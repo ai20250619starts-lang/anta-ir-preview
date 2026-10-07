@@ -29,7 +29,7 @@ const reportTitle = period.half === 'annual' ? { en: 'Annual report', tc: 'å¹´å 
       <H class="mt-1 text-xl font-bold md:text-2xl">{periodLabel(period, lang)}</H>
       {period.date && <p class="mt-1 text-sm text-graphite">{t(lang, 'announcedOn')}: <time datetime={period.date}>{formatDate(period.date, lang)}</time></p>}
     </div>
-    <span class="display-num text-3xl text-brand" aria-hidden="true">{period.half === 'annual' ? 'FY' : 'H1'}{String(period.fy).slice(2)}</span>
+    <span class="display-num text-3xl text-brand" aria-hidden="true">{period.half === 'annual' ? 'FY' : '1H'}{String(period.fy).slice(2)}</span>
   </div>
   <ul class="divide-y divide-mist">
     {slots.map((s) => {

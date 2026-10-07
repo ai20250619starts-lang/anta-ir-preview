@@ -22,6 +22,6 @@ const unitText = unit === 'ppt' ? { en: ' ppt', tc: ' 個百分點', sc: ' 个�
 ---
 <span class={`tabular inline-flex items-center gap-1 font-semibold ${color} ${cls}`}>
   <Icon name={dir === 'up' ? 'arrow-up' : dir === 'down' ? 'arrow-down' : 'flat'} size={12} />
-  <span aria-hidden="true">{abs !== undefined && <>{signed(abs, 2)} </>}{abs !== undefined ? `(${signed(value, digits, unitText)})` : signed(value, digits, unitText)}</span>
+  <span aria-hidden="true">{abs !== undefined && <>{signed(abs, 2)}{' '}</>}{abs !== undefined ? `(${signed(value, digits, unitText)})` : signed(value, digits, unitText)}</span>
   <span class="sr-only">{changeWords(value, unit, lang)}</span>
 </span>

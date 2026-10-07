@@ -3,8 +3,7 @@
 This is a preview of a revamped investor relations website for ANTA Sports Products Limited (HKEX: 2020 / 82020), built for **client review only**.
 It is **not the official site**. The live site, https://ir.anta.com, is used as a read-only reference.
 
-**Status:** piece 1 is done: the content scraper, the typed data model, and a minimal Astro 5 + Tailwind scaffold that consumes the data in EN / TC / SC.
-The design system and home page are the next step.
+**Status:** piece 1 (scraper + data model) and piece 2 (design system + home page in EN / TC / SC) are done. All other IA pages are "coming soon" stubs.
 
 ## Requirements
 
@@ -36,6 +35,14 @@ npm run dev             # local dev server on http://127.0.0.1:4321/en/ (local o
 | `npm test` | Runs the vitest suite (`tests/`) |
 | `npm run build` | `validate` + `astro check` + `astro build` → `dist/` |
 | `npm run dev` / `npm run preview` | Local dev server / serve `dist/`, both bound to 127.0.0.1 |
+
+## Design system and home page (piece 2)
+
+- Tokens: `src/styles/global.css`. Brand red is ONE setting (`--brand-red`, placeholder `#FF0000`, accent only); `brand-ink` (≈#B70000, ~7:1 on white) is derived from it for text, links and white-on-red buttons. Warm greys, type scale, spacing tokens.
+- Fonts: Inter (variable) + Barlow Condensed 600, self-hosted from `src/assets/fonts` (OFL licences alongside); CJK uses system stacks. No Google Fonts or CDNs.
+- Components (`src/components/`): SiteHeader (desktop nav ≥1280px, mobile menu), LangSwitcher (keeps path, query and #hash), SiteFooter, PreviewBanner, QuoteStrip (mock quote, "Illustrative" + ≥15-min delay), SectionHeading, Button, Badge, Change (arrow + sign + %), DocumentRow (HKT date/time, approx./undated dates, 繁體版 fallback note, size, language chips), ResultsHubCard, KpiCard, CalendarItem, ContactCard, BrandStrip.
+- Pages: `/[lang]/` home, `/[lang]/design/` showcase, `/[lang]/<ia-path>/` stubs from `src/lib/nav.ts`, `/[lang]/debug/` (+ documents/, data/) from piece 1, root `/` with PREVIEW banner.
+- With a preview running (`npm run preview`): `npm run screenshots` → `audit/screenshots/piece2/`, `npm run lighthouse` → `audit/lighthouse/`.
 
 ## Build configuration for GitHub Pages (no deployment yet)
 

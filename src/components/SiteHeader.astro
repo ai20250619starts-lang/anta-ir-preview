@@ -20,10 +20,10 @@ const active = activeSection(current);
 const href = (p: string) => withBase(`${lang}/${p}`);
 ---
 <header class="sticky top-0 z-40 border-b border-mist bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/90">
-  <div class="container-page flex h-16 items-center justify-between gap-4 xl:h-[4.5rem]">
+  <div class="container-page flex h-16 items-center justify-between gap-3 xl:h-[4.5rem]">
     <a href={href('')} class="flex shrink-0 items-center gap-3 no-underline" aria-label={`ANTA Sports — ${t(lang, 'ir')} — ${t(lang, 'home')}`}>
       <Image src={logo} alt="" width={64} height={36} class="h-9 w-auto" loading="eager" />
-      <span class="hidden border-l border-mist pl-3 text-sm leading-tight font-semibold text-ink sm:block">{t(lang, 'ir')}</span>
+      <span class="hidden border-l border-mist pl-3 text-sm leading-tight font-semibold text-ink sm:block xl:hidden 2xl:block">{t(lang, 'ir')}</span>
     </a>
 
     <nav aria-label={t(lang, 'mainNav')} class="hidden xl:block">
@@ -33,7 +33,7 @@ const href = (p: string) => withBase(`${lang}/${p}`);
             <a
               href={href(s.path)}
               aria-current={active?.key === s.key ? 'page' : undefined}
-              class={`flex min-h-11 items-center gap-1 px-2.5 text-sm font-medium whitespace-nowrap hover:text-brand-ink ${active?.key === s.key ? 'text-ink shadow-[inset_0_-3px_0_var(--color-brand)]' : 'text-ink'}`}
+              class={`flex min-h-11 items-center gap-0.5 px-2 text-[0.8125rem] font-medium whitespace-nowrap 2xl:px-3 2xl:text-sm hover:text-brand-ink ${active?.key === s.key ? 'text-ink shadow-[inset_0_-3px_0_var(--color-brand)]' : 'text-ink'}`}
             >
               {s.label[lang]}
               {s.children.length > 1 && <Icon name="chevron-down" size={12} class="text-stone" />}
@@ -63,8 +63,8 @@ const href = (p: string) => withBase(`${lang}/${p}`);
         aria-controls="mobile-nav"
         data-menu-toggle
       >
-        <Icon name="menu" size={18} class="menu-open-icon" />
-        <Icon name="close" size={18} class="menu-close-icon hidden" />
+        <span class="menu-open-icon"><Icon name="menu" size={18} /></span>
+        <span class="menu-close-icon hidden"><Icon name="close" size={18} /></span>
         <span>{t(lang, 'menu')}</span>
       </button>
     </div>
