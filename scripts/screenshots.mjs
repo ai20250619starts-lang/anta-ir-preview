@@ -24,7 +24,11 @@ for (const [name, path, w] of shots.filter(([n]) => !only || only.has(n))) {
     await document.fonts.ready;
   });
   await new Promise((r) => setTimeout(r, Number(process.env.SETTLE_MS || 2200))); // let entrance, reveal, count-up and bar animations settle
+  // scroll-driven (view()) entrances key off the layout viewport: grow it to the full page so every section is "in view"
+  await page.setViewport({ width: w, height: await page.evaluate(() => document.documentElement.scrollHeight), deviceScaleFactor: 1 });
+  await new Promise((r) => setTimeout(r, 600));
   await page.screenshot({ path: `${out}/${name}.png`, fullPage: true });
+  await page.setViewport({ width: w, height: w < 768 ? 780 : 900, deviceScaleFactor: 1 });
   // real horizontal overflow = the page itself scrolls sideways (clipped decorative SVG paths don't count)
   const overflow = await page.evaluate(() => { const d = document.documentElement; return d.scrollWidth > d.clientWidth ? `scrollWidth ${d.scrollWidth} > ${d.clientWidth}: ` + [...document.querySelectorAll('body *')].filter((e) => e.getBoundingClientRect().right > d.clientWidth + 1 && !e.closest('svg')).slice(0, 3).map((e) => e.tagName + '.' + String(e.className).slice(0, 60)).join(' | ') : ''; });
   console.log(name, overflow ? 'OVERFLOW: ' + overflow : 'ok');

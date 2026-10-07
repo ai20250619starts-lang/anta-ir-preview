@@ -12,8 +12,8 @@ import Change from './ui/Change.astro';
 import CountUp from './ui/CountUp.astro';
 
 type Row = FinancialHighlightsFile['rows'][number];
-interface Props { row: Row; years: number[]; lang: Lang; label?: string }
-const { row, years, lang, label } = Astro.props;
+interface Props { row: Row; years: number[]; lang: Lang; label?: string; index?: number }
+const { row, years, lang, label, index = 0 } = Astro.props;
 const ys = [...years].sort((a, b) => a - b);
 const fy = ys[ys.length - 1];
 const prev = ys[ys.length - 2];
@@ -24,19 +24,19 @@ const unit = row.unit === 'rmb-million' ? t(lang, 'rmbMillion') : row.unit === '
 const display = row.display[String(fy)] ?? '—';
 const name = label ?? pick(row.label, lang).replace(/\s*[（(].*?[)）]\s*$/, '');
 ---
-<article class="flex flex-col gap-1.5 rounded-lg border border-line bg-white p-4 shadow-card sm:p-6 lg:p-7">
+<article data-sync data-enter style={`--i:${index};--kf:ll-launch-in;--ease:var(--ease-launch)`} class="ll-card flex flex-col gap-1.5 rounded-lg border border-line bg-white p-4 shadow-card sm:p-6 lg:p-7">
   <h3 class="min-h-10 text-sm leading-5 font-semibold text-graphite sm:min-h-11 sm:text-[0.9375rem] sm:leading-[1.375rem]">{name}</h3>
   <p class="mt-2"><CountUp value={display} class="display-num text-num-sm sm:text-[3.25rem] sm:leading-none lg:text-num-lg" /></p>
   <p class="text-[0.8125rem] text-muted">{unit || '\u00a0'}</p>
   <p class="mt-2.5 flex flex-wrap items-center gap-x-2 gap-y-1.5 text-[0.8125rem] text-muted">
-    {ch && <span class={`rounded-full px-2 py-[3px] leading-[1.125rem] ${ch.value > 0 ? 'bg-up-tint' : ch.value < 0 ? 'bg-down-tint' : 'bg-surface'}`}><Change value={ch.value} unit={ch.unit} lang={lang} class="text-[0.8125rem]" /></span>}
+    {ch && <span class={`ll-chip ${ch.value > 0 ? 'is-up' : ch.value < 0 ? 'is-down' : ''} rounded-full px-2 py-[3px] leading-[1.125rem] ${ch.value > 0 ? 'bg-up-tint' : ch.value < 0 ? 'bg-down-tint' : 'bg-surface'}`}><Change value={ch.value} unit={ch.unit} lang={lang} class="text-[0.8125rem]" /></span>}
     <span>{t(lang, 'fy')}{lang === 'en' ? ' ' : ''}{fy} {ch && t(lang, 'vsPrior')}</span>
   </p>
   <div class="mt-auto border-t border-line pt-3.5">
     <svg viewBox="0 0 120 48" class="mt-1 block h-12 w-full" preserveAspectRatio="none" aria-hidden="true" focusable="false">
       {vals.map((v, i) => {
         const h = max ? Math.max(2, (v / max) * 46) : 2;
-        return <rect class="ll-bar" style={`--i:${i}`} x={i * 20 + 2} y={48 - h} width="16" height={h} rx="1" fill={i === vals.length - 1 ? 'var(--color-brand)' : 'var(--color-bar)'} />;
+        return <rect class="ll-bar" style={`--i:${i}${i === vals.length - 1 ? ';--now:120ms' : ''}`} x={i * 20 + 2} y={48 - h} width="16" height={h} rx="1" fill={i === vals.length - 1 ? 'var(--color-brand)' : 'var(--color-bar)'} />;
       })}
     </svg>
     <p class="tabular mt-1.5 flex justify-between text-2xs text-muted" aria-hidden="true"><span>{ys[0]}</span><span>{fy}</span></p>

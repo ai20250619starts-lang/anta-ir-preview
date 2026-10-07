@@ -1,5 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import { existsSync, readFileSync } from 'node:fs';
+import { gzipSync } from 'node:zlib';
 import { WHY_INVEST } from '../src/data/why-invest';
 import company from '../data/company.json';
 
@@ -35,11 +36,20 @@ describe.skipIf(!existsSync('dist/en/index.html'))('home page (built)', () => {
     expect(h).toContain("classList.add('js')");
     expect(h).toContain('data-reveal');
     const counts = [...h.matchAll(/<span class="sr-only">([^<]+)<\/span><span class="ll-count-ghost" aria-hidden="true">([^<]+)<\/span><span class="ll-count-run" aria-hidden="true" data-count>([^<]+)<\/span>/g)];
-    expect(counts.length).toBeGreaterThanOrEqual(8); // 4 KPI values + 4 countable Why Invest figures
+    expect(counts.length).toBeGreaterThanOrEqual(7); // 4 KPI values + 3 Why Invest figures ≥ 10 (MOTION.md §7)
     for (const [, sr, ghost, run] of counts) {
       expect(ghost).toBe(sr);
       expect(run).toBe(sr);
     }
     expect(h).not.toMatch(/aria-live/);
+    // values under 10 and multi-number strings surge instead of counting
+    for (const v of ['Top 3', '6 + 2']) expect(h).toContain(`data-surge>${v}<`);
+  });
+
+  it('ships the motion runtime under the 5 KB (min+gzip) cap', () => {
+    const h = page('en');
+    const inline = [...h.matchAll(/<script type="module"[^>]*>([\s\S]*?)<\/script>/g)].map((m) => m[1]).join('');
+    const ext = [...h.matchAll(/<script[^>]+src="[^"]*?(\/_astro\/[^"]+\.js)"/g)].map((m) => readFileSync(`dist${m[1]}`, 'utf8')).join('');
+    expect(gzipSync(inline + ext, { level: 9 }).length).toBeLessThanOrEqual(5 * 1024);
   });
 });

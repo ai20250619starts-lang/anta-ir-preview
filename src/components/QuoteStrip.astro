@@ -50,11 +50,13 @@ const label = { en: 'Share price (illustrative)', tc: '股價（示意）', sc: 
     <p class="text-[0.8125rem] font-medium text-muted"><b class="text-ink">{q.symbol}</b> · ANTA Sports · HKD</p>
     <p class="mt-0.5 flex flex-wrap items-baseline gap-x-3.5 gap-y-1.5">
       <span class="display-num text-[4rem] leading-none tracking-[-0.01em] lg:text-num-xl">{q.last.toFixed(2)}</span>
-      <Change value={q.changePct} abs={q.change} unit="%" lang={lang} digits={2} class="text-[1.0625rem]" />
+      <Change value={q.changePct} abs={q.change} unit="%" lang={lang} digits={2} class="ll-chg-in text-[1.0625rem]" />
     </p>
     <svg viewBox={`0 0 ${W} ${H}`} class="ll-spark mt-3.5 block h-auto w-full" aria-hidden="true" focusable="false">
       <path class="ll-spark-area" d={area} fill="rgb(14 15 17 / 0.05)" />
-      <path class="ll-spark-line" d={line} pathLength="1" fill="none" stroke="var(--color-ink)" stroke-width="1.5" stroke-linejoin="round" />
+      <path class="ll-spark-line" d={line} fill="none" stroke="var(--color-ink)" stroke-width="1.5" stroke-linejoin="round" />
+      <rect class="ll-spark-wipe" x="0" y="0" width={W} height={H} fill="#fff" />
+      <circle class="ll-spark-ring" cx={lx} cy={ly} r="7" fill="none" stroke="var(--color-muted)" stroke-width="1.5" />
       <circle class="ll-spark-dot" cx={lx} cy={ly} r="4.5" fill="var(--color-brand)" stroke="rgb(255 0 0 / 0.18)" stroke-width="6" />
     </svg>
     <p class="mt-1.5 flex justify-between text-2xs text-muted" aria-hidden="true"><span>{formatMonth(first, lang)}</span><span>{t(lang, 'sparkCaption')}</span><span>{formatMonth(last, lang)}</span></p>

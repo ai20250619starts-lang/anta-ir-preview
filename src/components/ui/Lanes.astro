@@ -1,8 +1,9 @@
 ---
 /**
  * "Lane lines": running-track bend used as the hero texture (port of lanes() in design/src/build.py).
- * One lane (lead) is brand red and draws itself in on load (stroke-dashoffset on a pathLength=1 path).
- * Decorative only.
+ * Two layers with identical geometry so they can move independently (MOTION.md §3/§5): the grey hairlines
+ * (.ll-hero-lanes) and the red lead lane (.ll-lead-lane), which draws in via stroke-dashoffset on a
+ * pathLength=1 path. Decorative only.
  */
 interface Props { n?: number; cx?: number; cy?: number; r0?: number; gap?: number; lead?: number; w?: number; h?: number; class?: string }
 const { n = 9, cx = 480, cy = 1010, r0 = 120, gap = 36, lead = 4, w = 1440, h = 890, class: cls = '' } = Astro.props;
@@ -11,6 +12,9 @@ const paths = Array.from({ length: n }, (_, i) => {
   return { d: `M${w},${cy - r} H${cx} A${r},${r} 0 0 0 ${cx},${cy + r}`, lead: i === lead };
 });
 ---
-<svg class={`ll-lanes ${cls}`} viewBox={`0 0 ${w} ${h}`} preserveAspectRatio="xMinYMax slice" aria-hidden="true" focusable="false">
-  {paths.map((p) => (p.lead ? <path class="lead" pathLength="1" d={p.d} /> : <path d={p.d} />))}
+<svg class={`ll-hero-lanes ${cls}`} viewBox={`0 0 ${w} ${h}`} preserveAspectRatio="xMinYMax slice" aria-hidden="true" focusable="false">
+  {paths.filter((p) => !p.lead).map((p) => <path d={p.d} />)}
+</svg>
+<svg class={`ll-lead-lane ${cls}`} viewBox={`0 0 ${w} ${h}`} preserveAspectRatio="xMinYMax slice" aria-hidden="true" focusable="false">
+  {paths.filter((p) => p.lead).map((p) => <path pathLength="1" d={p.d} />)}
 </svg>

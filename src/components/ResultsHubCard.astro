@@ -26,7 +26,8 @@ const slots: { key: SlotKey; label: string; icon: 'file' | 'play' }[] = [
 ];
 const reportTitle = period.half === 'annual' ? { en: 'Annual report', tc: '年報', sc: '年报' }[lang] : { en: 'Interim report', tc: '中期報告', sc: '中期报告' }[lang];
 ---
-<article class={`grid overflow-hidden rounded-lg border-t-4 border-brand bg-white shadow-raised ${feature ? 'lg:grid-cols-[300px_1fr]' : ''}`}>
+<article class={`relative grid overflow-hidden rounded-lg bg-white pt-1 shadow-raised ${feature ? 'lg:grid-cols-[300px_1fr]' : ''}`}>
+  <span class={`ll-edge ${feature ? 'll-edge-in' : ''}`} aria-hidden="true"></span>
   <div class={`flex flex-col gap-1.5 p-6 ${feature ? 'lg:border-r lg:border-line lg:p-8' : ''}`}>
     <p class="eyebrow">{t(lang, 'latestResults')}</p>
     <H class="text-2xl font-[650] tracking-[-0.02em]">{periodLabel(period, lang)}</H>
@@ -39,7 +40,7 @@ const reportTitle = period.half === 'annual' ? { en: 'Annual report', tc: '年�
     </p>
   </div>
   <ul class={`grid border-t border-line sm:grid-cols-2 ${feature ? 'lg:grid-cols-5 lg:border-t-0' : ''}`}>
-    {slots.map((s) => {
+    {slots.map((s, i) => {
       const d = period.docs[s.key];
       const pf = d ? primaryFile(d, lang) : null;
       const label = s.key === 'report' ? reportTitle : s.label;
@@ -48,8 +49,8 @@ const reportTitle = period.half === 'annual' ? { en: 'Annual report', tc: '年�
       return (
         <li class={`border-b border-line sm:odd:border-r ${feature ? 'lg:border-r lg:border-b-0 lg:last:border-r-0' : ''}`}>
           {pf && d ? (
-            <a href={pf.file.url} rel="noopener" class={`group transition-colors duration-150 hover:bg-surface ${tile}`}>
-              <span class="grid size-10 shrink-0 place-items-center rounded-md bg-surface text-ink transition-colors duration-200 group-hover:bg-ink group-hover:text-white"><Icon name={s.icon} size={20} /></span>
+            <a href={pf.file.url} rel="noopener" class={`group ll-card ll-flat hover:bg-surface ${feature ? 'll-tile-in' : ''} ${tile}`} style={`--i:${i}`}>
+              <span class="ll-well grid size-10 shrink-0 place-items-center rounded-md bg-surface text-ink transition-colors duration-200 group-hover:bg-ink group-hover:text-white"><Icon name={s.icon} size={20} /></span>
               <span class="min-w-0">
                 <span class="block text-[0.9375rem] leading-5 font-semibold">{label}</span>
                 <span class="tabular block text-xs text-muted">{formatLabel(pf.file, d.type, lang)}{pf.file.sizeBytes ? ` · ${formatBytes(pf.file.sizeBytes)}` : ''}</span>
@@ -57,8 +58,8 @@ const reportTitle = period.half === 'annual' ? { en: 'Annual report', tc: '年�
               </span>
             </a>
           ) : (
-            <span class={`text-graphite ${tile}`}>
-              <span class="grid size-10 shrink-0 place-items-center rounded-md bg-surface text-muted"><Icon name={s.icon} size={20} /></span>
+            <span class={`text-graphite ${feature ? 'll-tile-in' : ''} ${tile}`} style={`--i:${i}`}>
+              <span class="ll-well grid size-10 shrink-0 place-items-center rounded-md bg-surface text-muted"><Icon name={s.icon} size={20} /></span>
               <span><span class="block text-[0.9375rem] leading-5 font-semibold">{label}</span><span class="block text-xs">{t(lang, 'notYetAvailable')}</span></span>
             </span>
           )}

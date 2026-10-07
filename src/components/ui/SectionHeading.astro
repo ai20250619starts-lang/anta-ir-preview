@@ -15,8 +15,8 @@ const H = `h${level}` as 'h2' | 'h3';
 ---
 <div class={`mb-7 flex flex-wrap items-end justify-between gap-x-6 gap-y-3 lg:mb-11 ${cls}`}>
   <div class="max-w-3xl">
-    {eyebrow && <p class="eyebrow ll-eyebrow mb-2.5">{eyebrow}</p>}
-    <H id={id} class={level === 2 ? 'text-3xl font-[650] tracking-[-0.022em] text-balance lg:text-4xl' : 'text-xl font-semibold'}>{title}</H>
+    {eyebrow && <p class="eyebrow ll-eyebrow ll-eb mb-2.5">{eyebrow}</p>}
+    <H id={id} data-enter style="--i:1" class={level === 2 ? 'text-3xl font-[650] tracking-[-0.022em] text-balance lg:text-4xl' : 'text-xl font-semibold'}>{title}</H>
     {description && <p class="mt-2 text-sm text-muted">{description}</p>}
   </div>
   {action && (

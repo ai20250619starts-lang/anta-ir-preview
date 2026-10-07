@@ -6,8 +6,9 @@ import Badge from './ui/Badge.astro';
 import Icon from './ui/Icon.astro';
 
 type Ev = CalendarFile['events'][number];
-interface Props { event: Ev; lang: Lang; past?: boolean }
-const { event, lang, past = false } = Astro.props;
+/** i: home-page stagger index → split-flap day digit + text rise (MOTION.md §4 Events); omit elsewhere. */
+interface Props { event: Ev; lang: Lang; past?: boolean; i?: number }
+const { event, lang, past = false, i } = Astro.props;
 const dm = dayMonth(event.date, lang);
 const kind = {
   results: { en: 'Results', tc: '業績', sc: '业绩' },
@@ -19,13 +20,13 @@ const kind = {
 }[event.kind][lang];
 const ics = event.icsUrl;
 ---
-<article class="grid grid-cols-[72px_1fr] items-center gap-5 border-b border-line py-5 lg:grid-cols-[80px_1fr] lg:gap-6">
+<article class={`grid grid-cols-[72px_1fr] items-center gap-5 border-b border-line py-5 lg:grid-cols-[80px_1fr] lg:gap-6 ${i !== undefined ? 'll-row' : ''}`}>
   <div class={`grid justify-items-center rounded-md border py-2 text-center leading-none ${past ? 'border-line' : 'border-ink'}`} aria-hidden="true">
     <span class="text-2xs font-bold tracking-[0.08em] text-brand-ink uppercase">{dm.month}</span>
-    <span class="display-num mt-1 mb-0.5 text-[2.125rem] leading-none">{dm.day}</span>
+    <span class="mt-1 mb-0.5 block overflow-clip"><span class="display-num block text-[2.125rem] leading-none" data-enter={i !== undefined ? '' : undefined} style={i !== undefined ? '--kf:ll-flap;--ease:var(--ease-settle)' : undefined}>{dm.day}</span></span>
     <span class="tabular text-2xs text-muted">{dm.year}</span>
   </div>
-  <div class="min-w-0">
+  <div class="min-w-0" data-enter={i !== undefined ? '' : undefined} style={i !== undefined ? `--i:${i + 1};--kf:ll-rise-sm` : undefined}>
     <p class="flex flex-wrap gap-1.5"><Badge tone={past ? 'outline' : 'brand'}>{kind}</Badge>{past && <Badge tone="neutral" class="!bg-surface !text-muted">{lang === 'en' ? 'Past' : lang === 'tc' ? '已舉行' : '已举行'}</Badge>}</p>
     <h3 class="mt-1.5 text-lg leading-[1.625rem] font-semibold">{pick(event.title, lang)}</h3>
     <p class="text-[0.8125rem] text-muted"><time datetime={event.date}>{formatDate(event.date, lang)}</time></p>

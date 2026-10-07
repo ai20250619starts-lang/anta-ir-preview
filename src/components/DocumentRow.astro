@@ -12,8 +12,9 @@ import { formatBytes } from '../data';
 import Badge from './ui/Badge.astro';
 import Icon from './ui/Icon.astro';
 
-interface Props { doc: DocumentRecord; lang: Lang; showType?: boolean; headingLevel?: 'h3' | 'p' }
-const { doc, lang, showType = true, headingLevel = 'p' } = Astro.props;
+/** i: home-page stagger index → row slides in from the left (MOTION.md §4 Announcements); omit elsewhere. */
+interface Props { doc: DocumentRecord; lang: Lang; showType?: boolean; headingLevel?: 'h3' | 'p'; i?: number }
+const { doc, lang, showType = true, headingLevel = 'p', i } = Astro.props;
 const dd = docDate(doc, lang);
 const pf = primaryFile(doc, lang);
 const title = pick(doc.title, lang);
@@ -23,7 +24,7 @@ const versionNote = pf?.isFallback ? t(lang, pf.versionLang === 'tc' ? 'tcVersio
 const size = pf?.file.sizeBytes ? formatBytes(pf.file.sizeBytes) : null;
 const H = headingLevel;
 ---
-<article class="grid gap-2 border-b border-line py-5 lg:grid-cols-[150px_minmax(0,1fr)_230px] lg:items-center lg:gap-8 lg:py-[22px]">
+<article class={`grid gap-2 border-b border-line py-5 lg:grid-cols-[150px_minmax(0,1fr)_230px] lg:items-center lg:gap-8 lg:py-[22px] ${i !== undefined ? 'll-row' : ''}`} data-enter={i !== undefined ? '' : undefined} style={i !== undefined ? `--i:${i};--kf:ll-slide-in` : undefined}>
   <div class="text-sm text-muted">
     {dd.kind === 'exact' && (
       <time datetime={dd.iso} class="tabular block">

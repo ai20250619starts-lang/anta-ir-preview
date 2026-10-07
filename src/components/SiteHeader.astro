@@ -21,6 +21,7 @@ const href = (p: string) => withBase(`${lang}/${p}`);
 const secHref = (s: (typeof NAV)[number]) => s.external?.[lang] ?? href(s.path);
 ---
 <header class="sticky top-0 z-40 border-b border-line bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/90">
+  <span class="ll-progress" aria-hidden="true"></span>
   <div class="container-page flex h-16 items-center justify-between gap-3 nav:h-[76px]">
     <a href={href('')} class="flex shrink-0 items-center gap-3 no-underline" aria-label={`ANTA Sports — ${t(lang, 'ir')} — ${t(lang, 'home')}`}>
       <Image src={logo} alt="" width={64} height={36} class="h-9 w-auto" loading="eager" />

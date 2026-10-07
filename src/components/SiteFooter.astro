@@ -14,19 +14,20 @@ const href = (p: string) => withBase(`${lang}/${p}`);
 const irEmail = contacts.emails.find((e) => e.key === 'investor-relations')?.email;
 const year = new Date().getFullYear();
 ---
-<footer class="on-dark mt-auto bg-ink text-white">
+<footer class="on-dark mt-auto bg-ink text-white" data-reveal>
   <div class="container-page grid gap-10 pt-14 pb-10 lg:gap-12 lg:pt-[72px] lg:pb-14">
-    <div class="lg:grid lg:grid-cols-[auto_1fr_auto] lg:items-center lg:gap-10 lg:border-b lg:border-white/15 lg:pb-10">
+    <div class="relative lg:grid lg:grid-cols-[auto_1fr_auto] lg:items-center lg:gap-10 lg:border-b lg:border-white/15 lg:pb-10">
+      <span class="ll-finish hidden lg:block" data-enter style="--kf:ll-scale-x" aria-hidden="true"></span>
       <Image src={logoWhite} alt="ANTA Sports" width={64} height={36} class="h-9 w-auto" />
-      <p class="ll-slogan mt-6 text-[1.75rem] lg:mt-0">{pick(company.slogan, lang)}</p>
+      <p class="ll-slogan mt-6 text-[1.75rem] lg:mt-0" data-enter style="--kf:ll-rise-sm">{pick(company.slogan, lang)}</p>
       <p class="mt-4 text-sm text-on-dark-muted lg:mt-0 lg:text-right">
         {t(lang, 'copyright')} · HKEX 2020 / 82020
         {irEmail && <><br /><a class="font-semibold text-white underline-offset-4 hover:underline" href={`mailto:${irEmail}`}>{irEmail}</a></>}
       </p>
     </div>
     <nav aria-label={lang === 'en' ? 'Footer' : lang === 'tc' ? '頁尾' : '页尾'} class="grid grid-cols-2 gap-x-6 gap-y-8 md:grid-cols-3 lg:grid-cols-6 lg:gap-8">
-      {NAV.map((s) => (
-        <div>
+      {NAV.map((s, i) => (
+        <div data-enter style={`--i:${i};--kf:ll-rise-sm`}>
           <h2 class="mb-2.5 text-xs font-semibold tracking-[0.08em] text-on-dark-muted uppercase">{s.label[lang]}</h2>
           <ul>
             {s.external ? (

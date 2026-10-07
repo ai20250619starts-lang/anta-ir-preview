@@ -9,10 +9,12 @@
  */
 interface Props { value: string; class?: string }
 const { value, class: cls = '' } = Astro.props;
-const countable = (value.match(/\d[\d,]*(?:\.\d+)?/g) ?? []).length === 1;
+// MOTION.md §7: count only a single number ≥ 10; anything else ("Top 3", "6 + 2", "前三") surges instead.
+const nums = value.match(/\d[\d,]*(?:\.\d+)?/g) ?? [];
+const countable = nums.length === 1 && parseFloat(nums[0].replace(/,/g, '')) >= 10;
 ---
 {countable ? (
   <span class={`ll-count ${cls}`}><span class="sr-only">{value}</span><span class="ll-count-ghost" aria-hidden="true">{value}</span><span class="ll-count-run" aria-hidden="true" data-count>{value}</span></span>
 ) : (
-  <span class={cls}>{value}</span>
+  <span class={cls} data-surge>{value}</span>
 )}

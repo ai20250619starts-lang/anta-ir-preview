@@ -47,34 +47,35 @@ const strategic = list.filter((b) => b.pillar === 'strategic-investment');
     <h3 class="eyebrow">{t(lang, 'inHouse')}</h3>
   </div>
   <ul class="grid grid-cols-2 gap-3 md:grid-cols-3 xl:grid-cols-6">
-    {inHouse.map((b) => {
+    {inHouse.map((b, i) => {
       const img = localImage(b.logo?.src);
       const size = LOGO_SIZE[b.key] ?? { h: 44, cls: 'max-h-11' };
       return (
         <li>
-          <a href={brandHref(b)} class="ll-lift relative grid h-[116px] place-items-center rounded-lg border border-line bg-white xl:h-[140px]">
+          <a href={brandHref(b)} data-enter style={`--i:${i}`} class="ll-card relative grid h-[116px] place-items-center rounded-lg border border-line bg-white xl:h-[140px]">
             {img ? (
-              <Image src={img} alt={NAMES[b.key] ?? b.name} height={size.h} class={`${size.cls} w-auto max-w-[62%] object-contain brightness-0`} />
+              <Image src={img} alt={NAMES[b.key] ?? b.name} height={size.h} class={`ll-logo ${size.cls} w-auto max-w-[62%] object-contain brightness-0`} />
             ) : (
               <span class="font-display text-xl tracking-wide">{b.name}</span>
             )}
-            <span class="absolute bottom-2.5 left-3.5 text-2xs font-semibold tracking-[0.06em] text-muted uppercase" aria-hidden="true">{NAMES[b.key] ?? b.name}</span>
+            <span class="ll-cap absolute bottom-2.5 left-3.5 text-2xs font-semibold tracking-[0.06em] text-muted uppercase" aria-hidden="true">{NAMES[b.key] ?? b.name}</span>
           </a>
         </li>
       );
     })}
   </ul>
+  <div class="relative h-0.5 overflow-clip" aria-hidden="true"><span class="ll-shimmer h-full w-full bg-brand"></span></div>
   {strategic.length > 0 && (
     <>
       <h3 class="eyebrow mt-10 mb-3.5">{t(lang, 'strategic')}</h3>
       <ul class="grid gap-3 md:grid-cols-2">
-        {strategic.map((b) => {
+        {strategic.map((b, i) => {
           const img = localImage(b.logo?.src);
           const size = LOGO_SIZE[b.key] ?? { h: 48, cls: 'max-h-12' };
           return (
             <li>
-              <a href={brandHref(b)} class="ll-lift grid h-full grid-cols-[88px_1fr] items-center gap-5 rounded-lg border border-line bg-white px-6 py-5 md:grid-cols-[128px_1fr]">
-                <span class="grid place-items-center">{img ? <Image src={img} alt="" height={size.h} class={`${size.cls} w-auto object-contain brightness-0`} /> : <span class="font-display text-lg">{b.name}</span>}</span>
+              <a href={brandHref(b)} data-enter style={`--i:${i + 3};--kf:ll-slide-r;--from-x:32px`} class="ll-card grid h-full grid-cols-[88px_1fr] items-center gap-5 rounded-lg border border-line bg-white px-6 py-5 md:grid-cols-[128px_1fr]">
+                <span class="grid place-items-center">{img ? <Image src={img} alt="" height={size.h} class={`ll-logo ${size.cls} w-auto object-contain brightness-0`} /> : <span class="font-display text-lg">{b.name}</span>}</span>
                 <span>
                   <b class="block text-base font-[650]">{NAMES[b.key] ?? b.name}</b>
                   <span class="mt-0.5 block text-sm leading-[1.3125rem] text-graphite">{relation(b)}</span>

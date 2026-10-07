@@ -158,5 +158,13 @@ Design system, home page, final IA pages, search, charts, and deployment. No dep
 
 - Design source: `design/` (mockup `index.html`, `DESIGN.md`, reference screenshots, font/contrast scripts). Tokens are merged into `src/styles/global.css` (`@theme`); the brand red is still one setting (`--brand-red`) with derived `brand-ink` (#CC0000, text/buttons) and `brand-press` (hover).
 - Updated components (no duplicates): `QuoteStrip` (quote card), `ResultsHubCard` (results band), `WhyInvest` (split layout + lead figures from `why-invest.ts`), `DocumentRow` (ledger row), `KpiCard` (tile + 6-year bars), `CalendarItem`, `ContactCard` (`plain`), `BrandStrip` (in-house tiles + strategic tiles), `SiteHeader` (1100px `nav` breakpoint), `LangSwitcher` (pill, `tone`), `SiteFooter`, `ui/Button` (pills), `ui/SectionHeading`; new `ui/Lanes` (hero track bend) and `ui/CountUp`.
-- Motion: CSS in `global.css` (Lane Lines section) + one inline IntersectionObserver script in `Base.astro`. Everything is gated on `html.js` and `prefers-reduced-motion: no-preference`; no-JS and reduced-motion users get the final state. `node scripts/motion-check.mjs` (against a running preview on :4321) prints the no-JS / reduced-motion / animated states.
+- Motion: superseded by "Lead Runner" (piece 6, below).
+
+## "Lead Runner" motion (piece 6, `design/MOTION.md`)
+
+- CSS: the Lane Lines block in `src/styles/global.css` (tokens `--ease-sprint/launch/settle`, `--dur-*`, `--stagger-*`; keyframes; hero intro; `view()`/`scroll()` entrances with an IntersectionObserver fallback under `@supports not (animation-timeline: view())`; interactions; print).
+- JS: `src/scripts/motion.ts` (≈1.6 KB min+gzip, bundled/deferred) — count-ups (expo-out, 900 ms, never overshoot, exact final string), KPI bar sync, reveal fallback, magnetic hero CTAs, and finalisers on `beforeprint` / `pagehide` / `visibilitychange`. The only inline script is the head one-liner that sets `html.js`.
+- Markup hooks: `data-enter` (+ `--i`, `--kf`, `--ease`), `data-sync` (KPI tiles), `data-reveal` (fallback sections), `ll-*` classes.
+- Reduced motion → final state, no counting; JS off → all content visible (count-ups show their server strings).
+- Tests: `tests/motion.browser.test.ts` (headless Chrome over `dist/`; skipped without Chrome or with a gated dist). Frames: `node scripts/motion-frames.mjs [outDir]` pauses and seeks the hero intro to exact times.
 - Screenshots wait `SETTLE_MS` (default 2200 ms) for animations to finish. Lighthouse report: `audit/lighthouse/piece5-home-en-mobile.report.{html,json}`.

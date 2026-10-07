@@ -48,24 +48,25 @@ const esgReports = company.esg.reportsUrl[lang] ?? company.esg.reportsUrl.en;
 // Headline phrases kept together (DESIGN.md: no orphaned "multi-" / CJK characters): EN nowrap on "multi-brand",
 // CJK split after "、" into inline-block phrases.
 const heroTitle = t(lang, 'heroTitle');
-const titleParts = lang === 'en' ? heroTitle.split(/(multi-brand)/) : heroTitle.split(/(?<=、)/);
+// Word spans for the H1 "lean-in" (MOTION.md §3): EN words / CJK phrases (split after 、), each .ll-w with --i.
+const titleParts = lang === 'en' ? heroTitle.split(' ') : heroTitle.split(/(?<=、)/);
 ---
 <Base lang={lang} title={t(lang, 'home')}>
   <!-- 1–2 Hero with quote card -->
-  <section class="on-dark relative isolate overflow-hidden bg-ink text-white" aria-labelledby="h-hero">
+  <section class="ll-hero on-dark relative isolate overflow-clip bg-ink text-white" aria-labelledby="h-hero">
     <Lanes />
     <div class="container-page grid gap-10 pt-11 pb-[120px] lg:grid-cols-[minmax(0,7fr)_minmax(0,5fr)] lg:items-start lg:gap-16 lg:pt-20 lg:pb-[168px]">
-      <div class="ll-rise">
+      <div>
         <p class="eyebrow ll-eyebrow !text-on-dark-muted">{t(lang, 'heroEyebrow')}</p>
-        <h1 id="h-hero" class="mt-5 text-display font-[650] tracking-[-0.032em] text-balance md:text-display-md lg:text-display-lg">{titleParts.map((p) => (lang === 'en' ? (p === 'multi-brand' ? <span class="whitespace-nowrap">{p}</span> : p) : <span class="inline-block">{p}</span>))}</h1>
-        <p class="mt-5 max-w-[40em] text-lg text-hero-body lg:text-xl">{t(lang, 'heroBody')}</p>
+        <h1 id="h-hero" class="mt-5 text-display font-[650] tracking-[-0.032em] text-balance md:text-display-md lg:text-display-lg">{titleParts.map((p, i) => <><span class="ll-w" style={`--i:${i}`}>{p}</span>{lang === 'en' && i < titleParts.length - 1 ? ' ' : ''}</>)}</h1>
+        <p class="ll-body-in mt-5 max-w-[40em] text-lg text-hero-body lg:text-xl">{t(lang, 'heroBody')}</p>
         <div class="mt-8 flex flex-wrap gap-3">
-          <Button href="#results" icon="arrow-right">{t(lang, 'latestResults')}</Button>
-          <Button href="#why" variant="inverse" icon={null}>{t(lang, 'whyInvestCta')}</Button>
+          <Button href="#results" icon="arrow-right" class="ll-cta ll-magnet" style="--d:350ms">{t(lang, 'latestResults')}</Button>
+          <Button href="#why" variant="inverse" icon={null} class="ll-cta ll-magnet" style="--d:410ms">{t(lang, 'whyInvestCta')}</Button>
         </div>
-        <p class="ll-slogan mt-10 text-[1.375rem]">{pick(company.slogan, lang)}</p>
+        <p class="ll-slogan ll-slogan-in mt-10 text-[1.375rem]">{pick(company.slogan, lang)}</p>
       </div>
-      <div class="ll-rise" style="--d:.12s"><QuoteStrip lang={lang} /></div>
+      <div class="ll-quote-in"><QuoteStrip lang={lang} /></div>
     </div>
   </section>
 
@@ -81,8 +82,9 @@ const titleParts = lang === 'en' ? heroTitle.split(/(multi-brand)/) : heroTitle.
   <section class="pb-section lg:pb-section-lg" aria-labelledby="h-ann" data-reveal>
     <div class="container-page">
       <SectionHeading id="h-ann" eyebrow={t(lang, 'filings')} title={t(lang, 'latestAnnouncements')} action={{ href: href('investors/announcements/'), label: t(lang, 'allAnnouncements') }} />
-      <div class="border-t-2 border-ink">
-        {announcements.map((d) => <DocumentRow doc={d} lang={lang} headingLevel="h3" />)}
+      <div>
+        <div class="ll-rule" data-enter style="--kf:ll-scale-x" aria-hidden="true"></div>
+        {announcements.map((d, i) => <DocumentRow doc={d} lang={lang} headingLevel="h3" i={i + 1} />)}
       </div>
     </div>
   </section>
@@ -92,7 +94,7 @@ const titleParts = lang === 'en' ? heroTitle.split(/(multi-brand)/) : heroTitle.
     <div class="container-page">
       <SectionHeading id="h-fin" eyebrow={`${t(lang, 'annualResults')} · ${t(lang, 'fy')}${lang === 'en' ? ' ' : ''}${highlights.years[0]}`} title={t(lang, 'financialHighlights')} description={`${pick(highlights.currencyNote, lang)} · ${t(lang, 'sixYearTrend')} ${Math.min(...highlights.years)}–${highlights.years[0]}`} action={{ href: href('investors/highlights/'), label: t(lang, 'allHighlights') }} />
       <div class="grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-4 lg:gap-5">
-        {kpis.map((r) => <KpiCard row={r} years={highlights.years} lang={lang} label={kpiLabels[r.key]?.[lang]} />)}
+        {kpis.map((r, i) => <KpiCard index={i} row={r} years={highlights.years} lang={lang} label={kpiLabels[r.key]?.[lang]} />)}
       </div>
     </div>
   </section>
@@ -104,10 +106,10 @@ const titleParts = lang === 'en' ? heroTitle.split(/(multi-brand)/) : heroTitle.
         <SectionHeading id="h-ev" eyebrow={t(lang, 'irCalendar')} title={upcoming.length ? t(lang, 'upcomingEvents') : t(lang, 'recentEvents')} action={{ href: href('investors/'), label: t(lang, 'irCalendar') }} />
         {!upcoming.length && <p class="-mt-3 mb-4 text-sm text-muted">{t(lang, 'noUpcoming')}</p>}
         <div class="border-t-2 border-ink">
-          {(upcoming.length ? upcoming : recent).map((e) => <CalendarItem event={e} lang={lang} past={!upcoming.length} />)}
+          {(upcoming.length ? upcoming : recent).map((e, i) => <CalendarItem event={e} lang={lang} past={!upcoming.length} i={i} />)}
         </div>
       </div>
-      <aside aria-labelledby="h-cta" class="relative self-start overflow-hidden rounded-lg bg-surface p-7 before:absolute before:inset-y-0 before:left-0 before:w-1 before:bg-brand lg:p-9">
+      <aside aria-labelledby="h-cta" data-enter style="--kf:ll-slide-r;--from-x:40px" class="ll-stay relative self-start overflow-clip rounded-lg bg-surface p-7 lg:p-9">
         <h2 id="h-cta" class="text-2xl font-[650] tracking-[-0.02em]">{t(lang, 'stayInformed')}</h2>
         <p class="mt-2 text-graphite">{t(lang, 'stayInformedBody')}</p>
         <div class="mt-5 flex flex-wrap gap-3">
@@ -132,9 +134,9 @@ const titleParts = lang === 'en' ? heroTitle.split(/(multi-brand)/) : heroTitle.
   <!-- 9 ESG -->
   <section class="py-section lg:py-section-lg" aria-labelledby="h-esg" data-reveal>
     <div class="container-page grid items-center gap-9 lg:grid-cols-2 lg:gap-20">
-      <Image src={esgImage} alt="" widths={[480, 768, 1080]} sizes="(min-width: 1024px) 50vw, 100vw" class="aspect-[4/3] w-full rounded-lg object-cover" loading="lazy" />
-      <div>
-        <p class="eyebrow ll-eyebrow">ESG</p>
+      <div class="ll-curtain rounded-lg"><Image src={esgImage} alt="" widths={[480, 768, 1080]} sizes="(min-width: 1024px) 50vw, 100vw" class="block aspect-[4/3] w-full object-cover" loading="lazy" /></div>
+      <div data-enter style="--i:2">
+        <p class="eyebrow ll-eyebrow ll-eb">ESG</p>
         <h2 id="h-esg" class="mt-3 text-3xl font-[650] tracking-[-0.022em] lg:text-4xl">{t(lang, 'esgTitle')}</h2>
         <p class="mt-4 text-lg text-graphite lg:text-xl">{t(lang, 'esgBody')}</p>
         <div class="mt-7 flex flex-wrap gap-3">

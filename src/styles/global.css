@@ -116,8 +116,18 @@
   --shadow-card: 0 1px 2px rgb(14 15 17 / 0.06), 0 1px 1px rgb(14 15 17 / 0.04);
   --shadow-raised: 0 12px 32px -12px rgb(14 15 17 / 0.18), 0 2px 6px rgb(14 15 17 / 0.06);
 
-  /* motion */
-  --ease-lane: cubic-bezier(0.2, 0.7, 0.2, 1);
+  /* motion (design/MOTION.md §2) */
+  --ease-lane: cubic-bezier(0.2, 0.7, 0.2, 1); /* general ease-out, fades */
+  --ease-sprint: cubic-bezier(0.16, 1, 0.3, 1); /* expo-out: lanes, data marks, count-ups (no overshoot) */
+  --ease-launch: cubic-bezier(0.34, 1.56, 0.64, 1); /* back-out ≈8–10%: containers only */
+  --ease-settle: cubic-bezier(0.22, 1.25, 0.36, 1); /* soft overshoot ≈3%: icon wells, chips, logos */
+  --dur-quick: 200ms;
+  --dur-base: 420ms;
+  --dur-sprint: 600ms;
+  --dur-long: 900ms;
+  --stagger-tight: 35ms;
+  --stagger: 60ms;
+  --stagger-loose: 90ms;
 }
 
 /* CJK system stacks per script (Latin glyphs still come from Inter) */
@@ -224,11 +234,32 @@
 }
 
 /* ------------------------------------------------------------------------------------------------
- * Lane Lines components + motion (design/DESIGN.md §3 "Motion", extended per the approved brief).
- * Rules: motion only when <html class="js"> (set by the inline script in Base.astro) AND the user has no
- * reduced-motion preference; otherwise everything renders in its final state. Only transform/opacity are
- * animated (plus stroke-dashoffset on SVG strokes, which is paint-only) → no layout shift.
+ * Lane Lines components + "Lead Runner" motion (design/MOTION.md).
+ * Gates:
+ *   html.js        set synchronously in <head> → CSS-only motion (hero intro, view() scroll entrances)
+ *   html.js-ready  set by src/scripts/motion.ts → JS-dependent hide states (IO fallback, KPI bars/chips)
+ * Every animation lives inside @media (prefers-reduced-motion: no-preference); otherwise the final state renders.
+ * Data marks (bars, sparkline, counted figures) use --ease-sprint and never overshoot; only containers use
+ * --ease-launch / --ease-settle. Only transform/opacity animate, except stroke-dashoffset on the one red lead lane.
+ * Hover lifts/zooms use the individual `translate`/`scale` properties so they compose with entrance transforms.
  * ---------------------------------------------------------------------------------------------- */
+:root {
+  --rise-sm: 12px;
+  --rise: 24px;
+  --rise-lg: 48px;
+  --launch: 64px;
+  --slide-x: 24px;
+}
+@media (max-width: 767px) {
+  :root {
+    --rise-sm: 9px;
+    --rise: 18px;
+    --rise-lg: 36px;
+    --launch: 48px;
+    --slide-x: 18px;
+  }
+}
+
 @layer components {
   .ll-eyebrow {
     display: inline-flex;
@@ -242,6 +273,7 @@
     height: 3px;
     background: var(--color-brand);
     transform: skewX(-20deg);
+    transform-origin: 0 50%;
   }
   .ll-slogan {
     display: flex;
@@ -262,8 +294,9 @@
     font-weight: 700;
     letter-spacing: 0.12em;
   }
-  /* hero lanes: hairlines faded to the right; lead lane in brand red */
-  .ll-lanes {
+  /* hero lanes: two layers with the same geometry (grey hairlines / red lead lane) */
+  .ll-hero-lanes,
+  .ll-lead-lane {
     position: absolute;
     inset: 0;
     width: 100%;
@@ -271,26 +304,104 @@
     z-index: -1;
     mask-image: linear-gradient(90deg, #000 0, #000 40%, transparent 85%);
   }
-  .ll-lanes path {
+  .ll-hero-lanes path {
     fill: none;
     stroke: rgb(255 255 255 / 0.075);
     stroke-width: 1.5;
   }
-  .ll-lanes path.lead {
+  .ll-lead-lane path {
+    fill: none;
     stroke: var(--color-brand);
     stroke-width: 3;
     stroke-dasharray: 1;
     stroke-dashoffset: 0;
   }
-  .ll-spark-line {
-    stroke-dasharray: 1;
-    stroke-dashoffset: 0;
+  .ll-w {
+    display: inline-block;
   }
-  /* count-up: ghost reserves the final width; the animated copy sits on top */
+  /* sparkline wipe overlay: hidden (scaleX 0) unless the intro animates it */
+  .ll-spark-wipe {
+    transform-box: fill-box;
+    transform-origin: 100% 50%;
+    transform: scaleX(0);
+  }
+  .ll-spark-ring,
+  .ll-shimmer,
+  .ll-progress {
+    display: none;
+  }
+  .ll-edge {
+    position: absolute;
+    inset: 0 0 auto;
+    height: 4px;
+    background: var(--color-brand);
+    transform-origin: 0 50%;
+  }
+  .ll-rule {
+    height: 2px;
+    background: var(--color-ink);
+    transform-origin: 0 50%;
+  }
+  .ll-fig {
+    position: relative;
+    padding-left: calc(3px + 0.875rem);
+  }
+  .ll-fig::before,
+  .ll-stay::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    background: var(--color-brand);
+  }
+  .ll-fig::before {
+    width: 3px;
+    transform-origin: 50% 100%;
+  }
+  .ll-stay::before {
+    width: 4px;
+    transform-origin: 50% 0;
+  }
+  .ll-why-list {
+    position: relative;
+  }
+  .ll-why-rail {
+    position: absolute;
+    left: -1px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: var(--color-brand);
+    transform-origin: 50% 0;
+  }
+  .ll-curtain {
+    position: relative;
+    overflow: clip;
+  }
+  .ll-curtain::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: var(--color-ink);
+    transform-origin: 50% 0;
+    transform: scaleY(0);
+  }
+  .ll-finish {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -1px;
+    height: 2px;
+    background: var(--color-brand);
+    transform-origin: 0 50%;
+  }
+  /* count-up: ghost reserves the final width (zero CLS); the animated copy sits on top */
   .ll-count {
     position: relative;
     display: inline-block;
     white-space: nowrap;
+    font-variant-numeric: tabular-nums;
   }
   .ll-count-ghost {
     visibility: hidden;
@@ -299,75 +410,353 @@
     position: absolute;
     inset: 0;
   }
-  /* hover micro-interactions (colour changes everywhere; movement only without reduced motion) */
-  .ll-lift {
-    transition: border-color 0.2s, box-shadow 0.2s, transform 0.2s var(--ease-lane);
+  /* cards: colour/shadow feedback for everyone; lift + shimmer lane only with motion (below) */
+  .ll-card {
+    position: relative;
+    transition: translate var(--dur-quick) var(--ease-sprint), box-shadow var(--dur-quick), border-color var(--dur-quick), background-color 150ms, scale 120ms;
   }
-  .ll-lift:hover {
-    border-color: var(--color-ink);
-    box-shadow: var(--shadow-raised);
+  .ll-card::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 2px;
+    background: var(--color-brand);
+    transform: scaleX(0);
+    transform-origin: 0 50%;
+    transition: transform 250ms var(--ease-sprint);
+    pointer-events: none;
+  }
+  @media (hover: hover) and (pointer: fine) {
+    .ll-card:hover,
+    .ll-card:has(:focus-visible),
+    .ll-card:focus-visible {
+      box-shadow: var(--shadow-raised);
+      border-color: var(--color-ink);
+    }
+  }
+  .ll-row {
+    position: relative;
+  }
+  .ll-row::before {
+    content: '';
+    position: absolute;
+    left: -0.75rem;
+    top: 1.25rem;
+    bottom: 1.25rem;
+    width: 2px;
+    background: var(--color-brand);
+    transform: scaleY(0);
+    transition: transform var(--dur-quick) var(--ease-sprint);
   }
   .ll-arrow svg:last-of-type {
-    transition: transform 0.2s var(--ease-lane);
+    transition: transform var(--dur-quick) var(--ease-sprint);
   }
+  .ll-logo,
+  .ll-cap {
+    transition: scale var(--dur-quick) var(--ease-settle), translate var(--dur-quick) var(--ease-settle);
+  }
+}
+/* unlayered so it beats the Button's transition-colors utility */
+.ll-magnet,
+.ll-press {
+  transition: translate 300ms var(--ease-launch), scale 120ms, color 200ms, background-color 200ms, border-color 200ms;
 }
 
-@keyframes ll-rise {
-  from {
-    opacity: 0.01;
-    transform: translateY(12px);
-  }
-}
-@keyframes ll-draw {
-  from {
-    stroke-dashoffset: 1;
-  }
-}
-@keyframes ll-fade {
-  from {
-    opacity: 0;
-  }
-}
+/* keyframes (all "from" states; the "to" state is the element's resting style) */
+@keyframes ll-rise-in { from { opacity: 0; transform: translateY(var(--rise)); } }
+@keyframes ll-rise-sm { from { opacity: 0; transform: translateY(var(--rise-sm)); } }
+@keyframes ll-rise-16 { from { opacity: 0; transform: translateY(16px); } }
+@keyframes ll-launch-in { from { opacity: 0; transform: translateY(var(--rise-lg)); } }
+@keyframes ll-card-launch { from { opacity: 0; transform: translateY(var(--launch)); } }
+@keyframes ll-slide-in { from { opacity: 0; transform: translateX(calc(-1 * var(--slide-x))); } }
+@keyframes ll-slide-sm { from { opacity: 0; transform: translateX(-12px); } }
+@keyframes ll-slide-r { from { opacity: 0; transform: translateX(var(--from-x, 40px)); } }
+@keyframes ll-surge { from { opacity: 0; transform: translateY(40%); } }
+@keyframes ll-flap { from { transform: translateY(-100%); } }
+@keyframes ll-scale-x { from { transform: scaleX(0); } }
+@keyframes ll-scale-y { from { transform: scaleY(0); } }
+@keyframes ll-mark { from { transform: skewX(-20deg) scaleX(0); } }
+@keyframes ll-curtain { from { transform: scaleY(1); } to { transform: scaleY(0); } }
+@keyframes ll-zoom-in { from { transform: scale(1.08); } }
+@keyframes ll-shimmer { 0% { transform: translateX(-100%); opacity: 0; } 50% { opacity: 1; } 100% { transform: translateX(100%); opacity: 0; } }
+@keyframes ll-draw { from { stroke-dashoffset: 1; } }
+@keyframes ll-fade-in { from { opacity: 0; } }
+@keyframes ll-lanes-in { from { opacity: 0; transform: translateX(-6%); } }
+@keyframes ll-word { from { transform: translateX(-0.5em) skewX(-10deg); } }
+@keyframes ll-body-in { from { transform: translateY(12px); } }
+@keyframes ll-cta-in { from { transform: translateY(10px) scale(0.96); } }
+@keyframes ll-wipe { from { transform: scaleX(1); } to { transform: scaleX(0); } }
+@keyframes ll-ring { from { transform: scale(0.6); opacity: 0.4; } to { transform: scale(1.8); opacity: 0; } }
+@keyframes ll-well { from { transform: scale(0.85); } }
+@keyframes ll-chip-up { from { opacity: 0; transform: translateY(4px); } }
+@keyframes ll-parallax { to { translate: 0 var(--px, -80px); } }
+@keyframes ll-drift { from { translate: 0 -24px; } to { translate: 0 24px; } }
 
 @media (prefers-reduced-motion: no-preference) {
-  .ll-lift:hover {
-    transform: translateY(-2px);
+  /* ---- §3 hero intro: CSS only, time-based, starts at first paint (H1/eyebrow/body stay opacity 1) ---- */
+  .js .ll-hero-lanes {
+    animation: ll-lanes-in var(--dur-sprint) var(--ease-sprint) both;
+    will-change: transform;
   }
-  .ll-arrow:hover svg:last-of-type {
-    transform: translateX(3px);
+  .js .ll-hero .ll-eyebrow::before {
+    animation: ll-mark var(--dur-quick) var(--ease-sprint) both;
   }
-  /* hero entrance */
-  .js .ll-rise {
-    animation: ll-rise 0.7s var(--ease-lane) both;
-    animation-delay: var(--d, 0s);
+  .js .ll-w {
+    animation: ll-word 520ms var(--ease-sprint) both;
+    animation-delay: calc(60ms + var(--i, 0) * var(--stagger-tight));
   }
-  .js .ll-lanes path.lead {
-    animation: ll-draw 1.6s var(--ease-lane) 0.2s both;
+  .js .ll-lead-lane {
+    will-change: transform;
   }
-  /* quote sparkline draws in, then the area + last-price dot fade in */
-  .js .ll-spark-line {
-    animation: ll-draw 1.4s var(--ease-lane) 0.5s both;
+  .js .ll-lead-lane path {
+    animation: ll-draw 700ms var(--ease-sprint) 200ms both;
   }
-  .js .ll-spark-area,
-  .js .ll-spark-dot {
-    animation: ll-fade 0.5s ease-out 1.6s both;
+  .js .ll-body-in {
+    animation: ll-body-in var(--dur-base) var(--ease-sprint) 250ms both;
   }
-  /* section reveal on scroll */
-  .js [data-reveal] {
-    transition: opacity 0.7s var(--ease-lane), transform 0.7s var(--ease-lane);
+  .js .ll-quote-in {
+    animation: ll-card-launch 650ms var(--ease-launch) 300ms both;
   }
-  .js [data-reveal]:not(.is-in) {
+  .js .ll-cta {
+    animation: ll-cta-in var(--dur-base) var(--ease-launch) both;
+    animation-delay: var(--d, 350ms);
+  }
+  .js .ll-spark-wipe {
+    animation: ll-wipe 500ms var(--ease-lane) 600ms both;
+  }
+  .js .ll-slogan-in {
+    animation: ll-slide-in 360ms var(--ease-sprint) 800ms both;
+  }
+  .js .ll-edge-in {
+    animation: ll-scale-x 250ms var(--ease-sprint) 950ms both;
+  }
+  .js .ll-spark-dot,
+  .js .ll-chg-in {
+    animation: ll-fade-in 200ms var(--ease-lane) 1000ms both;
+  }
+  .js .ll-spark-ring {
+    display: inline;
+    transform-box: fill-box;
+    transform-origin: 50% 50%;
+    animation: ll-ring 700ms var(--ease-lane) 1000ms both;
+  }
+  .js .ll-tile-in {
+    animation: ll-rise-16 var(--dur-base) var(--ease-sprint) both;
+    animation-delay: calc(1000ms + var(--i, 0) * 50ms);
+  }
+  .js .ll-tile-in .ll-well {
+    animation: ll-well var(--dur-base) var(--ease-settle) both;
+    animation-delay: calc(1000ms + var(--i, 0) * 50ms);
+  }
+
+  /* ---- KPI tiles (time-based on .is-in from motion.ts, synced with the count-up) ---- */
+  .js-ready [data-sync]:not(.is-in) .ll-bar {
+    transform: scaleY(0);
+  }
+  .js-ready [data-sync]:not(.is-in) .ll-chip {
     opacity: 0;
-    transform: translateY(16px);
   }
-  /* KPI bars grow from the baseline, staggered */
-  .js .ll-bar {
+  .ll-bar {
     transform-box: fill-box;
     transform-origin: 50% 100%;
-    transition: transform 0.8s var(--ease-lane) calc(var(--i, 0) * 70ms + 200ms);
   }
-  .js [data-reveal]:not(.is-in) .ll-bar {
-    transform: scaleY(0);
+  [data-sync].is-in .ll-bar {
+    animation: ll-scale-y var(--dur-sprint) var(--ease-sprint) both; /* sprint = no overshoot */
+    animation-delay: calc(min(var(--i, 0), 7) * var(--stagger) + var(--now, 0ms));
+  }
+  [data-sync].is-in .ll-chip.is-up {
+    animation: ll-chip-up var(--dur-base) var(--ease-settle) 600ms both;
+  }
+  [data-sync].is-in .ll-chip:not(.is-up) {
+    animation: ll-fade-in var(--dur-base) var(--ease-lane) 600ms both; /* ▼ / flat: opacity only */
+  }
+
+  /* ---- §8 interactions (motion parts) ---- */
+  @media (hover: hover) and (pointer: fine) {
+    .ll-card:hover,
+    .ll-card:has(:focus-visible),
+    .ll-card:focus-visible {
+      translate: 0 -4px;
+    }
+    .ll-card:hover::after,
+    .ll-card:has(:focus-visible)::after,
+    .ll-card:focus-visible::after {
+      transform: scaleX(1);
+    }
+    .ll-row:hover::before,
+    .ll-row:has(:focus-visible)::before {
+      transform: scaleY(1);
+    }
+    .ll-flat.ll-card:hover,
+    .ll-flat.ll-card:has(:focus-visible),
+    .ll-flat.ll-card:focus-visible {
+      translate: none; /* result tiles sit inside the clipped band: lane + well, no lift */
+      box-shadow: none;
+    }
+    .ll-card:hover .ll-logo {
+      scale: 1.06;
+    }
+    .ll-card:hover .ll-cap {
+      translate: 0 -3px;
+    }
+    .ll-arrow:hover svg:last-of-type {
+      transform: translateX(4px);
+    }
+  }
+  @media (hover: none) {
+    .ll-card:active {
+      scale: 0.98;
+    }
+  }
+  .ll-press:active {
+    scale: 0.97;
+  }
+
+  /* ---- §4/§5 scroll-driven (view() / scroll()) ---- */
+  @supports (animation-timeline: view()) {
+    .js .ll-progress {
+      display: block;
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: -1px;
+      height: 3px;
+      background: var(--color-brand);
+      transform-origin: 0 50%;
+      will-change: transform;
+      animation: ll-scale-x linear both;
+      animation-timeline: scroll(root block);
+    }
+    .js .ll-hero-lanes {
+      --px: -80px;
+      animation: ll-lanes-in var(--dur-sprint) var(--ease-sprint) both, ll-parallax linear both;
+      animation-timeline: auto, scroll(root block);
+      animation-range: normal, 0px 90vh;
+    }
+    .js .ll-lead-lane {
+      --px: -120px;
+      animation: ll-parallax linear both;
+      animation-timeline: scroll(root block);
+      animation-range: 0px 90vh;
+    }
+    .js [data-enter] {
+      animation: var(--kf, ll-rise-in) var(--dur-base) var(--ease, var(--ease-sprint)) both;
+      animation-timeline: view();
+      animation-range: entry calc(min(var(--i, 0), 7) * 6%) entry calc(70% + min(var(--i, 0), 7) * 6%);
+    }
+    /* section-head eyebrow mark (pseudo-element follows its eyebrow's own view timeline) */
+    .js .ll-eb {
+      view-timeline: --eb block;
+    }
+    .js .ll-eb::before {
+      animation: ll-mark linear both;
+      animation-timeline: --eb;
+      animation-range: entry 0% entry 70%;
+    }
+    /* Why Invest: red rule beside each figure grows from the bottom; rail scrubbed through the list */
+    .js .ll-fig {
+      view-timeline: --fig block;
+    }
+    .js .ll-fig::before {
+      animation: ll-scale-y var(--dur-sprint) var(--ease-sprint) both;
+      animation-timeline: --fig;
+      animation-range: entry 20% entry 100%;
+    }
+    .js .ll-why-list {
+      view-timeline: --why block;
+    }
+    .js .ll-why-rail {
+      animation: ll-scale-y linear both;
+      animation-timeline: --why;
+      animation-range: cover 20% cover 80%;
+    }
+    /* Stay informed red lane */
+    .js .ll-stay {
+      view-timeline: --stay block;
+    }
+    .js .ll-stay::before {
+      animation: ll-scale-y var(--dur-sprint) var(--ease-sprint) both;
+      animation-timeline: --stay;
+      animation-range: entry 25% entry 100%;
+    }
+    /* Brands relay: one shimmer lane under the in-house grid */
+    .js .ll-shimmer {
+      display: block;
+      animation: ll-shimmer linear both;
+      animation-timeline: view();
+      animation-range: entry 100% cover 60%;
+    }
+    /* ESG curtain + zoom, then a scrubbed drift */
+    .js .ll-curtain {
+      view-timeline: --esg block;
+    }
+    .js .ll-curtain::after {
+      animation: ll-curtain var(--dur-long) var(--ease-sprint) both;
+      animation-timeline: --esg;
+      animation-range: entry 10% entry 90%;
+    }
+    .js .ll-curtain img {
+      animation: ll-zoom-in var(--dur-long) var(--ease-sprint) both, ll-drift linear both;
+      animation-timeline: --esg, --esg;
+      animation-range: entry 10% entry 90%, cover 0% cover 100%;
+    }
+  }
+
+  /* ---- fallback: no scroll timelines → IO adds .is-in to [data-reveal]; children transition in ---- */
+  @supports not (animation-timeline: view()) {
+    .js-ready [data-reveal]:not(.is-in) [data-enter] {
+      opacity: 0;
+      transform: translateY(var(--rise));
+    }
+    .js-ready [data-reveal] [data-enter] {
+      transition: opacity var(--dur-base) var(--ease-lane), transform var(--dur-base) var(--ease-sprint);
+      transition-delay: calc(min(var(--i, 0), 7) * var(--stagger));
+    }
+    .js-ready [data-reveal].is-in .ll-shimmer {
+      display: block;
+      animation: ll-shimmer 700ms var(--ease-lane) 400ms both;
+    }
+  }
+}
+
+/* print: always the final state (count-ups print their exact server string via the ghost copy) */
+@media print {
+  .ll-count-ghost {
+    visibility: visible !important;
+  }
+  .ll-count-run {
+    visibility: hidden !important;
+  }
+  [data-enter],
+  [data-reveal],
+  .ll-bar,
+  .ll-chip,
+  .ll-w,
+  .ll-quote-in,
+  .ll-tile-in {
+    opacity: 1 !important;
+    transform: none !important;
+    animation: none !important;
+  }
+  .ll-progress,
+  .ll-shimmer,
+  .ll-spark-ring,
+  .ll-curtain::after {
+    display: none !important;
+  }
+  .ll-eb::before,
+  .ll-fig::before,
+  .ll-stay::before,
+  .ll-why-rail,
+  .ll-curtain img,
+  .ll-hero-lanes,
+  .ll-lead-lane,
+  .ll-lead-lane path,
+  .ll-spark-wipe,
+  .ll-edge {
+    animation: none !important;
   }
 }
 
