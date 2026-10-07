@@ -10,7 +10,8 @@ import type { Browser, Page } from 'puppeteer-core';
  */
 const CHROME = process.env.CHROME_PATH || '/usr/bin/google-chrome';
 const html = existsSync('dist/en/index.html') ? readFileSync('dist/en/index.html', 'utf8') : '';
-const ready = existsSync(CHROME) && html.includes('ll-count-run');
+// a gated dist (PREVIEW_PASSWORD set, as in the Pages deploy) hides the page behind #pg-gate → skip, don't fail CI
+const ready = existsSync(CHROME) && html.includes('ll-count-run') && !html.includes('id="pg-gate"');
 const BASE = html.match(/href="(\/[^"]*?)_astro\//)?.[1] ?? '/'; // site base the dist was built with
 const TYPES: Record<string, string> = { '.html': 'text/html', '.css': 'text/css', '.js': 'text/javascript', '.svg': 'image/svg+xml', '.webp': 'image/webp', '.png': 'image/png', '.jpg': 'image/jpeg', '.woff2': 'font/woff2', '.json': 'application/json' };
 
