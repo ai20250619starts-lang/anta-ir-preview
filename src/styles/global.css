@@ -573,6 +573,13 @@
     animation: ll-fade-in var(--dur-base) var(--ease-lane) 600ms both; /* ▼ / flat: opacity only */
   }
 
+  /* ---- Brands relay: one time-based shimmer lane under the in-house grid (MOTION.md §4: 700 ms), played once
+     when motion.ts marks [data-shimmer] .is-in. Not scroll-scrubbed: a scrubbed pass froze as a partial red line. */
+  .js-ready [data-shimmer].is-in .ll-shimmer {
+    display: block;
+    animation: ll-shimmer 700ms var(--ease-lane) 150ms both;
+  }
+
   /* ---- §8 interactions (motion parts) ---- */
   @media (hover: hover) and (pointer: fine) {
     .ll-card:hover,
@@ -681,13 +688,6 @@
       animation-timeline: --stay;
       animation-range: entry 25% entry 100%;
     }
-    /* Brands relay: one shimmer lane under the in-house grid */
-    .js .ll-shimmer {
-      display: block;
-      animation: ll-shimmer linear both;
-      animation-timeline: view();
-      animation-range: entry 100% cover 60%;
-    }
     /* ESG curtain + zoom, then a scrubbed drift */
     .js .ll-curtain {
       view-timeline: --esg block;
@@ -713,10 +713,6 @@
     .js-ready [data-reveal] [data-enter] {
       transition: opacity var(--dur-base) var(--ease-lane), transform var(--dur-base) var(--ease-sprint);
       transition-delay: calc(min(var(--i, 0), 7) * var(--stagger));
-    }
-    .js-ready [data-reveal].is-in .ll-shimmer {
-      display: block;
-      animation: ll-shimmer 700ms var(--ease-lane) 400ms both;
     }
   }
 }

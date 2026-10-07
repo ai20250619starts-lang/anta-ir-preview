@@ -8,6 +8,7 @@
  *    approach the target from below and the last frame writes the exact server string.
  *  - Figures are set to 0 only when they come near the viewport ("armed"); finalisers write the exact string on
  *    beforeprint, pagehide, visibilitychange→hidden, and when a running figure leaves the viewport.
+ *  - Brands relay shimmer: [data-shimmer] gets .is-in once fully in view (one 700 ms CSS pass).
  *  - Magnetic hero CTAs (fine pointers, no reduced motion): ≤ 6 px, passive pointermove, rAF-throttled.
  */
 type Fig = { el: HTMLElement; f: string; pre: string; post: string; sep: boolean; dec: number; to: number; t0: number; state: 0 | 1 | 2 | 3 };
@@ -106,6 +107,9 @@ if (!hasIO) {
     );
     const units = [...$$('[data-sync]'), ...$$('[data-count]').filter((el) => !el.closest('[data-sync]'))];
     units.forEach((u) => (arm.observe(u), run.observe(u)));
+    // brands relay shimmer: one time-based pass once its lane is fully in view
+    const sio = new IntersectionObserver((es) => es.forEach((e) => e.isIntersecting && (e.target.classList.add('is-in'), sio.unobserve(e.target))), { threshold: 1, rootMargin: '0px 0px -10% 0px' });
+    $$('[data-shimmer]').forEach((e) => sio.observe(e));
 
     if (matchMedia('(hover: hover) and (pointer: fine)').matches) {
       for (const b of $$('.ll-magnet')) {
