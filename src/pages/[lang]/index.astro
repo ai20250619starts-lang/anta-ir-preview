@@ -1,5 +1,5 @@
 ---
-/** Home page (EN / TC / SC): IR-first above the fold, then announcements, highlights, events, brands, ESG, CTA. */
+/** Home page (EN / TC / SC): IR-first above the fold, then Why Invest (draft), announcements, highlights, events, brands, ESG, CTA. */
 import Base from '../../layouts/Base.astro';
 import type { Lang } from '../../data/schemas';
 import { calendar, company, contacts, documents, highlights } from '../../data';
@@ -13,6 +13,7 @@ import KpiCard from '../../components/KpiCard.astro';
 import CalendarItem from '../../components/CalendarItem.astro';
 import ContactCard from '../../components/ContactCard.astro';
 import BrandStrip from '../../components/BrandStrip.astro';
+import WhyInvest from '../../components/WhyInvest.astro';
 import SectionHeading from '../../components/ui/SectionHeading.astro';
 import Button from '../../components/ui/Button.astro';
 import { Image } from 'astro:assets';
@@ -58,9 +59,12 @@ const esgReports = company.esg.reportsUrl[lang] ?? company.esg.reportsUrl.en;
     </div>
   </section>
 
+  <!-- Why Invest (client deck slide 9; draft) -->
+  <WhyInvest lang={lang} />
+
   <!-- Latest announcements -->
-  <section class="container-page py-section" aria-labelledby="h-ann">
-    <SectionHeading id="h-ann" title={t(lang, 'latestAnnouncements')} action={{ href: href('announcements/'), label: t(lang, 'allAnnouncements') }} />
+  <section class="container-page border-t border-mist py-section" aria-labelledby="h-ann">
+    <SectionHeading id="h-ann" title={t(lang, 'latestAnnouncements')} action={{ href: href('investors/announcements/'), label: t(lang, 'allAnnouncements') }} />
     <div class="border-t border-ink">
       {announcements.map((d) => <DocumentRow doc={d} lang={lang} headingLevel="h3" />)}
     </div>
@@ -69,7 +73,7 @@ const esgReports = company.esg.reportsUrl[lang] ?? company.esg.reportsUrl.en;
   <!-- Financial highlights -->
   <section class="bg-paper py-section" aria-labelledby="h-fin">
     <div class="container-page">
-      <SectionHeading id="h-fin" title={t(lang, 'financialHighlights')} description={`${t(lang, 'fy')}${lang === 'en' ? ' ' : ''}${highlights.years[0]} · ${pick(highlights.currencyNote, lang)}`} action={{ href: href('results/highlights/'), label: t(lang, 'allHighlights') }} />
+      <SectionHeading id="h-fin" title={t(lang, 'financialHighlights')} description={`${t(lang, 'fy')}${lang === 'en' ? ' ' : ''}${highlights.years[0]} · ${pick(highlights.currencyNote, lang)}`} action={{ href: href('investors/highlights/'), label: t(lang, 'allHighlights') }} />
       <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
         {kpis.map((r) => <KpiCard row={r} years={highlights.years} lang={lang} label={kpiLabels[r.key]?.[lang]} />)}
       </div>
@@ -79,7 +83,7 @@ const esgReports = company.esg.reportsUrl[lang] ?? company.esg.reportsUrl.en;
   <!-- Events + contact -->
   <section class="container-page grid gap-12 py-section lg:grid-cols-[1.4fr_1fr]">
     <div aria-labelledby="h-ev">
-      <SectionHeading id="h-ev" title={upcoming.length ? t(lang, 'upcomingEvents') : t(lang, 'recentEvents')} action={{ href: href('events/'), label: t(lang, 'irCalendar') }} />
+      <SectionHeading id="h-ev" title={upcoming.length ? t(lang, 'upcomingEvents') : t(lang, 'recentEvents')} action={{ href: href('investors/'), label: t(lang, 'irCalendar') }} />
       {!upcoming.length && <p class="mb-2 text-sm text-graphite">{t(lang, 'noUpcoming')}</p>}
       <div class="border-t border-ink">
         {(upcoming.length ? upcoming : recent).map((e) => <CalendarItem event={e} lang={lang} past={!upcoming.length} />)}
@@ -89,7 +93,7 @@ const esgReports = company.esg.reportsUrl[lang] ?? company.esg.reportsUrl.en;
       <SectionHeading id="h-cta" title={t(lang, 'stayInformed')} description={t(lang, 'stayInformedBody')} />
       <div class="flex flex-wrap gap-3">
         <Button href={alertUrl} external icon="bell" srSuffix={t(lang, 'externalSite')}>{t(lang, 'emailAlerts')}</Button>
-        <Button href={href('resources/contacts/')} variant="secondary">{t(lang, 'contactIr')}</Button>
+        <Button href={href('contact/')} variant="secondary">{t(lang, 'contactIr')}</Button>
       </div>
       <ContactCard lang={lang} title={pick(hk.name, lang)} address={pick(hk.address, lang)} phones={hk.phones} fax={hk.fax} emails={irEmails} />
     </div>
@@ -98,7 +102,7 @@ const esgReports = company.esg.reportsUrl[lang] ?? company.esg.reportsUrl.en;
   <!-- Brands -->
   <section class="border-t border-mist py-section" aria-labelledby="h-br">
     <div class="container-page">
-      <SectionHeading id="h-br" title={t(lang, 'ourBrands')} action={{ href: href('why-anta/brands/'), label: t(lang, 'brandPortfolio') }} />
+      <SectionHeading id="h-br" title={t(lang, 'ourBrands')} action={{ href: href('brands/'), label: t(lang, 'brandPortfolio') }} />
       <BrandStrip lang={lang} />
     </div>
   </section>

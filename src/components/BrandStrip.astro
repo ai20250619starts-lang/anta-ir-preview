@@ -1,5 +1,11 @@
 ---
-/** Monochrome logo strip of the brand portfolio (logos rendered black for a calm, consistent row). */
+/**
+ * Monochrome logo strip of the brand portfolio (logos rendered black for a calm, consistent row).
+ * In-house brands follow the client's order (deck slide 4). Strategic investments are only those listed on
+ * ir.anta.com/en/brand.php (data/brands.json): Amer Sports and MUSINSA. PUMA (29.06% stake announced
+ * 2026-01-27) is not listed on the brand page and no completion is evidenced in the scraped data, so it is omitted.
+ * All eight have local logo assets; a text wordmark is the fallback if one is missing.
+ */
 import type { Lang } from '../data/schemas';
 import { brands } from '../data';
 import { t } from '../i18n/ui';
@@ -9,7 +15,13 @@ import { Image } from 'astro:assets';
 
 interface Props { lang: Lang }
 const { lang } = Astro.props;
-const list = [...brands.brands].sort((a, b) => a.order - b.order);
+const CLIENT_ORDER = ['anta', 'fila', 'descente', 'kolon-sport', 'jack-wolfskin', 'maia-active', 'amer', 'musinsa'];
+const rank = (k: string) => (CLIENT_ORDER.includes(k) ? CLIENT_ORDER.indexOf(k) : 100);
+const list = [...brands.brands].sort((a, b) => rank(a.key) - rank(b.key) || a.order - b.order);
+const brandHref = (b: (typeof list)[number]) =>
+  withBase(b.pillar === 'in-house' ? `${lang}/brands/${b.key}/` : `${lang}/brands/strategic-investments/#${b.key}`);
+/** Display names where the logo alone is ambiguous (AMER = Amer Sports, per brand.php). */
+const NAMES: Record<string, string> = { amer: 'Amer Sports' };
 const groups = [
   { key: 'in-house', label: t(lang, 'inHouse'), items: list.filter((b) => b.pillar === 'in-house') },
   { key: 'strategic-investment', label: t(lang, 'strategic'), items: list.filter((b) => b.pillar === 'strategic-investment') },
@@ -24,9 +36,9 @@ const groups = [
           const img = localImage(b.logo?.src);
           return (
             <li class="bg-white">
-              <a href={withBase(`${lang}/why-anta/brands/#${b.key}`)} class="flex h-24 items-center justify-center p-4 hover:bg-paper">
+              <a href={brandHref(b)} class="flex h-24 items-center justify-center p-4 hover:bg-paper">
                 {img ? (
-                  <Image src={img} alt={b.name} height={48} class="max-h-12 w-auto object-contain brightness-0" />
+                  <Image src={img} alt={NAMES[b.key] ?? b.name} height={48} class="max-h-12 w-auto object-contain brightness-0" />
                 ) : (
                   <span class="font-display text-xl tracking-wide">{b.name}</span>
                 )}

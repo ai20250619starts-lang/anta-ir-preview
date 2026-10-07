@@ -5,7 +5,7 @@ import { restOfPath, switchLangPath } from '../src/lib/i18n-path';
 import { docDate, signed, yoy } from '../src/lib/format';
 import { primaryFile } from '../src/lib/docs';
 import { buildResultsPeriods, latestResults, periodFromTitle } from '../src/lib/results';
-import { allNavPaths, stubPaths, findNav } from '../src/lib/nav';
+import { allNavPaths, stubPaths, findNav, NAV } from '../src/lib/nav';
 
 const docs = docsJson.documents as DocumentRecord[];
 
@@ -67,5 +67,26 @@ describe('navigation', () => {
     for (const p of allNavPaths()) expect(findNav(p).link).toBeTruthy();
     expect(stubPaths()).not.toContain('');
     expect(new Set(allNavPaths()).size).toBe(allNavPaths().length);
+  });
+
+  it("follows the client's structure (deck slide 4)", () => {
+    expect(NAV.map((s) => s.label.en)).toEqual(['About Us', 'Brands', 'Corporate Governance', 'Investors', 'Sustainability', 'Contact Us']);
+    const labels = NAV.flatMap((s) => s.children.map((c) => c.label.en));
+    expect(labels).toContain('Corporate News');
+    expect(labels.some((l) => /press release/i.test(l))).toBe(false);
+    expect(NAV.find((s) => s.key === 'brands')!.children.map((c) => c.label.en)).toEqual([
+      'ANTA', 'FILA', 'DESCENTE', 'KOLON SPORT', 'JACK WOLFSKIN', 'MAIA ACTIVE', 'Strategic Investments',
+    ]);
+    for (const s of NAV) for (const l of ['en', 'tc', 'sc'] as const) {
+      expect(s.label[l]).toBeTruthy();
+      for (const c of s.children) expect(c.label[l]).toBeTruthy();
+    }
+  });
+
+  it('sustainability is an external link to the ESG site and gets no stub', () => {
+    const esg = NAV.find((s) => s.key === 'sustainability')!;
+    expect(esg.external?.en).toMatch(/^https:\/\/esg\.anta\.com\//);
+    expect(allNavPaths()).not.toContain(esg.path);
+    expect(stubPaths()).not.toContain(esg.path);
   });
 });

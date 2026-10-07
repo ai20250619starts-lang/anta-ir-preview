@@ -63,7 +63,7 @@ const label = { en: 'Share price (illustrative)', tc: '股價（示意）', sc: 
       <svg viewBox={`0 0 ${W} ${H}`} width={W} height={H} class="h-10 w-40 text-ink" aria-hidden="true" focusable="false">
         <polyline points={pts} fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" />
       </svg>
-      <a href={withBase(`${lang}/share/`)} class="inline-flex min-h-11 items-center gap-1.5 text-sm font-semibold text-brand-ink underline decoration-1 underline-offset-4 hover:decoration-2">{t(lang, 'quoteDetails')}<Icon name="arrow-right" size={14} /></a>
+      <a href={withBase(`${lang}/investors/stock/`)} class="inline-flex min-h-11 items-center gap-1.5 text-sm font-semibold text-brand-ink underline decoration-1 underline-offset-4 hover:decoration-2">{t(lang, 'quoteDetails')}<Icon name="arrow-right" size={14} /></a>
     </div>
   </div>
   {variant === 'full' && <p class="border-t border-mist px-4 py-2 text-xs text-graphite">{q.disclaimer[lang]}</p>}

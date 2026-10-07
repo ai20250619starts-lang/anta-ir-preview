@@ -1,7 +1,9 @@
-// Screenshots of a running local preview (npm run preview). Usage: node scripts/screenshots.mjs [baseUrl]
+// Screenshots of a running local preview (npm run preview).
+// Usage: node scripts/screenshots.mjs [baseUrl] [outDir] [name,name,...]
 import puppeteer from 'puppeteer-core';
 const base = process.argv[2] || 'http://127.0.0.1:4321/';
-const out = 'audit/screenshots/piece2';
+const out = process.argv[3] || 'audit/screenshots/piece2';
+const only = process.argv[4] ? new Set(process.argv[4].split(',')) : null;
 const shots = [
   ['home-en-desktop', 'en/', 1280],
   ['home-en-mobile', 'en/', 360],
@@ -13,7 +15,7 @@ const shots = [
 ];
 const browser = await puppeteer.launch({ executablePath: process.env.CHROME || '/usr/bin/google-chrome', args: ['--no-sandbox'] });
 const page = await browser.newPage();
-for (const [name, path, w] of shots) {
+for (const [name, path, w] of shots.filter(([n]) => !only || only.has(n))) {
   await page.setViewport({ width: w, height: w < 768 ? 780 : 900, deviceScaleFactor: 1 });
   await page.goto(base + path, { waitUntil: 'networkidle0' });
   await page.evaluate(async () => {

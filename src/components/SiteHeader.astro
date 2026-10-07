@@ -18,6 +18,7 @@ const { lang } = Astro.props;
 const current = restOfPath(Astro.url.pathname, import.meta.env.BASE_URL);
 const active = activeSection(current);
 const href = (p: string) => withBase(`${lang}/${p}`);
+const secHref = (s: (typeof NAV)[number]) => s.external?.[lang] ?? href(s.path);
 ---
 <header class="sticky top-0 z-40 border-b border-mist bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/90">
   <div class="container-page flex h-16 items-center justify-between gap-3 xl:h-[4.5rem]">
@@ -31,12 +32,14 @@ const href = (p: string) => withBase(`${lang}/${p}`);
         {NAV.map((s) => (
           <li class="group relative">
             <a
-              href={href(s.path)}
+              href={secHref(s)}
+              rel={s.external ? 'noopener' : undefined}
               aria-current={active?.key === s.key ? 'page' : undefined}
               class={`flex min-h-11 items-center gap-0.5 px-2 text-[0.8125rem] font-medium whitespace-nowrap 2xl:px-3 2xl:text-sm hover:text-brand-ink ${active?.key === s.key ? 'text-ink shadow-[inset_0_-3px_0_var(--color-brand)]' : 'text-ink'}`}
             >
               {s.label[lang]}
               {s.children.length > 1 && <Icon name="chevron-down" size={12} class="text-stone" />}
+              {s.external && <><Icon name="external" size={12} class="text-stone" /><span class="sr-only"> ({t(lang, 'externalSite')})</span></>}
             </a>
             {s.children.length > 1 && (
               <div class="invisible absolute top-full left-0 z-50 min-w-64 pt-2 opacity-0 transition-opacity group-focus-within:visible group-focus-within:opacity-100 group-hover:visible group-hover:opacity-100">
@@ -88,7 +91,7 @@ const href = (p: string) => withBase(`${lang}/${p}`);
             </details>
           </li>
         ) : (
-          <li><a href={href(s.path)} class="flex min-h-12 items-center text-base font-semibold" aria-current={current === s.path ? 'page' : undefined}>{s.label[lang]}</a></li>
+          <li><a href={secHref(s)} rel={s.external ? 'noopener' : undefined} class="flex min-h-12 items-center gap-2 text-base font-semibold" aria-current={current === s.path ? 'page' : undefined}>{s.label[lang]}{s.external && <><Icon name="external" size={14} /><span class="sr-only"> ({t(lang, 'externalSite')})</span></>}</a></li>
         ),
       )}
     </ul>
