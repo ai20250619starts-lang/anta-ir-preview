@@ -71,7 +71,7 @@ npx astro preview --host 127.0.0.1     # then open http://127.0.0.1:4321/anta-ir
 
 - Read-only GET/HEAD requests to public pages. **No form submissions**: the enquiry and email-alert iframes and search are never used. No load testing.
 - Requests are sequential, with ≥ 3 s (+ jitter) between network requests, a descriptive User-Agent, a 30 s timeout and at most 2 retries with backoff.
-- **Resumable on-disk cache** in `.cache/http/` (git-ignored). Every response, including 404s, is cached by method + URL. Re-runs only fetch what is missing; network errors are not cached, so they are retried next time.
+- **Resumable on-disk cache** in `.cache/http/` (git-ignored). Every response, including 404s, is cached by method + URL. Re-runs only fetch what is missing. Page fetches that end in a network error are not cached, so they are retried next time. Link-check network errors *are* cached (dead hosts take ~20 s each); `--recheck-errors` retries them.
 - To refresh content, delete `.cache/http/` (or just the files for the pages you want refetched) and run `npm run scrape`.
 - PDFs are **linked, never copied**. The only binaries downloaded are small public images (logo, favicon, brand logos/images, two key photos), each ≤ 700 KB. They are stored in `public/assets/anta/`, with source URL and SHA-256 recorded in `data/assets.json`. They are reused for the preview only.
 
@@ -102,7 +102,12 @@ src/data/validate.ts        integrity rules shared by validate + tests
 src/data/index.ts           typed, validated data access for Astro pages
 src/i18n/ui.ts              locales (en / tc / sc), UI strings, language fallback helper
 src/styles/global.css       Tailwind v4 + design tokens (brand red placeholder #FF0000 in ONE variable)
-src/pages/                  / → /en/ redirect; /[lang]/ debug page, /[lang]/documents/, /[lang]/data/
+src/pages/                  / → /en/ redirect; /[lang]/ debug page, /[lang]/documents/, /[lang]/data/, 404, robots.txt
+src/layouts/Base.astro      noindex meta, PREVIEW banner, password gate, header/nav/language switcher
+src/components/             PasswordGate (head script + CSS) and PasswordGateForm (overlay)
+src/lib/paths.ts            withBase() — every internal link/asset goes through it (PREVIEW_BASE)
+public/.nojekyll            keeps _astro/ visible on GitHub Pages
+.github/workflows/          deploy-pages.yml (manual trigger only; inert until a repo exists)
 public/assets/anta/         downloaded preview assets
 tests/data.test.ts          vitest suite
 audit/                      site audit and project plan (PLAN.md)
