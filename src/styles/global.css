@@ -538,9 +538,10 @@
   }
   .js .ll-spark-ring {
     display: inline;
+    opacity: 0; /* invisible before the 1000 ms pulse (a "both" fill showed a stray ring from first paint) */
     transform-box: fill-box;
     transform-origin: 50% 50%;
-    animation: ll-ring 700ms var(--ease-lane) 1000ms both;
+    animation: ll-ring 700ms var(--ease-lane) 1000ms forwards;
   }
   .js .ll-tile-in {
     animation: ll-rise-16 var(--dur-base) var(--ease-sprint) both;
