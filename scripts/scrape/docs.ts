@@ -26,7 +26,7 @@ const textWithBreaks = (html: string) =>
   line(cheerio.load(`<x>${html.replace(/<br\s*\/?>/gi, ' — ')}</x>`, null, false)('x').text()).replace(/(\s—\s)+/g, ' — ').replace(/^—\s|\s—$/g, '');
 
 /** `<ul class="list"><li><span class="date">2026.10.02</span><a class="title" href=...>` */
-export const parseDatedList = (html: string, page: string, lang: Lang): RawItem[] => {
+export const parseDatedList = (html: string, page: string, lang: Lang, resolveAgainst: string = page): RawItem[] => {
   const $ = cheerio.load(html);
   return $('ul.list > li')
     .toArray()
@@ -37,7 +37,7 @@ export const parseDatedList = (html: string, page: string, lang: Lang): RawItem[
         lang,
         date: parseDotDate($(li).find('.date').first().text()),
         title: textWithBreaks(a.html() ?? ''),
-        url: href ? absUrl(href, page) : null,
+        url: href ? absUrl(href, resolveAgainst) : null,
         sourceUrl: page,
       };
     })
@@ -88,9 +88,14 @@ export const crawlQueryYears = async (f: PoliteFetcher, lang: Lang, path: string
   return items;
 };
 
-/** financial_*.php fragments: default fragment shows latest year; others via `data-href="include/..."`. */
+/**
+ * financial_*.php fragments: default fragment shows latest year; others via `data-href="include/..."`.
+ * The fragments are injected by JS into `/{lang}/financial.php`, so relative hrefs inside them
+ * (e.g. `news_detail.php?id=…`) must be resolved against that host page, not the fragment URL.
+ */
 export const crawlIncludeYears = async (f: PoliteFetcher, lang: Lang, path: string, notes: Notes) => {
   const first = pageUrl(lang, path);
+  const host = pageUrl(lang, 'financial.php');
   const r = await f.get(first);
   if (r.status !== 200) {
     notes.push(`FAILED ${first} -> ${r.status} ${r.error ?? ''}`);
@@ -99,7 +104,7 @@ export const crawlIncludeYears = async (f: PoliteFetcher, lang: Lang, path: stri
   const $ = cheerio.load(r.body);
   const shown = $('.t-year span').first().text().trim();
   const hrefs = [...new Set($('a[data-href*="include/"]').toArray().map((a) => $(a).attr('data-href')!))];
-  const items = parseDatedList(r.body, first, lang);
+  const items = parseDatedList(r.body, first, lang, host);
   for (const h of hrefs) {
     const y = h.match(/(\d{4})/)?.[1];
     if (y === shown) continue;
@@ -109,7 +114,7 @@ export const crawlIncludeYears = async (f: PoliteFetcher, lang: Lang, path: stri
       notes.push(`FAILED ${u} -> ${ry.status} ${ry.error ?? ''}`);
       continue;
     }
-    items.push(...parseDatedList(ry.body, u, lang));
+    items.push(...parseDatedList(ry.body, u, lang, host));
   }
   return items;
 };
@@ -236,7 +241,14 @@ export class DocumentStore {
   merges = 0;
 
   add(r: DocumentRecord) {
-    const urls = LANGS.map((L) => r.files[L]?.url).filter((u): u is string => !!u && u.endsWith('.pdf'));
+    const urls = [
+      ...LANGS.map((L) => r.files[L]?.url).filter((u): u is string => !!u && u.endsWith('.pdf')),
+      // HTML press releases: same news_detail id = same document (whichever list it came from)
+      ...LANGS.flatMap((L) => [r.files[L]?.url, r.sourceUrls[L]])
+        .map((u) => u?.match(/news_detail\.php\?id=(\d+)/)?.[1])
+        .filter((id): id is string => !!id)
+        .map((id) => `press:${id}`),
+    ];
     let hit = urls.map((u) => this.byUrl.get(u)).find(Boolean);
     const tkey = r.type === 'report' ? `${r.category}|${normTitle(r.title.en)}` : null;
     if (!hit && tkey && r.title.en) hit = this.byReportTitle.get(tkey);

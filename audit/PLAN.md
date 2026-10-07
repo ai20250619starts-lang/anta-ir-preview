@@ -237,3 +237,21 @@ All options should add `X-Robots-Tag: noindex, nofollow`, a `robots.txt` disallo
 6. **Scope:** IR site only, or also fold in ESG (esg.anta.com) and the brand pages? Should SC be a full third language or fall back to TC documents as today?
 7. **Framework:** OK with Astro, or does ANTA's dev/vendor team need Next.js/React for long-term maintenance?
 8. **Git identity and remote:** commits currently use a box-local identity (`Grok Bot <grok-bot@box.local>`). Should the repo be pushed to a GitHub or origin remote, and under which org?
+
+---
+
+## Addendum (2026-10-07, HKT): hosting decision changed
+
+The recommended Cloudflare option is **dropped**. The preview will be hosted on **GitHub Pages**, in a new repo under Harry's GitHub account. The repo is not created yet, and no remote or push exists.
+
+- **Config.** The Astro config is static, with `site` and `base` taken from `PREVIEW_SITE` and `PREVIEW_BASE`.
+- **Protections.**
+  - noindex meta on every page
+  - `robots.txt` with `Disallow: /`
+  - a visible PREVIEW banner
+  - an optional client-side password gate (`PREVIEW_PASSWORD`), which is light protection only
+- **Caveats to accept.**
+  - Pages content is publicly fetchable.
+  - Pages can't send `X-Robots-Tag` headers.
+  - robots.txt is advisory on project pages.
+  - `*.github.io` reachability from mainland China is unreliable.

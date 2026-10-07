@@ -36,6 +36,36 @@ npm run dev             # local dev server on http://127.0.0.1:4321/en/ (local o
 | `npm run build` | `validate` + `astro check` + `astro build` → `dist/` |
 | `npm run dev` / `npm run preview` | Local dev server / serve `dist/`, both bound to 127.0.0.1 |
 
+## Build configuration for GitHub Pages (no deployment yet)
+
+The preview is planned for **GitHub Pages**, in a new repo under Harry's account. That repo doesn't exist yet; no remote is configured and nothing has been pushed.
+The build is plain static output, configured with environment variables:
+
+| Variable | Purpose | Default |
+|---|---|---|
+| `PREVIEW_SITE` | Pages origin, e.g. `https://<user>.github.io` | `http://localhost:4321` |
+| `PREVIEW_BASE` | project-page path, e.g. `/<repo-name>/` | `/` |
+| `PREVIEW_PASSWORD` | enables the light client-side password gate | unset (gate off) |
+
+```bash
+# local test of a project-page build, e.g. for repo "anta-ir-preview"
+PREVIEW_SITE=https://example.github.io PREVIEW_BASE=/anta-ir-preview/ PREVIEW_PASSWORD=changeme npm run build
+npx astro preview --host 127.0.0.1     # then open http://127.0.0.1:4321/anta-ir-preview/en/
+```
+
+- **Base path.** All internal links and assets go through `withBase()` (`src/lib/paths.ts`), so `/repo-name/` project pages work.
+- **Jekyll.** `public/.nojekyll` stops Jekyll from hiding the `_astro/` folder.
+- **Workflow.** `.github/workflows/deploy-pages.yml` is ready but inert. It is manual-trigger only and needs the repo, plus Pages set to "GitHub Actions".
+- **Search engines.**
+  - Every page carries `<meta name="robots" content="noindex, nofollow, noarchive">`.
+  - `robots.txt` says `Disallow: /`. On a *project* page, crawlers only read the domain-root robots.txt, so there it is advisory; the meta tag is the real control.
+  - GitHub Pages cannot send `X-Robots-Tag` headers.
+- **Banner.** Every page shows a visible PREVIEW banner.
+- **Password gate (light protection only, NOT security).**
+  - When `PREVIEW_PASSWORD` is set at build time, pages embed a salted SHA-256 hash and hide the content until the visitor enters the password. Unlock lasts for the browser session.
+  - The HTML is still publicly downloadable, and anyone can view source or disable JavaScript. It only keeps casual visitors and forwarded-link viewers out.
+  - Don't put anything confidential in the preview. For real access control you need a host with server-side auth.
+
 ## Scraper ground rules (enforced in `scripts/scrape/config.ts` and `http.ts`)
 
 - Read-only GET/HEAD requests to public pages. **No form submissions**: the enquiry and email-alert iframes and search are never used. No load testing.

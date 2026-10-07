@@ -2,40 +2,45 @@
 import '../styles/global.css';
 import type { Lang } from '../data/schemas';
 import { HTML_LANG, LANGS, LANG_LABEL, t } from '../i18n/ui';
+import { withBase } from '../lib/paths';
+import PasswordGate from '../components/PasswordGate.astro';
+import PasswordGateForm from '../components/PasswordGateForm.astro';
 
 interface Props {
   lang: Lang;
   title: string;
-  /** path after the language prefix, e.g. "documents" — used by the language switcher to stay on the same page */
+  /** path after the language prefix, e.g. "documents/" — used by the language switcher to stay on the same page */
   path?: string;
 }
 const { lang, title, path = '' } = Astro.props;
-const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 ---
 <!doctype html>
 <html lang={HTML_LANG[lang]}>
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="robots" content="noindex, nofollow" />
+    <!-- Preview must never be indexed (GitHub Pages cannot send X-Robots-Tag headers, so this meta is the main control). -->
+    <meta name="robots" content="noindex, nofollow, noarchive" />
+    <PasswordGate />
     <title>{title} · {t(lang, 'siteTitle')}</title>
-    <link rel="icon" href={`${base}/assets/anta/favicon.png`} />
-    {LANGS.map((l) => <link rel="alternate" hreflang={HTML_LANG[l]} href={`${base}/${l}/${path}`} />)}
+    <link rel="icon" href={withBase('assets/anta/favicon.png')} />
+    {LANGS.map((l) => <link rel="alternate" hreflang={HTML_LANG[l]} href={withBase(`${l}/${path}`)} />)}
   </head>
   <body class="bg-white text-ink">
-    <div class="bg-ink px-4 py-2 text-center text-xs text-white">{t(lang, 'previewBanner')}</div>
+    <PasswordGateForm />
+    <div class="bg-ink px-4 py-2 text-center text-xs text-white" role="note">{t(lang, 'previewBanner')}</div>
     <header class="border-b border-mist">
       <div class="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-3">
-        <a href={`${base}/${lang}/`} class="flex items-center gap-3">
-          <img src={`${base}/assets/anta/logo_scrolled.png`} alt="ANTA Sports" class="h-8 w-auto" />
+        <a href={withBase(`${lang}/`)} class="flex items-center gap-3">
+          <img src={withBase('assets/anta/logo_scrolled.png')} alt="ANTA Sports" class="h-8 w-auto" />
           <span class="text-sm font-semibold">IR · {t(lang, 'home')}</span>
         </a>
         <nav class="flex items-center gap-4 text-sm">
-          <a class="hover:text-brand" href={`${base}/${lang}/documents/`}>{t(lang, 'documents')}</a>
-          <a class="hover:text-brand" href={`${base}/${lang}/data/`}>{t(lang, 'data')}</a>
+          <a class="hover:text-brand" href={withBase(`${lang}/documents/`)}>{t(lang, 'documents')}</a>
+          <a class="hover:text-brand" href={withBase(`${lang}/data/`)}>{t(lang, 'data')}</a>
           <span class="flex gap-2" aria-label="Language">
             {LANGS.map((l) => (
-              <a href={`${base}/${l}/${path}`} lang={HTML_LANG[l]} aria-current={l === lang ? 'true' : undefined}
+              <a href={withBase(`${l}/${path}`)} lang={HTML_LANG[l]} aria-current={l === lang ? 'true' : undefined}
                 class={l === lang ? 'font-bold text-brand' : 'text-graphite hover:text-brand'}>{LANG_LABEL[l]}</a>
             ))}
           </span>

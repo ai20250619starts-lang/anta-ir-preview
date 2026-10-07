@@ -2,6 +2,7 @@
 import Base from '../../layouts/Base.astro';
 import { highlights, board, calendar, faq, contacts, brands, company, quote } from '../../data';
 import { langPaths, pick, t } from '../../i18n/ui';
+import { withBase } from '../../lib/paths';
 import type { Lang } from '../../data/schemas';
 
 export const getStaticPaths = langPaths;
@@ -52,7 +53,7 @@ const L = (v: string[] | undefined) => v ?? [];
     <ul class="mt-2 grid grid-cols-2 gap-4 text-sm md:grid-cols-4">
       {brands.brands.map((b) => (
         <li class="rounded border border-mist p-3">
-          {b.logo && <img src={b.logo.src} alt={b.name} class="h-10 w-auto" loading="lazy" />}
+          {b.logo && <img src={withBase(b.logo.src)} alt={b.name} class="h-10 w-auto" loading="lazy" />}
           <p class="mt-2 font-semibold">{b.name}</p>
           <p class="text-xs text-graphite">{b.pillar}</p>
         </li>

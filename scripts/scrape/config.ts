@@ -13,6 +13,6 @@ export const TIMEOUT_MS = 30000;
 export const MAX_RETRIES = 2;
 
 export const CACHE_DIR = '.cache/http';
-export const DATA_DIR = 'data';
+export const DATA_DIR = process.env.SCRAPE_DATA_DIR || 'data';
 
 export const pageUrl = (lang: Lang, path: string) => `${BASE}/${lang}/${path}`;

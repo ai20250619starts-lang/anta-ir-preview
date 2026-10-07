@@ -1,0 +1,13 @@
+---
+// GitHub Pages serves dist/404.html for unknown paths.
+import { withBase } from '../lib/paths';
+---
+<!doctype html>
+<html lang="en">
+  <head><meta charset="utf-8" /><meta name="robots" content="noindex, nofollow" /><title>Not found — ANTA IR Preview</title></head>
+  <body style="font-family:sans-serif;padding:2rem">
+    <p>PREVIEW — not the official ANTA Sports website.</p>
+    <h1>Page not found</h1>
+    <p><a href={withBase('en/')}>English</a> · <a href={withBase('tc/')}>繁體中文</a> · <a href={withBase('sc/')}>简体中文</a></p>
+  </body>
+</html>
