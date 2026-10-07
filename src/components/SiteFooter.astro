@@ -42,8 +42,6 @@ const year = new Date().getFullYear();
       <p class="max-w-3xl">{t(lang, 'footerDisclaimer')}</p>
       <div class="flex flex-wrap items-center gap-x-5 gap-y-1.5">
         {UTILITY.map((u) => <a href={href(u.path)} class="inline-flex min-h-8 items-center text-white hover:underline">{u.label[lang]}</a>)}
-        <a href={href('design/')} class="inline-flex min-h-8 items-center text-white hover:underline">{t(lang, 'design')}</a>
-        <a href={href('debug/')} class="inline-flex min-h-8 items-center text-white hover:underline">{t(lang, 'debug')}</a>
         <a href={`https://ir.anta.com/${lang}/`} class="inline-flex min-h-8 items-center text-white hover:underline" rel="noopener">{t(lang, 'officialSite')}</a>
         <span>© {year}</span>
       </div>
