@@ -1,5 +1,139 @@
 {
-  "generatedAt": "2026-10-07T09:01:45.836Z",
+  "generatedAt": "2026-10-07T10:15:02.778Z",
   "note": "Public images from ir.anta.com reused for the client PREVIEW only (approved). Do not ship to production without ANTA brand sign-off. PDFs are linked, never copied.",
-  "assets": []
+  "assets": [
+    {
+      "path": "/assets/anta/logo.png",
+      "sourceUrl": "https://ir.anta.com/img/logo.png",
+      "bytes": 1597,
+      "sha256": "1aaf20299a9a780dd952419e92582e12fe40650d192461e5cb0b62887b311c82",
+      "purpose": "ANTA logo (white, header on dark/hero)"
+    },
+    {
+      "path": "/assets/anta/logo_scrolled.png",
+      "sourceUrl": "https://ir.anta.com/img/logo_scrolled.png",
+      "bytes": 16188,
+      "sha256": "fd10cbdfcb58950c5178a29c0a35d08ea91861ddbcf3da36d717dc72d40913a0",
+      "purpose": "ANTA logo (colour, header on light)"
+    },
+    {
+      "path": "/assets/anta/favicon.png",
+      "sourceUrl": "https://ir.anta.com/img/favicon.png",
+      "bytes": 1521,
+      "sha256": "6e029a12da336e0ef95e01d20b0c82bbfe0891159489e4f03e6330f1bedb2c1d",
+      "purpose": "favicon"
+    },
+    {
+      "path": "/assets/anta/banner2.jpg",
+      "sourceUrl": "https://ir.anta.com/img/banner2.jpg",
+      "bytes": 350542,
+      "sha256": "f5327c65db1a13502c44659140060fbf7be48c625d9530e9c5601ead9d1ffb32",
+      "purpose": "key image: hero/section photography"
+    },
+    {
+      "path": "/assets/anta/banner3.jpg",
+      "sourceUrl": "https://ir.anta.com/img/banner3.jpg",
+      "bytes": 574404,
+      "sha256": "212d5e235eb119ed0451e0d153d5ca0054bd626c19948bc8abbffecb08bb4203",
+      "purpose": "key image: hero/section photography"
+    },
+    {
+      "path": "/assets/anta/brand/logo_1.png",
+      "sourceUrl": "https://ir.anta.com/img/brand/logo_1.png",
+      "bytes": 2062,
+      "sha256": "7675a0992acf8166722c12dc9a999cab2426ec7988d83a0d6148fa4a5b92ed33",
+      "purpose": "brand logo: ANTA"
+    },
+    {
+      "path": "/assets/anta/brand/brand_1_img.jpg",
+      "sourceUrl": "https://ir.anta.com/img/brand/brand_1_img.jpg",
+      "bytes": 417557,
+      "sha256": "e4c2caad81f730dabad7466ebca7464d3de3fd91186884890a0cc91b54bde459",
+      "purpose": "brand image: ANTA"
+    },
+    {
+      "path": "/assets/anta/brand/logo_3.png",
+      "sourceUrl": "https://ir.anta.com/img/brand/logo_3.png",
+      "bytes": 1310,
+      "sha256": "15720aef5673242d60cf88eef22f1ddce90d697661ca680eeab497c4d306cf81",
+      "purpose": "brand logo: FILA"
+    },
+    {
+      "path": "/assets/anta/brand/brand_3_img.jpg",
+      "sourceUrl": "https://ir.anta.com/img/brand/brand_3_img.jpg",
+      "bytes": 424204,
+      "sha256": "90a5269eb1b5197676abbc417cb85875d093d1408b2bfd03575df4106b866515",
+      "purpose": "brand image: FILA"
+    },
+    {
+      "path": "/assets/anta/brand/logo_6.png",
+      "sourceUrl": "https://ir.anta.com/img/brand/logo_6.png",
+      "bytes": 2554,
+      "sha256": "4ef83f71e70ee2c63ac8f9f1d166d82761e7bec8791ed820af3deaa4b7b36ff7",
+      "purpose": "brand logo: DESCENTE"
+    },
+    {
+      "path": "/assets/anta/brand/brand_6_img.jpg",
+      "sourceUrl": "https://ir.anta.com/img/brand/brand_6_img.jpg",
+      "bytes": 292976,
+      "sha256": "da9ead2e6f03c2bb8b86ce7b94e2a0a60ad112d1a6f6950b686224ef5c750fdc",
+      "purpose": "brand image: DESCENTE"
+    },
+    {
+      "path": "/assets/anta/brand/logo_8.png",
+      "sourceUrl": "https://ir.anta.com/img/brand/logo_8.png",
+      "bytes": 26694,
+      "sha256": "7e2d91f47e04949ba5e53d3fe279b186c1ed279df99772b334700ac120a3cb22",
+      "purpose": "brand logo: KOLON SPORT"
+    },
+    {
+      "path": "/assets/anta/brand/brand_8_img.jpg",
+      "sourceUrl": "https://ir.anta.com/img/brand/brand_8_img.jpg",
+      "bytes": 451421,
+      "sha256": "d0e43c021250aeb14e796c2b2a842b35d2ef050bbe370f08f6228e182b4b44f0",
+      "purpose": "brand image: KOLON SPORT"
+    },
+    {
+      "path": "/assets/anta/brand/logo_11.png",
+      "sourceUrl": "https://ir.anta.com/img/brand/logo_11.png",
+      "bytes": 14872,
+      "sha256": "1a083269345d47d0f272bcaa45dd7e8a433e93a1a6ed1841245b88301b93afb1",
+      "purpose": "brand logo: MAIA ACTIVE"
+    },
+    {
+      "path": "/assets/anta/brand/brand_11_img.jpg",
+      "sourceUrl": "https://ir.anta.com/img/brand/brand_11_img.jpg",
+      "bytes": 461970,
+      "sha256": "e243723f75c858d5f8dfa70240bda4b9ef872bb33fa82bb76a785005fb73b136",
+      "purpose": "brand image: MAIA ACTIVE"
+    },
+    {
+      "path": "/assets/anta/brand/logo_12.png",
+      "sourceUrl": "https://ir.anta.com/img/brand/logo_12.png",
+      "bytes": 19551,
+      "sha256": "39e8e46a5c4d5b3f104bff65ec95121a7ce08e19cf0e6301d0797769eef750a3",
+      "purpose": "brand logo: JACK WOLFSKIN"
+    },
+    {
+      "path": "/assets/anta/brand/brand_12_img.jpg",
+      "sourceUrl": "https://ir.anta.com/img/brand/brand_12_img.jpg",
+      "bytes": 372349,
+      "sha256": "0f4273d5dddc9f51c137e17c1468845855e674a2b78eed32e5fba69fbf47cdfa",
+      "purpose": "brand image: JACK WOLFSKIN"
+    },
+    {
+      "path": "/assets/anta/brand/logo_10.png",
+      "sourceUrl": "https://ir.anta.com/img/brand/logo_10.png",
+      "bytes": 18815,
+      "sha256": "52570b0ed36c3d4303ef7f51763ebe8ec4fc5b9358eff7a86f1ce51e6ad6c858",
+      "purpose": "brand logo: AMER"
+    },
+    {
+      "path": "/assets/anta/brand/logo_13.png",
+      "sourceUrl": "https://ir.anta.com/img/brand/logo_13.png",
+      "bytes": 7064,
+      "sha256": "ac57906376b7f84661a1cd8452f35a3ef4b79da1d4fcfbe164b7c33bf9a1c4ee",
+      "purpose": "brand logo: MUSINSA"
+    }
+  ]
 }

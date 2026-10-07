@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-10-07T09:01:45.723Z",
+  "generatedAt": "2026-10-07T09:21:40.160Z",
   "currencyNote": {
     "en": "RMB million",
     "tc": "人民幣百萬元",
-    "sc": null
+    "sc": "人民币百万元"
   },
   "years": [
     2025,
@@ -19,12 +19,12 @@
       "group": {
         "en": "Key Financial Highlights",
         "tc": "重要財務資訊",
-        "sc": null
+        "sc": "重要财务资讯"
       },
       "label": {
         "en": "Revenue",
         "tc": "收益",
-        "sc": null
+        "sc": "收益"
       },
       "unit": "rmb-million",
       "values": {
@@ -49,12 +49,12 @@
       "group": {
         "en": "Key Financial Highlights",
         "tc": "重要財務資訊",
-        "sc": null
+        "sc": "重要财务资讯"
       },
       "label": {
         "en": "Gross profit",
         "tc": "毛利",
-        "sc": null
+        "sc": "毛利"
       },
       "unit": "rmb-million",
       "values": {
@@ -79,12 +79,12 @@
       "group": {
         "en": "Key Financial Highlights",
         "tc": "重要財務資訊",
-        "sc": null
+        "sc": "重要财务资讯"
       },
       "label": {
         "en": "Profit from operations",
         "tc": "經營溢利",
-        "sc": null
+        "sc": "经营溢利"
       },
       "unit": "rmb-million",
       "values": {
@@ -109,12 +109,12 @@
       "group": {
         "en": "Key Financial Highlights",
         "tc": "重要財務資訊",
-        "sc": null
+        "sc": "重要财务资讯"
       },
       "label": {
         "en": "Profit attributable to equity shareholders",
         "tc": "股東應佔溢利",
-        "sc": null
+        "sc": "股东应占溢利"
       },
       "unit": "rmb-million",
       "values": {
@@ -139,12 +139,12 @@
       "group": {
         "en": "Key Financial Highlights",
         "tc": "重要財務資訊",
-        "sc": null
+        "sc": "重要财务资讯"
       },
       "label": {
         "en": "Basic earnings per share (RMB cents)",
         "tc": "每股基本盈利（人民幣分）",
-        "sc": null
+        "sc": "每股基本盈利（人民币分）"
       },
       "unit": "rmb-cents",
       "values": {
@@ -169,12 +169,12 @@
       "group": {
         "en": "Margins",
         "tc": "利潤率",
-        "sc": null
+        "sc": "利润率"
       },
       "label": {
         "en": "Gross profit margin",
         "tc": "毛利率",
-        "sc": null
+        "sc": "毛利率"
       },
       "unit": "percent",
       "values": {

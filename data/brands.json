@@ -1,26 +1,38 @@
 {
-  "generatedAt": "2026-10-07T09:01:45.810Z",
+  "generatedAt": "2026-10-07T09:23:34.774Z",
   "intro": {
     "overview": {
       "en": [
         "ANTA Sports employs a differentiated multi-brand strategy to capture opportunities across mass-to-premium segments in the rapidly evolving global sportswear market. By building a well-defined brand portfolio that spans performance sports, high-end fashion sports, outdoor and specialized categories, the Group strengthens resilience against market volatility while supporting sustainable long-term value creation. Our brand portfolio is organized into two complementary pillars: In-house Brands (fully managed operations) and Strategic Investments (equity stakes and partnerships)."
       ],
-      "tc": [],
-      "sc": []
+      "tc": [
+        "安踏體育採取差異化的多品牌戰略，以捕捉迅速發展的全球體育用品市場中從大眾到高端各細分領域的機遇。集團通過打造涵蓋專業運動、高端時尚運動、戶外及細分領域的清晰品牌組合，增強抵禦市場波動的韌性，同時助力實現可持續的長期價值創造。我們的品牌組合分為兩大互補支柱：自有品牌（全面自主運營）與戰略投資（股權投資及合作夥伴關係）。"
+      ],
+      "sc": [
+        "安踏体育采取差异化的多品牌战略，以捕捉迅速发展的全球体育用品市场中从大众到高端各细分领域的机遇。集团通过打造涵盖专业运动、高端时尚运动、户外及细分领域的清晰品牌组合，增强抵御市场波动的韧性，同时助力实现可持续的长期价值创造。我们的品牌组合分为两大互补支柱：自有品牌（全面自主运营）与战略投资（股权投资及合作伙伴关系）。"
+      ]
     },
     "inHouse": {
       "en": [
         "The Group’s core operating brands form a complementary ladder covering mass-market performance to premium niche segments."
       ],
-      "tc": [],
-      "sc": []
+      "tc": [
+        "集團的核心運營品牌形成了互補梯隊，覆蓋從大眾專業運動到高端小眾市場的各個領域。"
+      ],
+      "sc": [
+        "集团的核心运营品牌形成了互补梯队，覆盖从大众专业运动到高端小众市场的各个领域。"
+      ]
     },
     "strategic": {
       "en": [
         "Complementing the in-house portfolio, ANTA Sports holds strategic positions that expand its global footprint and access to premium international brands and platforms."
       ],
-      "tc": [],
-      "sc": []
+      "tc": [
+        "作為對自有品牌組合的補充，安踏體育拥有戰略性佈局，以拓展其全球版圖並接觸高端國際品牌與平台。"
+      ],
+      "sc": [
+        "作为对自有品牌组合的补充，安踏体育拥有战略性布局，以拓展其全球版图并接触高端国际品牌与平台。"
+      ]
     }
   },
   "brands": [
@@ -32,33 +44,37 @@
         "en": [
           "ANTA was established in China in 1990s. As a leading sports brand in China, ANTA has always been committed to providing consumers with functional, professional and technology-driven sports products across a diverse range of sporting categories, from popular sports such as running, cross-training, basketball, and others, to professional and niche sports."
         ],
-        "tc": [],
-        "sc": []
+        "tc": [
+          "安踏於一九九零年代在中國創立。作為中國體育用品行業領導品牌，安踏為消費者提供具功能性、專業及科技驅動的體育用品，涵蓋包括大眾體育項目，例如跑步、綜訓和籃球等，到專業及小眾體育項目的多個領域。"
+        ],
+        "sc": [
+          "安踏于一九九零年代在中国创立。作为中国体育用品行业领导品牌，安踏为消费者提供具功能性、专业及科技驱动的体育用品，涵盖包括大众体育项目，例如跑步、综训和篮球等，到专业及小众体育项目的多个领域。"
+        ]
       },
       "links": [
         {
           "label": {
             "en": "Brand Website",
-            "tc": null,
-            "sc": null
+            "tc": "品牌網站",
+            "sc": "品牌网站"
           },
           "url": "http://en.anta.com/"
         },
         {
           "label": {
             "en": "Official Online Shop",
-            "tc": null,
-            "sc": null
+            "tc": "官方商城",
+            "sc": "官方商城"
           },
           "url": "https://www.anta.cn/"
         }
       ],
       "logo": {
-        "src": "https://ir.anta.com/img/brand/logo_1.png",
+        "src": "/assets/anta/brand/logo_1.png",
         "sourceUrl": "https://ir.anta.com/img/brand/logo_1.png"
       },
       "image": {
-        "src": "https://ir.anta.com/img/brand/brand_1_img.jpg",
+        "src": "/assets/anta/brand/brand_1_img.jpg",
         "sourceUrl": "https://ir.anta.com/img/brand/brand_1_img.jpg"
       },
       "order": 0
@@ -71,25 +87,29 @@
         "en": [
           "FILA was established in Italy in 1910s. After acquired the Fila business in the PRC in late 2009, FILA is positioned as a high-end sports fashion clothing brand in China. As a global brand with over 100 years of history, the unique combination of stylish and sporty image from FILA has gained awareness among the Chinese high-end consumers. FILA also has cross-over cooperation with world-renowned designers to bring differentiated sports fashion experiences to the consumers. Echoing FILA’s high-end positioning, FILA stores are mainly located in first- and second-tier cities."
         ],
-        "tc": [],
-        "sc": []
+        "tc": [
+          "FILA於一九一零年代於意大利創立。於二零零九年底收購FILA中國業務後，FILA在中國的定位是一個高端運動時尚服飾品牌。作爲擁有超過100年歷史的國際品牌，FILA結合時尚及運動形象，其獨特個性已吸引中國高端消費者的關注。FILA也與全球知名的設計師進行跨界合作，爲消費者帶來獨有的運動時尚體驗。配合FILA的高端定位，FILA店主要開設在一綫及二綫城市。"
+        ],
+        "sc": [
+          "FILA于一九一零年代于意大利创立。于二零零九年底收购FILA中国业务后，FILA在中国的定位是一个高端运动时尚服饰品牌。作为拥有超过100年历史的国际品牌，FILA结合时尚及运动形象，其独特个性已吸引中国高端消费者的关注。FILA也与全球知名的设计师进行跨界合作，为消费者带来独有的运动时尚体验。配合FILA的高端定位，FILA店主要开设在一线及二线城市。"
+        ]
       },
       "links": [
         {
           "label": {
             "en": "Brand Website",
-            "tc": null,
-            "sc": null
+            "tc": "品牌網站",
+            "sc": "品牌网站"
           },
           "url": "https://www.fila.cn/"
         }
       ],
       "logo": {
-        "src": "https://ir.anta.com/img/brand/logo_3.png",
+        "src": "/assets/anta/brand/logo_3.png",
         "sourceUrl": "https://ir.anta.com/img/brand/logo_3.png"
       },
       "image": {
-        "src": "https://ir.anta.com/img/brand/brand_3_img.jpg",
+        "src": "/assets/anta/brand/brand_3_img.jpg",
         "sourceUrl": "https://ir.anta.com/img/brand/brand_3_img.jpg"
       },
       "order": 1
@@ -102,16 +122,20 @@
         "en": [
           "DESCENTE was established in Japan in 1930s. Having upheld the design-driven sports spirit of “DESIGN THAT MOVES” throughout 80 years of brand legacy, DESCENTE incorporates revolutionary technology with ingenious craftsmanship into each of its creations, with a focus on high-end and high-quality professional sportswear product collection for skiing, running, cycling, cross training, golf, women’s fitness and more. Through years of continuous effort and dedication, DESCENTE has established itself in the Chinese Mainland market, capturing the attention of core customers seeking high-tech materials and exquisite craftsmanship."
         ],
-        "tc": [],
-        "sc": []
+        "tc": [
+          "憑藉80多年的品牌傳承，DESCENTE秉承以設計驅動運動精神「DESIGN THAT MOVES」，融合創新技術與匠心工藝於每一個創作當中。自二零一六年底，我們在中國大陸獨家運營及從事帶有「DESCENTE」商標的產品設計、營銷及銷售的業務，打造高端及高質感的專業運動產品系列，包括滑雪、跑步、騎行、綜訓、高爾夫以及女子健身等體育用品。經過多年的不懈努力，DESCENTE已矗立於中國大陸市場，吸引了追求高科技物料和頂尖工藝產品的核心顧客關注。"
+        ],
+        "sc": [
+          "凭借80多年的品牌传承，DESCENTE秉承以设计驱动运动精神「DESIGN THAT MOVES」，融合创新技术与匠心工艺于每一个创作当中。自二零一六年底，我们在中国大陆独家运营及从事带有「DESCENTE」商标的产品设计、营销及销售的业务，打造高端及高质感的专业运动产品系列，包括滑雪、跑步、骑行、综训、高尔夫以及女子健身等体育用品。经过多年的不懈努力，DESCENTE已矗立于中国大陆市场，吸引了追求高科技物料和顶尖工艺产品的核心顾客关注。"
+        ]
       },
       "links": [],
       "logo": {
-        "src": "https://ir.anta.com/img/brand/logo_6.png",
+        "src": "/assets/anta/brand/logo_6.png",
         "sourceUrl": "https://ir.anta.com/img/brand/logo_6.png"
       },
       "image": {
-        "src": "https://ir.anta.com/img/brand/brand_6_img.jpg",
+        "src": "/assets/anta/brand/brand_6_img.jpg",
         "sourceUrl": "https://ir.anta.com/img/brand/brand_6_img.jpg"
       },
       "order": 2
@@ -124,16 +148,20 @@
         "en": [
           "Since its founding in 1973, KOLON SPORT has strived to be a premium outdoor lifestyle brand integrating fashionable design and functionality. Successfully satisfying consumers’ sophisticated needs for functionality, KOLON SPORT has also broken through the boundaries between urban and outdoor fashion through fashionable and aggressive design. To capitalize on opportunities in the fast-growing outdoor sports and camping market, KOLON SPORT improves consumers’ experiences through product innovation, integrated marketing and continued retail image upgrades."
         ],
-        "tc": [],
-        "sc": []
+        "tc": [
+          "KOLON SPORT自1973年創立以來，一直致力成為融合潮流設計和功能的高端品質戶外生活方式品牌。在滿足消費者對功能性需求的同時，通過時尚大膽的設計和剪裁，打破都市與戶外的界限。為抓緊快速增長的戶外運動用品和露營市場機遇，KOLON SPORT通過產品創新、整合市場營銷及零售形象升級，不斷提升消費者體驗。"
+        ],
+        "sc": [
+          "KOLON SPORT自1973年创立以来，一直致力成为融合潮流设计和功能的高端品质户外生活方式品牌。在满足消费者对功能性需求的同时，通过时尚大胆的设计和剪裁，打破都市与户外的界限。为抓紧快速增长的户外运动用品和露营市场机遇，KOLON SPORT通过产品创新、整合市场营销及零售形象升级，不断提升消费者体验。"
+        ]
       },
       "links": [],
       "logo": {
-        "src": "https://ir.anta.com/img/brand/logo_8.png",
+        "src": "/assets/anta/brand/logo_8.png",
         "sourceUrl": "https://ir.anta.com/img/brand/logo_8.png"
       },
       "image": {
-        "src": "https://ir.anta.com/img/brand/brand_8_img.jpg",
+        "src": "/assets/anta/brand/brand_8_img.jpg",
         "sourceUrl": "https://ir.anta.com/img/brand/brand_8_img.jpg"
       },
       "order": 3
@@ -146,16 +174,20 @@
         "en": [
           "MAIA ACTIVE, a sportswear brand specifically designed for Asian women, was established in Shanghai in 2016. With the design philosophy of 'Letting Asian women enjoy the beauty of sports,' MAIA develops 'Addictive' technology sports fabrics and a sizing system better suited for Asian women. This approach allows MAIA to create high-quality sportswear that enhances the sports experience for Asian women. MAIA encourages every sporty girl to become her ideal version, helping her to find it, achieve it, and BE AS YOU WISH."
         ],
-        "tc": [],
-        "sc": []
+        "tc": [
+          "MAIA ACTIVE是一個專為亞洲女性設計的運動服品牌，以「讓亞洲女性享受運動的美好」為設計理念，於2016年成立於上海。 透過研發「讓身體上癮」的科技運動布料和更適合亞洲女性的版型系統，打造高品質的運動服，為亞洲女性帶來更好的運動體驗。 MAIA鼓勵每一位運動女孩成為自己理想中的樣子，找到它，實現它，BE AS YOU WISH !"
+        ],
+        "sc": [
+          "MAIA ACTIVE是一个专为亚洲女性设计的运动服品牌，以「让亚洲女性享受运动的美好」为设计理念，于2016年成立于上海。 透过研发「让身体上瘾」的科技运动布料和更适合亚洲女性的版型系统，打造高品质的运动服，为亚洲女性带来更好的运动体验。 MAIA鼓励每一位运动女孩成为自己理想中的样子，找到它，实现它，BE AS YOU WISH !"
+        ]
       },
       "links": [],
       "logo": {
-        "src": "https://ir.anta.com/img/brand/logo_11.png",
+        "src": "/assets/anta/brand/logo_11.png",
         "sourceUrl": "https://ir.anta.com/img/brand/logo_11.png"
       },
       "image": {
-        "src": "https://ir.anta.com/img/brand/brand_11_img.jpg",
+        "src": "/assets/anta/brand/brand_11_img.jpg",
         "sourceUrl": "https://ir.anta.com/img/brand/brand_11_img.jpg"
       },
       "order": 4
@@ -169,25 +201,31 @@
           "Founded in 1981, JACK WOLFSKIN is a premium German brand specializing in outdoor apparel, footwear, and equipment. Catering to both active outdoor enthusiasts and urban explorers, the brand offers professional-grade products across hiking, biking, skiing, and camping categories. Renowned for their optimized functionality, exceptional quality, and innovative craftsmanship, JACK WOLFSKIN's offerings reflect the finest in German engineering, technology, and design.",
           "The brand boasts a versatile portfolio of thoughtfully and sustainably engineered technologies, including the widely acclaimed \"Texapore\" range of materials. Guided by the philosophy of enabling everyone to partake in outdoor experiences through endless discovery, JACK WOLFSKIN is committed to delivering innovative and sustainable solutions that elevate and enrich outdoor experiences for all."
         ],
-        "tc": [],
-        "sc": []
+        "tc": [
+          "JACK WOLFSKIN創立於1981年，是專注於戶外服飾、鞋履及裝備業務的德國頂級品牌。JACK WOLFSKIN致力為活躍的戶外愛好者及都市探索者提供專業級產品，涵蓋徒步旅行、自行車運動、滑雪以及露營等多個領域。品牌以出色的功能、卓越的品質及創新的工藝而聞名，其產品充分體現了德國工程、技術及設計的精髓。",
+          "品牌擁有一整套先進且可持續的技術加持，當中包括廣受市場認可的 Texapore 系列材料。秉持「讓每個人都能通過無盡探索參與體驗戶外」的理念，JACK WOLFSKIN致力於提供創新且永續的解決方案，提升並豐富所有人的戶外體驗。"
+        ],
+        "sc": [
+          "JACK WOLFSKIN创立于1981年，是专注于户外服饰、鞋履及装备业务的德国顶级品牌。JACK WOLFSKIN致力为活跃的户外爱好者及都市探索者提供专业级产品，涵盖徒步旅行、自行车运动、滑雪以及露营等多个领域。品牌以出色的功能、卓越的品质及创新的工艺而闻名，其产品充分体现了德国工程、技术及设计的精髓。",
+          "品牌拥有一整套先进且可持续的技术加持，当中包括广受市场认可的 Texapore 系列材料。秉持「让每个人都能通过无尽探索参与体验户外」的理念，JACK WOLFSKIN致力于提供创新且永续的解决方案，提升并丰富所有人的户外体验。"
+        ]
       },
       "links": [
         {
           "label": {
             "en": "Brand Website",
-            "tc": null,
-            "sc": null
+            "tc": "品牌網站",
+            "sc": "品牌网站"
           },
           "url": "https://www.jack-wolfskin.com/"
         }
       ],
       "logo": {
-        "src": "https://ir.anta.com/img/brand/logo_12.png",
+        "src": "/assets/anta/brand/logo_12.png",
         "sourceUrl": "https://ir.anta.com/img/brand/logo_12.png"
       },
       "image": {
-        "src": "https://ir.anta.com/img/brand/brand_12_img.jpg",
+        "src": "/assets/anta/brand/brand_12_img.jpg",
         "sourceUrl": "https://ir.anta.com/img/brand/brand_12_img.jpg"
       },
       "order": 5
@@ -201,21 +239,27 @@
           "Amer Sports is a sporting goods company with internationally recognized brands including Salomon, Arc'teryx, Wilson, Peak Performance, Atomic, etc. Its technically advanced sports equipment, footwear, apparel and accessories aim to improve performance and increase enjoyment of sports and outdoor activities.",
           "ANTA Sports is also the largest shareholder of Amer Sports, Inc., a global group of iconic sports and outdoor brands, including Arc'teryx, Salomon, Wilson, Peak Performance, and Atomic, whose shares are listed on the New York Stock Exchange (NYSE: AS)."
         ],
-        "tc": [],
-        "sc": []
+        "tc": [
+          "Amer Sports為擁有國際知名品牌的體育用品公司，品牌包括Salomon、Arc'teryx、Wilson、Peak Performance及Atomic等。其技術先進的運動設備、鞋履、服裝及配飾旨在提升消費者在運動及戶外活動時的表現，並提升樂趣。",
+          "安踏體育亦為Amer Sports, Inc. 的最大股東，Amer Sports, Inc. 是一個全球的標誌性體育和戶外品牌集團，包括Arc'teryx、Salomon、Wilson、Peak Performance和Atomic，其股票於紐約證券交易所（NYSE：AS）上市。"
+        ],
+        "sc": [
+          "Amer Sports为拥有国际知名品牌的体育用品公司，品牌包括Salomon、Arc'teryx、Wilson、Peak Performance及Atomic等。其技术先进的运动设备、鞋履、服装及配饰旨在提升消费者在运动及户外活动时的表现，并提升乐趣。",
+          "安踏体育亦为Amer Sports, Inc. 的最大股东，Amer Sports, Inc. 是一个全球的标志性体育和户外品牌集团，包括Arc'teryx、Salomon、Wilson、Peak Performance和Atomic，其股票于纽约证券交易所（NYSE：AS）上市。"
+        ]
       },
       "links": [
         {
           "label": {
             "en": "Brand Website",
-            "tc": null,
-            "sc": null
+            "tc": "品牌網站",
+            "sc": "品牌网站"
           },
           "url": "https://www.amersports.com/"
         }
       ],
       "logo": {
-        "src": "https://ir.anta.com/img/brand/logo_10.png",
+        "src": "/assets/anta/brand/logo_10.png",
         "sourceUrl": "https://ir.anta.com/img/brand/logo_10.png"
       },
       "image": null,
@@ -230,12 +274,18 @@
           "MUSINSA is one of South Korea’s largest fashion platform companies, operating popular platforms such as MUSINSA, 29CM, EMPTY and SOLDOUT. It is committed to exploring synergies between fashion and sports.",
           "ANTA Sports has established a joint venture (JV) with MUSINSA, taking a 40% equity stake to develop the \"MUSINSA STANDARD\" brand and the \"Musinsa Store\" multi-brand retail concept across the China market. This partnership strategically targets young consumers seeking unique sports and fashion products."
         ],
-        "tc": [],
-        "sc": []
+        "tc": [
+          "MUSINSA 為韓國規模最大的時尚平台集團之一，其時尚平台包括 MUSINSA、29CM、 EMPTY 及 SOLDOUT，致力探索大時尚產業與體育產業的融合邊界。",
+          "安踏體育與MUSINSA成立合資公司，並持有該公司40% 股權，共同在中國市場發展「MUSINSA STANDARD」和多品牌集合店「Musinsa Store」等業務，為熱愛運動與時尚的年輕消費者提供更具個性化和差異化的選擇。"
+        ],
+        "sc": [
+          "MUSINSA 为韩国规模最大的时尚平台集团之一，其时尚平台包括 MUSINSA、29CM、 EMPTY 及 SOLDOUT，致力探索大时尚产业与体育产业的融合边界。",
+          "安踏体育与MUSINSA成立合资公司，并持有该公司40% 股权，共同在中国市场发展「MUSINSA STANDARD」和多品牌集合店「Musinsa Store」等业务，为热爱运动与时尚的年轻消费者提供更具个性化和差异化的选择。"
+        ]
       },
       "links": [],
       "logo": {
-        "src": "https://ir.anta.com/img/brand/logo_13.png",
+        "src": "/assets/anta/brand/logo_13.png",
         "sourceUrl": "https://ir.anta.com/img/brand/logo_13.png"
       },
       "image": null,

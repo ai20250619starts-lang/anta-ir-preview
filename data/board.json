@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-07T09:01:45.750Z",
+  "generatedAt": "2026-10-07T09:21:49.820Z",
   "people": [
     {
       "id": "ding-shizhong",
@@ -7,13 +7,13 @@
       "name": {
         "en": "Mr. Ding Shizhong",
         "tc": "丁世忠先生",
-        "sc": null
+        "sc": "丁世忠先生"
       },
       "nameZh": "丁世忠先生",
       "roles": {
         "en": "Chairman",
-        "tc": null,
-        "sc": null
+        "tc": "主席",
+        "sc": "主席"
       },
       "bio": {
         "en": [
@@ -22,7 +22,9 @@
         "tc": [
           "55歲，為本公司的董事會主席兼執行董事。彼在本集團企業戰略、人才建設、企業文化、企業管治、經營監督等事項上發揮核心領導作用，並直接管理本集團收購合併事宜。彼為本集團的創始人之一，並一直致力於領導本集團拓展及推廣海內外業務。丁先生現為紐約證券交易所上市公司Amer Sports, Inc. (NYSE：AS) 的董事會主席。近年來，彼獲授《財富》2023年中國最具影響力的50位商界領袖、《哈佛商業評論》中國百佳CEO、2022中國慈善榜年度慈善家等社會各界頒發的榮譽稱號。彼現為中華全國工商業聯合會副主席、薩馬蘭奇體育發展基金會理事會成員及中國奧委會委員。丁先生為丁世家先生的弟弟及賴世賢先生的內兄，彼等皆為本公司的執行董事。彼亦為安踏國際集團控股有限公司的董事，安踏國際集團控股有限公司為本公司的主要股東。"
         ],
-        "sc": []
+        "sc": [
+          "55岁，为本公司的董事会主席兼执行董事。彼在本集团企业战略、人才建设、企业文化、企业管治、经营监督等事项上发挥核心领导作用，并直接管理本集团收购合并事宜。彼为本集团的创始人之一，并一直致力于领导本集团拓展及推广海内外业务。丁先生现为纽约证券交易所上市公司Amer Sports, Inc. (NYSE：AS) 的董事会主席。近年来，彼获授《财富》2023年中国最具影响力的50位商界领袖、《哈佛商业评论》中国百佳CEO、2022中国慈善榜年度慈善家等社会各界颁发的荣誉称号。彼现为中华全国工商业联合会副主席、萨马兰奇体育发展基金会理事会成员及中国奥委会委员。丁先生为丁世家先生的弟弟及赖世贤先生的内兄，彼等皆为本公司的执行董事。彼亦为安踏国际集团控股有限公司的董事，安踏国际集团控股有限公司为本公司的主要股东。"
+        ]
       },
       "order": 0
     },
@@ -32,13 +34,13 @@
       "name": {
         "en": "Mr. Ding Shijia",
         "tc": "丁世家先生",
-        "sc": null
+        "sc": "丁世家先生"
       },
       "nameZh": "丁世家先生",
       "roles": {
         "en": "Deputy Chairman",
-        "tc": null,
-        "sc": null
+        "tc": "副主席",
+        "sc": "副主席"
       },
       "bio": {
         "en": [
@@ -47,7 +49,9 @@
         "tc": [
           "61歲，為本公司的董事會副主席兼執行董事。彼負責管理本集團生產職能。彼為本集團的創始人之一及於中國體育用品業擁有逾三十年經驗。於二零零二年及二零零四年，彼獲授泉州市優秀青年企業家的榮銜。丁世家先生為丁世忠先生的長兄及賴世賢先生的內兄，彼等皆為本公司的執行董事。彼亦為安踏國際集團控股有限公司的董事，安踏國際集團控股有限公司為本公司的主要股東。"
         ],
-        "sc": []
+        "sc": [
+          "61岁，为本公司的董事会副主席兼执行董事。彼负责管理本集团生产职能。彼为本集团的创始人之一及于中国体育用品业拥有逾三十年经验。于二零零二年及二零零四年，彼获授泉州市优秀青年企业家的荣衔。丁世家先生为丁世忠先生的长兄及赖世贤先生的内兄，彼等皆为本公司的执行董事。彼亦为安踏国际集团控股有限公司的董事，安踏国际集团控股有限公司为本公司的主要股东。"
+        ]
       },
       "order": 1
     },
@@ -57,13 +61,13 @@
       "name": {
         "en": "Mr. Lai Shixian",
         "tc": "賴世賢先生",
-        "sc": null
+        "sc": "赖世贤先生"
       },
       "nameZh": "賴世賢先生",
       "roles": {
         "en": "Co-Chief Executive Officer",
-        "tc": null,
-        "sc": null
+        "tc": "聯席首席執行官",
+        "sc": "联席首席执行官"
       },
       "bio": {
         "en": [
@@ -72,7 +76,9 @@
         "tc": [
           "51歲，為本公司的執行董事及其中一位聯席首席執行官。彼分管安踏品牌、除FILA 品牌以外的所有其他品牌、集團採購以及本集團的若干職能（包括人力資源、法務、投資者關係及行政管理等）。彼於二零零三年三月加入本集團及於行政及財務管理方面擁有逾二十年經驗。賴先生擁有中歐國際工商學院的高層管理人員工商管理碩士學位。賴先生為丁世忠先生及丁世家先生的妹夫，彼等皆為本公司的執行董事。彼亦為安踏國際集團控股有限公司的董事，安踏國際集團控股有限公司為本公司的主要股東。賴先生現為香港聯交所上市公司中國利郎有限公司（股票代號：1234）的獨立非執行董事。"
         ],
-        "sc": []
+        "sc": [
+          "51岁，为本公司的执行董事及其中一位联席首席执行官。彼分管安踏品牌、除FILA 品牌以外的所有其他品牌、集团采购以及本集团的若干职能（包括人力资源、法务、投资者关系及行政管理等）。彼于二零零三年三月加入本集团及于行政及财务管理方面拥有逾二十年经验。赖先生拥有中欧国际工商学院的高层管理人员工商管理硕士学位。赖先生为丁世忠先生及丁世家先生的妹夫，彼等皆为本公司的执行董事。彼亦为安踏国际集团控股有限公司的董事，安踏国际集团控股有限公司为本公司的主要股东。赖先生现为香港联交所上市公司中国利郎有限公司（股票代号：1234）的独立非执行董事。"
+        ]
       },
       "order": 2
     },
@@ -82,13 +88,13 @@
       "name": {
         "en": "Mr. Wu Yonghua",
         "tc": "吳永華先生",
-        "sc": null
+        "sc": "吴永华先生"
       },
       "nameZh": "吳永華先生",
       "roles": {
         "en": "Co-Chief Executive Officer",
-        "tc": null,
-        "sc": null
+        "tc": "聯席首席執行官",
+        "sc": "联席首席执行官"
       },
       "bio": {
         "en": [
@@ -97,7 +103,9 @@
         "tc": [
           "55歲，為本公司的執行董事及其中一位聯席首席執行官。彼主要分管FILA 品牌、本集團海外業務（包括東南亞國際業務）及本集團若干職能（包括戰略、數字化、科創、質量管理、企業文化與公共關係等）。彼於二零零三年十月加入本集團，在中國市場銷售、營銷及品牌運營領域擁有逾二十年經驗。"
         ],
-        "sc": []
+        "sc": [
+          "55岁，为本公司的执行董事及其中一位联席首席执行官。彼主要分管FILA 品牌、本集团海外业务（包括东南亚国际业务）及本集团若干职能（包括战略、数字化、科创、质量管理、企业文化与公共关系等）。彼于二零零三年十月加入本集团，在中国市场销售、营销及品牌运营领域拥有逾二十年经验。"
+        ]
       },
       "order": 3
     },
@@ -107,7 +115,7 @@
       "name": {
         "en": "Mr. Zheng Jie",
         "tc": "鄭捷先生",
-        "sc": null
+        "sc": "郑捷先生"
       },
       "nameZh": "鄭捷先生",
       "roles": {
@@ -122,7 +130,9 @@
         "tc": [
           "57歲，為本公司的執行董事。彼主要負責Amer Sports相關業務。鄭先生現為紐約證券交易所上市公司Amer Sports, Inc.（NYSE：AS）的首席執行官兼董事。彼於二零零八年十月加入本集團，於營銷管理方面擁有超過二十年經驗，包括於國際運動服飾品牌中國業務部任職銷售副總裁及總經理超過八年。鄭先生擁有上海復旦大學管理科學學士學位。"
         ],
-        "sc": []
+        "sc": [
+          "57岁，为本公司的执行董事。彼主要负责Amer Sports相关业务。郑先生现为纽约证券交易所上市公司Amer Sports, Inc.（NYSE：AS）的首席执行官兼董事。彼于二零零八年十月加入本集团，于营销管理方面拥有超过二十年经验，包括于国际运动服饰品牌中国业务部任职销售副总裁及总经理超过八年。郑先生拥有上海复旦大学管理科学学士学位。"
+        ]
       },
       "order": 4
     },
@@ -132,13 +142,13 @@
       "name": {
         "en": "Mr. Bi Mingwei",
         "tc": "畢明偉先生",
-        "sc": null
+        "sc": "毕明伟先生"
       },
       "nameZh": "畢明偉先生",
       "roles": {
         "en": "Chief Financial Officer",
-        "tc": null,
-        "sc": null
+        "tc": "首席財務官",
+        "sc": "首席财务官"
       },
       "bio": {
         "en": [
@@ -147,7 +157,9 @@
         "tc": [
           "53歲，為本公司的執行董事兼首席財務官。彼主要負責本集團的財務管理職能及若干中後台職能（包括業務流程管理及物流管理等）。畢先生現為紐約證券交易所上市公司Amer Sports, Inc.（NYSE：AS）的董事。彼於二零零七年五月加入本集團，於財務管理及運動服飾行業擁有逾二十年經驗。畢先生擁有中國對外經濟貿易大學會計學學士學位，並為中國註冊會計師協會非執業會員。"
         ],
-        "sc": []
+        "sc": [
+          "53岁，为本公司的执行董事兼首席财务官。彼主要负责本集团的财务管理职能及若干中后台职能（包括业务流程管理及物流管理等）。毕先生现为纽约证券交易所上市公司Amer Sports, Inc.（NYSE：AS）的董事。彼于二零零七年五月加入本集团，于财务管理及运动服饰行业拥有逾二十年经验。毕先生拥有中国对外经济贸易大学会计学学士学位，并为中国注册会计师协会非执业会员。"
+        ]
       },
       "order": 5
     },
@@ -157,7 +169,7 @@
       "name": {
         "en": "Mr. Yiu Kin Wah Stephen JP",
         "tc": "姚建華先生 太平紳士",
-        "sc": null
+        "sc": "姚建华先生 太平绅士"
       },
       "nameZh": "姚建華先生 太平紳士",
       "roles": {
@@ -172,7 +184,9 @@
         "tc": [
           "65歲，為本公司獨立非執行董事，並於二零一八年六月加入董事會。彼擁有香港理工大學會計專業文憑及英國華威大學工商管理碩士學位。姚先生為特許公認會計師公會和香港會計師公會資深會員。彼現為香港特別行政區公務員敘用委員會委員、香港機場管理局董事會成員、保險業監管局主席、外匯基金諮詢委員會委員、金融學院的董事及香港科技大學司庫及校董會成員。姚先生現為香港聯交所上市公司中國移動有限公司（股票代號：941）及美團（股票代號：3690）的獨立非執行董事，及紐約證券交易所上市公司Amer Sports, Inc.（NYSE：AS）的獨立董事。姚先生曾任職於環球會計師事務所畢馬威，最後的職位為畢馬威中國及香港的主席和首席執行官、畢馬威國際及亞太地區的執行委員會和董事會成員。"
         ],
-        "sc": []
+        "sc": [
+          "65岁，为本公司独立非执行董事，并于二零一八年六月加入董事会。彼拥有香港理工大学会计专业文凭及英国华威大学工商管理硕士学位。姚先生为特许公认会计师公会和香港会计师公会资深会员。彼现为香港特别行政区公务员叙用委员会委员、香港机场管理局董事会成员、保险业监管局主席、外汇基金咨询委员会委员、金融学院的董事及香港科技大学司库及校董会成员。姚先生现为香港联交所上市公司中国移动有限公司（股票代号：941）及美团（股票代号：3690）的独立非执行董事，及纽约证券交易所上市公司Amer Sports, Inc.（NYSE：AS）的独立董事。姚先生曾任职于环球会计师事务所毕马威，最后的职位为毕马威中国及香港的主席和首席执行官、毕马威国际及亚太地区的执行委员会和董事会成员。"
+        ]
       },
       "order": 6
     },
@@ -182,7 +196,7 @@
       "name": {
         "en": "Mr. Lai Hin Wing Henry Stephen",
         "tc": "賴顯榮先生",
-        "sc": null
+        "sc": "赖显荣先生"
       },
       "nameZh": "賴顯榮先生",
       "roles": {
@@ -197,7 +211,9 @@
         "tc": [
           "69歲，為本公司獨立非執行董事，並於二零二零年十一月加入董事會。彼畢業於香港大學並擁有法律學士學位，為中國香港、英格蘭及威爾斯與澳洲維多利亞州認可律師。彼現為中國香港律師兼國際公證人事務所胡百全律師事務所的合夥人兼聯席主席，於法律界執業逾四十年。賴先生為中國香港的國際公證人及中國委託公證人。彼現為香港董事學會卸任主席、榮譽理事、資深會員及企業管治政策委員會主席、香港律師會審批委員會委員、中國委託公証人協會有限公司紀律審裁團委員及香港恒生大學校董。賴先生現為香港聯交所上市公司華潤啤酒（控股）有限公司（股票代號：291）的獨立非執行董事。彼曾於二零二零年十一月至二零二三年十月擔任中國醫療網絡有限公司（股票代號：383）的非執行董事、二零一一年十二月至二零二五年十二月擔任宏輝集團控股有限公司（股票代號：183）的非執行董事，以及二零二五年三月至二零二五年十二月擔任撥康視雲製藥有限公司（股票代號：2592）的獨立非執行董事，該等公司均於香港聯交所上市。"
         ],
-        "sc": []
+        "sc": [
+          "69岁，为本公司独立非执行董事，并于二零二零年十一月加入董事会。彼毕业于香港大学并拥有法律学士学位，为中国香港、英格兰及威尔斯与澳洲维多利亚州认可律师。彼现为中国香港律师兼国际公证人事务所胡百全律师事务所的合伙人兼联席主席，于法律界执业逾四十年。赖先生为中国香港的国际公证人及中国委托公证人。彼现为香港董事学会卸任主席、荣誉理事、资深会员及企业管治政策委员会主席、香港律师会审批委员会委员、中国委托公证人协会有限公司纪律审裁团委员及香港恒生大学校董。赖先生现为香港联交所上市公司华润啤酒（控股）有限公司（股票代号：291）的独立非执行董事。彼曾于二零二零年十一月至二零二三年十月担任中国医疗网络有限公司（股票代号：383）的非执行董事、二零一一年十二月至二零二五年十二月担任宏辉集团控股有限公司（股票代号：183）的非执行董事，以及二零二五年三月至二零二五年十二月担任拨康视云制药有限公司（股票代号：2592）的独立非执行董事，该等公司均于香港联交所上市。"
+        ]
       },
       "order": 7
     },
@@ -207,7 +223,7 @@
       "name": {
         "en": "Ms. Wang Jiaqian",
         "tc": "王佳茜女士",
-        "sc": null
+        "sc": "王佳茜女士"
       },
       "nameZh": "王佳茜女士",
       "roles": {
@@ -222,7 +238,9 @@
         "tc": [
           "47歲，為本公司獨立非執行董事，並於二零二一年七月加入董事會。彼擁有中國南京大學英語語言文學專業學士學位及中國北京大學金融專業碩士學位。彼現為香奈兒有限公司北亞區總裁辦公室總監，分管戰略、規劃、洞察、和外部合作。王女士於二零一零年九月至二零一九年六月任職於環球管理諮詢公司波士頓諮詢公司，最後的職位為董事總經理暨全球合夥人。彼於零售及消費品戰略及商業諮詢方面擁有逾十五年經驗。"
         ],
-        "sc": []
+        "sc": [
+          "47岁，为本公司独立非执行董事，并于二零二一年七月加入董事会。彼拥有中国南京大学英语语言文学专业学士学位及中国北京大学金融专业硕士学位。彼现为香奈儿有限公司北亚区总裁办公室总监，分管战略、规划、洞察、和外部合作。王女士于二零一零年九月至二零一九年六月任职于环球管理咨询公司波士顿咨询公司，最后的职位为董事总经理暨全球合伙人。彼于零售及消费品战略及商业咨询方面拥有逾十五年经验。"
+        ]
       },
       "order": 8
     },
@@ -232,7 +250,7 @@
       "name": {
         "en": "Ms. Xia Lian",
         "tc": "夏蓮女士",
-        "sc": null
+        "sc": "夏莲女士"
       },
       "nameZh": "夏蓮女士",
       "roles": {
@@ -247,7 +265,9 @@
         "tc": [
           "47歲，為本公司獨立非執行董事，並於二零二二年七月加入董事會。彼擁有中國北京大學市場營銷學士學位及歐洲工商管理學院(INSEAD)組織變革高管碩士學位。彼現為遠見教育科技（深圳）有限公司執行董事及總經理，於工商管理及商業諮詢方面擁有逾二十年經驗。夏女士於二零零七年四月至二零二零年八月任職於長江商學院，最後的職位為助理院長。夏女士現為香港聯交所上市公司綠葉製藥集團有限公司（股票代號：2186）的獨立非執行董事及上海證券交易所上市公司山鷹國際控股股份公司（股票代號：600567）的獨立董事。"
         ],
-        "sc": []
+        "sc": [
+          "47岁，为本公司独立非执行董事，并于二零二二年七月加入董事会。彼拥有中国北京大学市场营销学士学位及欧洲工商管理学院(INSEAD)组织变革高管硕士学位。彼现为远见教育科技（深圳）有限公司执行董事及总经理，于工商管理及商业咨询方面拥有逾二十年经验。夏女士于二零零七年四月至二零二零年八月任职于长江商学院，最后的职位为助理院长。夏女士现为香港联交所上市公司绿叶制药集团有限公司（股票代号：2186）的独立非执行董事及上海证券交易所上市公司山鹰国际控股股份公司（股票代号：600567）的独立董事。"
+        ]
       },
       "order": 9
     },
@@ -257,7 +277,7 @@
       "name": {
         "en": "Mr. Tse Kin Chung",
         "tc": "謝建聰先生",
-        "sc": null
+        "sc": "谢建聪先生"
       },
       "nameZh": "謝建聰先生",
       "roles": {
@@ -272,7 +292,9 @@
         "tc": [
           "45歲，為本公司的公司秘書兼本集團副總裁，主要負責財務管理及合規工作。彼於二零零七年十月加入本集團，具有逾二十年審計及財務管理之經驗。彼擁有香港理工大學會計學學士學位，亦為香港會計師公會會員。"
         ],
-        "sc": []
+        "sc": [
+          "45岁，为本公司的公司秘书兼本集团副总裁，主要负责财务管理及合规工作。彼于二零零七年十月加入本集团，具有逾二十年审计及财务管理之经验。彼拥有香港理工大学会计学学士学位，亦为香港会计师公会会员。"
+        ]
       },
       "order": 10
     }
@@ -282,15 +304,15 @@
       "key": "audit",
       "name": {
         "en": "Audit Committee",
-        "tc": null,
-        "sc": null
+        "tc": "審核委員會",
+        "sc": "审核委员会"
       },
       "members": [
         {
           "name": {
             "en": "Mr. Yiu Kin Wah Stephen",
-            "tc": null,
-            "sc": null
+            "tc": "姚建華先生",
+            "sc": "姚建华先生"
           },
           "personId": "yiu-kin-wah-stephen",
           "isChair": true,
@@ -299,8 +321,8 @@
         {
           "name": {
             "en": "Mr. Lai Hin Wing Henry Stephen",
-            "tc": null,
-            "sc": null
+            "tc": "賴顯榮先生",
+            "sc": "赖显荣先生"
           },
           "personId": "lai-hin-wing-henry-stephen",
           "isChair": false,
@@ -309,8 +331,8 @@
         {
           "name": {
             "en": "Ms. Wang Jiaqian",
-            "tc": null,
-            "sc": null
+            "tc": "王佳茜女士",
+            "sc": "王佳茜女士"
           },
           "personId": "wang-jiaqian",
           "isChair": false,
@@ -319,8 +341,8 @@
         {
           "name": {
             "en": "Ms. Xia Lian",
-            "tc": null,
-            "sc": null
+            "tc": "夏蓮女士",
+            "sc": "夏莲女士"
           },
           "personId": "xia-lian",
           "isChair": false,
@@ -329,23 +351,23 @@
       ],
       "termsOfReference": {
         "en": "https://ir.anta.com/pdf/gov_ac_en.pdf",
-        "tc": null,
-        "sc": null
+        "tc": "https://ir.anta.com/pdf/gov_ac_tc.pdf",
+        "sc": "https://ir.anta.com/pdf/gov_ac_tc.pdf"
       }
     },
     {
       "key": "remuneration",
       "name": {
         "en": "Remuneration Committee",
-        "tc": null,
-        "sc": null
+        "tc": "薪酬委員會",
+        "sc": "薪酬委员会"
       },
       "members": [
         {
           "name": {
             "en": "Ms. Xia Lian",
-            "tc": null,
-            "sc": null
+            "tc": "夏蓮女士",
+            "sc": "夏莲女士"
           },
           "personId": "xia-lian",
           "isChair": true,
@@ -354,8 +376,8 @@
         {
           "name": {
             "en": "Mr. Lai Hin Wing Henry Stephen",
-            "tc": null,
-            "sc": null
+            "tc": "賴顯榮先生",
+            "sc": "赖显荣先生"
           },
           "personId": "lai-hin-wing-henry-stephen",
           "isChair": false,
@@ -364,8 +386,8 @@
         {
           "name": {
             "en": "Ms. Wang Jiaqian",
-            "tc": null,
-            "sc": null
+            "tc": "王佳茜女士",
+            "sc": "王佳茜女士"
           },
           "personId": "wang-jiaqian",
           "isChair": false,
@@ -374,23 +396,23 @@
       ],
       "termsOfReference": {
         "en": "https://ir.anta.com/pdf/gov_rc_en.pdf",
-        "tc": null,
-        "sc": null
+        "tc": "https://ir.anta.com/pdf/gov_rc_tc.pdf",
+        "sc": "https://ir.anta.com/pdf/gov_rc_tc.pdf"
       }
     },
     {
       "key": "nomination",
       "name": {
         "en": "Nomination Committee",
-        "tc": null,
-        "sc": null
+        "tc": "提名委員會",
+        "sc": "提名委员会"
       },
       "members": [
         {
           "name": {
             "en": "Mr. Lai Hin Wing Henry Stephen",
-            "tc": null,
-            "sc": null
+            "tc": "賴顯榮先生",
+            "sc": "赖显荣先生"
           },
           "personId": "lai-hin-wing-henry-stephen",
           "isChair": true,
@@ -399,8 +421,8 @@
         {
           "name": {
             "en": "Mr. Yiu Kin Wah Stephen",
-            "tc": null,
-            "sc": null
+            "tc": "姚建華先生",
+            "sc": "姚建华先生"
           },
           "personId": "yiu-kin-wah-stephen",
           "isChair": false,
@@ -409,8 +431,8 @@
         {
           "name": {
             "en": "Ms. Wang Jiaqian",
-            "tc": null,
-            "sc": null
+            "tc": "王佳茜女士",
+            "sc": "王佳茜女士"
           },
           "personId": "wang-jiaqian",
           "isChair": false,
@@ -419,8 +441,8 @@
         {
           "name": {
             "en": "Ms. Xia Lian",
-            "tc": null,
-            "sc": null
+            "tc": "夏蓮女士",
+            "sc": "夏莲女士"
           },
           "personId": "xia-lian",
           "isChair": false,
@@ -429,23 +451,23 @@
       ],
       "termsOfReference": {
         "en": "https://ir.anta.com/pdf/gov_nc_en.pdf",
-        "tc": null,
-        "sc": null
+        "tc": "https://ir.anta.com/pdf/gov_nc_tc.pdf",
+        "sc": "https://ir.anta.com/pdf/gov_nc_tc.pdf"
       }
     },
     {
       "key": "risk-management",
       "name": {
         "en": "Risk Management Committee",
-        "tc": null,
-        "sc": null
+        "tc": "風險管理委員會",
+        "sc": "风险管理委员会"
       },
       "members": [
         {
           "name": {
             "en": "Ms. Wang Jiaqian",
-            "tc": null,
-            "sc": null
+            "tc": "王佳茜女士",
+            "sc": "王佳茜女士"
           },
           "personId": "wang-jiaqian",
           "isChair": true,
@@ -454,8 +476,8 @@
         {
           "name": {
             "en": "Mr. Yiu Kin Wah Stephen",
-            "tc": null,
-            "sc": null
+            "tc": "姚建華先生",
+            "sc": "姚建华先生"
           },
           "personId": "yiu-kin-wah-stephen",
           "isChair": false,
@@ -464,8 +486,8 @@
         {
           "name": {
             "en": "Mr. Lai Hin Wing Henry Stephen",
-            "tc": null,
-            "sc": null
+            "tc": "賴顯榮先生",
+            "sc": "赖显荣先生"
           },
           "personId": "lai-hin-wing-henry-stephen",
           "isChair": false,
@@ -474,8 +496,8 @@
         {
           "name": {
             "en": "Ms. Xia Lian",
-            "tc": null,
-            "sc": null
+            "tc": "夏蓮女士",
+            "sc": "夏莲女士"
           },
           "personId": "xia-lian",
           "isChair": false,
@@ -484,8 +506,8 @@
         {
           "name": {
             "en": "Mr. Bi Mingwei",
-            "tc": null,
-            "sc": null
+            "tc": "畢明偉先生",
+            "sc": "毕明伟先生"
           },
           "personId": "bi-mingwei",
           "isChair": false,
@@ -494,23 +516,23 @@
       ],
       "termsOfReference": {
         "en": "https://ir.anta.com/pdf/gov_rmc_en.pdf",
-        "tc": null,
-        "sc": null
+        "tc": "https://ir.anta.com/pdf/gov_rmc_tc.pdf",
+        "sc": "https://ir.anta.com/pdf/gov_rmc_tc.pdf"
       }
     },
     {
       "key": "sustainability",
       "name": {
         "en": "Sustainability Committee",
-        "tc": null,
-        "sc": null
+        "tc": "可持續發展委員會",
+        "sc": "可持续发展委员会"
       },
       "members": [
         {
           "name": {
             "en": "Mr. Lai Shixian",
-            "tc": null,
-            "sc": null
+            "tc": "賴世賢先生",
+            "sc": "赖世贤先生"
           },
           "personId": "lai-shixian",
           "isChair": true,
@@ -519,8 +541,8 @@
         {
           "name": {
             "en": "Mr. Yiu Kin Wah Stephen",
-            "tc": null,
-            "sc": null
+            "tc": "姚建華先生",
+            "sc": "姚建华先生"
           },
           "personId": "yiu-kin-wah-stephen",
           "isChair": false,
@@ -529,8 +551,8 @@
         {
           "name": {
             "en": "Mr. Lai Hin Wing Henry Stephen",
-            "tc": null,
-            "sc": null
+            "tc": "賴顯榮先生",
+            "sc": "赖显荣先生"
           },
           "personId": "lai-hin-wing-henry-stephen",
           "isChair": false,
@@ -539,8 +561,8 @@
         {
           "name": {
             "en": "Ms. Wang Jiaqian",
-            "tc": null,
-            "sc": null
+            "tc": "王佳茜女士",
+            "sc": "王佳茜女士"
           },
           "personId": "wang-jiaqian",
           "isChair": false,
@@ -549,8 +571,8 @@
         {
           "name": {
             "en": "Ms. Xia Lian",
-            "tc": null,
-            "sc": null
+            "tc": "夏蓮女士",
+            "sc": "夏莲女士"
           },
           "personId": "xia-lian",
           "isChair": false,
@@ -559,8 +581,8 @@
         {
           "name": {
             "en": "Mr. Wu Yonghua",
-            "tc": null,
-            "sc": null
+            "tc": "吳永華先生",
+            "sc": "吴永华先生"
           },
           "personId": "wu-yonghua",
           "isChair": false,
@@ -569,8 +591,8 @@
         {
           "name": {
             "en": "Ms. Jiang Yan",
-            "tc": null,
-            "sc": null
+            "tc": "江艷女士",
+            "sc": "江艳女士"
           },
           "personId": null,
           "isChair": false,
@@ -579,8 +601,8 @@
         {
           "name": {
             "en": "Mr. Wan Bin",
-            "tc": null,
-            "sc": null
+            "tc": "萬斌先生",
+            "sc": "万斌先生"
           },
           "personId": null,
           "isChair": false,
@@ -589,8 +611,8 @@
       ],
       "termsOfReference": {
         "en": "https://ir.anta.com/pdf/gov_sc_en.pdf",
-        "tc": null,
-        "sc": null
+        "tc": "https://ir.anta.com/pdf/gov_sc_tc.pdf",
+        "sc": "https://ir.anta.com/pdf/gov_sc_tc.pdf"
       }
     }
   ],
@@ -599,8 +621,14 @@
       "ANTA Sports Products Limited recognises the value and importance of achieving high corporate governance standards to enhance corporate performance, transparency and accountability, earning the confidence of shareholders and the public. The board of director strives to adhere to the principles of corporate governance and adopt sound corporate governance practices to meet the legal and commercial standards by focusing on areas such as internal control, fair disclosure and accountability to all shareholders. The Company regularly reviews its corporate governance practices to ensure its continuous compliance.",
       "For more detail about ANTA Sports Products Limited's corporate governance, please see the \"Corporate Governance Report\" section in the latest annual report."
     ],
-    "tc": [],
-    "sc": []
+    "tc": [
+      "安踏體育用品有限公司認同，要達致較高企業管治標準的價值和重要性，在於能提升企業表現、透明度和問責水平，從而取得股東和社會大眾的信心。董事會盡力遵守企業管治準則及採納有效的企業管治方針，以滿足法律上及商業上的標準，專注於例如內部監控、公允披露及向所有股東負責等範疇。本公司定期檢討其企業管治守則 以確保持續遵守。",
+      "有關安踏體育用品有限公司的企業管治常規詳情，請參閱最新年報的「企業管治報告」部分。"
+    ],
+    "sc": [
+      "安踏体育用品有限公司认同，要达致较高企业管治标准的价值和重要性，在于能提升企业表现、透明度和问责水平，从而取得股东和社会大众的信心。董事会尽力遵守企业管治准则及采纳有效的企业管治方针，以满足法律上及商业上的标准，专注于例如内部监控、公允披露及向所有股东负责等范畴。本公司定期检讨其企业管治守则 以确保持续遵守。",
+      "有关安踏体育用品有限公司的企业管治常规详情，请参阅最新年报的“企业管治报告”部分。"
+    ]
   },
   "sourceUrls": {
     "directors": {

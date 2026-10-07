@@ -1,17 +1,17 @@
 {
-  "generatedAt": "2026-10-07T09:01:45.803Z",
+  "generatedAt": "2026-10-07T09:23:28.237Z",
   "offices": [
     {
       "key": "jinjiang",
       "name": {
         "en": "Jinjiang Office",
-        "tc": null,
-        "sc": null
+        "tc": "晉江辦事處",
+        "sc": "晋江办事处"
       },
       "address": {
         "en": "Dongshan Industrial Zone, Chidian Town, Jinjiang City, Fujian Province, China",
-        "tc": null,
-        "sc": null
+        "tc": "中國福建省晉江市池店鎮東山工業區",
+        "sc": "中国福建省晋江市池店镇东山工业区"
       },
       "postcode": "362212",
       "phones": [
@@ -25,13 +25,13 @@
       "key": "xiamen",
       "name": {
         "en": "Xiamen Office",
-        "tc": null,
-        "sc": null
+        "tc": "廈門辦事處",
+        "sc": "厦门办事处"
       },
       "address": {
         "en": "No.99, Jiayi Road, Guanyinshan, Xiamen, Fujian Province, China",
-        "tc": null,
-        "sc": null
+        "tc": "中國福建省廈門市觀音山嘉義路99號",
+        "sc": "中国福建省厦门市观音山嘉义路99号"
       },
       "postcode": "361008",
       "phones": [
@@ -45,13 +45,13 @@
       "key": "hong-kong-sar",
       "name": {
         "en": "Hong Kong SAR Office",
-        "tc": null,
-        "sc": null
+        "tc": "中國香港辦事處",
+        "sc": "中国香港办事处"
       },
       "address": {
         "en": "16/F, Manhattan Place, 23 Wang Tai Road, Kowloon Bay, Kowloon, Hong Kong SAR, PRC",
-        "tc": null,
-        "sc": null
+        "tc": "中國香港特別行政區九龍九龍灣宏泰道23號 Manhattan Place 16樓",
+        "sc": "中国香港特别行政区九龙九龙湾宏泰道23号 Manhattan Place 16楼"
       },
       "postcode": null,
       "phones": [
@@ -68,8 +68,8 @@
       "key": "general",
       "label": {
         "en": "General enquiries",
-        "tc": null,
-        "sc": null
+        "tc": "一般查詢",
+        "sc": "一般查询"
       },
       "email": "anta_ccpr@anta.com"
     },
@@ -77,8 +77,8 @@
       "key": "investor-relations",
       "label": {
         "en": "Investor relations enquiries",
-        "tc": null,
-        "sc": null
+        "tc": "投資者關係查詢",
+        "sc": "投资者关系查询"
       },
       "email": "ir@anta.com.hk"
     }
@@ -88,8 +88,8 @@
       "key": "board",
       "heading": {
         "en": "Board",
-        "tc": null,
-        "sc": null
+        "tc": "董事會",
+        "sc": "董事会"
       },
       "blocks": [
         {
@@ -102,8 +102,24 @@
             "Mr. Zheng Jie",
             "Mr. Bi Mingwei (Chief Financial Officer)"
           ],
-          "tc": [],
-          "sc": []
+          "tc": [
+            "執行董事",
+            "丁世忠先生（主席）",
+            "丁世家先生（副主席）",
+            "賴世賢先生（聯席首席執行官）",
+            "吳永華先生（聯席首席執行官）",
+            "鄭捷先生",
+            "畢明偉先生（首席財務官）"
+          ],
+          "sc": [
+            "执行董事",
+            "丁世忠先生（主席）",
+            "丁世家先生（副主席）",
+            "赖世贤先生（联席首席执行官）",
+            "吴永华先生（联席首席执行官）",
+            "郑捷先生",
+            "毕明伟先生（首席财务官）"
+          ]
         },
         {
           "en": [
@@ -113,16 +129,34 @@
             "Ms. Wang Jiaqian",
             "Ms. Xia Lian"
           ],
-          "tc": [],
-          "sc": []
+          "tc": [
+            "獨立非執行董事",
+            "姚建華先生太平紳士",
+            "賴顯榮先生",
+            "王佳茜女士",
+            "夏蓮女士"
+          ],
+          "sc": [
+            "独立非执行董事",
+            "姚建华先生太平绅士",
+            "赖显荣先生",
+            "王佳茜女士",
+            "夏莲女士"
+          ]
         },
         {
           "en": [
             "Company Secretary",
             "Mr. Tse Kin Chung"
           ],
-          "tc": [],
-          "sc": []
+          "tc": [
+            "公司秘書",
+            "謝建聰先生"
+          ],
+          "sc": [
+            "公司秘书",
+            "谢建聪先生"
+          ]
         }
       ]
     },
@@ -130,8 +164,8 @@
       "key": "board-committee",
       "heading": {
         "en": "Board Committee",
-        "tc": null,
-        "sc": null
+        "tc": "董事會轄下委員會",
+        "sc": "董事会辖下委员会"
       },
       "blocks": [
         {
@@ -142,8 +176,20 @@
             "Ms. Wang Jiaqian",
             "Ms. Xia Lian"
           ],
-          "tc": [],
-          "sc": []
+          "tc": [
+            "審核委員會",
+            "姚建華先生（委員會主席）",
+            "賴顯榮先生",
+            "王佳茜女士",
+            "夏蓮女士"
+          ],
+          "sc": [
+            "审核委员会",
+            "姚建华先生（委员会主席）",
+            "赖显荣先生",
+            "王佳茜女士",
+            "夏莲女士"
+          ]
         },
         {
           "en": [
@@ -152,8 +198,18 @@
             "Mr. Lai Hin Wing Henry Stephen",
             "Ms. Wang Jiaqian"
           ],
-          "tc": [],
-          "sc": []
+          "tc": [
+            "薪酬委員會",
+            "夏蓮女士（委員會主席）",
+            "賴顯榮先生",
+            "王佳茜女士"
+          ],
+          "sc": [
+            "薪酬委员会",
+            "夏莲女士（委员会主席）",
+            "赖显荣先生",
+            "王佳茜女士"
+          ]
         },
         {
           "en": [
@@ -163,8 +219,20 @@
             "Ms. Wang Jiaqian",
             "Ms. Xia Lian"
           ],
-          "tc": [],
-          "sc": []
+          "tc": [
+            "提名委員會",
+            "賴顯榮先生（委員會主席）",
+            "姚建華先生",
+            "王佳茜女士",
+            "夏蓮女士"
+          ],
+          "sc": [
+            "提名委员会",
+            "赖显荣先生（委员会主席）",
+            "姚建华先生",
+            "王佳茜女士",
+            "夏莲女士"
+          ]
         },
         {
           "en": [
@@ -175,8 +243,22 @@
             "Ms. Xia Lian",
             "Mr. Bi Mingwei"
           ],
-          "tc": [],
-          "sc": []
+          "tc": [
+            "風險管理委員會",
+            "王佳茜女士（委員會主席）",
+            "姚建華先生",
+            "賴顯榮先生",
+            "夏蓮女士",
+            "畢明偉先生"
+          ],
+          "sc": [
+            "风险管理委员会",
+            "王佳茜女士（委员会主席）",
+            "姚建华先生",
+            "赖显荣先生",
+            "夏莲女士",
+            "毕明伟先生"
+          ]
         },
         {
           "en": [
@@ -191,8 +273,30 @@
             "Mr. Wan Bin*",
             "*non-Board member"
           ],
-          "tc": [],
-          "sc": []
+          "tc": [
+            "可持續發展委員會",
+            "賴世賢先生（委員會主席）",
+            "姚建華先生",
+            "賴顯榮先生",
+            "王佳茜女士",
+            "夏蓮女士",
+            "吳永華先生",
+            "江艷女士*",
+            "萬斌先生*",
+            "* 非董事會成員"
+          ],
+          "sc": [
+            "可持续发展委员会",
+            "赖世贤先生（委员会主席）",
+            "姚建华先生",
+            "赖显荣先生",
+            "王佳茜女士",
+            "夏莲女士",
+            "吴永华先生",
+            "江艳女士*",
+            "万斌先生*",
+            "* 非董事会成员"
+          ]
         }
       ]
     },
@@ -200,8 +304,8 @@
       "key": "authorised-representatives",
       "heading": {
         "en": "Authorised Representatives",
-        "tc": null,
-        "sc": null
+        "tc": "授權代表",
+        "sc": "授权代表"
       },
       "blocks": [
         {
@@ -209,8 +313,14 @@
             "Mr. Lai Shixian",
             "Mr. Tse Kin Chung"
           ],
-          "tc": [],
-          "sc": []
+          "tc": [
+            "賴世賢先生",
+            "謝建聰先生"
+          ],
+          "sc": [
+            "赖世贤先生",
+            "谢建聪先生"
+          ]
         }
       ]
     },
@@ -218,8 +328,8 @@
       "key": "registered-office",
       "heading": {
         "en": "Registered Office",
-        "tc": null,
-        "sc": null
+        "tc": "註冊辦事處",
+        "sc": "注册办事处"
       },
       "blocks": [
         {
@@ -229,8 +339,18 @@
             "P.O. Box 2681, Grand Cayman",
             "KY1-1111, Cayman Islands"
           ],
-          "tc": [],
-          "sc": []
+          "tc": [
+            "開曼群島辦事處",
+            "Cricket Square, Hutchins Drive,",
+            "P.O. Box 2681, Grand Cayman",
+            "KY1-1111, Cayman Islands"
+          ],
+          "sc": [
+            "开曼群岛办事处",
+            "Cricket Square, Hutchins Drive,",
+            "P.O. Box 2681, Grand Cayman",
+            "KY1-1111, Cayman Islands"
+          ]
         }
       ]
     },
@@ -238,8 +358,8 @@
       "key": "principal-place-of-business-in-hong-kong-sar",
       "heading": {
         "en": "Principal Place of Business in Hong Kong SAR",
-        "tc": null,
-        "sc": null
+        "tc": "中國香港主要營業地點",
+        "sc": "中国香港主要营业地点"
       },
       "blocks": [
         {
@@ -248,8 +368,16 @@
             "16/F, Manhattan Place, 23 Wang Tai Road,",
             "Kowloon Bay, Kowloon, Hong Kong SAR"
           ],
-          "tc": [],
-          "sc": []
+          "tc": [
+            "中國香港辦事處",
+            "中國香港九龍九龍灣宏泰道23號",
+            "Manhattan Place 16樓"
+          ],
+          "sc": [
+            "中国香港办事处",
+            "中国香港九龙九龙湾宏泰道23号",
+            "Manhattan Place 16楼"
+          ]
         }
       ]
     },
@@ -257,8 +385,8 @@
       "key": "head-offices-in-chinese-mainland",
       "heading": {
         "en": "Head offices in Chinese Mainland",
-        "tc": null,
-        "sc": null
+        "tc": "中國大陸主要辦事處",
+        "sc": "中国大陆主要办事处"
       },
       "blocks": [
         {
@@ -268,8 +396,16 @@
             "Jinjiang City, Fujian Province, China",
             "Postal code: 362212"
           ],
-          "tc": [],
-          "sc": []
+          "tc": [
+            "晉江辦事處",
+            "中國福建省晉江市池店鎮東山工業區",
+            "郵編：362212"
+          ],
+          "sc": [
+            "晋江办事处",
+            "中国福建省晋江市池店镇东山工业区",
+            "邮编：362212"
+          ]
         },
         {
           "en": [
@@ -277,8 +413,16 @@
             "No. 99 Jiayi Road, Guanyinshan, Xiamen, Fujian Province, China",
             "Postal code: 361008"
           ],
-          "tc": [],
-          "sc": []
+          "tc": [
+            "廈門辦事處",
+            "中國福建省廈門市觀音山嘉義路99號",
+            "郵編：361008"
+          ],
+          "sc": [
+            "厦门办事处",
+            "中国福建省厦门市观音山嘉义路99号",
+            "邮编：361008"
+          ]
         }
       ]
     },
@@ -286,8 +430,8 @@
       "key": "share-registrars-and-transfer-offices",
       "heading": {
         "en": "Share Registrars and Transfer Offices",
-        "tc": null,
-        "sc": null
+        "tc": "股份過戶登記處",
+        "sc": "股份过户登记处"
       },
       "blocks": [
         {
@@ -298,8 +442,20 @@
             "Building D, P.O. Box 1586, Gardenia Court, Camana Bay,",
             "Grand Cayman, KY1-1100, Cayman Islands"
           ],
-          "tc": [],
-          "sc": []
+          "tc": [
+            "開曼群島總處",
+            "Suntera (Cayman) Limited",
+            "Suite 3204, Unit 2A, Block 3,",
+            "Building D, P.O. Box 1586, Gardenia Court, Camana Bay,",
+            "Grand Cayman, KY1-1100, Cayman Islands"
+          ],
+          "sc": [
+            "开曼群岛总处",
+            "Suntera (Cayman) Limited",
+            "Suite 3204, Unit 2A, Block 3,",
+            "Building D, P.O. Box 1586, Gardenia Court, Camana Bay,",
+            "Grand Cayman, KY1-1100, Cayman Islands"
+          ]
         },
         {
           "en": [
@@ -308,8 +464,16 @@
             "Shops 1712-1716,17th Floor, Hopewell Centre,",
             "183 Queen's Road East, Wan Chai, Hong Kong SAR"
           ],
-          "tc": [],
-          "sc": []
+          "tc": [
+            "中國香港分處",
+            "香港中央證券登記有限公司",
+            "中國香港灣仔皇后大道東183號合和中心17樓1712–1716室"
+          ],
+          "sc": [
+            "中国香港分处",
+            "香港中央证券登记有限公司",
+            "中国香港湾仔皇后大道东183号合和中心17楼1712–1716室"
+          ]
         }
       ]
     },
@@ -317,16 +481,20 @@
       "key": "legal-adviser",
       "heading": {
         "en": "Legal Adviser",
-        "tc": null,
-        "sc": null
+        "tc": "法律顧問",
+        "sc": "法律顾问"
       },
       "blocks": [
         {
           "en": [
             "Morgan, Lewis & Bockius"
           ],
-          "tc": [],
-          "sc": []
+          "tc": [
+            "摩根路易斯律師事務所"
+          ],
+          "sc": [
+            "摩根路易斯律师事务所"
+          ]
         }
       ]
     },
@@ -334,8 +502,8 @@
       "key": "auditor",
       "heading": {
         "en": "Auditor",
-        "tc": null,
-        "sc": null
+        "tc": "核數師",
+        "sc": "核数师"
       },
       "blocks": [
         {
@@ -344,8 +512,16 @@
             "Certified Public Accountants",
             "Public Interest Entity Auditor registered in accordance with the Accounting and Financial Reporting Council Ordinance"
           ],
-          "tc": [],
-          "sc": []
+          "tc": [
+            "畢馬威會計師事務所",
+            "執業會計師",
+            "根據《會計及財務匯報局條例》註冊的公眾利益實體核數師"
+          ],
+          "sc": [
+            "毕马威会计师事务所",
+            "执业会计师",
+            "根据《会计及财务汇报局条例》注册的公众利益实体核数师"
+          ]
         }
       ]
     },
@@ -353,8 +529,8 @@
       "key": "principal-bankers",
       "heading": {
         "en": "Principal Bankers",
-        "tc": null,
-        "sc": null
+        "tc": "主要往來銀行",
+        "sc": "主要往来银行"
       },
       "blocks": [
         {
@@ -365,8 +541,20 @@
             "China Merchants Bank Co., Ltd.",
             "Standard Chartered Bank PLC"
           ],
-          "tc": [],
-          "sc": []
+          "tc": [
+            "中國銀行（香港）有限公司",
+            "中國工商銀行股份有限公司",
+            "興業銀行股份有限公司",
+            "招商銀行股份有限公司",
+            "渣打銀行"
+          ],
+          "sc": [
+            "中国银行（香港）有限公司",
+            "中国工商银行股份有限公司",
+            "兴业银行股份有限公司",
+            "招商银行股份有限公司",
+            "渣打银行"
+          ]
         }
       ]
     }
@@ -374,13 +562,13 @@
   "vendorForms": {
     "enquiryFormUrl": {
       "en": "https://enquiryform.website.wisdomir.com/main/02020_new.php?id=394&lang=en",
-      "tc": "",
-      "sc": ""
+      "tc": "https://enquiryform.website.wisdomir.com/main/02020_new.php?id=394&lang=tc",
+      "sc": "https://enquiryform.website.wisdomir.com/main/02020_new.php?id=394&lang=sc"
     },
     "emailAlertUrl": {
       "en": "https://alertform.website.wisdomir.com/main/02020.php?id=394&lang=en",
-      "tc": "",
-      "sc": ""
+      "tc": "https://alertform.website.wisdomir.com/main/02020.php?id=394&lang=tc",
+      "sc": "https://alertform.website.wisdomir.com/main/02020.php?id=394&lang=sc"
     }
   },
   "sourceUrls": {

@@ -1,39 +1,39 @@
 # Scrape report
 
-Generated 2026-10-07T09:01:45.879Z (UTC). Source: https://ir.anta.com (EN / TC / SC). Run started 2026-10-07T09:01:45.421Z.
+Generated 2026-10-07T10:15:02.902Z (UTC). Source: https://ir.anta.com (EN / TC / SC). Run started 2026-10-07T09:08:08.995Z.
 
-Fetch: **0** network requests this run, 58 cache hits, 0 errors. Sequential, ≥3 s apart, descriptive User-Agent, on-disk cache in `.cache/http` (re-runs only fetch what is missing).
+Fetch: **1168** network requests this run, 1119 cache hits, 18 errors. Sequential, ≥3 s apart, descriptive User-Agent, on-disk cache in `.cache/http` (re-runs only fetch what is missing).
 
 ## Totals
 
 | Dataset | Records |
 | --- | --- |
-| documents (merged across languages) | 868 |
+| documents (merged across languages) | 949 |
 | financial highlight rows | 6 |
 | board people | 11 |
 | committees | 5 |
-| calendar events | 3 |
+| calendar events | 33 |
 | FAQ items | 17 |
 | offices | 3 |
 | brands | 8 |
-| assets downloaded | 0 |
+| assets downloaded | 19 |
 
-Merged documents with a publication time: 750. Files with a known size: 0.
+Merged documents with a publication time: 800. Files with a known size: 710.
 
 ## Source lists (raw items per language → merged records)
 
 | Section | EN | TC | SC | Merged groups |
 | --- | --- | --- | --- | --- |
-| reports (financial_report.php) | 39 | 0 | 0 | 39 |
-| presentations (financial_info.php) | 41 | 0 | 0 | 41 |
-| press releases, HTML (news_press.php + news_detail.php) | 46 | 6 | 6 | 46 |
-| results press releases (financial_press.php) | 1 | 0 | 0 | 1 |
-| results webcasts (financial_webcast.php) | 1 | 0 | 0 | 1 |
-| results announcements (financial_ann.php) | 3 | 0 | 0 | 3 |
-| announcements & circulars (news.php) | 755 | 36 | 36 | 755 |
-| governance documents (about_gov.php) | 16 | 0 | 0 | 16 |
-| corporate communications (about_communications.php) | 2 | 0 | 0 | 2 |
-| AGM documents (news_gm.php) | 4 | 0 | 0 | 4 |
+| reports (financial_report.php) | 39 | 39 | 39 | 39 |
+| presentations (financial_info.php) | 41 | 41 | 41 | 41 |
+| press releases, HTML (news_press.php + news_detail.php) | 46 | 47 | 47 | 48 |
+| results press releases (financial_press.php) | 38 | 37 | 37 | 38 |
+| results webcasts (financial_webcast.php) | 7 | 7 | 7 | 7 |
+| results announcements (financial_ann.php) | 39 | 39 | 39 | 39 |
+| announcements & circulars (news.php) | 755 | 755 | 755 | 755 |
+| governance documents (about_gov.php) | 16 | 16 | 16 | 16 |
+| corporate communications (about_communications.php) | 2 | 2 | 2 | 2 |
+| AGM documents (news_gm.php) | 4 | 4 | 4 | 4 |
 
 Records found in several lists (e.g. an annual report listed under Reports *and* Announcements) are merged into one record carrying `tags` for every list it appears in.
 
@@ -43,109 +43,167 @@ Records found in several lists (e.g. an annual report listed under Reports *and*
 
 | Type | Total | Has EN | Has TC | Has SC | Native EN file | Native TC file | Native SC file |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| announcement | 470 | 470 | 23 | 23 | 470 | 23 | 2 |
-| corporate-communication | 2 | 2 | 0 | 0 | 2 | 0 | 0 |
-| general-meeting | 4 | 4 | 0 | 0 | 4 | 0 | 0 |
-| governance | 31 | 31 | 0 | 0 | 31 | 0 | 0 |
-| monthly-return | 214 | 214 | 10 | 10 | 214 | 10 | 0 |
-| presentation | 41 | 41 | 0 | 0 | 41 | 0 | 0 |
-| press-release | 47 | 47 | 6 | 6 | 47 | 6 | 6 |
-| report | 58 | 58 | 3 | 3 | 58 | 3 | 1 |
-| webcast | 1 | 1 | 0 | 0 | 1 | 0 | 0 |
+| announcement | 506 | 506 | 506 | 506 | 506 | 506 | 51 |
+| corporate-communication | 2 | 2 | 2 | 2 | 2 | 2 | 2 |
+| general-meeting | 4 | 4 | 4 | 4 | 4 | 4 | 4 |
+| governance | 31 | 31 | 31 | 31 | 31 | 31 | 0 |
+| monthly-return | 214 | 214 | 214 | 214 | 214 | 214 | 0 |
+| presentation | 41 | 41 | 41 | 41 | 41 | 41 | 41 |
+| press-release | 86 | 84 | 84 | 84 | 84 | 84 | 84 |
+| report | 58 | 58 | 58 | 58 | 58 | 58 | 17 |
+| webcast | 7 | 7 | 7 | 7 | 6 | 4 | 6 |
 
 ## Documents by type and year
 
 | Type | 2026 | 2025 | 2024 | 2023 | 2022 | 2021 | 2020 | 2019 | 2018 | 2017 | 2016 | 2015 | 2014 | 2013 | 2012 | 2011 | 2010 | 2009 | 2008 | 2007 | undated |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| announcement | 25 | 44 | 49 | 33 | 23 | 31 | 27 | 47 | 23 | 25 | 16 | 17 | 20 | 14 | 15 | 12 | 13 | 18 | 11 | 7 |  |
+| announcement | 25 | 45 | 51 | 35 | 25 | 33 | 29 | 49 | 25 | 27 | 18 | 19 | 22 | 16 | 17 | 14 | 15 | 20 | 13 | 8 |  |
 | corporate-communication |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 2 |
 | general-meeting |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 4 |
 | governance |  | 2 | 1 |  | 5 | 1 |  |  |  |  |  | 2 |  | 1 | 3 |  |  |  |  |  | 16 |
 | monthly-return | 10 | 13 | 12 | 12 | 12 | 12 | 12 | 12 | 12 | 12 | 12 | 12 | 12 | 12 | 12 | 12 | 12 | 11 |  |  |  |
 | presentation | 5 | 2 | 2 | 2 | 2 | 2 | 2 | 2 | 2 | 2 | 2 | 2 | 2 | 2 | 2 | 2 | 2 | 2 | 2 |  |  |
-| press-release | 7 | 10 | 17 | 13 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+| press-release | 8 | 12 | 21 | 15 | 2 | 2 | 2 | 2 | 2 | 2 | 2 | 2 | 2 | 2 | 2 | 2 | 2 | 2 | 1 | 1 |  |
 | report | 3 | 3 | 3 | 3 | 3 | 3 | 3 | 3 | 3 | 3 | 3 | 2 | 3 | 3 | 3 | 3 | 3 | 3 | 3 | 2 |  |
-| webcast | 1 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+| webcast | 2 | 2 | 2 | 1 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
 
 ## Missing languages
 
-Records missing a language (no title or no file on the source site for that language): EN 0, TC 826, SC 826.
-SC records that link a TC file instead of an SC file: 33; TC records linking an EN file: 0.
+Records missing a language (no title or no file on the source site for that language): EN 2, TC 2, SC 2.
+SC records that link a TC file instead of an SC file: 742; TC records linking an EN file: 3.
 
 | Date | Type | Missing | Title |
 | --- | --- | --- | --- |
-| 2026-08-26 | presentation | tc, sc | 2026 Interim Results Presentation |
-| 2026-08-26 | press-release | tc, sc | ANTA Sports' Revenue Grows 12.9% to RMB43.51 Billion in the First Half of 2026, Ranking Fi |
-| 2026-08-26 | announcement | tc, sc | 2026 INTERIM RESULTS ANNOUNCEMENT |
-| 2026-08-26 | webcast | tc, sc | 2026 Interim Results Presentation |
-| 2026-07-17 | presentation | tc, sc | Second Quarter, 2026 Investors Presentation |
-| 2026-04-13 | presentation | tc, sc | First Quarter, 2026 Investors Presentation |
-| 2026-03-25 | presentation | tc, sc | 2025 Annual Results Presentation |
-| 2026-03-25 | announcement | tc, sc | 2025 ANNUAL RESULTS ANNOUNCEMENT |
-| 2026-01-20 | presentation | tc, sc | Fourth Quarter, 2025 Investors Presentation |
-| 2025-12-22 | governance | tc, sc | Sustainability Committee Terms of Reference |
-| 2025-12-18 | press-release | tc, sc | ANTA Sports Achieves Dual ESG Rating Upgrades MSCI ESG Rating Further Upgraded to "AA" Thi |
-| 2025-12-10 | announcement | tc, sc | Next Day Disclosure Return |
-| 2025-12-01 | monthly-return | tc, sc | Monthly Return of Equity Issuer on Movements in Securities for the month ended 30 November |
-| 2025-11-27 | press-release | tc, sc | ANTA Sports Pledges Emergency Donation of HKD 30 Million in Cash and Supplies to Support T |
-| 2025-11-03 | monthly-return | tc, sc | Monthly Return of Equity Issuer on Movements in Securities for the month ended 31 October  |
-| 2025-10-27 | announcement | tc, sc | OPERATIONAL UPDATE FOR THE THIRD QUARTER OF 2025 |
-| 2025-10-02 | monthly-return | tc, sc | Monthly Return of Equity Issuer on Movements in Securities for the month ended 30 Septembe |
-| 2025-09-30 | announcement | tc, sc | Next Day Disclosure Return |
-| 2025-09-29 | announcement | tc, sc | Next Day Disclosure Return |
-| 2025-09-28 | announcement | tc, sc | Next Day Disclosure Return |
-| 2025-09-25 | announcement | tc, sc | Next Day Disclosure Return |
-| 2025-09-24 | announcement | tc, sc | Next Day Disclosure Return |
-| 2025-09-23 | announcement | tc, sc | Next Day Disclosure Return |
-| 2025-09-22 | announcement | tc, sc | Next Day Disclosure Return |
-| 2025-09-12 | press-release | tc, sc | ANTA Sports Debuts in ReThink HK 2025 |
-| 2025-09-08 | report | tc, sc | Interim Report 2025 |
-| 2025-09-08 | press-release | tc, sc | ANTA Sports Receives Renewed ESG Recognition, Outperforming 75% of Industry Peers |
-| 2025-09-01 | monthly-return | tc, sc | Monthly Return of Equity Issuer on Movements in Securities for the month ended 31 August 2 |
-| 2025-08-28 | announcement | tc, sc | ANNOUNCEMENT MADE PURSUANT TO RULE 13.10 OF THE LISTING RULES |
-| 2025-08-28 | announcement | tc, sc | ANNOUNCEMENT MADE PURSUANT TO RULE 13.10 OF THE LISTING RULES |
-| 2025-08-28 | press-release | tc, sc | ANTA Sports Included in Hang Seng ESG 50 Index for the First Time |
-| 2025-08-27 | announcement | tc, sc | ADJUSTMENT TO CONVERSION PRICE OF EUR1,500,000,000 ZERO COUPON GUARANTEED CONVERTIBLE BOND |
-| 2025-08-27 | announcement | tc, sc | 2025 INTERIM RESULTS ANNOUNCEMENT |
-| 2025-08-27 | announcement | tc, sc | VOLUNTARY ANNOUNCEMENT - JOINT VENTURE WITH MUSINSA |
-| 2025-08-27 | announcement | tc, sc | Interim dividend declared for the six months ended 30 June 2025 |
-| 2025-08-27 | announcement | tc, sc | CONNECTED TRANSACTIONS SHARE SUBSCRIPTION AGREEMENTS DEEMED DISPOSAL OF EQUITY INTEREST IN |
-| 2025-08-27 | press-release | tc, sc | ANTA Sports' Revenue Increases by 14.3%, Exceeding RMB 38.5 Billion in the First Half |
-| 2025-08-01 | monthly-return | tc, sc | Monthly Return of Equity Issuer on Movements in Securities for the month ended 31 July 202 |
-| 2025-07-29 | announcement | tc, sc | 2025 INTERIM RESULTS ANNOUNCEMENT |
-| 2025-07-29 | presentation | tc, sc | 2025 Interim Results Presentation |
-| 2025-07-21 | announcement | tc, sc | DATE OF BOARD MEETING |
-| 2025-07-15 | announcement | tc, sc | OPERATIONAL UPDATE FOR THE SECOND QUARTER AND FIRST HALF OF 2025 |
-| 2025-07-02 | monthly-return | tc, sc | Monthly Return of Equity Issuer on Movements in Securities for the month ended 30 June 202 |
-| 2025-06-30 | press-release | tc, sc | ANTA Sports Earns Great Place to Work® Certification™ for the First Time |
-| 2025-06-25 | governance | tc, sc | Nomination Committee Terms of Reference |
-| 2025-06-16 | announcement | tc, sc | LIST OF DIRECTORS AND THEIR ROLES AND FUNCTIONS |
-| 2025-06-04 | announcement | tc, sc | VOLUNTARY ANNOUNCEMENT - GRANT OF SHARE AWARDS PURSUANT TO SHARE AWARD SCHEME INVOLVING EX |
-| 2025-06-02 | monthly-return | tc, sc | Monthly Return of Equity Issuer on Movements in Securities for the month ended 31 May 2025 |
-| 2025-06-02 | announcement | tc, sc | VOLUNTARY ANNOUNCEMENT - COMPLETION OF ACQUISITION OF JACK WOLFSKIN BUSINESS |
-| 2025-06-02 | announcement | tc, sc | CHANGES IN COMPOSITION OF SUSTAINABILITY COMMITTEE |
-| 2025-05-07 | announcement | tc, sc | VOTING RESULTS OF THE ANNUAL GENERAL MEETING HELD ON 7 MAY 2025 |
-| 2025-05-07 | announcement | tc, sc | ADJUSTMENT TO CONVERSION PRICE OF EUR1,500,000,000 ZERO COUPON GUARANTEED CONVERTIBLE BOND |
-| 2025-05-02 | monthly-return | tc, sc | Monthly Return of Equity Issuer on Movements in Securities for the month ended 30 April 20 |
-| 2025-04-10 | announcement | tc, sc | OPERATIONAL UPDATE FOR THE FIRST QUARTER OF 2025 |
-| 2025-04-10 | announcement | tc, sc | VOLUNTARY ANNOUNCEMENT - ACQUISITION OF JACK WOLFSKIN BUSINESS |
-| 2025-04-01 | monthly-return | tc, sc | Monthly Return of Equity Issuer on Movements in Securities for the month ended 31 March 20 |
-| 2025-03-31 | report | tc, sc | Annual Report 2024 |
-| 2025-03-31 | announcement | tc, sc | Circular - Proposed Grant of General Mandates to Issue and Repurchase Shares, Re-election  |
-| 2025-03-31 | announcement | tc, sc | Notice of the Annual General Meeting |
-| 2025-03-31 | announcement | tc, sc | Proxy Form - Form of Proxy for the Annual General Meeting to be held on Wednesday, 7 May 2 |
+| 2024-03-11 | press-release | en, tc | 安踏欧文一代全球首发 — 安踏携手凯里 · 欧文开启全球化进程 |
+| 2024-03-11 | press-release | en, sc | 安踏歐文一代全球首發 — 安踏攜手凱里 · 歐文開啟全球化進程 |
+| 2007-08-27 | press-release | tc, sc | ANTA Sports Products Limited Announces its 2007 Interim Results |
 
-…and 766 more (see scrape-report.json).
 
 ## Broken links
 
-Checked 0 unique URLs: every file of reports, presentations, press releases, webcasts, governance/AGM/communication documents; a sample of announcement PDFs (newest 10 plus one per year per type; `--check-all` checks every file); and internal/external links found on the scraped pages.
+Checked 835 unique URLs: every file of reports, presentations, press releases, webcasts, governance/AGM/communication documents; a sample of announcement PDFs (newest 10 plus one per year per type; `--check-all` checks every file); and internal/external links found on the scraped pages.
 
-_No broken links found._
+| Status | Kind | URL | Found on |
+| --- | --- | --- | --- |
+| network error | document | http://webcast.live.wisdomir.com/anta_23ir/arc_landing_en.php | https://ir.anta.com/en/include/financial_webcast.php?year=2023 |
+| network error | document | http://webcast.live.wisdomir.com/anta_23ir/arc_landing_tc.php | https://ir.anta.com/tc/include/financial_webcast.php?year=2023<br>https://ir.anta.com/sc/include/financial_webcast.php?year=2023 |
+| 404 | document | https://ir.anta.com/en/include/news_detail.php?id=103240 | https://ir.anta.com/en/include/financial_press.php?year=2021 |
+| 404 | document | https://ir.anta.com/tc/include/news_detail.php?id=103240 | https://ir.anta.com/tc/include/financial_press.php?year=2021 |
+| 404 | document | https://ir.anta.com/sc/include/news_detail.php?id=103240 | https://ir.anta.com/sc/include/financial_press.php?year=2021 |
+| 404 | document | https://ir.anta.com/en/include/news_detail.php?id=91609 | https://ir.anta.com/en/include/financial_press.php?year=2021 |
+| 404 | document | https://ir.anta.com/tc/include/news_detail.php?id=91609 | https://ir.anta.com/tc/include/financial_press.php?year=2021 |
+| 404 | document | https://ir.anta.com/sc/include/news_detail.php?id=91609 | https://ir.anta.com/sc/include/financial_press.php?year=2021 |
+| 404 | document | https://ir.anta.com/en/include/news_detail.php?id=80587 | https://ir.anta.com/en/include/financial_press.php?year=2020 |
+| 404 | document | https://ir.anta.com/tc/include/news_detail.php?id=80587 | https://ir.anta.com/tc/include/financial_press.php?year=2020 |
+| 404 | document | https://ir.anta.com/sc/include/news_detail.php?id=80587 | https://ir.anta.com/sc/include/financial_press.php?year=2020 |
+| 404 | document | https://ir.anta.com/en/include/news_detail.php?id=73646 | https://ir.anta.com/en/include/financial_press.php?year=2020 |
+| 404 | document | https://ir.anta.com/tc/include/news_detail.php?id=73646 | https://ir.anta.com/tc/include/financial_press.php?year=2020 |
+| 404 | document | https://ir.anta.com/sc/include/news_detail.php?id=73646 | https://ir.anta.com/sc/include/financial_press.php?year=2020 |
+| 404 | document | https://ir.anta.com/en/include/news_detail.php?id=65635 | https://ir.anta.com/en/include/financial_press.php?year=2019 |
+| 404 | document | https://ir.anta.com/tc/include/news_detail.php?id=65635 | https://ir.anta.com/tc/include/financial_press.php?year=2019 |
+| 404 | document | https://ir.anta.com/sc/include/news_detail.php?id=65635 | https://ir.anta.com/sc/include/financial_press.php?year=2019 |
+| 404 | document | https://ir.anta.com/en/include/news_detail.php?id=57321 | https://ir.anta.com/en/include/financial_press.php?year=2019 |
+| 404 | document | https://ir.anta.com/tc/include/news_detail.php?id=57321 | https://ir.anta.com/tc/include/financial_press.php?year=2019 |
+| 404 | document | https://ir.anta.com/sc/include/news_detail.php?id=57321 | https://ir.anta.com/sc/include/financial_press.php?year=2019 |
+| 404 | document | https://ir.anta.com/en/include/news_detail.php?id=52186 | https://ir.anta.com/en/include/financial_press.php?year=2018 |
+| 404 | document | https://ir.anta.com/tc/include/news_detail.php?id=52186 | https://ir.anta.com/tc/include/financial_press.php?year=2018 |
+| 404 | document | https://ir.anta.com/sc/include/news_detail.php?id=52186 | https://ir.anta.com/sc/include/financial_press.php?year=2018 |
+| 404 | document | https://ir.anta.com/en/include/news_detail.php?id=42089 | https://ir.anta.com/en/include/financial_press.php?year=2018 |
+| 404 | document | https://ir.anta.com/tc/include/news_detail.php?id=42089 | https://ir.anta.com/tc/include/financial_press.php?year=2018 |
+| 404 | document | https://ir.anta.com/sc/include/news_detail.php?id=42089 | https://ir.anta.com/sc/include/financial_press.php?year=2018 |
+| 404 | document | https://ir.anta.com/en/include/news_detail.php?id=38653 | https://ir.anta.com/en/include/financial_press.php?year=2017 |
+| 404 | document | https://ir.anta.com/tc/include/news_detail.php?id=38653 | https://ir.anta.com/tc/include/financial_press.php?year=2017 |
+| 404 | document | https://ir.anta.com/sc/include/news_detail.php?id=38653 | https://ir.anta.com/sc/include/financial_press.php?year=2017 |
+| 404 | document | https://ir.anta.com/en/include/news_detail.php?id=38652 | https://ir.anta.com/en/include/financial_press.php?year=2017 |
+| 404 | document | https://ir.anta.com/tc/include/news_detail.php?id=38652 | https://ir.anta.com/tc/include/financial_press.php?year=2017 |
+| 404 | document | https://ir.anta.com/sc/include/news_detail.php?id=38652 | https://ir.anta.com/sc/include/financial_press.php?year=2017 |
+| 404 | document | https://ir.anta.com/en/include/news_detail.php?id=38657 | https://ir.anta.com/en/include/financial_press.php?year=2016 |
+| 404 | document | https://ir.anta.com/tc/include/news_detail.php?id=38657 | https://ir.anta.com/tc/include/financial_press.php?year=2016 |
+| 404 | document | https://ir.anta.com/sc/include/news_detail.php?id=38657 | https://ir.anta.com/sc/include/financial_press.php?year=2016 |
+| 404 | document | https://ir.anta.com/en/include/news_detail.php?id=38656 | https://ir.anta.com/en/include/financial_press.php?year=2016 |
+| 404 | document | https://ir.anta.com/tc/include/news_detail.php?id=38656 | https://ir.anta.com/tc/include/financial_press.php?year=2016 |
+| 404 | document | https://ir.anta.com/sc/include/news_detail.php?id=38656 | https://ir.anta.com/sc/include/financial_press.php?year=2016 |
+| 404 | document | https://ir.anta.com/en/include/news_detail.php?id=38673 | https://ir.anta.com/en/include/financial_press.php?year=2015 |
+| 404 | document | https://ir.anta.com/tc/include/news_detail.php?id=38673 | https://ir.anta.com/tc/include/financial_press.php?year=2015 |
+| 404 | document | https://ir.anta.com/sc/include/news_detail.php?id=38673 | https://ir.anta.com/sc/include/financial_press.php?year=2015 |
+| 404 | document | https://ir.anta.com/en/include/news_detail.php?id=38658 | https://ir.anta.com/en/include/financial_press.php?year=2015 |
+| 404 | document | https://ir.anta.com/tc/include/news_detail.php?id=38658 | https://ir.anta.com/tc/include/financial_press.php?year=2015 |
+| 404 | document | https://ir.anta.com/sc/include/news_detail.php?id=38658 | https://ir.anta.com/sc/include/financial_press.php?year=2015 |
+| 404 | document | https://ir.anta.com/en/include/news_detail.php?id=40056 | https://ir.anta.com/en/include/financial_press.php?year=2014 |
+| 404 | document | https://ir.anta.com/tc/include/news_detail.php?id=40056 | https://ir.anta.com/tc/include/financial_press.php?year=2014 |
+| 404 | document | https://ir.anta.com/sc/include/news_detail.php?id=40056 | https://ir.anta.com/sc/include/financial_press.php?year=2014 |
+| 404 | document | https://ir.anta.com/en/include/news_detail.php?id=38681 | https://ir.anta.com/en/include/financial_press.php?year=2014 |
+| 404 | document | https://ir.anta.com/tc/include/news_detail.php?id=38681 | https://ir.anta.com/tc/include/financial_press.php?year=2014 |
+| 404 | document | https://ir.anta.com/sc/include/news_detail.php?id=38681 | https://ir.anta.com/sc/include/financial_press.php?year=2014 |
+| 404 | document | https://ir.anta.com/en/include/news_detail.php?id=40058 | https://ir.anta.com/en/include/financial_press.php?year=2013 |
+| 404 | document | https://ir.anta.com/tc/include/news_detail.php?id=40058 | https://ir.anta.com/tc/include/financial_press.php?year=2013 |
+| 404 | document | https://ir.anta.com/sc/include/news_detail.php?id=40058 | https://ir.anta.com/sc/include/financial_press.php?year=2013 |
+| 404 | document | https://ir.anta.com/en/include/news_detail.php?id=40057 | https://ir.anta.com/en/include/financial_press.php?year=2013 |
+| 404 | document | https://ir.anta.com/tc/include/news_detail.php?id=40057 | https://ir.anta.com/tc/include/financial_press.php?year=2013 |
+| 404 | document | https://ir.anta.com/sc/include/news_detail.php?id=40057 | https://ir.anta.com/sc/include/financial_press.php?year=2013 |
+| 404 | document | https://ir.anta.com/en/include/news_detail.php?id=40065 | https://ir.anta.com/en/include/financial_press.php?year=2012 |
+| 404 | document | https://ir.anta.com/tc/include/news_detail.php?id=40065 | https://ir.anta.com/tc/include/financial_press.php?year=2012 |
+| 404 | document | https://ir.anta.com/sc/include/news_detail.php?id=40065 | https://ir.anta.com/sc/include/financial_press.php?year=2012 |
+| 404 | document | https://ir.anta.com/en/include/news_detail.php?id=40064 | https://ir.anta.com/en/include/financial_press.php?year=2012 |
+| 404 | document | https://ir.anta.com/tc/include/news_detail.php?id=40064 | https://ir.anta.com/tc/include/financial_press.php?year=2012 |
+| 404 | document | https://ir.anta.com/sc/include/news_detail.php?id=40064 | https://ir.anta.com/sc/include/financial_press.php?year=2012 |
+| 404 | document | https://ir.anta.com/en/include/news_detail.php?id=40073 | https://ir.anta.com/en/include/financial_press.php?year=2011 |
+| 404 | document | https://ir.anta.com/tc/include/news_detail.php?id=40073 | https://ir.anta.com/tc/include/financial_press.php?year=2011 |
+| 404 | document | https://ir.anta.com/sc/include/news_detail.php?id=40073 | https://ir.anta.com/sc/include/financial_press.php?year=2011 |
+| 404 | document | https://ir.anta.com/en/include/news_detail.php?id=40072 | https://ir.anta.com/en/include/financial_press.php?year=2011 |
+| 404 | document | https://ir.anta.com/tc/include/news_detail.php?id=40072 | https://ir.anta.com/tc/include/financial_press.php?year=2011 |
+| 404 | document | https://ir.anta.com/sc/include/news_detail.php?id=40072 | https://ir.anta.com/sc/include/financial_press.php?year=2011 |
+| 404 | document | https://ir.anta.com/en/include/news_detail.php?id=40075 | https://ir.anta.com/en/include/financial_press.php?year=2010 |
+| 404 | document | https://ir.anta.com/tc/include/news_detail.php?id=40075 | https://ir.anta.com/tc/include/financial_press.php?year=2010 |
+| 404 | document | https://ir.anta.com/sc/include/news_detail.php?id=40075 | https://ir.anta.com/sc/include/financial_press.php?year=2010 |
+| 404 | document | https://ir.anta.com/en/include/news_detail.php?id=40074 | https://ir.anta.com/en/include/financial_press.php?year=2010 |
+| 404 | document | https://ir.anta.com/tc/include/news_detail.php?id=40074 | https://ir.anta.com/tc/include/financial_press.php?year=2010 |
+| 404 | document | https://ir.anta.com/sc/include/news_detail.php?id=40074 | https://ir.anta.com/sc/include/financial_press.php?year=2010 |
+| 404 | document | https://ir.anta.com/en/include/news_detail.php?id=40077 | https://ir.anta.com/en/include/financial_press.php?year=2009 |
+| 404 | document | https://ir.anta.com/tc/include/news_detail.php?id=40077 | https://ir.anta.com/tc/include/financial_press.php?year=2009 |
+| 404 | document | https://ir.anta.com/sc/include/news_detail.php?id=40077 | https://ir.anta.com/sc/include/financial_press.php?year=2009 |
+| 404 | document | https://ir.anta.com/en/include/news_detail.php?id=40076 | https://ir.anta.com/en/include/financial_press.php?year=2009 |
+| 404 | document | https://ir.anta.com/tc/include/news_detail.php?id=40076 | https://ir.anta.com/tc/include/financial_press.php?year=2009 |
+| 404 | document | https://ir.anta.com/sc/include/news_detail.php?id=40076 | https://ir.anta.com/sc/include/financial_press.php?year=2009 |
+| 404 | document | https://ir.anta.com/en/include/news_detail.php?id=40079 | https://ir.anta.com/en/include/financial_press.php?year=2008 |
+| 404 | document | https://ir.anta.com/tc/include/news_detail.php?id=40079 | https://ir.anta.com/tc/include/financial_press.php?year=2008 |
+| 404 | document | https://ir.anta.com/sc/include/news_detail.php?id=40079 | https://ir.anta.com/sc/include/financial_press.php?year=2008 |
+| 404 | document | https://ir.anta.com/en/include/news_detail.php?id=40081 | https://ir.anta.com/en/include/financial_press.php?year=2007 |
+| 404 | document | https://ir.anta.com/tc/include/news_detail.php?id=40081 | https://ir.anta.com/tc/include/financial_press.php?year=2007 |
+| 404 | document | https://ir.anta.com/sc/include/news_detail.php?id=40081 | https://ir.anta.com/sc/include/financial_press.php?year=2007 |
+| 404 | document | https://ir.anta.com/en/include/news_detail.php?id=40080 | https://ir.anta.com/en/include/financial_press.php?year=2007 |
+| network error | external | http://anta.cre8ir.com/ | https://ir.anta.com/en/financial_report.php |
+| network error | external | http://anta.cre8ir.com/index_c.html | https://ir.anta.com/tc/financial_report.php<br>https://ir.anta.com/sc/financial_report.php |
+| 404 | internal-page | https://ir.anta.com/esg/en/index.php | https://ir.anta.com/en/news_press.php<br>https://ir.anta.com/en/news_press.php?year=2025 |
+| network error | external | http://www.miibeian.gov.cn/ | https://ir.anta.com/en/news_press.php<br>https://ir.anta.com/en/news_press.php?year=2025 |
+| network error | external | http://en.anta.com/ | https://ir.anta.com/en/news_press.php<br>https://ir.anta.com/en/news_press.php?year=2025 |
+| network error | external | http://ir.anta.com/ | https://ir.anta.com/en/news_detail.php?id=153757<br>https://ir.anta.com/en/news_detail.php?id=153579 |
+| network error | external | http://ir.anta.com/esg/ | https://ir.anta.com/en/news_detail.php?id=153757<br>https://ir.anta.com/en/news_detail.php?id=153579 |
+| 404 | internal-page | https://ir.anta.com/esg/ | https://ir.anta.com/en/news_detail.php?id=153198<br>https://ir.anta.com/tc/news_detail.php?id=153198 |
+| 404 | internal-page | https://ir.anta.com/en/news_day.php | https://ir.anta.com/en/news_detail.php?id=126812 |
+| 404 | internal-page | https://ir.anta.com/esg/tc/index.php | https://ir.anta.com/tc/news_press.php<br>https://ir.anta.com/tc/news_press.php?year=2025 |
+| network error | external | http://www.anta.com/ | https://ir.anta.com/tc/news_press.php<br>https://ir.anta.com/tc/news_press.php?year=2025 |
+| 404 | internal-page | https://ir.anta.com/esg/sc/index.php | https://ir.anta.com/sc/news_press.php<br>https://ir.anta.com/sc/news_press.php?year=2025 |
+| 404 | internal-page | https://ir.anta.com/sc/mailto%20:esg@anta.com.hk | https://ir.anta.com/sc/news_detail.php?id=139011<br>https://ir.anta.com/sc/news_detail.php?id=135218 |
+| 404 | internal-page | https://ir.anta.com/sc/mailto%20:ir@anta.com.hk | https://ir.anta.com/sc/news_detail.php?id=132610 |
+| 503 | external | https://www.hkexnews.hk/index.htm | https://ir.anta.com/en/about_communications.php |
+| 503 | external | https://www.hkexnews.hk/index_c.htm | https://ir.anta.com/tc/about_communications.php<br>https://ir.anta.com/sc/about_communications.php |
+| 404 | external | https://meetings.computershare.com/ANTAAGM2026 | https://ir.anta.com/en/news_gm.php<br>https://ir.anta.com/tc/news_gm.php |
+| network error | external | http://webcast.live.wisdomir.com/anta_17ar/arc_landing_en.php | https://ir.anta.com/en/news_calendar.php?year=2018 |
+| network error | external | http://livewebcast.todayir.com/anta_17ir/arc_landing.php | https://ir.anta.com/en/news_calendar.php?year=2017<br>https://ir.anta.com/tc/news_calendar.php?year=2017 |
+| network error | external | http://website.antasports.wisdomir.com/anta_17investor/en.php | https://ir.anta.com/en/news_calendar.php?year=2017 |
+| network error | external | http://www.todayir.com/webcasting/anta_16ar/arc_landing.php | https://ir.anta.com/en/news_calendar.php?year=2017<br>https://ir.anta.com/tc/news_calendar.php?year=2017 |
+| network error | external | http://livewebcast.todayir.com/anta_16ir/arc_landing.php | https://ir.anta.com/en/news_calendar.php?year=2016<br>https://ir.anta.com/tc/news_calendar.php?year=2016 |
+| network error | external | http://webcast.live.wisdomir.com/anta_17ar/arc_landing_sc.php | https://ir.anta.com/tc/news_calendar.php?year=2018<br>https://ir.anta.com/sc/news_calendar.php?year=2018 |
+| network error | external | http://website.antasports.wisdomir.com/anta_17investor/cn.php | https://ir.anta.com/tc/news_calendar.php?year=2017<br>https://ir.anta.com/sc/news_calendar.php?year=2017 |
+| network error | external | http://www.hkexnews.hk/index.htm | https://ir.anta.com/en/about_ir.php |
+| network error | external | http://www.hkexnews.hk/index_c.htm | https://ir.anta.com/tc/about_ir.php<br>https://ir.anta.com/sc/about_ir.php |
 
 ## Cross-checks
 
 - Monthly returns 2026 (EN): news_monthly.php lists 10; scraper classified 10 from the announcements list ✓
+- Monthly returns 2026 (TC): news_monthly.php lists 10; scraper classified 10 from the announcements list ✓
+- Monthly returns 2026 (SC): news_monthly.php lists 10; scraper classified 10 from the announcements list ✓
 
 ## Not scrapeable / handled specially
 
@@ -163,25 +221,7 @@ _No broken links found._
 
 ## Assets
 
-- skipped: https://ir.anta.com/img/logo.png (HTTP 0)
-- skipped: https://ir.anta.com/img/logo_scrolled.png (HTTP 0)
-- skipped: https://ir.anta.com/img/favicon.png (HTTP 0)
-- skipped: https://ir.anta.com/img/banner2.jpg (HTTP 0)
-- skipped: https://ir.anta.com/img/banner3.jpg (HTTP 0)
-- skipped: https://ir.anta.com/img/brand/logo_1.png (HTTP 0)
-- skipped: https://ir.anta.com/img/brand/brand_1_img.jpg (HTTP 0)
-- skipped: https://ir.anta.com/img/brand/logo_3.png (HTTP 0)
-- skipped: https://ir.anta.com/img/brand/brand_3_img.jpg (HTTP 0)
-- skipped: https://ir.anta.com/img/brand/logo_6.png (HTTP 0)
-- skipped: https://ir.anta.com/img/brand/brand_6_img.jpg (HTTP 0)
-- skipped: https://ir.anta.com/img/brand/logo_8.png (HTTP 0)
-- skipped: https://ir.anta.com/img/brand/brand_8_img.jpg (HTTP 0)
-- skipped: https://ir.anta.com/img/brand/logo_11.png (HTTP 0)
-- skipped: https://ir.anta.com/img/brand/brand_11_img.jpg (HTTP 0)
-- skipped: https://ir.anta.com/img/brand/logo_12.png (HTTP 0)
-- skipped: https://ir.anta.com/img/brand/brand_12_img.jpg (HTTP 0)
-- skipped: https://ir.anta.com/img/brand/logo_10.png (HTTP 0)
-- skipped: https://ir.anta.com/img/brand/logo_13.png (HTTP 0) See `data/assets.json` for paths, source URLs and SHA-256.
+All selected assets downloaded. See `data/assets.json` for paths, source URLs and SHA-256.
 
 ## Validation
 
@@ -192,7 +232,7 @@ _No broken links found._
 | board.json | valid ✓ |
 | calendar.json | valid ✓ |
 | faq.json | valid ✓ |
-| contacts.json | INVALID: vendorForms.enquiryFormUrl.tc: Invalid url; vendorForms.enquiryFormUrl.sc: Invalid url; vendorForms.emailAlertUrl.tc: Invalid url |
+| contacts.json | valid ✓ |
 | brands.json | valid ✓ |
 | company.json | valid ✓ |
 | quote.mock.json | valid ✓ |
@@ -200,226 +240,4 @@ _No broken links found._
 
 ## Scraper notes / warnings
 
-- FAILED https://ir.anta.com/tc/financial_report.php -> 0
-- FAILED https://ir.anta.com/sc/financial_report.php -> 0
-- FAILED https://ir.anta.com/tc/financial_info.php -> 0
-- FAILED https://ir.anta.com/sc/financial_info.php -> 0
-- FAILED press detail https://ir.anta.com/en/news_detail.php?id=169228 -> 0
-- FAILED press detail https://ir.anta.com/en/news_detail.php?id=167844 -> 0
-- FAILED press detail https://ir.anta.com/en/news_detail.php?id=164060 -> 0
-- FAILED press detail https://ir.anta.com/en/news_detail.php?id=160710 -> 0
-- FAILED press detail https://ir.anta.com/en/news_detail.php?id=159672 -> 0
-- FAILED press detail https://ir.anta.com/en/news_detail.php?id=159082 -> 0
-- FAILED press detail https://ir.anta.com/en/news_detail.php?id=158139 -> 0
-- FAILED press detail https://ir.anta.com/en/news_detail.php?id=157805 -> 0
-- FAILED press detail https://ir.anta.com/en/news_detail.php?id=153757 -> 0
-- FAILED press detail https://ir.anta.com/en/news_detail.php?id=153579 -> 0
-- FAILED press detail https://ir.anta.com/en/news_detail.php?id=153198 -> 0
-- FAILED press detail https://ir.anta.com/en/news_detail.php?id=153056 -> 0
-- FAILED press detail https://ir.anta.com/en/news_detail.php?id=151337 -> 0
-- FAILED press detail https://ir.anta.com/en/news_detail.php?id=144313 -> 0
-- FAILED press detail https://ir.anta.com/en/news_detail.php?id=143103 -> 0
-- FAILED press detail https://ir.anta.com/en/news_detail.php?id=142053 -> 0
-- FAILED press detail https://ir.anta.com/en/news_detail.php?id=141704 -> 0
-- FAILED press detail https://ir.anta.com/en/news_detail.php?id=140867 -> 0
-- FAILED press detail https://ir.anta.com/en/news_detail.php?id=140384 -> 0
-- FAILED press detail https://ir.anta.com/en/news_detail.php?id=139525 -> 0
-- FAILED press detail https://ir.anta.com/en/news_detail.php?id=139011 -> 0
-- FAILED press detail https://ir.anta.com/en/news_detail.php?id=138010 -> 0
-- FAILED press detail https://ir.anta.com/en/news_detail.php?id=137894 -> 0
-- FAILED press detail https://ir.anta.com/en/news_detail.php?id=136874 -> 0
-- FAILED press detail https://ir.anta.com/en/news_detail.php?id=137129 -> 0
-- FAILED press detail https://ir.anta.com/en/news_detail.php?id=135985 -> 0
-- FAILED press detail https://ir.anta.com/en/news_detail.php?id=135278 -> 0
-- FAILED press detail https://ir.anta.com/en/news_detail.php?id=135218 -> 0
-- FAILED press detail https://ir.anta.com/en/news_detail.php?id=135127 -> 0
-- FAILED press detail https://ir.anta.com/en/news_detail.php?id=133778 -> 0
-- FAILED press detail https://ir.anta.com/en/news_detail.php?id=132610 -> 0
-- FAILED press detail https://ir.anta.com/en/news_detail.php?id=131730 -> 0
-- FAILED press detail https://ir.anta.com/en/news_detail.php?id=131014 -> 0
-- FAILED press detail https://ir.anta.com/en/news_detail.php?id=126874 -> 0
-- FAILED press detail https://ir.anta.com/en/news_detail.php?id=126812 -> 0
-- FAILED press detail https://ir.anta.com/en/news_detail.php?id=126737 -> 0
-- FAILED press detail https://ir.anta.com/en/news_detail.php?id=126436 -> 0
-- FAILED press detail https://ir.anta.com/en/news_detail.php?id=126098 -> 0
-- FAILED press detail https://ir.anta.com/en/news_detail.php?id=125289 -> 0
-- FAILED press detail https://ir.anta.com/en/news_detail.php?id=123915 -> 0
-- FAILED press detail https://ir.anta.com/en/news_detail.php?id=123745 -> 0
-- FAILED press detail https://ir.anta.com/en/news_detail.php?id=123036 -> 0
-- FAILED press detail https://ir.anta.com/en/news_detail.php?id=122201 -> 0
-- FAILED press detail https://ir.anta.com/en/news_detail.php?id=120958 -> 0
-- FAILED press detail https://ir.anta.com/en/news_detail.php?id=119922 -> 0
-- FAILED press detail https://ir.anta.com/en/news_detail.php?id=119274 -> 0
-- FAILED https://ir.anta.com/tc/news_press.php?year=2025 -> 0 offline: not in cache
-- FAILED https://ir.anta.com/tc/news_press.php?year=2024 -> 0 offline: not in cache
-- FAILED https://ir.anta.com/tc/news_press.php?year=2023 -> 0 offline: not in cache
-- FAILED press detail https://ir.anta.com/tc/news_detail.php?id=169228 -> 0
-- FAILED press detail https://ir.anta.com/tc/news_detail.php?id=167844 -> 0
-- FAILED press detail https://ir.anta.com/tc/news_detail.php?id=164060 -> 0
-- FAILED press detail https://ir.anta.com/tc/news_detail.php?id=160710 -> 0
-- FAILED press detail https://ir.anta.com/tc/news_detail.php?id=159672 -> 0
-- FAILED press detail https://ir.anta.com/tc/news_detail.php?id=159082 -> 0
-- FAILED https://ir.anta.com/sc/news_press.php?year=2025 -> 0 offline: not in cache
-- FAILED https://ir.anta.com/sc/news_press.php?year=2024 -> 0 offline: not in cache
-- FAILED https://ir.anta.com/sc/news_press.php?year=2023 -> 0 offline: not in cache
-- FAILED press detail https://ir.anta.com/sc/news_detail.php?id=169228 -> 0
-- FAILED press detail https://ir.anta.com/sc/news_detail.php?id=167844 -> 0
-- FAILED press detail https://ir.anta.com/sc/news_detail.php?id=164060 -> 0
-- FAILED press detail https://ir.anta.com/sc/news_detail.php?id=160710 -> 0
-- FAILED press detail https://ir.anta.com/sc/news_detail.php?id=159672 -> 0
-- FAILED press detail https://ir.anta.com/sc/news_detail.php?id=159082 -> 0
-- FAILED https://ir.anta.com/en/include/financial_press.php?year=2025 -> 0 offline: not in cache
-- FAILED https://ir.anta.com/en/include/financial_press.php?year=2024 -> 0 offline: not in cache
-- FAILED https://ir.anta.com/en/include/financial_press.php?year=2023 -> 0 offline: not in cache
-- FAILED https://ir.anta.com/en/include/financial_press.php?year=2022 -> 0 offline: not in cache
-- FAILED https://ir.anta.com/en/include/financial_press.php?year=2021 -> 0 offline: not in cache
-- FAILED https://ir.anta.com/en/include/financial_press.php?year=2020 -> 0 offline: not in cache
-- FAILED https://ir.anta.com/en/include/financial_press.php?year=2019 -> 0 offline: not in cache
-- FAILED https://ir.anta.com/en/include/financial_press.php?year=2018 -> 0 offline: not in cache
-- FAILED https://ir.anta.com/en/include/financial_press.php?year=2017 -> 0 offline: not in cache
-- FAILED https://ir.anta.com/en/include/financial_press.php?year=2016 -> 0 offline: not in cache
-- FAILED https://ir.anta.com/en/include/financial_press.php?year=2015 -> 0 offline: not in cache
-- FAILED https://ir.anta.com/en/include/financial_press.php?year=2014 -> 0 offline: not in cache
-- FAILED https://ir.anta.com/en/include/financial_press.php?year=2013 -> 0 offline: not in cache
-- FAILED https://ir.anta.com/en/include/financial_press.php?year=2012 -> 0 offline: not in cache
-- FAILED https://ir.anta.com/en/include/financial_press.php?year=2011 -> 0 offline: not in cache
-- FAILED https://ir.anta.com/en/include/financial_press.php?year=2010 -> 0 offline: not in cache
-- FAILED https://ir.anta.com/en/include/financial_press.php?year=2009 -> 0 offline: not in cache
-- FAILED https://ir.anta.com/en/include/financial_press.php?year=2008 -> 0 offline: not in cache
-- FAILED https://ir.anta.com/en/include/financial_press.php?year=2007 -> 0 offline: not in cache
-- FAILED https://ir.anta.com/tc/financial_press.php -> 0 offline: not in cache
-- FAILED https://ir.anta.com/sc/financial_press.php -> 0 offline: not in cache
-- FAILED https://ir.anta.com/en/include/financial_webcast.php?year=2025 -> 0 offline: not in cache
-- FAILED https://ir.anta.com/en/include/financial_webcast.php?year=2024 -> 0 offline: not in cache
-- FAILED https://ir.anta.com/en/include/financial_webcast.php?year=2023 -> 0 offline: not in cache
-- FAILED https://ir.anta.com/en/include/financial_webcast.php?year=2022 -> 0 offline: not in cache
-- FAILED https://ir.anta.com/en/include/financial_webcast.php?year=2021 -> 0 offline: not in cache
-- FAILED https://ir.anta.com/en/include/financial_webcast.php?year=2020 -> 0 offline: not in cache
-- FAILED https://ir.anta.com/en/include/financial_webcast.php?year=2019 -> 0 offline: not in cache
-- FAILED https://ir.anta.com/en/include/financial_webcast.php?year=2018 -> 0 offline: not in cache
-- FAILED https://ir.anta.com/en/include/financial_webcast.php?year=2017 -> 0 offline: not in cache
-- FAILED https://ir.anta.com/en/include/financial_webcast.php?year=2016 -> 0 offline: not in cache
-- FAILED https://ir.anta.com/en/include/financial_webcast.php?year=2015 -> 0 offline: not in cache
-- FAILED https://ir.anta.com/en/include/financial_webcast.php?year=2014 -> 0 offline: not in cache
-- FAILED https://ir.anta.com/en/include/financial_webcast.php?year=2013 -> 0 offline: not in cache
-- FAILED https://ir.anta.com/en/include/financial_webcast.php?year=2012 -> 0 offline: not in cache
-- FAILED https://ir.anta.com/en/include/financial_webcast.php?year=2011 -> 0 offline: not in cache
-- FAILED https://ir.anta.com/en/include/financial_webcast.php?year=2010 -> 0 offline: not in cache
-- FAILED https://ir.anta.com/en/include/financial_webcast.php?year=2009 -> 0 offline: not in cache
-- FAILED https://ir.anta.com/en/include/financial_webcast.php?year=2008 -> 0 offline: not in cache
-- FAILED https://ir.anta.com/en/include/financial_webcast.php?year=2007 -> 0 offline: not in cache
-- FAILED https://ir.anta.com/tc/financial_webcast.php -> 0 offline: not in cache
-- FAILED https://ir.anta.com/sc/financial_webcast.php -> 0 offline: not in cache
-- FAILED https://ir.anta.com/en/include/financial_ann.php?year=2024 -> 0 offline: not in cache
-- FAILED https://ir.anta.com/en/include/financial_ann.php?year=2023 -> 0 offline: not in cache
-- FAILED https://ir.anta.com/en/include/financial_ann.php?year=2022 -> 0 offline: not in cache
-- FAILED https://ir.anta.com/en/include/financial_ann.php?year=2021 -> 0 offline: not in cache
-- FAILED https://ir.anta.com/en/include/financial_ann.php?year=2020 -> 0 offline: not in cache
-- FAILED https://ir.anta.com/en/include/financial_ann.php?year=2019 -> 0 offline: not in cache
-- FAILED https://ir.anta.com/en/include/financial_ann.php?year=2018 -> 0 offline: not in cache
-- FAILED https://ir.anta.com/en/include/financial_ann.php?year=2017 -> 0 offline: not in cache
-- FAILED https://ir.anta.com/en/include/financial_ann.php?year=2016 -> 0 offline: not in cache
-- FAILED https://ir.anta.com/en/include/financial_ann.php?year=2015 -> 0 offline: not in cache
-- FAILED https://ir.anta.com/en/include/financial_ann.php?year=2014 -> 0 offline: not in cache
-- FAILED https://ir.anta.com/en/include/financial_ann.php?year=2013 -> 0 offline: not in cache
-- FAILED https://ir.anta.com/en/include/financial_ann.php?year=2012 -> 0 offline: not in cache
-- FAILED https://ir.anta.com/en/include/financial_ann.php?year=2011 -> 0 offline: not in cache
-- FAILED https://ir.anta.com/en/include/financial_ann.php?year=2010 -> 0 offline: not in cache
-- FAILED https://ir.anta.com/en/include/financial_ann.php?year=2009 -> 0 offline: not in cache
-- FAILED https://ir.anta.com/en/include/financial_ann.php?year=2008 -> 0 offline: not in cache
-- FAILED https://ir.anta.com/en/include/financial_ann.php?year=2007 -> 0 offline: not in cache
-- FAILED https://ir.anta.com/tc/financial_ann.php -> 0 offline: not in cache
-- FAILED https://ir.anta.com/sc/financial_ann.php -> 0 offline: not in cache
-- FAILED https://ir.anta.com/tc/news.php?year=2025 -> 0 offline: not in cache
-- FAILED https://ir.anta.com/tc/news.php?year=2024 -> 0 offline: not in cache
-- FAILED https://ir.anta.com/tc/news.php?year=2023 -> 0 offline: not in cache
-- FAILED https://ir.anta.com/tc/news.php?year=2022 -> 0 offline: not in cache
-- FAILED https://ir.anta.com/tc/news.php?year=2021 -> 0 offline: not in cache
-- FAILED https://ir.anta.com/tc/news.php?year=2020 -> 0 offline: not in cache
-- FAILED https://ir.anta.com/tc/news.php?year=2019 -> 0 offline: not in cache
-- FAILED https://ir.anta.com/tc/news.php?year=2018 -> 0 offline: not in cache
-- FAILED https://ir.anta.com/tc/news.php?year=2017 -> 0 offline: not in cache
-- FAILED https://ir.anta.com/tc/news.php?year=2016 -> 0 offline: not in cache
-- FAILED https://ir.anta.com/tc/news.php?year=2015 -> 0 offline: not in cache
-- FAILED https://ir.anta.com/tc/news.php?year=2014 -> 0 offline: not in cache
-- FAILED https://ir.anta.com/tc/news.php?year=2013 -> 0 offline: not in cache
-- FAILED https://ir.anta.com/tc/news.php?year=2012 -> 0 offline: not in cache
-- FAILED https://ir.anta.com/tc/news.php?year=2011 -> 0 offline: not in cache
-- FAILED https://ir.anta.com/tc/news.php?year=2010 -> 0 offline: not in cache
-- FAILED https://ir.anta.com/tc/news.php?year=2009 -> 0 offline: not in cache
-- FAILED https://ir.anta.com/tc/news.php?year=2008 -> 0 offline: not in cache
-- FAILED https://ir.anta.com/tc/news.php?year=2007 -> 0 offline: not in cache
-- FAILED https://ir.anta.com/sc/news.php?year=2025 -> 0 offline: not in cache
-- FAILED https://ir.anta.com/sc/news.php?year=2024 -> 0 offline: not in cache
-- FAILED https://ir.anta.com/sc/news.php?year=2023 -> 0 offline: not in cache
-- FAILED https://ir.anta.com/sc/news.php?year=2022 -> 0 offline: not in cache
-- FAILED https://ir.anta.com/sc/news.php?year=2021 -> 0 offline: not in cache
-- FAILED https://ir.anta.com/sc/news.php?year=2020 -> 0 offline: not in cache
-- FAILED https://ir.anta.com/sc/news.php?year=2019 -> 0 offline: not in cache
-- FAILED https://ir.anta.com/sc/news.php?year=2018 -> 0 offline: not in cache
-- FAILED https://ir.anta.com/sc/news.php?year=2017 -> 0 offline: not in cache
-- FAILED https://ir.anta.com/sc/news.php?year=2016 -> 0 offline: not in cache
-- FAILED https://ir.anta.com/sc/news.php?year=2015 -> 0 offline: not in cache
-- FAILED https://ir.anta.com/sc/news.php?year=2014 -> 0 offline: not in cache
-- FAILED https://ir.anta.com/sc/news.php?year=2013 -> 0 offline: not in cache
-- FAILED https://ir.anta.com/sc/news.php?year=2012 -> 0 offline: not in cache
-- FAILED https://ir.anta.com/sc/news.php?year=2011 -> 0 offline: not in cache
-- FAILED https://ir.anta.com/sc/news.php?year=2010 -> 0 offline: not in cache
-- FAILED https://ir.anta.com/sc/news.php?year=2009 -> 0 offline: not in cache
-- FAILED https://ir.anta.com/sc/news.php?year=2008 -> 0 offline: not in cache
-- FAILED https://ir.anta.com/sc/news.php?year=2007 -> 0 offline: not in cache
-- FAILED https://ir.anta.com/tc/about_gov.php
-- FAILED https://ir.anta.com/sc/about_gov.php
-- FAILED https://ir.anta.com/tc/about_communications.php
-- FAILED https://ir.anta.com/sc/about_communications.php
-- FAILED https://ir.anta.com/tc/news_gm.php
-- FAILED https://ir.anta.com/sc/news_gm.php
-- FAILED https://ir.anta.com/sc/financial_highlight.php -> 0 offline: not in cache
-- highlights row "Revenue": sc values differ from EN (undefined)
-- highlights row "Gross profit": sc values differ from EN (undefined)
-- highlights row "Profit from operations": sc values differ from EN (undefined)
-- highlights row "Profit attributable to equity shareholders": sc values differ from EN (undefined)
-- highlights row "Basic earnings per share (RMB cents)": sc values differ from EN (undefined)
-- highlights row "Gross profit margin": sc values differ from EN (undefined)
-- FAILED https://ir.anta.com/sc/about_bod.php -> 0 offline: not in cache
-- FAILED https://ir.anta.com/tc/about_gov.php -> 0 offline: not in cache
-- FAILED https://ir.anta.com/sc/about_gov.php -> 0 offline: not in cache
-- FAILED https://ir.anta.com/tc/about_info.php -> 0 offline: not in cache
-- FAILED https://ir.anta.com/sc/about_info.php -> 0 offline: not in cache
-- board: people count differs by language (en 11, tc 11, sc 0)
-- FAILED https://ir.anta.com/en/news_calendar.php?year=2025 -> 0
-- FAILED https://ir.anta.com/en/news_calendar.php?year=2024 -> 0
-- FAILED https://ir.anta.com/en/news_calendar.php?year=2023 -> 0
-- FAILED https://ir.anta.com/en/news_calendar.php?year=2020 -> 0
-- FAILED https://ir.anta.com/en/news_calendar.php?year=2019 -> 0
-- FAILED https://ir.anta.com/en/news_calendar.php?year=2018 -> 0
-- FAILED https://ir.anta.com/en/news_calendar.php?year=2017 -> 0
-- FAILED https://ir.anta.com/en/news_calendar.php?year=2016 -> 0
-- FAILED https://ir.anta.com/tc/news_calendar.php?year=2025 -> 0
-- FAILED https://ir.anta.com/tc/news_calendar.php?year=2024 -> 0
-- FAILED https://ir.anta.com/tc/news_calendar.php?year=2023 -> 0
-- FAILED https://ir.anta.com/tc/news_calendar.php?year=2020 -> 0
-- FAILED https://ir.anta.com/tc/news_calendar.php?year=2019 -> 0
-- FAILED https://ir.anta.com/tc/news_calendar.php?year=2018 -> 0
-- FAILED https://ir.anta.com/tc/news_calendar.php?year=2017 -> 0
-- FAILED https://ir.anta.com/tc/news_calendar.php?year=2016 -> 0
-- FAILED https://ir.anta.com/tc/about_ir.php -> 0 offline: not in cache
-- FAILED https://ir.anta.com/sc/about_ir.php -> 0 offline: not in cache
-- faq: item count differs (en 17, tc 0, sc 0)
-- FAILED https://ir.anta.com/tc/contact.php -> 0 offline: not in cache
-- FAILED https://ir.anta.com/sc/contact.php -> 0 offline: not in cache
-- FAILED https://ir.anta.com/tc/about_info.php -> 0 offline: not in cache
-- FAILED https://ir.anta.com/sc/about_info.php -> 0 offline: not in cache
-- FAILED https://ir.anta.com/tc/contact_alert.php -> 0 offline: not in cache
-- FAILED https://ir.anta.com/sc/contact_alert.php -> 0 offline: not in cache
-- FAILED https://ir.anta.com/tc/brand.php -> 0 offline: not in cache
-- FAILED https://ir.anta.com/sc/brand.php -> 0 offline: not in cache
-- FAILED https://ir.anta.com/tc/about.php -> 0 offline: not in cache
-- FAILED https://ir.anta.com/sc/about.php -> 0 offline: not in cache
-- FAILED https://ir.anta.com/tc/about_chairman.php -> 0 offline: not in cache
-- FAILED https://ir.anta.com/sc/about_chairman.php -> 0 offline: not in cache
-- FAILED https://ir.anta.com/tc/about_communications.php -> 0 offline: not in cache
-- FAILED https://ir.anta.com/sc/about_communications.php -> 0 offline: not in cache
-- FAILED https://ir.anta.com/tc/news_gm.php -> 0 offline: not in cache
-- FAILED https://ir.anta.com/sc/news_gm.php -> 0 offline: not in cache
-- link check skipped (--no-links)
+_None._
