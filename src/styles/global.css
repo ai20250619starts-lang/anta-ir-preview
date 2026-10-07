@@ -30,12 +30,12 @@
 }
 
 /* ------------------------------------------------------------------------------------------------
- * Design tokens.
- * BRAND RED: one setting only (--brand-red). #FF0000 is the PLACEHOLDER used by the current site;
- * replace it once ANTA confirms the official value. Everything else is derived from it:
- *   --color-brand       accent fills, rules, logo-adjacent marks, large display text (≥24px)
- *   --color-brand-ink   text-safe darker red (≥4.5:1 on white) for links/small text and for
- *                       white-on-red buttons. #FF0000 on white is only ~4.0:1, which fails AA for body text.
+ * Design tokens — "Lane Lines" (design/DESIGN.md §3), merged into the single-source system.
+ * BRAND RED: one setting only (--brand-red). #FF0000 is the PLACEHOLDER; replace once ANTA confirms it.
+ * Everything red is derived from it:
+ *   --color-brand        graphics only: lanes, rules, bars, markers (never text)
+ *   --color-brand-ink    text-safe red (sRGB 80% of brand → #CC0000, 5.89:1 on white): red text, red buttons
+ *   --color-brand-press  hover/pressed red buttons (sRGB 64% → ≈#A30000, ≈8:1 with white)
  * ---------------------------------------------------------------------------------------------- */
 :root {
   --brand-red: #ff0000; /* placeholder — single source of truth for the brand colour */
@@ -44,21 +44,27 @@
 @theme {
   /* colour */
   --color-brand: var(--brand-red);
-  --color-brand-ink: color-mix(in oklab, var(--brand-red) 78%, black); /* #FF0000 → ≈#B70000, ≈7:1 on white */
-  --color-brand-tint: color-mix(in oklab, var(--brand-red) 7%, white);
-  --color-ink: #111111; /* body text, 18.9:1 */
-  --color-graphite: #4c4a46; /* secondary text, warm, ≈8.9:1 */
-  --color-stone: #6b6862; /* tertiary text / meta, warm, ≈5.6:1 */
-  --color-mist: #d9d6d0; /* borders, dividers (non-text) */
-  --color-sand: #ebe8e3; /* subtle fills */
-  --color-paper: #f6f5f3; /* section backgrounds */
-  --color-up: #0b6e3a; /* HK convention: up = green (always with arrow + sign + %) */
-  --color-down: var(--color-brand-ink); /* down = red (always with arrow + sign + %) */
+  --color-brand-ink: color-mix(in srgb, var(--brand-red) 80%, black);
+  --color-brand-press: color-mix(in srgb, var(--brand-red) 64%, black);
+  --color-brand-tint: color-mix(in srgb, var(--brand-red) 8%, white); /* = down-tint (#FDECEC-ish), chips/badges */
+  --color-ink: #0e0f11; /* text, dark surfaces, strong rules — 19.2:1 */
+  --color-graphite: #3d4249; /* secondary text — 10.1:1 */
+  --color-muted: #5c636d; /* captions/meta; lightest text grey — 6.1:1 (5.6:1 on surface) */
+  --color-line: #dadde2; /* decorative hairlines only */
+  --color-surface: #f4f5f7; /* alternate sections, chips, cards */
+  --color-on-dark-muted: #a9b0ba; /* muted text on ink — 8.8:1 */
+  --color-hero-body: #d5d9df; /* body copy on ink — 13.5:1 */
+  --color-up: #0a7a3e; /* HK convention up = green (always with arrow + sign) */
+  --color-up-tint: #e7f4ec;
+  --color-down: var(--color-brand-ink); /* down = red text */
+  --color-down-tint: var(--color-brand-tint);
+  --color-flag: #ffd84d; /* "Illustrative" badge */
+  --color-flag-tint: #fff6d1;
+  --color-bar: #8a919b; /* prior-year KPI bars — 3.2:1 non-text */
 
   /* type */
-  --font-sans: 'Inter Variable', 'Helvetica Neue', Arial, 'PingFang TC', 'PingFang SC', 'Noto Sans CJK TC', 'Noto Sans CJK SC', 'Microsoft JhengHei', 'Microsoft YaHei', sans-serif;
+  --font-sans: 'Inter Variable', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'PingFang TC', 'PingFang SC', 'Noto Sans CJK TC', 'Noto Sans CJK SC', 'Microsoft JhengHei', 'Microsoft YaHei', sans-serif;
   --font-display: 'Barlow Condensed', 'Inter Variable', 'Arial Narrow', Arial, sans-serif;
-  /* type scale (≈1.2 minor third, rem) — paired line heights */
   --text-2xs: 0.6875rem;
   --text-2xs--line-height: 1rem;
   --text-xs: 0.75rem;
@@ -67,29 +73,51 @@
   --text-sm--line-height: 1.375rem;
   --text-base: 1rem;
   --text-base--line-height: 1.625rem;
-  --text-lg: 1.1875rem;
+  --text-lg: 1.125rem; /* lead */
   --text-lg--line-height: 1.75rem;
-  --text-xl: 1.4375rem;
-  --text-xl--line-height: 2rem;
-  --text-2xl: 1.75rem;
-  --text-2xl--line-height: 2.25rem;
-  --text-3xl: 2.125rem;
-  --text-3xl--line-height: 2.5rem;
-  --text-4xl: 2.625rem;
-  --text-4xl--line-height: 1.1;
+  --text-xl: 1.25rem; /* h3 / lead-lg */
+  --text-xl--line-height: 1.875rem;
+  --text-2xl: 1.625rem; /* card h2 */
+  --text-2xl--line-height: 2rem;
+  --text-3xl: 1.75rem; /* section h2 (mobile) */
+  --text-3xl--line-height: 2.125rem;
+  --text-4xl: 2.75rem; /* section h2 (desktop) */
+  --text-4xl--line-height: 3.125rem;
   --text-5xl: 3.25rem;
   --text-5xl--line-height: 1.05;
+  --text-display: 2.5rem;
+  --text-display--line-height: 2.75rem;
+  --text-display-md: 3.5rem;
+  --text-display-md--line-height: 3.75rem;
+  --text-display-lg: 4.5rem;
+  --text-display-lg--line-height: 4.75rem;
+  --text-num-sm: 2.5rem;
+  --text-num-sm--line-height: 1;
+  --text-num-md: 3rem;
+  --text-num-md--line-height: 1;
+  --text-num-lg: 3.75rem;
+  --text-num-lg--line-height: 1;
+  --text-num-xl: 4.75rem;
+  --text-num-xl--line-height: 1;
 
-  /* spacing: Tailwind's 4px base unit plus named section rhythm */
+  /* spacing + layout */
   --spacing: 0.25rem;
-  --spacing-gutter: 1rem;
-  --spacing-section: 3.5rem;
-  --spacing-section-lg: 5rem;
+  --spacing-gutter: 1.25rem;
+  --spacing-section: 4.5rem;
+  --spacing-section-lg: 7rem;
+  --breakpoint-nav: 1100px; /* full desktop navigation */
+  --container-page: 80rem;
 
-  /* layout */
-  --container-page: 76rem;
-  --radius-card: 0.25rem;
-  --shadow-card: 0 1px 2px rgb(17 17 17 / 0.06), 0 1px 1px rgb(17 17 17 / 0.04);
+  /* radii + shadows */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-card: 12px;
+  --shadow-card: 0 1px 2px rgb(14 15 17 / 0.06), 0 1px 1px rgb(14 15 17 / 0.04);
+  --shadow-raised: 0 12px 32px -12px rgb(14 15 17 / 0.18), 0 2px 6px rgb(14 15 17 / 0.06);
+
+  /* motion */
+  --ease-lane: cubic-bezier(0.2, 0.7, 0.2, 1);
 }
 
 /* CJK system stacks per script (Latin glyphs still come from Inter) */
@@ -116,8 +144,8 @@
   }
   /* visible focus everywhere (keyboard) */
   :focus-visible {
-    outline: 3px solid var(--color-brand-ink);
-    outline-offset: 2px;
+    outline: 3px solid var(--color-brand);
+    outline-offset: 3px;
     border-radius: 2px;
   }
   .on-dark :focus-visible,
@@ -147,6 +175,12 @@
       padding-inline: 2rem;
     }
   }
+  @media (min-width: 1280px) {
+    .container-page {
+      max-width: calc(var(--container-page) + 5rem);
+      padding-inline: 2.5rem;
+    }
+  }
   .tabular {
     font-variant-numeric: tabular-nums lining-nums;
     font-feature-settings: 'tnum', 'lnum';
@@ -171,7 +205,7 @@
     font-weight: 600;
     letter-spacing: 0.08em;
     text-transform: uppercase;
-    color: var(--color-graphite);
+    color: var(--color-muted);
   }
   :lang(zh) .eyebrow {
     letter-spacing: 0.12em;
@@ -189,10 +223,163 @@
   }
 }
 
+/* ------------------------------------------------------------------------------------------------
+ * Lane Lines components + motion (design/DESIGN.md §3 "Motion", extended per the approved brief).
+ * Rules: motion only when <html class="js"> (set by the inline script in Base.astro) AND the user has no
+ * reduced-motion preference; otherwise everything renders in its final state. Only transform/opacity are
+ * animated (plus stroke-dashoffset on SVG strokes, which is paint-only) → no layout shift.
+ * ---------------------------------------------------------------------------------------------- */
+@layer components {
+  .ll-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.625rem;
+  }
+  .ll-eyebrow::before,
+  .ll-slogan::before {
+    content: '';
+    width: 1.25rem;
+    height: 3px;
+    background: var(--color-brand);
+    transform: skewX(-20deg);
+  }
+  .ll-slogan {
+    display: flex;
+    align-items: center;
+    gap: 0.875rem;
+    font-family: var(--font-display);
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    line-height: 1.1;
+  }
+  .ll-slogan::before {
+    width: 1.75rem;
+    height: 4px;
+  }
+  :lang(zh) .ll-slogan {
+    font-family: var(--font-sans);
+    font-weight: 700;
+    letter-spacing: 0.12em;
+  }
+  /* hero lanes: hairlines faded to the right; lead lane in brand red */
+  .ll-lanes {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    mask-image: linear-gradient(90deg, #000 0, #000 40%, transparent 85%);
+  }
+  .ll-lanes path {
+    fill: none;
+    stroke: rgb(255 255 255 / 0.075);
+    stroke-width: 1.5;
+  }
+  .ll-lanes path.lead {
+    stroke: var(--color-brand);
+    stroke-width: 3;
+    stroke-dasharray: 1;
+    stroke-dashoffset: 0;
+  }
+  .ll-spark-line {
+    stroke-dasharray: 1;
+    stroke-dashoffset: 0;
+  }
+  /* count-up: ghost reserves the final width; the animated copy sits on top */
+  .ll-count {
+    position: relative;
+    display: inline-block;
+    white-space: nowrap;
+  }
+  .ll-count-ghost {
+    visibility: hidden;
+  }
+  .ll-count-run {
+    position: absolute;
+    inset: 0;
+  }
+  /* hover micro-interactions (colour changes everywhere; movement only without reduced motion) */
+  .ll-lift {
+    transition: border-color 0.2s, box-shadow 0.2s, transform 0.2s var(--ease-lane);
+  }
+  .ll-lift:hover {
+    border-color: var(--color-ink);
+    box-shadow: var(--shadow-raised);
+  }
+  .ll-arrow svg:last-of-type {
+    transition: transform 0.2s var(--ease-lane);
+  }
+}
+
+@keyframes ll-rise {
+  from {
+    opacity: 0.01;
+    transform: translateY(12px);
+  }
+}
+@keyframes ll-draw {
+  from {
+    stroke-dashoffset: 1;
+  }
+}
+@keyframes ll-fade {
+  from {
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .ll-lift:hover {
+    transform: translateY(-2px);
+  }
+  .ll-arrow:hover svg:last-of-type {
+    transform: translateX(3px);
+  }
+  /* hero entrance */
+  .js .ll-rise {
+    animation: ll-rise 0.7s var(--ease-lane) both;
+    animation-delay: var(--d, 0s);
+  }
+  .js .ll-lanes path.lead {
+    animation: ll-draw 1.6s var(--ease-lane) 0.2s both;
+  }
+  /* quote sparkline draws in, then the area + last-price dot fade in */
+  .js .ll-spark-line {
+    animation: ll-draw 1.4s var(--ease-lane) 0.5s both;
+  }
+  .js .ll-spark-area,
+  .js .ll-spark-dot {
+    animation: ll-fade 0.5s ease-out 1.6s both;
+  }
+  /* section reveal on scroll */
+  .js [data-reveal] {
+    transition: opacity 0.7s var(--ease-lane), transform 0.7s var(--ease-lane);
+  }
+  .js [data-reveal]:not(.is-in) {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  /* KPI bars grow from the baseline, staggered */
+  .js .ll-bar {
+    transform-box: fill-box;
+    transform-origin: 50% 100%;
+    transition: transform 0.8s var(--ease-lane) calc(var(--i, 0) * 70ms + 200ms);
+  }
+  .js [data-reveal]:not(.is-in) .ll-bar {
+    transform: scaleY(0);
+  }
+}
+
 @media print {
   .no-print,
   header nav,
   #pg-gate {
     display: none !important;
   }
+}
+
+/* CJK headings keep 0 tracking (negative tracking is for Latin only; DESIGN.md §3 Typography) */
+:lang(zh) [class*='tracking-[-'] {
+  letter-spacing: 0;
 }

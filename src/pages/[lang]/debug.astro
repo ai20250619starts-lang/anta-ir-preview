@@ -35,25 +35,25 @@ const datasets = [
   </p>
 
   <section class="mt-8 grid gap-6 md:grid-cols-2">
-    <div class="rounded border border-mist p-4">
+    <div class="rounded border border-line p-4">
       <h2 class="font-semibold">Documents</h2>
       <p class="tabular mt-1 text-3xl font-bold">{docs.length}</p>
       <p class="text-sm text-graphite">{withLang} available in this language · {Math.min(...years)}–{Math.max(...years)}</p>
       <ul class="tabular mt-3 grid grid-cols-2 gap-x-4 text-sm">
-        {byType.map(([k, v]) => <li class="flex justify-between border-b border-paper py-1"><span>{k}</span><span>{v}</span></li>)}
+        {byType.map(([k, v]) => <li class="flex justify-between border-b border-surface py-1"><span>{k}</span><span>{v}</span></li>)}
       </ul>
     </div>
-    <div class="rounded border border-mist p-4">
+    <div class="rounded border border-line p-4">
       <h2 class="font-semibold">Datasets (validated)</h2>
       <ul class="mt-3 text-sm">
-        {datasets.map(([k, v]) => <li class="flex justify-between border-b border-paper py-1"><code>{k}</code><span class="tabular">{v}</span></li>)}
+        {datasets.map(([k, v]) => <li class="flex justify-between border-b border-surface py-1"><code>{k}</code><span class="tabular">{v}</span></li>)}
       </ul>
     </div>
   </section>
 
   <section class="mt-8">
     <h2 class="font-semibold">Latest 10</h2>
-    <ul class="mt-2 divide-y divide-paper text-sm">
+    <ul class="mt-2 divide-y divide-surface text-sm">
       {docs.slice(0, 10).map((d) => (
         <li class="flex gap-4 py-2">
           <span class="tabular w-28 shrink-0 text-graphite">{d.date}{d.time ? ` ${d.time}` : ''}</span>

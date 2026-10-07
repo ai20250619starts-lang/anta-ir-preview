@@ -1,6 +1,6 @@
 ---
 /**
- * Site header: logo, full desktop navigation (≥1280px, dropdowns open on hover and keyboard focus),
+ * Site header: logo, full desktop navigation (≥1100px `nav` breakpoint, dropdowns open on hover and keyboard focus),
  * mobile/tablet menu (disclosure button + native <details> per section), language switcher.
  */
 import type { Lang } from '../data/schemas';
@@ -20,14 +20,14 @@ const active = activeSection(current);
 const href = (p: string) => withBase(`${lang}/${p}`);
 const secHref = (s: (typeof NAV)[number]) => s.external?.[lang] ?? href(s.path);
 ---
-<header class="sticky top-0 z-40 border-b border-mist bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/90">
-  <div class="container-page flex h-16 items-center justify-between gap-3 xl:h-[4.5rem]">
+<header class="sticky top-0 z-40 border-b border-line bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/90">
+  <div class="container-page flex h-16 items-center justify-between gap-3 nav:h-[76px]">
     <a href={href('')} class="flex shrink-0 items-center gap-3 no-underline" aria-label={`ANTA Sports — ${t(lang, 'ir')} — ${t(lang, 'home')}`}>
       <Image src={logo} alt="" width={64} height={36} class="h-9 w-auto" loading="eager" />
-      <span class="hidden border-l border-mist pl-3 text-sm leading-tight font-semibold text-ink sm:block xl:hidden 2xl:block">{t(lang, 'ir')}</span>
+      <span class="hidden border-l border-line pl-3 text-sm leading-tight font-semibold text-ink sm:block nav:hidden">{t(lang, 'ir')}</span>
     </a>
 
-    <nav aria-label={t(lang, 'mainNav')} class="hidden xl:block">
+    <nav aria-label={t(lang, 'mainNav')} class="hidden nav:block">
       <ul class="flex items-center">
         {NAV.map((s) => (
           <li class="group relative">
@@ -35,18 +35,18 @@ const secHref = (s: (typeof NAV)[number]) => s.external?.[lang] ?? href(s.path);
               href={secHref(s)}
               rel={s.external ? 'noopener' : undefined}
               aria-current={active?.key === s.key ? 'page' : undefined}
-              class={`flex min-h-11 items-center gap-0.5 px-2 text-[0.8125rem] font-medium whitespace-nowrap 2xl:px-3 2xl:text-sm hover:text-brand-ink ${active?.key === s.key ? 'text-ink shadow-[inset_0_-3px_0_var(--color-brand)]' : 'text-ink'}`}
+              class={`flex min-h-11 items-center gap-1.5 rounded-full px-3 text-[0.9375rem] font-[550] whitespace-nowrap text-ink transition-colors duration-150 hover:bg-surface ${active?.key === s.key ? 'shadow-[inset_0_-3px_0_var(--color-brand)]' : ''}`}
             >
               {s.label[lang]}
-              {s.children.length > 1 && <Icon name="chevron-down" size={12} class="text-stone" />}
-              {s.external && <><Icon name="external" size={12} class="text-stone" /><span class="sr-only"> ({t(lang, 'externalSite')})</span></>}
+              {s.children.length > 1 && <Icon name="chevron-down" size={12} class="text-muted" />}
+              {s.external && <><Icon name="external" size={12} class="text-muted" /><span class="sr-only"> ({t(lang, 'externalSite')})</span></>}
             </a>
             {s.children.length > 1 && (
               <div class="invisible absolute top-full left-0 z-50 min-w-64 pt-2 opacity-0 transition-opacity group-focus-within:visible group-focus-within:opacity-100 group-hover:visible group-hover:opacity-100">
-                <ul class="rounded-card border border-mist bg-white p-2 shadow-lg">
+                <ul class="rounded-card border border-line bg-white p-2 shadow-lg">
                   {s.children.map((c) => (
                     <li>
-                      <a href={href(c.path)} class="block rounded-sm px-3 py-2.5 text-sm text-ink hover:bg-paper hover:text-brand-ink" aria-current={current === c.path ? 'page' : undefined}>{c.label[lang]}</a>
+                      <a href={href(c.path)} class="block rounded-sm px-3 py-2.5 text-sm text-ink hover:bg-surface hover:text-brand-ink" aria-current={current === c.path ? 'page' : undefined}>{c.label[lang]}</a>
                     </li>
                   ))}
                 </ul>
@@ -61,7 +61,7 @@ const secHref = (s: (typeof NAV)[number]) => s.external?.[lang] ?? href(s.path);
       <LangSwitcher lang={lang} />
       <button
         type="button"
-        class="ml-1 inline-flex min-h-11 items-center gap-2 rounded-sm border border-ink px-3 text-sm font-semibold xl:hidden"
+        class="ml-1 inline-flex min-h-11 items-center gap-2 rounded-sm border border-ink px-3 text-sm font-semibold nav:hidden"
         aria-expanded="false"
         aria-controls="mobile-nav"
         data-menu-toggle
@@ -73,8 +73,8 @@ const secHref = (s: (typeof NAV)[number]) => s.external?.[lang] ?? href(s.path);
     </div>
   </div>
 
-  <nav id="mobile-nav" aria-label={t(lang, 'mainNav')} class="max-h-[calc(100dvh-4rem)] overflow-y-auto border-t border-mist bg-white xl:hidden" hidden>
-    <ul class="container-page divide-y divide-mist py-2">
+  <nav id="mobile-nav" aria-label={t(lang, 'mainNav')} class="max-h-[calc(100dvh-4rem)] overflow-y-auto border-t border-line bg-white nav:hidden" hidden>
+    <ul class="container-page divide-y divide-line py-2">
       {NAV.map((s) =>
         s.children.length > 1 ? (
           <li>

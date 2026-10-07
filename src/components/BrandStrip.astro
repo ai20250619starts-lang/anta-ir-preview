@@ -27,34 +27,63 @@ const NAMES: Record<string, string> = { amer: 'Amer Sports' };
  * and small lettering; MUSINSA is a very wide, heavy wordmark (240x47). Default: 48px tall.
  */
 const LOGO_SIZE: Record<string, { h: number; cls: string }> = {
+  'kolon-sport': { h: 58, cls: 'max-h-[58px]' },
+  'maia-active': { h: 58, cls: 'max-h-[58px]' },
   amer: { h: 64, cls: 'max-h-16' },
-  musinsa: { h: 24, cls: 'max-h-6 max-w-[132px]' },
+  musinsa: { h: 22, cls: 'max-h-[22px] max-w-[120px]' },
 };
-const groups = [
-  { key: 'in-house', label: t(lang, 'inHouse'), items: list.filter((b) => b.pillar === 'in-house') },
-  { key: 'strategic-investment', label: t(lang, 'strategic'), items: list.filter((b) => b.pillar === 'strategic-investment') },
-];
+/** One line per strategic investment: the first sentence of the relationship paragraph in brands.json. */
+const relation = (b: (typeof list)[number]) => {
+  const paras = (b.description as Record<Lang, string[] | null>)[lang] ?? b.description.en ?? [];
+  const txt = paras[1] ?? paras[0] ?? '';
+  const m = txt.match(lang === 'en' ? /^.*?\.(?=\s|$)/ : /^.*?。/);
+  return (m ? m[0] : txt).trim();
+};
+const inHouse = list.filter((b) => b.pillar === 'in-house');
+const strategic = list.filter((b) => b.pillar === 'strategic-investment');
 ---
-<div class="grid gap-8 lg:grid-cols-[3fr_1fr]">
-  {groups.map((g) => (
-    <div>
-      <h3 class="eyebrow mb-3">{g.label}</h3>
-      <ul class={`grid gap-px overflow-hidden rounded-card border border-mist bg-mist ${g.key === 'in-house' ? 'grid-cols-2 sm:grid-cols-3 md:grid-cols-6 lg:grid-cols-3 xl:grid-cols-6' : 'grid-cols-2 lg:grid-cols-1'}`}>
-        {g.items.map((b) => {
+<div>
+  <div class="mb-3.5 flex items-center justify-between gap-4">
+    <h3 class="eyebrow">{t(lang, 'inHouse')}</h3>
+  </div>
+  <ul class="grid grid-cols-2 gap-3 md:grid-cols-3 xl:grid-cols-6">
+    {inHouse.map((b) => {
+      const img = localImage(b.logo?.src);
+      const size = LOGO_SIZE[b.key] ?? { h: 44, cls: 'max-h-11' };
+      return (
+        <li>
+          <a href={brandHref(b)} class="ll-lift relative grid h-[116px] place-items-center rounded-lg border border-line bg-white xl:h-[140px]">
+            {img ? (
+              <Image src={img} alt={NAMES[b.key] ?? b.name} height={size.h} class={`${size.cls} w-auto max-w-[62%] object-contain brightness-0`} />
+            ) : (
+              <span class="font-display text-xl tracking-wide">{b.name}</span>
+            )}
+            <span class="absolute bottom-2.5 left-3.5 text-2xs font-semibold tracking-[0.06em] text-muted uppercase" aria-hidden="true">{NAMES[b.key] ?? b.name}</span>
+          </a>
+        </li>
+      );
+    })}
+  </ul>
+  {strategic.length > 0 && (
+    <>
+      <h3 class="eyebrow mt-10 mb-3.5">{t(lang, 'strategic')}</h3>
+      <ul class="grid gap-3 md:grid-cols-2">
+        {strategic.map((b) => {
           const img = localImage(b.logo?.src);
+          const size = LOGO_SIZE[b.key] ?? { h: 48, cls: 'max-h-12' };
           return (
-            <li class="bg-white">
-              <a href={brandHref(b)} class="flex h-24 items-center justify-center p-4 hover:bg-paper">
-                {img ? (
-                  <Image src={img} alt={NAMES[b.key] ?? b.name} height={LOGO_SIZE[b.key]?.h ?? 48} class={`${LOGO_SIZE[b.key]?.cls ?? 'max-h-12'} w-auto object-contain brightness-0`} />
-                ) : (
-                  <span class="font-display text-xl tracking-wide">{b.name}</span>
-                )}
+            <li>
+              <a href={brandHref(b)} class="ll-lift grid h-full grid-cols-[88px_1fr] items-center gap-5 rounded-lg border border-line bg-white px-6 py-5 md:grid-cols-[128px_1fr]">
+                <span class="grid place-items-center">{img ? <Image src={img} alt="" height={size.h} class={`${size.cls} w-auto object-contain brightness-0`} /> : <span class="font-display text-lg">{b.name}</span>}</span>
+                <span>
+                  <b class="block text-base font-[650]">{NAMES[b.key] ?? b.name}</b>
+                  <span class="mt-0.5 block text-sm leading-[1.3125rem] text-graphite">{relation(b)}</span>
+                </span>
               </a>
             </li>
           );
         })}
       </ul>
-    </div>
-  ))}
+    </>
+  )}
 </div>

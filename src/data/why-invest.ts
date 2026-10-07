@@ -23,6 +23,9 @@ export interface WhyInvestPoint {
   key: string;
   title: L10n;
   body: L10n;
+  /** lead figure (Lane Lines design) — always taken from this point's own body copy; tested */
+  figure: L10n;
+  figureCaption: L10n;
   facts: { text: L10n; source: WhyInvestSource }[];
 }
 
@@ -38,6 +41,8 @@ const same = (s: string): L10n => ({ en: s, tc: s, sc: s });
 export const WHY_INVEST: WhyInvestPoint[] = [
   {
     key: 'china-leadership',
+    figure: { en: '~21.8%', tc: '約21.8%', sc: '约21.8%' },
+    figureCaption: { en: 'China sportswear market share, 2025', tc: '2025年中國運動鞋服市場份額', sc: '2025年中国运动鞋服市场份额' },
     title: { en: 'Leader in China', tc: '中國市場領導地位', sc: '中国市场领导地位' },
     body: {
       en: 'An estimated ~21.8% share of China’s sportswear market in 2025, per an internationally recognised institution cited by ANTA, built on a “Brand + Retail” model and over 800 supply-chain partners.',
@@ -53,6 +58,8 @@ export const WHY_INVEST: WhyInvestPoint[] = [
   },
   {
     key: 'multi-brand',
+    figure: same('6 + 2'),
+    figureCaption: { en: 'In-house brands + strategic investments', tc: '自有品牌 + 戰略投資', sc: '自有品牌 + 战略投资' },
     title: { en: 'Multi-brand platform', tc: '多品牌平台', sc: '多品牌平台' },
     body: {
       en: 'Six in-house brands — ANTA, FILA, DESCENTE, KOLON SPORT, JACK WOLFSKIN and MAIA ACTIVE — spanning mass to premium segments, complemented by strategic investments in Amer Sports and MUSINSA.',
@@ -68,6 +75,8 @@ export const WHY_INVEST: WhyInvestPoint[] = [
   },
   {
     key: 'management',
+    figure: same('27.0%'),
+    figureCaption: { en: 'Operating profit margin, 1H 2026 (+0.7 ppt)', tc: '2026年上半年經營溢利率（+0.7個百分點）', sc: '2026年上半年经营溢利率（+0.7个百分点）' },
     title: { en: 'Efficient management', tc: '高效的管理團隊', sc: '高效的管理团队' },
     body: {
       en: 'Operating profit margin up 0.7 ppt to 27.0% and gross profit margin up 0.5 ppt to 63.9% in the first half of 2026.',
@@ -81,6 +90,8 @@ export const WHY_INVEST: WhyInvestPoint[] = [
   },
   {
     key: 'global',
+    figure: { en: 'Top 3', tc: '前三', sc: '前三' },
+    figureCaption: { en: 'Ranked among the industry’s global top three', tc: '全球範圍內穩居行業前三', sc: '全球范围内稳居行业前三' },
     title: { en: 'Global expansion', tc: '全球擴張', sc: '全球扩张' },
     body: {
       en: 'Largest shareholder of NYSE-listed Amer Sports (Arc’teryx, Salomon, Wilson); completed the JACK WOLFSKIN acquisition in 2025; ranked among the industry’s global top three.',
@@ -95,6 +106,8 @@ export const WHY_INVEST: WhyInvestPoint[] = [
   },
   {
     key: 'returns',
+    figure: same('50.3%'),
+    figureCaption: { en: 'Payout ratio, 1H 2026', tc: '2026年上半年派息率', sc: '2026年上半年派息率' },
     title: { en: 'Shareholder returns', tc: '致力提升股東回報', sc: '致力提升股东回报' },
     body: {
       en: 'Payout ratio of 50.3% declared for the first half of 2026 (excluding share of associates’ results and related one-off items), maintaining a relatively high payout ratio.',

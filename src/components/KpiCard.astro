@@ -1,10 +1,15 @@
 ---
-/** KPI card from a financial-highlights row: latest FY value, YoY change (arrow + sign), 6-year mini bars. */
+/**
+ * KPI tile (Lane Lines): label, latest FY value (counts up once in view), YoY change chip (arrow + sign + unit),
+ * six-year bar chart from zero (current year in brand red; bars grow in when the section is revealed).
+ * Full history in sr-only text; the chart is aria-hidden.
+ */
 import type { Lang } from '../data/schemas';
 import type { FinancialHighlightsFile } from '../data/schemas';
 import { pick, t } from '../i18n/ui';
 import { yoy } from '../lib/format';
 import Change from './ui/Change.astro';
+import CountUp from './ui/CountUp.astro';
 
 type Row = FinancialHighlightsFile['rows'][number];
 interface Props { row: Row; years: number[]; lang: Lang; label?: string }
@@ -19,24 +24,22 @@ const unit = row.unit === 'rmb-million' ? t(lang, 'rmbMillion') : row.unit === '
 const display = row.display[String(fy)] ?? '—';
 const name = label ?? pick(row.label, lang).replace(/\s*[（(].*?[)）]\s*$/, '');
 ---
-<article class="flex flex-col rounded-card border border-mist bg-white p-5">
-  <h3 class="text-sm font-semibold text-graphite">{name}</h3>
-  <p class="mt-3 flex items-baseline gap-2">
-    <span class="display-num text-4xl text-ink">{display}</span>
-    {unit && <span class="text-xs text-graphite">{unit}</span>}
+<article class="flex flex-col gap-1.5 rounded-lg border border-line bg-white p-4 shadow-card sm:p-6 lg:p-7">
+  <h3 class="min-h-10 text-sm leading-5 font-semibold text-graphite sm:min-h-11 sm:text-[0.9375rem] sm:leading-[1.375rem]">{name}</h3>
+  <p class="mt-2"><CountUp value={display} class="display-num text-num-sm sm:text-[3.25rem] sm:leading-none lg:text-num-lg" /></p>
+  <p class="text-[0.8125rem] text-muted">{unit || '\u00a0'}</p>
+  <p class="mt-2.5 flex flex-wrap items-center gap-x-2 gap-y-1.5 text-[0.8125rem] text-muted">
+    {ch && <span class={`rounded-full px-2 py-[3px] leading-[1.125rem] ${ch.value > 0 ? 'bg-up-tint' : ch.value < 0 ? 'bg-down-tint' : 'bg-surface'}`}><Change value={ch.value} unit={ch.unit} lang={lang} class="text-[0.8125rem]" /></span>}
+    <span>{t(lang, 'fy')}{lang === 'en' ? ' ' : ''}{fy} {ch && t(lang, 'vsPrior')}</span>
   </p>
-  <p class="mt-1 text-xs text-graphite">
-    {t(lang, 'fy')}{lang === 'en' ? ' ' : ''}{fy}
-    {ch && <> · <Change value={ch.value} unit={ch.unit} lang={lang} class="text-xs" /> <span>{t(lang, 'vsPrior')}</span></>}
-  </p>
-  <div class="mt-auto pt-4">
-    <svg viewBox="0 0 120 36" class="h-9 w-full" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+  <div class="mt-auto border-t border-line pt-3.5">
+    <svg viewBox="0 0 120 48" class="mt-1 block h-12 w-full" preserveAspectRatio="none" aria-hidden="true" focusable="false">
       {vals.map((v, i) => {
-        const h = max ? Math.max(2, (v / max) * 34) : 2;
-        return <rect x={i * 20 + 3} y={36 - h} width="14" height={h} fill={i === vals.length - 1 ? 'var(--color-brand)' : 'var(--color-mist)'} />;
+        const h = max ? Math.max(2, (v / max) * 46) : 2;
+        return <rect class="ll-bar" style={`--i:${i}`} x={i * 20 + 2} y={48 - h} width="16" height={h} rx="1" fill={i === vals.length - 1 ? 'var(--color-brand)' : 'var(--color-bar)'} />;
       })}
     </svg>
-    <p class="tabular mt-1 flex justify-between text-2xs text-graphite" aria-hidden="true"><span>{ys[0]}</span><span>{fy}</span></p>
+    <p class="tabular mt-1.5 flex justify-between text-2xs text-muted" aria-hidden="true"><span>{ys[0]}</span><span>{fy}</span></p>
     <p class="sr-only">{ys.map((y) => `${y}: ${row.display[String(y)] ?? '—'}`).join('; ')}</p>
   </div>
 </article>

@@ -24,7 +24,7 @@ const types = [...new Set(docs.map((d) => d.type))];
             {list.map((d) => {
               const f = d.files[lang] ?? d.files.en ?? d.files.tc;
               return (
-                <tr class="border-t border-paper align-top">
+                <tr class="border-t border-surface align-top">
                   <td class="tabular py-1 pr-3 whitespace-nowrap">{d.date ?? '—'}{d.time ? ` ${d.time}` : ''}</td>
                   <td class="pr-3 text-xs text-graphite">{d.category}</td>
                   <td class="pr-3">{pick(d.title, lang)}{!d.title[lang] && <span class="text-xs text-graphite"> {t(lang, 'missing')}</span>}</td>

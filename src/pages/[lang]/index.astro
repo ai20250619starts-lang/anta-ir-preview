@@ -1,5 +1,8 @@
 ---
-/** Home page (EN / TC / SC): IR-first above the fold, then Why Invest (draft), announcements, highlights, events, brands, ESG, CTA. */
+/**
+ * Home page (EN / TC / SC) — "Lane Lines" concept (design/DESIGN.md). Order: hero (+ quote card), latest results band,
+ * Why Invest, announcements, financial highlights, events + stay informed, brands, ESG. Motion: see global.css + Base.astro.
+ */
 import Base from '../../layouts/Base.astro';
 import type { Lang } from '../../data/schemas';
 import { calendar, company, contacts, documents, highlights } from '../../data';
@@ -15,6 +18,7 @@ import ContactCard from '../../components/ContactCard.astro';
 import BrandStrip from '../../components/BrandStrip.astro';
 import WhyInvest from '../../components/WhyInvest.astro';
 import SectionHeading from '../../components/ui/SectionHeading.astro';
+import Lanes from '../../components/ui/Lanes.astro';
 import Button from '../../components/ui/Button.astro';
 import { Image } from 'astro:assets';
 import esgImage from '../../assets/images/banner3.jpg';
@@ -41,85 +45,103 @@ const irEmails = contacts.emails.map((e) => ({ label: pick(e.label, lang), email
 const alertUrl = contacts.vendorForms.emailAlertUrl[lang];
 const esgUrl = company.esg.siteUrl[lang] ?? company.esg.siteUrl.en;
 const esgReports = company.esg.reportsUrl[lang] ?? company.esg.reportsUrl.en;
+// Headline phrases kept together (DESIGN.md: no orphaned "multi-" / CJK characters): EN nowrap on "multi-brand",
+// CJK split after "、" into inline-block phrases.
+const heroTitle = t(lang, 'heroTitle');
+const titleParts = lang === 'en' ? heroTitle.split(/(multi-brand)/) : heroTitle.split(/(?<=、)/);
 ---
 <Base lang={lang} title={t(lang, 'home')}>
-  <!-- Above the fold: headline, quote, latest results -->
-  <section class="border-b border-mist bg-paper">
-    <div class="container-page grid gap-8 py-8 md:py-12 lg:grid-cols-[1.15fr_1fr] lg:gap-12">
-      <div class="flex flex-col gap-6">
-        <div>
-          <p class="eyebrow flex items-center gap-2"><span class="inline-block h-0.5 w-6 bg-brand" aria-hidden="true"></span>{t(lang, 'heroEyebrow')}</p>
-          <h1 class="mt-3 text-3xl font-bold tracking-tight text-balance md:text-5xl">{t(lang, 'heroTitle')}</h1>
-          <p class="mt-4 max-w-xl text-lg text-graphite">{t(lang, 'heroBody')}</p>
-          <p class="mt-3 font-display text-xl tracking-wide text-ink">{pick(company.slogan, lang)}</p>
+  <!-- 1–2 Hero with quote card -->
+  <section class="on-dark relative isolate overflow-hidden bg-ink text-white" aria-labelledby="h-hero">
+    <Lanes />
+    <div class="container-page grid gap-10 pt-11 pb-[120px] lg:grid-cols-[minmax(0,7fr)_minmax(0,5fr)] lg:items-start lg:gap-16 lg:pt-20 lg:pb-[168px]">
+      <div class="ll-rise">
+        <p class="eyebrow ll-eyebrow !text-on-dark-muted">{t(lang, 'heroEyebrow')}</p>
+        <h1 id="h-hero" class="mt-5 text-display font-[650] tracking-[-0.032em] text-balance md:text-display-md lg:text-display-lg">{titleParts.map((p) => (lang === 'en' ? (p === 'multi-brand' ? <span class="whitespace-nowrap">{p}</span> : p) : <span class="inline-block">{p}</span>))}</h1>
+        <p class="mt-5 max-w-[40em] text-lg text-hero-body lg:text-xl">{t(lang, 'heroBody')}</p>
+        <div class="mt-8 flex flex-wrap gap-3">
+          <Button href="#results" icon="arrow-right">{t(lang, 'latestResults')}</Button>
+          <Button href="#why" variant="inverse" icon={null}>{t(lang, 'whyInvestCta')}</Button>
         </div>
-        <QuoteStrip lang={lang} variant="compact" />
+        <p class="ll-slogan mt-10 text-[1.375rem]">{pick(company.slogan, lang)}</p>
       </div>
-      <div class="self-start"><ResultsHubCard period={period} lang={lang} feature headingLevel="h2" /></div>
+      <div class="ll-rise" style="--d:.12s"><QuoteStrip lang={lang} /></div>
     </div>
   </section>
 
-  <!-- Why Invest (client deck slide 9; draft) -->
+  <!-- 3 Latest results band (overlaps the hero; the red lane arrives at its top edge) -->
+  <section id="results" class="relative z-10 -mt-20 scroll-mt-24" aria-label={t(lang, 'latestResults')}>
+    <div class="container-page"><ResultsHubCard period={period} lang={lang} feature headingLevel="h2" /></div>
+  </section>
+
+  <!-- 4 Why Invest (client-confirmed) -->
   <WhyInvest lang={lang} />
 
-  <!-- Latest announcements -->
-  <section class="container-page border-t border-mist py-section" aria-labelledby="h-ann">
-    <SectionHeading id="h-ann" title={t(lang, 'latestAnnouncements')} action={{ href: href('investors/announcements/'), label: t(lang, 'allAnnouncements') }} />
-    <div class="border-t border-ink">
-      {announcements.map((d) => <DocumentRow doc={d} lang={lang} headingLevel="h3" />)}
+  <!-- 5 Latest announcements -->
+  <section class="pb-section lg:pb-section-lg" aria-labelledby="h-ann" data-reveal>
+    <div class="container-page">
+      <SectionHeading id="h-ann" eyebrow={t(lang, 'filings')} title={t(lang, 'latestAnnouncements')} action={{ href: href('investors/announcements/'), label: t(lang, 'allAnnouncements') }} />
+      <div class="border-t-2 border-ink">
+        {announcements.map((d) => <DocumentRow doc={d} lang={lang} headingLevel="h3" />)}
+      </div>
     </div>
   </section>
 
-  <!-- Financial highlights -->
-  <section class="bg-paper py-section" aria-labelledby="h-fin">
+  <!-- 6 Financial highlights -->
+  <section class="bg-surface py-section lg:py-section-lg" aria-labelledby="h-fin" data-reveal>
     <div class="container-page">
-      <SectionHeading id="h-fin" title={t(lang, 'financialHighlights')} description={`${t(lang, 'fy')}${lang === 'en' ? ' ' : ''}${highlights.years[0]} · ${pick(highlights.currencyNote, lang)}`} action={{ href: href('investors/highlights/'), label: t(lang, 'allHighlights') }} />
-      <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+      <SectionHeading id="h-fin" eyebrow={`${t(lang, 'annualResults')} · ${t(lang, 'fy')}${lang === 'en' ? ' ' : ''}${highlights.years[0]}`} title={t(lang, 'financialHighlights')} description={`${pick(highlights.currencyNote, lang)} · ${t(lang, 'sixYearTrend')} ${Math.min(...highlights.years)}–${highlights.years[0]}`} action={{ href: href('investors/highlights/'), label: t(lang, 'allHighlights') }} />
+      <div class="grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-4 lg:gap-5">
         {kpis.map((r) => <KpiCard row={r} years={highlights.years} lang={lang} label={kpiLabels[r.key]?.[lang]} />)}
       </div>
     </div>
   </section>
 
-  <!-- Events + contact -->
-  <section class="container-page grid gap-12 py-section lg:grid-cols-[1.4fr_1fr]">
-    <div aria-labelledby="h-ev">
-      <SectionHeading id="h-ev" title={upcoming.length ? t(lang, 'upcomingEvents') : t(lang, 'recentEvents')} action={{ href: href('investors/'), label: t(lang, 'irCalendar') }} />
-      {!upcoming.length && <p class="mb-2 text-sm text-graphite">{t(lang, 'noUpcoming')}</p>}
-      <div class="border-t border-ink">
-        {(upcoming.length ? upcoming : recent).map((e) => <CalendarItem event={e} lang={lang} past={!upcoming.length} />)}
+  <!-- 7 Events + stay informed -->
+  <section class="py-section lg:py-section-lg" data-reveal>
+    <div class="container-page grid gap-12 lg:grid-cols-[minmax(0,7fr)_minmax(0,5fr)] lg:gap-16">
+      <div aria-labelledby="h-ev">
+        <SectionHeading id="h-ev" eyebrow={t(lang, 'irCalendar')} title={upcoming.length ? t(lang, 'upcomingEvents') : t(lang, 'recentEvents')} action={{ href: href('investors/'), label: t(lang, 'irCalendar') }} />
+        {!upcoming.length && <p class="-mt-3 mb-4 text-sm text-muted">{t(lang, 'noUpcoming')}</p>}
+        <div class="border-t-2 border-ink">
+          {(upcoming.length ? upcoming : recent).map((e) => <CalendarItem event={e} lang={lang} past={!upcoming.length} />)}
+        </div>
       </div>
-    </div>
-    <div aria-labelledby="h-cta" class="flex flex-col gap-4">
-      <SectionHeading id="h-cta" title={t(lang, 'stayInformed')} description={t(lang, 'stayInformedBody')} />
-      <div class="flex flex-wrap gap-3">
-        <Button href={alertUrl} external icon="bell" srSuffix={t(lang, 'externalSite')}>{t(lang, 'emailAlerts')}</Button>
-        <Button href={href('contact/')} variant="secondary">{t(lang, 'contactIr')}</Button>
-      </div>
-      <ContactCard lang={lang} title={pick(hk.name, lang)} address={pick(hk.address, lang)} phones={hk.phones} fax={hk.fax} emails={irEmails} />
+      <aside aria-labelledby="h-cta" class="relative self-start overflow-hidden rounded-lg bg-surface p-7 before:absolute before:inset-y-0 before:left-0 before:w-1 before:bg-brand lg:p-9">
+        <h2 id="h-cta" class="text-2xl font-[650] tracking-[-0.02em]">{t(lang, 'stayInformed')}</h2>
+        <p class="mt-2 text-graphite">{t(lang, 'stayInformedBody')}</p>
+        <div class="mt-5 flex flex-wrap gap-3">
+          <Button href={alertUrl} external icon="bell" srSuffix={t(lang, 'externalSite')}>{t(lang, 'emailAlerts')}</Button>
+          <Button href={href('contact/')} variant="secondary">{t(lang, 'contactIr')}</Button>
+        </div>
+        <div class="mt-7 border-t border-line pt-6">
+          <ContactCard plain lang={lang} title={pick(hk.name, lang)} address={pick(hk.address, lang)} phones={hk.phones} fax={hk.fax} emails={irEmails} />
+        </div>
+      </aside>
     </div>
   </section>
 
-  <!-- Brands -->
-  <section class="border-t border-mist py-section" aria-labelledby="h-br">
+  <!-- 8 Brands -->
+  <section class="bg-surface py-section lg:py-section-lg" aria-labelledby="h-br" data-reveal>
     <div class="container-page">
-      <SectionHeading id="h-br" title={t(lang, 'ourBrands')} action={{ href: href('brands/'), label: t(lang, 'brandPortfolio') }} />
+      <SectionHeading id="h-br" eyebrow={t(lang, 'multiBrand')} title={t(lang, 'ourBrands')} action={{ href: href('brands/'), label: t(lang, 'brandPortfolio') }} />
       <BrandStrip lang={lang} />
     </div>
   </section>
 
-  <!-- ESG teaser -->
-  <section class="on-dark bg-ink text-white" aria-labelledby="h-esg">
-    <div class="container-page grid items-center gap-8 py-section md:grid-cols-2">
+  <!-- 9 ESG -->
+  <section class="py-section lg:py-section-lg" aria-labelledby="h-esg" data-reveal>
+    <div class="container-page grid items-center gap-9 lg:grid-cols-2 lg:gap-20">
+      <Image src={esgImage} alt="" widths={[480, 768, 1080]} sizes="(min-width: 1024px) 50vw, 100vw" class="aspect-[4/3] w-full rounded-lg object-cover" loading="lazy" />
       <div>
-        <p class="text-xs font-semibold tracking-wider text-[#d6d3ce] uppercase">ESG</p>
-        <h2 id="h-esg" class="mt-2 text-2xl font-bold md:text-3xl">{t(lang, 'esgTitle')}</h2>
-        <p class="mt-3 max-w-lg text-[#e8e5e0]">{t(lang, 'esgBody')}</p>
-        <div class="mt-6 flex flex-wrap gap-3">
-          <Button href={esgUrl} variant="inverse" external srSuffix={t(lang, 'externalSite')}>{t(lang, 'visitEsg')}</Button>
-          <Button href={esgReports} variant="inverse" external srSuffix={t(lang, 'externalSite')}>{t(lang, 'esgReports')}</Button>
+        <p class="eyebrow ll-eyebrow">ESG</p>
+        <h2 id="h-esg" class="mt-3 text-3xl font-[650] tracking-[-0.022em] lg:text-4xl">{t(lang, 'esgTitle')}</h2>
+        <p class="mt-4 text-lg text-graphite lg:text-xl">{t(lang, 'esgBody')}</p>
+        <div class="mt-7 flex flex-wrap gap-3">
+          <Button href={esgUrl} variant="ink" external srSuffix={t(lang, 'externalSite')}>{t(lang, 'visitEsg')}</Button>
+          <Button href={esgReports} variant="secondary" external srSuffix={t(lang, 'externalSite')}>{t(lang, 'esgReports')}</Button>
         </div>
       </div>
-      <Image src={esgImage} alt="" widths={[480, 768, 1080]} sizes="(min-width: 768px) 50vw, 100vw" class="aspect-[5/3] w-full rounded-card object-cover" loading="lazy" />
     </div>
   </section>
 </Base>

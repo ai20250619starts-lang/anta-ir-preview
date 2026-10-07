@@ -23,7 +23,7 @@ const L = (v: string[] | undefined) => v ?? [];
     <h2 class="text-lg font-semibold">Financial highlights ({pick(highlights.currencyNote, lang)})</h2>
     <table class="tabular mt-2 text-sm">
       <thead><tr><th class="pr-4 text-left"></th>{highlights.years.map((y) => <th class="px-2 text-right">{y}</th>)}</tr></thead>
-      <tbody>{highlights.rows.map((r) => <tr class="border-t border-paper"><td class="pr-4">{pick(r.label, lang)}</td>{highlights.years.map((y) => <td class="px-2 text-right">{r.display[String(y)]}</td>)}</tr>)}</tbody>
+      <tbody>{highlights.rows.map((r) => <tr class="border-t border-surface"><td class="pr-4">{pick(r.label, lang)}</td>{highlights.years.map((y) => <td class="px-2 text-right">{r.display[String(y)]}</td>)}</tr>)}</tbody>
     </table>
   </section>
 
@@ -53,7 +53,7 @@ const L = (v: string[] | undefined) => v ?? [];
     <h2 class="text-lg font-semibold">Brands ({brands.brands.length})</h2>
     <ul class="mt-2 grid grid-cols-2 gap-4 text-sm md:grid-cols-4">
       {brands.brands.map((b) => (
-        <li class="rounded border border-mist p-3">
+        <li class="rounded border border-line p-3">
           {b.logo && <img src={withBase(b.logo.src)} alt={b.name} class="h-10 w-auto" loading="lazy" />}
           <p class="mt-2 font-semibold">{b.name}</p>
           <p class="text-xs text-graphite">{b.pillar}</p>

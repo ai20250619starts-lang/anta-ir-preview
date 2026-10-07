@@ -19,16 +19,16 @@ const kind = {
 }[event.kind][lang];
 const ics = event.icsUrl;
 ---
-<article class="flex gap-4 border-b border-mist py-4">
-  <div class={`flex w-16 shrink-0 flex-col items-center justify-center rounded-card py-2 text-center ${past ? 'bg-sand text-ink' : 'bg-ink text-white on-dark'}`} aria-hidden="true">
-    <span class="text-2xs font-semibold tracking-wider">{dm.month}</span>
-    <span class="display-num text-3xl leading-none">{dm.day}</span>
-    <span class="tabular text-2xs">{dm.year}</span>
+<article class="grid grid-cols-[72px_1fr] items-center gap-5 border-b border-line py-5 lg:grid-cols-[80px_1fr] lg:gap-6">
+  <div class={`grid justify-items-center rounded-md border py-2 text-center leading-none ${past ? 'border-line' : 'border-ink'}`} aria-hidden="true">
+    <span class="text-2xs font-bold tracking-[0.08em] text-brand-ink uppercase">{dm.month}</span>
+    <span class="display-num mt-1 mb-0.5 text-[2.125rem] leading-none">{dm.day}</span>
+    <span class="tabular text-2xs text-muted">{dm.year}</span>
   </div>
   <div class="min-w-0">
-    <p class="mb-1 flex flex-wrap gap-1.5"><Badge tone={past ? 'outline' : 'brand'}>{kind}</Badge>{past && <Badge tone="outline">{lang === 'en' ? 'Past' : lang === 'tc' ? '已舉行' : '已举行'}</Badge>}</p>
-    <h3 class="font-semibold leading-snug">{pick(event.title, lang)}</h3>
-    <p class="mt-0.5 text-sm text-graphite"><time datetime={event.date}>{formatDate(event.date, lang)}</time></p>
+    <p class="flex flex-wrap gap-1.5"><Badge tone={past ? 'outline' : 'brand'}>{kind}</Badge>{past && <Badge tone="neutral" class="!bg-surface !text-muted">{lang === 'en' ? 'Past' : lang === 'tc' ? '已舉行' : '已举行'}</Badge>}</p>
+    <h3 class="mt-1.5 text-lg leading-[1.625rem] font-semibold">{pick(event.title, lang)}</h3>
+    <p class="text-[0.8125rem] text-muted"><time datetime={event.date}>{formatDate(event.date, lang)}</time></p>
     {ics && !past && (
       <a href={ics} class="mt-1 inline-flex min-h-11 items-center gap-1.5 text-sm font-semibold text-brand-ink underline decoration-1 underline-offset-4 hover:decoration-2" rel="noopener">
         <Icon name="calendar" size={14} />{t(lang, 'addToCalendar')}<span class="sr-only"> (.ics)</span>

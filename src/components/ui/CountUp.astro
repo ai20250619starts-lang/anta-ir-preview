@@ -1,0 +1,18 @@
+---
+/**
+ * Figure that counts up once when scrolled into view (Lane Lines motion; script in Base.astro).
+ * - The final text is always in the DOM: an sr-only copy for screen readers (read once, no live region),
+ *   an invisible "ghost" that reserves the final width (no layout shift), and the visible aria-hidden copy
+ *   that the script animates. Without JS or with reduced motion, the visible copy simply shows the final text.
+ * - Only strings containing exactly one number are animated ("80,219", "~21.8%", "Top 3"); others ("6 + 2", "前三")
+ *   render as plain text.
+ */
+interface Props { value: string; class?: string }
+const { value, class: cls = '' } = Astro.props;
+const countable = (value.match(/\d[\d,]*(?:\.\d+)?/g) ?? []).length === 1;
+---
+{countable ? (
+  <span class={`ll-count ${cls}`}><span class="sr-only">{value}</span><span class="ll-count-ghost" aria-hidden="true">{value}</span><span class="ll-count-run" aria-hidden="true" data-count>{value}</span></span>
+) : (
+  <span class={cls}>{value}</span>
+)}

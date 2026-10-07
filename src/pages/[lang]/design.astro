@@ -25,15 +25,17 @@ const samples = [
   docs.find((d) => !d.date),
 ].filter((d): d is NonNullable<typeof d> => !!d);
 const swatches = [
-  ['brand', 'bg-brand', '--brand-red (accent only)'],
-  ['brand-ink', 'bg-brand-ink', 'text-safe red (links, buttons)'],
-  ['ink', 'bg-ink', '#111111'],
-  ['graphite', 'bg-graphite', '#4c4a46'],
-  ['stone', 'bg-stone', '#6b6862'],
-  ['mist', 'bg-mist', '#d9d6d0'],
-  ['sand', 'bg-sand', '#ebe8e3'],
-  ['paper', 'bg-paper', '#f6f5f3'],
-  ['up', 'bg-up', '#0b6e3a'],
+  ['brand', 'bg-brand', '--brand-red (graphics only)'],
+  ['brand-ink', 'bg-brand-ink', 'derived text red (≈#CC0000)'],
+  ['brand-press', 'bg-brand-press', 'derived hover red'],
+  ['ink', 'bg-ink', '#0E0F11'],
+  ['graphite', 'bg-graphite', '#3D4249'],
+  ['muted', 'bg-muted', '#5C636D'],
+  ['line', 'bg-line', '#DADDE2'],
+  ['surface', 'bg-surface', '#F4F5F7'],
+  ['bar', 'bg-bar', '#8A919B'],
+  ['flag', 'bg-flag', '#FFD84D'],
+  ['up', 'bg-up', '#0A7A3E'],
 ];
 const sizes = ['text-5xl', 'text-4xl', 'text-3xl', 'text-2xl', 'text-xl', 'text-lg', 'text-base', 'text-sm', 'text-xs'];
 const ev = [...calendar.events].sort((a, b) => b.date.localeCompare(a.date))[0];
@@ -45,7 +47,7 @@ const hk = contacts.offices[0];
 
     <section aria-labelledby="ds-c"><SectionHeading id="ds-c" title="Colour" description="One brand setting (--brand-red, placeholder #FF0000); brand-ink is derived from it for AA text contrast." />
       <ul class="grid grid-cols-3 gap-3 sm:grid-cols-5 lg:grid-cols-9">
-        {swatches.map(([n, c, note]) => <li class="text-xs"><span class={`block h-14 rounded-card border border-mist ${c}`}></span><span class="mt-1 block font-semibold">{n}</span><span class="text-graphite">{note}</span></li>)}
+        {swatches.map(([n, c, note]) => <li class="text-xs"><span class={`block h-14 rounded-card border border-line ${c}`}></span><span class="mt-1 block font-semibold">{n}</span><span class="text-graphite">{note}</span></li>)}
       </ul>
     </section>
 

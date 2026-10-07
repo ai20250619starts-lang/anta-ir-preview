@@ -23,12 +23,12 @@ const versionNote = pf?.isFallback ? t(lang, pf.versionLang === 'tc' ? 'tcVersio
 const size = pf?.file.sizeBytes ? formatBytes(pf.file.sizeBytes) : null;
 const H = headingLevel;
 ---
-<article class="grid gap-x-6 gap-y-2 border-b border-mist py-4 md:grid-cols-[9.5rem_1fr_auto] md:items-start">
-  <div class="text-sm text-graphite">
+<article class="grid gap-2 border-b border-line py-5 lg:grid-cols-[150px_minmax(0,1fr)_230px] lg:items-center lg:gap-8 lg:py-[22px]">
+  <div class="text-sm text-muted">
     {dd.kind === 'exact' && (
       <time datetime={dd.iso} class="tabular block">
         <span class="font-semibold text-ink">{dd.text}</span>
-        {dd.time && <span class="ml-2 md:ml-0 md:block">{dd.time} {t(lang, 'hkt')}</span>}
+        {dd.time && <span class="ml-2.5 text-[0.8125rem] lg:ml-0 lg:block">{dd.time} {t(lang, 'hkt')}</span>}
       </time>
     )}
     {dd.kind === 'approx' && (
@@ -42,21 +42,21 @@ const H = headingLevel;
   </div>
 
   <div class="min-w-0">
-    {showType && <p class="mb-1"><Badge>{TYPE_LABEL[doc.type][lang]}</Badge></p>}
-    <H class="text-base leading-snug font-medium">
+    {showType && <p class="mb-2"><Badge tone="outline">{TYPE_LABEL[doc.type][lang]}</Badge></p>}
+    <H class="text-base leading-6 font-[550]">
       {pf ? (
-        <a href={pf.file.url} class="text-ink hover:text-brand-ink hover:underline" lang={titleLang !== lang ? HTML_LANG[titleLang] : undefined} rel="noopener">
+        <a href={pf.file.url} class="text-ink underline-offset-4 transition-colors duration-150 hover:text-brand-ink hover:underline" lang={titleLang !== lang ? HTML_LANG[titleLang] : undefined} rel="noopener">
           {title}<span class="sr-only"> ({formatLabel(pf.file, doc.type, lang)}{size ? `, ${size}` : ''}{versionNote ? `, ${versionNote}` : ''})</span>
         </a>
       ) : <span>{title}</span>}
     </H>
   </div>
 
-  <div class="flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-graphite md:justify-end md:pt-0.5">
+  <div class="flex flex-wrap items-center gap-x-4 gap-y-1 text-xs text-muted lg:justify-end">
     {pf && (
       <span class="inline-flex items-center gap-1 font-semibold text-ink" aria-hidden="true">
         <Icon name={pf.file.format === 'pdf' ? 'file' : doc.type === 'webcast' ? 'play' : 'external'} size={14} />
-        {formatLabel(pf.file, doc.type, lang)}{size && <span class="tabular font-normal text-graphite"> · {size}</span>}
+        {formatLabel(pf.file, doc.type, lang)}{size && <span class="tabular font-normal text-muted"> · {size}</span>}
       </span>
     )}
     {versionNote && <span lang={HTML_LANG[pf!.versionLang]}><Badge tone="brand">{versionNote}</Badge></span>}
@@ -65,11 +65,11 @@ const H = headingLevel;
       {(['en', 'tc', 'sc'] as Lang[]).map((L) => {
         const f = langs.includes(L) ? fileInLang(doc, L) : null;
         return f ? (
-          <a href={f.url} hreflang={HTML_LANG[L]} lang={HTML_LANG[L]} class="inline-flex min-h-6 min-w-6 items-center justify-center rounded-sm border border-mist px-1 text-ink hover:border-ink" rel="noopener">
+          <a href={f.url} hreflang={HTML_LANG[L]} lang={HTML_LANG[L]} class="inline-grid h-6 min-w-7 place-items-center rounded-sm border border-line px-1 font-semibold text-ink transition-colors hover:border-ink" rel="noopener">
             <span aria-hidden="true">{LANG_LABEL[L]}</span><span class="sr-only">{LANG_NAME[L]}</span>
           </a>
         ) : (
-          <span class="inline-flex min-h-6 min-w-6 items-center justify-center rounded-sm px-1 text-stone line-through" title={`${LANG_NAME[L]}: ${t(lang, 'langUnavailable')}`}>
+          <span class="inline-grid h-6 min-w-7 place-items-center rounded-sm border border-dashed border-line bg-surface px-1 font-semibold text-muted" title={`${LANG_NAME[L]}: ${t(lang, 'langUnavailable')}`}>
             <span aria-hidden="true">{LANG_LABEL[L]}</span><span class="sr-only">{LANG_NAME[L]}: {t(lang, 'langUnavailable')}</span>
           </span>
         );

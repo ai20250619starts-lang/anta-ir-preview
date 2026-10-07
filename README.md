@@ -153,3 +153,10 @@ Design system, home page, final IA pages, search, charts, and deployment. No dep
 
 - **Hidden terms.** `src/lib/hidden-terms.ts` (`HIDDEN_TERMS`, currently `puma`, `彪馬`, `彪马`, matched case-insensitively) is the single place to configure terms that must never appear on the site. `src/data/index.ts` drops any document whose record mentions one (in any language or field) before pages see it; `data/documents.json` is left as scraped. The debug page shows how many documents were withheld. `tests/hidden-terms.test.ts` checks the filter and scans every built HTML file in `dist/` (run the tests after a build; the scan is skipped when there is no `dist/`).
 - **Slogan.** Rendered from `data/company.json` → `slogan` (scraped from the ir.anta.com home-page banner `.b-info`): EN "Keep Moving", TC "邁步向前", SC "迈步向前".
+
+## Home page in the "Lane Lines" concept (piece 5)
+
+- Design source: `design/` (mockup `index.html`, `DESIGN.md`, reference screenshots, font/contrast scripts). Tokens are merged into `src/styles/global.css` (`@theme`); the brand red is still one setting (`--brand-red`) with derived `brand-ink` (#CC0000, text/buttons) and `brand-press` (hover).
+- Updated components (no duplicates): `QuoteStrip` (quote card), `ResultsHubCard` (results band), `WhyInvest` (split layout + lead figures from `why-invest.ts`), `DocumentRow` (ledger row), `KpiCard` (tile + 6-year bars), `CalendarItem`, `ContactCard` (`plain`), `BrandStrip` (in-house tiles + strategic tiles), `SiteHeader` (1100px `nav` breakpoint), `LangSwitcher` (pill, `tone`), `SiteFooter`, `ui/Button` (pills), `ui/SectionHeading`; new `ui/Lanes` (hero track bend) and `ui/CountUp`.
+- Motion: CSS in `global.css` (Lane Lines section) + one inline IntersectionObserver script in `Base.astro`. Everything is gated on `html.js` and `prefers-reduced-motion: no-preference`; no-JS and reduced-motion users get the final state. `node scripts/motion-check.mjs` (against a running preview on :4321) prints the no-JS / reduced-motion / animated states.
+- Screenshots wait `SETTLE_MS` (default 2200 ms) for animations to finish. Lighthouse report: `audit/lighthouse/piece5-home-en-mobile.report.{html,json}`.

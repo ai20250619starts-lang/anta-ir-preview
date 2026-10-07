@@ -6,13 +6,13 @@
 import type { Lang } from '../data/schemas';
 import { HTML_LANG, LANGS, LANG_LABEL, LANG_NAME, t } from '../i18n/ui';
 import { switchLangPath } from '../lib/i18n-path';
-interface Props { lang: Lang; class?: string; variant?: 'compact' | 'full' }
-const { lang, class: cls = '', variant = 'compact' } = Astro.props;
+interface Props { lang: Lang; class?: string; variant?: 'compact' | 'full'; tone?: 'light' | 'dark' }
+const { lang, class: cls = '', variant = 'compact', tone = 'light' } = Astro.props;
 const base = import.meta.env.BASE_URL;
 const pathname = Astro.url.pathname;
 ---
 <nav aria-label={t(lang, 'language')} class={cls}>
-  <ul class="flex items-center gap-1">
+  <ul class={`flex w-max items-center rounded-full border p-[3px] ${tone === 'dark' ? 'border-white/20' : 'border-line'}`}>
     {LANGS.map((l) => (
       <li>
         <a
@@ -21,7 +21,7 @@ const pathname = Astro.url.pathname;
           lang={HTML_LANG[l]}
           data-lang-switch
           aria-current={l === lang ? 'true' : undefined}
-          class={`inline-flex min-h-11 min-w-11 items-center justify-center rounded-sm px-2 text-sm ${l === lang ? 'font-bold text-ink underline decoration-brand decoration-2 underline-offset-[6px]' : 'text-graphite hover:text-ink'}`}
+          class={`inline-grid h-9 min-w-10 place-items-center rounded-full px-2.5 text-[0.8125rem] font-semibold transition-colors duration-150 ${l === lang ? (tone === 'dark' ? 'bg-white text-ink' : 'bg-ink text-white') : tone === 'dark' ? 'text-white hover:bg-white/10' : 'text-graphite hover:bg-surface hover:text-ink'}`}
         >
           {variant === 'full' ? LANG_NAME[l] : <><span aria-hidden="true">{LANG_LABEL[l]}</span><span class="sr-only">{LANG_NAME[l]}</span></>}
         </a>

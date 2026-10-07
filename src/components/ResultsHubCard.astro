@@ -1,5 +1,9 @@
 ---
-/** Results-period hub: one card per reporting period linking announcement, press release, presentation, webcast, report. */
+/**
+ * Results-period hub (Lane Lines "Results band"): head (period, date, tag, results centre) + five document tiles
+ * (report, presentation, webcast, announcement, press release). 4px brand top edge = where the hero's red lane arrives.
+ * Keeps the 繁體版 / EN version note when the linked file is in another language.
+ */
 import type { Lang } from '../data/schemas';
 import { HTML_LANG, t } from '../i18n/ui';
 import { formatDate } from '../lib/format';
@@ -22,45 +26,44 @@ const slots: { key: SlotKey; label: string; icon: 'file' | 'play' }[] = [
 ];
 const reportTitle = period.half === 'annual' ? { en: 'Annual report', tc: '年報', sc: '年报' }[lang] : { en: 'Interim report', tc: '中期報告', sc: '中期报告' }[lang];
 ---
-<article class={`rounded-card border ${feature ? 'border-ink' : 'border-mist'} bg-white`}>
-  <div class={`flex flex-wrap items-start justify-between gap-3 border-b border-mist p-5 ${feature ? 'bg-paper' : ''}`}>
-    <div>
-      <p class="eyebrow">{t(lang, 'latestResults')}</p>
-      <H class="mt-1 text-xl font-bold md:text-2xl">{periodLabel(period, lang)}</H>
-      {period.date && <p class="mt-1 text-sm text-graphite">{t(lang, 'announcedOn')}: <time datetime={period.date}>{formatDate(period.date, lang)}</time></p>}
-    </div>
-    <span class="display-num text-3xl text-brand" aria-hidden="true">{period.half === 'annual' ? 'FY' : '1H'}{String(period.fy).slice(2)}</span>
+<article class={`grid overflow-hidden rounded-lg border-t-4 border-brand bg-white shadow-raised ${feature ? 'lg:grid-cols-[300px_1fr]' : ''}`}>
+  <div class={`flex flex-col gap-1.5 p-6 ${feature ? 'lg:border-r lg:border-line lg:p-8' : ''}`}>
+    <p class="eyebrow">{t(lang, 'latestResults')}</p>
+    <H class="text-2xl font-[650] tracking-[-0.02em]">{periodLabel(period, lang)}</H>
+    <p class="text-sm text-graphite">
+      {period.date && <>{t(lang, 'announcedOn')}{lang === 'en' ? ' ' : '：'}<time datetime={period.date}>{formatDate(period.date, lang)}</time> · </>}
+      <span class="font-display text-[0.9375rem] font-semibold tracking-[0.06em] text-brand-ink">{period.half === 'annual' ? 'FY' : '1H'}{String(period.fy).slice(2)}</span>
+    </p>
+    <p class={`mt-2.5 ${feature ? 'lg:mt-auto lg:pt-3' : ''}`}>
+      <a href={withBase(`${lang}/investors/reports/`)} class="ll-arrow inline-flex min-h-11 items-center gap-2 text-[0.9375rem] font-semibold text-brand-ink underline-offset-4 hover:underline">{t(lang, 'resultsCentre')}<Icon name="arrow-right" size={16} /></a>
+    </p>
   </div>
-  <ul class="divide-y divide-mist">
+  <ul class={`grid border-t border-line sm:grid-cols-2 ${feature ? 'lg:grid-cols-5 lg:border-t-0' : ''}`}>
     {slots.map((s) => {
       const d = period.docs[s.key];
       const pf = d ? primaryFile(d, lang) : null;
       const label = s.key === 'report' ? reportTitle : s.label;
       const note = pf?.isFallback ? t(lang, pf.versionLang === 'tc' ? 'tcVersion' : pf.versionLang === 'en' ? 'enVersion' : 'scVersion') : null;
+      const tile = `flex h-full min-h-16 items-center gap-3.5 px-6 py-4 ${feature ? 'lg:flex-col lg:items-start lg:gap-5 lg:py-8' : ''}`;
       return (
-        <li>
+        <li class={`border-b border-line sm:odd:border-r ${feature ? 'lg:border-r lg:border-b-0 lg:last:border-r-0' : ''}`}>
           {pf && d ? (
-            <a href={pf.file.url} rel="noopener" class="group flex min-h-14 items-center justify-between gap-3 px-5 py-3 hover:bg-paper">
-              <span class="flex items-center gap-3">
-                <Icon name={s.icon} size={18} class="text-brand-ink" />
-                <span class="font-semibold text-ink group-hover:underline">{label}</span>
-                {note && <span lang={HTML_LANG[pf.versionLang]}><Badge tone="brand">{note}</Badge></span>}
-              </span>
-              <span class="tabular text-xs text-graphite">
-                {formatLabel(pf.file, d.type, lang)}{pf.file.sizeBytes ? ` · ${formatBytes(pf.file.sizeBytes)}` : ''}
+            <a href={pf.file.url} rel="noopener" class={`group transition-colors duration-150 hover:bg-surface ${tile}`}>
+              <span class="grid size-10 shrink-0 place-items-center rounded-md bg-surface text-ink transition-colors duration-200 group-hover:bg-ink group-hover:text-white"><Icon name={s.icon} size={20} /></span>
+              <span class="min-w-0">
+                <span class="block text-[0.9375rem] leading-5 font-semibold">{label}</span>
+                <span class="tabular block text-xs text-muted">{formatLabel(pf.file, d.type, lang)}{pf.file.sizeBytes ? ` · ${formatBytes(pf.file.sizeBytes)}` : ''}</span>
+                {note && <span lang={HTML_LANG[pf.versionLang]} class="mt-1 inline-block"><Badge tone="brand">{note}</Badge></span>}
               </span>
             </a>
           ) : (
-            <span class="flex min-h-14 items-center justify-between gap-3 px-5 py-3 text-graphite">
-              <span class="flex items-center gap-3"><Icon name={s.icon} size={18} class="text-stone" />{label}</span>
-              <span class="text-xs">{t(lang, 'notYetAvailable')}</span>
+            <span class={`text-graphite ${tile}`}>
+              <span class="grid size-10 shrink-0 place-items-center rounded-md bg-surface text-muted"><Icon name={s.icon} size={20} /></span>
+              <span><span class="block text-[0.9375rem] leading-5 font-semibold">{label}</span><span class="block text-xs">{t(lang, 'notYetAvailable')}</span></span>
             </span>
           )}
         </li>
       );
     })}
   </ul>
-  <div class="border-t border-mist px-5 py-3">
-    <a href={withBase(`${lang}/investors/reports/`)} class="inline-flex min-h-11 items-center gap-1.5 text-sm font-semibold text-brand-ink underline decoration-1 underline-offset-4 hover:decoration-2">{t(lang, 'resultsCentre')}<Icon name="arrow-right" size={14} /></a>
-  </div>
 </article>

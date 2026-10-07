@@ -4,6 +4,8 @@ import type { Lang } from '../data/schemas';
 import Icon from './ui/Icon.astro';
 interface Props {
   lang: Lang;
+  /** plain: no card chrome (used inside the Stay informed panel) */
+  plain?: boolean;
   title: string;
   address?: string;
   phones?: string[];
@@ -11,7 +13,7 @@ interface Props {
   emails?: { label?: string; email: string }[];
   mapUrl?: string | null;
 }
-const { lang, title, address, phones = [], fax = [], emails = [], mapUrl } = Astro.props;
+const { lang, plain = false, title, address, phones = [], fax = [], emails = [], mapUrl } = Astro.props;
 const L = {
   tel: { en: 'Tel', tc: '電話', sc: '电话' }[lang],
   fax: { en: 'Fax', tc: '傳真', sc: '传真' }[lang],
@@ -19,14 +21,14 @@ const L = {
 };
 const tel = (p: string) => 'tel:+' + p.replace(/[^\d]/g, '');
 ---
-<article class="flex h-full flex-col rounded-card border border-mist bg-white p-5">
-  <h3 class="font-semibold">{title}</h3>
-  {address && <p class="mt-2 flex gap-2 text-sm text-graphite"><Icon name="pin" size={16} class="mt-1 text-stone" /><span>{address}</span></p>}
+<article class={plain ? 'flex flex-col' : 'flex h-full flex-col rounded-card border border-line bg-white p-5'}>
+  <h3 class="text-[0.9375rem] font-[650]">{title}</h3>
+  {address && <p class="mt-2 flex gap-2 text-sm text-graphite"><Icon name="pin" size={16} class="mt-1 text-muted" /><span>{address}</span></p>}
   <ul class="mt-3 space-y-1 text-sm">
-    {phones.map((p) => <li class="flex items-center gap-2"><Icon name="phone" size={14} class="text-stone" /><span class="sr-only">{L.tel}: </span><a href={tel(p)} class="tabular text-ink hover:text-brand-ink hover:underline">{p}</a></li>)}
+    {phones.map((p) => <li class="flex items-center gap-2"><Icon name="phone" size={14} class="text-muted" /><span class="sr-only">{L.tel}: </span><a href={tel(p)} class="tabular text-ink hover:text-brand-ink hover:underline">{p}</a></li>)}
     {fax.map((p) => <li class="tabular flex items-center gap-2 text-graphite"><span class="w-3.5 text-2xs font-semibold" aria-hidden="true">F</span><span class="sr-only">{L.fax}: </span>{p}</li>)}
     {emails.map((e) => (
-      <li class="flex items-start gap-2"><Icon name="mail" size={14} class="mt-1 text-stone" /><span>{e.label && <span class="block text-xs text-graphite">{e.label}</span>}<a href={`mailto:${e.email}`} class="break-all text-brand-ink underline decoration-1 underline-offset-4 hover:decoration-2">{e.email}</a></span></li>
+      <li class="flex items-start gap-2"><Icon name="mail" size={14} class="mt-1 text-muted" /><span>{e.label && <span class="block text-xs text-graphite">{e.label}</span>}<a href={`mailto:${e.email}`} class="break-all text-brand-ink underline decoration-1 underline-offset-4 hover:decoration-2">{e.email}</a></span></li>
     ))}
   </ul>
   {mapUrl && <a href={mapUrl} rel="noopener" class="mt-auto inline-flex min-h-11 items-center gap-1.5 pt-3 text-sm font-semibold text-brand-ink underline decoration-1 underline-offset-4 hover:decoration-2">{L.map}<Icon name="external" size={14} /></a>}

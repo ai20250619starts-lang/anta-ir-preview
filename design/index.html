@@ -1,0 +1,454 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Home · ANTA Sports Investor Relations — Design mockup “Lane Lines”</title>
+<meta name="robots" content="noindex">
+<link rel="preload" href="assets/fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/barlow-condensed-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
+<style>/* ANTA IR — "Lane Lines" home page mockup. Self-hosted fonts only. Mobile-first. */
+@font-face{font-family:"Inter";font-style:normal;font-display:swap;font-weight:100 900;src:url(assets/fonts/inter-latin-wght-normal.woff2) format("woff2-variations");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:"Inter";font-style:normal;font-display:swap;font-weight:100 900;src:url(assets/fonts/inter-latin-ext-wght-normal.woff2) format("woff2-variations");unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:"Barlow Condensed";font-style:normal;font-display:swap;font-weight:600;src:url(assets/fonts/barlow-condensed-latin-600-normal.woff2) format("woff2");unicode-range:U+0000-00FF,U+2000-206F,U+2212}
+/* CJK: build-time glyph subsets of Noto Sans CJK (OFL) for static UI/headings; system CJK fonts cover everything else */
+@font-face{font-family:"Noto Sans TC Sub";font-display:swap;font-weight:400;src:url(assets/fonts/noto-sans-tc-subset-400.woff2) format("woff2")}
+@font-face{font-family:"Noto Sans TC Sub";font-display:swap;font-weight:700;src:url(assets/fonts/noto-sans-tc-subset-700.woff2) format("woff2")}
+@font-face{font-family:"Noto Sans SC Sub";font-display:swap;font-weight:400;src:url(assets/fonts/noto-sans-sc-subset-400.woff2) format("woff2")}
+@font-face{font-family:"Noto Sans SC Sub";font-display:swap;font-weight:700;src:url(assets/fonts/noto-sans-sc-subset-700.woff2) format("woff2")}
+
+:root{
+  --red:#FF0000;        /* brand accent — graphics/lines only, never text */
+  --red-text:#CC0000;   /* 5.89:1 on white, 5.40:1 on surface */
+  --red-press:#A3000C;  /* hover/pressed for red buttons, 8.19:1 */
+  --ink:#0E0F11; --ink-2:#1B1D21; --graphite:#3D4249; --muted:#5C636D;
+  --line:#DADDE2; --line-strong:#0E0F11; --surface:#F4F5F7; --white:#FFFFFF;
+  --on-dark:#FFFFFF; --on-dark-muted:#A9B0BA; --on-dark-line:rgba(255,255,255,.16);
+  --up:#0A7A3E; --down:#CC0000; --flag:#FFD84D;
+  --sans:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  --tc:"Inter","Noto Sans TC Sub","PingFang HK","PingFang TC","Microsoft JhengHei","Noto Sans CJK TC","Source Han Sans TC",sans-serif;
+  --sc:"Inter","Noto Sans SC Sub","PingFang SC","Microsoft YaHei","Noto Sans CJK SC","Source Han Sans SC",sans-serif;
+  --num:"Barlow Condensed","Inter",system-ui,sans-serif;
+  --pad:20px; --max:1280px; --r-sm:4px; --r:8px; --r-lg:12px;
+  --shadow-1:0 1px 2px rgba(14,15,17,.06),0 1px 1px rgba(14,15,17,.04);
+  --shadow-2:0 12px 32px -12px rgba(14,15,17,.18),0 2px 6px rgba(14,15,17,.06);
+  --ease:cubic-bezier(.2,.7,.2,1);
+}
+@media (min-width:768px){:root{--pad:32px}}
+@media (min-width:1280px){:root{--pad:40px}}
+
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
+body{margin:0;font-family:var(--sans);font-size:16px;line-height:1.625;color:var(--ink);background:var(--white);font-feature-settings:"cv11","ss01";-webkit-font-smoothing:antialiased}
+:lang(zh-Hant){font-family:var(--tc)} :lang(zh-Hans){font-family:var(--sc)}
+img,svg{display:block;max-width:100%}
+a{color:inherit}
+h1,h2,h3,p,ul,ol,dl,dd{margin:0} ul,ol{padding:0;list-style:none}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.wrap{max-width:calc(var(--max) + 2*var(--pad));margin-inline:auto;padding-inline:var(--pad)}
+.tnum{font-variant-numeric:tabular-nums}
+:focus-visible{outline:3px solid var(--red);outline-offset:3px;border-radius:2px}
+.skip{position:absolute;left:12px;top:-60px;background:var(--ink);color:#fff;padding:10px 14px;z-index:50;border-radius:var(--r-sm)}
+.skip:focus{top:12px}
+
+/* type */
+.eyebrow{font-size:12px;line-height:16px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.eyebrow-bar{display:inline-flex;align-items:center;gap:10px}
+.eyebrow-bar::before{content:"";width:20px;height:3px;background:var(--red);transform:skewX(-20deg)}
+.h2{font-size:28px;line-height:34px;font-weight:650;letter-spacing:-.022em;text-wrap:balance}
+.lead{font-size:18px;line-height:28px;color:var(--graphite)}
+.small{font-size:14px;line-height:22px}
+.caption{font-size:12px;line-height:18px;color:var(--muted)}
+@media (min-width:1024px){.h2{font-size:44px;line-height:50px}.lead{font-size:20px;line-height:30px}}
+
+/* links + buttons */
+.link{display:inline-flex;align-items:center;gap:8px;font-weight:600;font-size:15px;color:var(--red-text);text-decoration:none;min-height:44px}
+.link svg{width:16px;height:16px;transition:transform .2s var(--ease)}
+.link:hover{text-decoration:underline;text-underline-offset:4px}
+.link:hover svg{transform:translateX(3px)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:48px;padding:0 22px;border-radius:999px;font-weight:600;font-size:15px;line-height:1;text-decoration:none;border:1.5px solid transparent;transition:background .2s var(--ease),color .2s var(--ease),border-color .2s var(--ease)}
+.btn svg{width:18px;height:18px}
+.btn-red{background:var(--red-text);color:#fff}.btn-red:hover{background:var(--red-press)}
+.btn-ink{background:var(--ink);color:#fff}.btn-ink:hover{background:var(--graphite)}
+.btn-line{border-color:var(--ink);color:var(--ink);background:transparent}.btn-line:hover{background:var(--ink);color:#fff}
+.btn-line-inv{border-color:rgba(255,255,255,.6);color:#fff}.btn-line-inv:hover{background:#fff;color:var(--ink);border-color:#fff}
+
+/* change indicator: arrow + sign + %, colour secondary */
+.chg{display:inline-flex;align-items:center;gap:6px;font-weight:600;font-variant-numeric:tabular-nums;white-space:nowrap}
+.chg svg{width:12px;height:12px;flex:none}
+.chg-down{color:var(--down)} .chg-up{color:var(--up)} .chg-flat{color:var(--graphite)}
+.chip{padding:3px 8px;border-radius:999px;font-size:13px;line-height:18px}
+.chip.chg-down{background:#FDECEC}.chip.chg-up{background:#E7F4EC}
+
+/* preview bar + header */
+.preview{background:var(--surface);border-bottom:1px solid var(--line);font-size:12px;line-height:16px;color:var(--graphite);text-align:center;padding:8px var(--pad)}
+.preview b{color:var(--ink)}
+.hdr{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.96);backdrop-filter:saturate(1.4) blur(8px);border-bottom:1px solid var(--line)}
+.hdr .wrap{display:flex;align-items:center;gap:16px;height:64px}
+.logo img{height:30px;width:auto}
+.nav{display:none}
+.hdr-tools{margin-left:auto;display:flex;align-items:center;gap:4px}
+.lang{display:flex;border:1px solid var(--line);border-radius:999px;padding:3px}
+.lang a{display:grid;place-items:center;min-width:36px;height:30px;padding:0 8px;border-radius:999px;font-size:13px;font-weight:600;text-decoration:none;color:var(--graphite)}
+.lang a[aria-current]{background:var(--ink);color:#fff}
+.icon-btn{display:grid;place-items:center;width:44px;height:44px;border:0;background:none;border-radius:999px;color:var(--ink);cursor:pointer}
+.icon-btn:hover{background:var(--surface)} .icon-btn svg{width:22px;height:22px}
+.search-btn{display:none}
+@media (min-width:1100px){
+  .hdr .wrap{height:76px;gap:32px}.logo img{height:36px}
+  .nav{display:flex;gap:2px;margin-left:8px}
+  .nav a{display:inline-flex;align-items:center;gap:6px;height:44px;padding:0 12px;font-size:15px;font-weight:550;text-decoration:none;color:var(--ink);border-radius:999px}
+  .nav a:hover{background:var(--surface)} .nav svg{width:12px;height:12px;color:var(--muted)}
+  .menu-btn{display:none}.search-btn{display:grid}
+}
+
+/* HERO */
+.hero{position:relative;background:var(--ink);color:var(--on-dark);overflow:hidden;isolation:isolate}
+.hero .lanes{position:absolute;right:0;bottom:0;width:100%;height:100%;max-width:none;z-index:-1;-webkit-mask-image:linear-gradient(90deg,#000 0,#000 40%,transparent 85%);mask-image:linear-gradient(90deg,#000 0,#000 40%,transparent 85%)}
+.lanes path{fill:none;stroke:rgba(255,255,255,.075);stroke-width:1.5}
+.lanes path.lead{stroke:var(--red);stroke-width:3;stroke-dasharray:2400;stroke-dashoffset:0;animation:draw 1.6s var(--ease) both .2s}
+@keyframes draw{from{stroke-dashoffset:2400}}
+.hero-grid{display:grid;gap:40px;padding-top:44px;padding-bottom:120px}
+.hero .eyebrow{color:var(--on-dark-muted)}
+.hero h1{margin-top:20px;font-size:40px;line-height:44px;font-weight:650;letter-spacing:-.032em;text-wrap:balance}
+.nw{white-space:nowrap}
+.hero .lead{margin-top:20px;color:#D5D9DF;max-width:40em}
+.hero-cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
+.slogan{display:flex;align-items:center;gap:14px;margin-top:40px;font-family:var(--num);font-weight:600;font-size:22px;letter-spacing:.06em;text-transform:uppercase}
+.slogan::before{content:"";width:28px;height:4px;background:var(--red);transform:skewX(-20deg)}
+@media (min-width:768px){.hero h1{font-size:56px;line-height:60px}}
+@media (min-width:1024px){
+  .hero-grid{grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:64px;padding-top:80px;padding-bottom:168px;align-items:start}
+  .hero h1{font-size:72px;line-height:76px}
+}
+
+/* QUOTE CARD */
+.quote{background:#fff;color:var(--ink);border-radius:var(--r-lg);box-shadow:var(--shadow-2);overflow:hidden}
+.q-flag{display:flex;align-items:center;gap:10px;padding:10px 20px;background:#FFF6D1;border-bottom:1px solid #F0E2A0;font-size:13px;line-height:18px}
+.badge{display:inline-flex;align-items:center;height:22px;padding:0 8px;border-radius:var(--r-sm);font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
+.badge-flag{background:var(--flag);color:var(--ink)}
+.q-body{padding:20px}
+.q-tabs{display:flex;gap:4px;padding:3px;background:var(--surface);border-radius:999px;width:max-content}
+.q-tabs button{font:inherit;font-size:13px;font-weight:600;height:30px;padding:0 14px;border:0;border-radius:999px;background:none;color:var(--graphite);cursor:pointer}
+.q-tabs button[aria-selected=true]{background:#fff;color:var(--ink);box-shadow:var(--shadow-1)}
+.q-sym{margin-top:18px;font-size:13px;color:var(--muted);font-weight:500}
+.q-sym b{color:var(--ink)}
+.q-price{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 14px;margin-top:2px}
+.q-last{font-family:var(--num);font-weight:600;font-size:64px;line-height:1;letter-spacing:-.01em;font-variant-numeric:tabular-nums}
+.q-price .chg{font-size:17px}
+.q-chart{position:relative;margin-top:14px;height:84px}
+.spark{width:100%;height:100%}
+.spark-line{fill:none;stroke:var(--ink);stroke-width:1.5}
+.spark-area{fill:rgba(14,15,17,.05)}
+.spark-dot{position:absolute;right:-4px;width:9px;height:9px;margin-top:-4.5px;border-radius:50%;background:var(--red);box-shadow:0 0 0 4px rgba(255,0,0,.15)}
+.q-axis{display:flex;justify-content:space-between;margin-top:6px;font-size:11px;color:var(--muted)}
+.q-stats{display:grid;grid-template-columns:repeat(2,1fr);gap:0 20px;margin-top:16px;border-top:1px solid var(--line)}
+.q-stats div{display:flex;justify-content:space-between;gap:8px;padding:9px 0;border-bottom:1px solid var(--line);font-size:13px}
+.q-stats dt{color:var(--muted)} .q-stats dd{font-weight:600;font-variant-numeric:tabular-nums}
+.q-range{grid-column:1/-1;display:block!important;border-bottom:0!important;padding-bottom:0!important}
+.q-range .rail{position:relative;height:4px;margin:10px 0 6px;background:var(--line);border-radius:4px}
+.q-range .rail i{position:absolute;top:-4px;width:3px;height:12px;background:var(--ink);border-radius:2px}
+.q-range .ends{display:flex;justify-content:space-between;font-weight:600;font-variant-numeric:tabular-nums}
+.q-foot{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:4px 16px;padding:6px 20px 8px;border-top:1px solid var(--line);background:#FBFBFC}
+.q-delay{display:flex;align-items:center;gap:8px;font-size:12px;line-height:16px;color:var(--graphite)}
+.q-delay svg{width:14px;height:14px;flex:none}
+@media (min-width:1024px){.q-last{font-size:76px}.q-body{padding:24px}.q-flag,.q-foot{padding-inline:24px}}
+
+/* RESULTS BAND (overlaps hero) */
+.results{position:relative;z-index:2;margin-top:-80px}
+.res{background:#fff;border-radius:var(--r-lg);box-shadow:var(--shadow-2);display:grid;overflow:hidden;border-top:4px solid var(--red)}
+.res-head{padding:24px;display:grid;gap:6px;align-content:start}
+.res-head h2{font-size:26px;line-height:32px;font-weight:650;letter-spacing:-.02em}
+.res-tag{font-family:var(--num);font-weight:600;font-size:15px;letter-spacing:.06em;color:var(--red-text)}
+.res-docs{display:grid;grid-template-columns:1fr;border-top:1px solid var(--line)}
+.res-docs a{display:flex;align-items:center;gap:14px;padding:16px 24px;min-height:64px;text-decoration:none;border-bottom:1px solid var(--line);transition:background .15s}
+.res-docs a:hover{background:var(--surface)}
+.res-docs .ic{display:grid;place-items:center;width:40px;height:40px;border-radius:var(--r);background:var(--surface);color:var(--ink);flex:none}
+.res-docs .ic svg{width:20px;height:20px}
+.res-docs b{display:block;font-weight:600;font-size:15px;line-height:20px}
+.res-docs span.m{display:block;font-size:12px;line-height:16px;color:var(--muted)}
+.res-docs a:hover .ic{background:var(--ink);color:#fff}
+.res-more{margin-top:10px}
+@media (min-width:640px){.res-docs{grid-template-columns:1fr 1fr}.res-docs a:nth-child(odd){border-right:1px solid var(--line)}}
+@media (min-width:1024px){
+  .res{grid-template-columns:300px 1fr}
+  .res-head{padding:32px;border-right:1px solid var(--line)}
+  .res-docs{grid-template-columns:repeat(5,1fr);border-top:0}
+  .res-docs a{flex-direction:column;align-items:flex-start;justify-content:flex-start;gap:20px;padding:32px 24px;border-bottom:0;border-right:1px solid var(--line)!important}
+  .res-docs a:last-child{border-right:0!important}
+  .res-more{margin-top:auto;padding-top:12px}
+}
+
+/* SECTIONS */
+.sec{padding-block:72px}
+.sec-head{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:12px 24px;margin-bottom:28px}
+.sec-head .h2{margin-top:10px}
+.sec-head .caption{margin-top:8px;font-size:14px}
+.bg-surface{background:var(--surface)}
+@media (min-width:1024px){.sec{padding-block:112px}.sec-head{margin-bottom:44px}}
+
+/* WHY INVEST */
+.wi{display:grid;gap:32px}
+.wi-intro p.small{margin-top:20px;color:var(--muted);max-width:28em}
+.wi-list{border-top:2px solid var(--ink);counter-reset:wi}
+.wi-item{display:grid;grid-template-columns:44px 1fr;gap:4px 12px;padding:28px 0;border-bottom:1px solid var(--line)}
+.wi-num{font-family:var(--num);font-weight:600;font-size:18px;line-height:28px;color:var(--red-text);letter-spacing:.04em}
+.wi-item h3{font-size:20px;line-height:28px;font-weight:650;letter-spacing:-.01em}
+.wi-item p{margin-top:8px;color:var(--graphite);font-size:15px;line-height:24px;max-width:38em}
+.wi-src{display:inline-flex;align-items:center;gap:6px;margin-top:10px;font-size:13px;color:var(--muted);text-decoration:underline;text-underline-offset:3px;min-height:32px}
+.wi-src svg{width:12px;height:12px}
+.wi-stat{grid-column:2;margin-top:16px;padding-left:14px;border-left:3px solid var(--red)}
+.wi-stat b{display:block;font-family:var(--num);font-weight:600;font-size:48px;line-height:1;letter-spacing:-.005em;font-variant-numeric:tabular-nums}
+.wi-stat span{display:block;margin-top:6px;font-size:13px;line-height:18px;color:var(--muted);max-width:16em}
+@media (min-width:1024px){
+  .wi{grid-template-columns:minmax(0,4fr) minmax(0,8fr);gap:64px}
+  .wi-intro{position:sticky;top:120px;align-self:start}
+  .wi-item{grid-template-columns:56px minmax(0,1fr) 220px;gap:0 32px;padding:32px 0}
+  .wi-stat{grid-column:3;grid-row:1/3;margin-top:0;align-self:start}
+  .wi-stat b{font-size:60px}
+}
+
+/* ANNOUNCEMENTS */
+.ann{border-top:2px solid var(--ink)}
+.ann li{display:grid;grid-template-columns:1fr;gap:8px;padding:20px 0;border-bottom:1px solid var(--line)}
+.ann-date{display:flex;gap:10px;align-items:baseline;font-size:14px;font-weight:600;font-variant-numeric:tabular-nums}
+.ann-date span{font-weight:400;color:var(--muted);font-size:13px}
+.tag{display:inline-flex;align-items:center;height:22px;padding:0 8px;border:1px solid var(--line);border-radius:var(--r-sm);font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--graphite);width:max-content}
+.ann-main{display:flex;flex-direction:column;align-items:flex-start;gap:8px}
+.ann-title{font-size:16px;line-height:24px;font-weight:550;text-decoration:none}
+.ann-title:hover{text-decoration:underline;text-underline-offset:4px;color:var(--red-text)}
+.ann-meta{display:flex;align-items:center;gap:16px;font-size:12px;color:var(--muted)}
+.ann-meta .pdf{display:inline-flex;align-items:center;gap:6px;font-weight:600;color:var(--ink)}
+.ann-meta .pdf svg{width:16px;height:16px}
+.langs{display:flex;gap:4px}
+.langs a,.langs s{display:grid;place-items:center;min-width:28px;height:24px;padding:0 4px;border:1px solid var(--line);border-radius:var(--r-sm);font-size:12px;font-weight:600;text-decoration:none;color:var(--ink)}
+.langs s{color:var(--muted);background:var(--surface);border-style:dashed}
+@media (min-width:1024px){
+  .ann li{grid-template-columns:150px 1fr 230px;gap:32px;align-items:center;padding:22px 0}
+  .ann-date{flex-direction:column;gap:2px}
+  .ann-meta{justify-content:flex-end}
+}
+
+/* KPI TILES */
+.kpis{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.kpi{background:#fff;border-radius:var(--r-lg);padding:16px;display:flex;flex-direction:column;gap:6px;box-shadow:var(--shadow-1);border:1px solid var(--line)}
+.kpi h3{font-size:14px;line-height:20px;font-weight:600;color:var(--graphite);min-height:40px}
+
+.kpi-val{font-family:var(--num);font-weight:600;font-size:40px;line-height:1;font-variant-numeric:tabular-nums;margin-top:8px}
+.kpi-unit{font-size:13px;color:var(--muted)}
+.kpi-chg{display:flex;flex-wrap:wrap;align-items:center;gap:6px 8px;margin-top:10px;font-size:13px;color:var(--muted)}
+.kpi-chart{margin-top:18px;padding-top:14px;border-top:1px solid var(--line)}
+.bars{width:100%;height:48px}
+.bar{fill:#8A919B}.bar-now{fill:var(--red)}
+.kpi-axis{display:flex;justify-content:space-between;margin-top:6px;font-size:11px;color:var(--muted);font-variant-numeric:tabular-nums}
+@media (min-width:640px){.kpis{gap:16px}.kpi{padding:24px}.kpi-val{font-size:52px}.kpi h3{font-size:15px;line-height:22px;min-height:44px}}
+@media (min-width:1024px){.kpis{grid-template-columns:repeat(4,1fr);gap:20px}.kpi{padding:28px}.kpi-val{font-size:60px}}
+
+/* EVENTS + STAY INFORMED */
+.ev-grid{display:grid;gap:48px}
+.ev-note{font-size:14px;color:var(--muted);margin:-12px 0 16px}
+.ev-list{border-top:2px solid var(--ink)}
+.ev{display:grid;grid-template-columns:72px 1fr;gap:20px;align-items:center;padding:20px 0;border-bottom:1px solid var(--line)}
+.ev-cal{display:grid;justify-items:center;padding:8px 0;border:1px solid var(--line);border-radius:var(--r);text-align:center;line-height:1}
+.ev-cal .mo{font-size:11px;font-weight:700;letter-spacing:.08em;color:var(--red-text)}
+.ev-cal .d{font-family:var(--num);font-weight:600;font-size:34px;margin:4px 0 2px}
+.ev-cal .y{font-size:11px;color:var(--muted)}
+.ev h3{font-size:18px;line-height:26px;font-weight:600;margin-top:6px}
+.ev .tags{display:flex;gap:6px}
+.tag-past{background:var(--surface);border-color:transparent;color:var(--muted)}
+.ev time{display:block;font-size:13px;color:var(--muted)}
+.stay{background:var(--surface);border-radius:var(--r-lg);padding:28px;position:relative;overflow:hidden}
+.stay::before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px;background:var(--red)}
+.stay h2{font-size:26px;line-height:32px;font-weight:650;letter-spacing:-.02em}
+.stay > p{margin-top:8px;color:var(--graphite)}
+.stay .btns{display:flex;flex-wrap:wrap;gap:12px;margin-top:20px}
+.contact{margin-top:28px;padding-top:24px;border-top:1px solid var(--line);display:grid;gap:16px;font-size:14px;line-height:22px}
+.contact h3{font-size:15px;font-weight:650}
+.contact address{font-style:normal;color:var(--graphite)}
+.contact dl{display:grid;grid-template-columns:auto 1fr;gap:6px 16px}
+.contact dt{color:var(--muted)} .contact dd a{font-weight:600;text-decoration:underline;text-underline-offset:3px;text-decoration-color:var(--line);word-break:break-word}
+.contact dd a:hover{text-decoration-color:currentColor}
+@media (min-width:1024px){.ev-grid{grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:64px}.stay{padding:36px}.ev{grid-template-columns:80px 1fr auto;gap:24px}}
+
+/* BRANDS */
+.br-label{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:14px}
+.br-label .caption{font-size:13px}
+.br-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.br{position:relative;display:grid;place-items:center;height:116px;background:#fff;border:1px solid var(--line);border-radius:var(--r-lg);text-decoration:none;transition:border-color .2s,box-shadow .2s,transform .2s var(--ease)}
+.br:hover{border-color:var(--ink);box-shadow:var(--shadow-2);transform:translateY(-2px)}
+.br img{max-height:44px;max-width:62%;width:auto;filter:brightness(0)}
+.br .nm{position:absolute;left:14px;bottom:10px;font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.br img.tall{max-height:58px}.br img.wide{max-height:22px}
+.br-strat{display:grid;gap:12px;margin-top:40px}
+.bs{display:grid;grid-template-columns:88px 1fr;align-items:center;gap:20px;padding:20px 24px;background:#fff;border:1px solid var(--line);border-radius:var(--r-lg);text-decoration:none;transition:border-color .2s}
+.bs:hover{border-color:var(--ink)}
+.bs img{max-height:48px;width:auto;filter:brightness(0)} .bs img.wide{max-height:18px;max-width:88px}
+@media (min-width:768px){.bs{grid-template-columns:128px 1fr}.bs img.wide{max-height:22px;max-width:120px}}
+.bs b{display:block;font-size:16px;font-weight:650}
+.bs span{display:block;margin-top:2px;font-size:14px;line-height:21px;color:var(--graphite)}
+@media (min-width:768px){.br-grid{grid-template-columns:repeat(3,1fr)}.br-strat{grid-template-columns:1fr 1fr}}
+@media (min-width:1280px){.br-grid{grid-template-columns:repeat(6,1fr)}.br{height:140px}}
+
+/* ESG */
+.esg{display:grid;gap:36px;align-items:center}
+.ph{position:relative;aspect-ratio:4/3;border-radius:var(--r-lg);overflow:hidden;background:linear-gradient(160deg,#E6EAE4 0%,#CBD5CC 55%,#B7C4BA 100%)}
+.ph > svg{position:absolute;inset:auto -10% -20% auto;width:120%;height:auto}
+.ph > svg path{fill:none;stroke:rgba(14,15,17,.10);stroke-width:1.5}
+.ph-label svg{width:16px;height:16px}
+.ph-label{position:absolute;left:16px;top:16px;display:inline-flex;align-items:center;gap:8px;padding:6px 10px;border-radius:var(--r-sm);background:rgba(255,255,255,.9);font-size:12px;font-weight:600;color:var(--ink)}
+.esg .h2{margin-top:12px}
+.esg p.lead{margin-top:16px}
+.esg .btns{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+@media (min-width:1024px){.esg{grid-template-columns:1fr 1fr;gap:80px}}
+
+/* CJK SPECIMEN (design-review only) */
+.spec{border:1.5px dashed #9AA1AB;border-radius:var(--r-lg);padding:24px;display:grid;gap:28px}
+.spec-top{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px}
+.spec-cols{display:grid;gap:28px}
+.spec .nw{display:inline-block;white-space:normal}
+.spec h3.big{font-size:32px;line-height:42px;font-weight:700;letter-spacing:0}
+.spec .sl{display:flex;align-items:center;gap:12px;margin-top:12px;font-size:20px;font-weight:700;letter-spacing:.12em}
+.spec .sl::before{content:"";width:24px;height:4px;background:var(--red);transform:skewX(-20deg)}
+.spec .wi-item{grid-template-columns:44px 1fr;border-bottom:0;padding:0}
+.spec .wi-item p{font-size:16px;line-height:28px;letter-spacing:.02em}
+.spec .kv{display:flex;gap:28px;flex-wrap:wrap;margin-top:16px}
+.spec .kv b{display:block;font-family:var(--num);font-size:40px;line-height:1;font-weight:600}
+.spec .kv span{font-size:14px;color:var(--graphite)}
+@media (min-width:1024px){.spec{padding:36px}.spec-cols{grid-template-columns:1.1fr 1fr 0.8fr;gap:48px}.spec .nw{display:inline-block;white-space:normal}
+.spec h3.big{font-size:40px;line-height:52px}}
+
+/* FOOTER */
+.ftr{background:var(--ink);color:var(--on-dark);margin-top:0}
+.ftr-top{display:grid;gap:40px;padding-block:56px 40px}
+.ftr-brand img{height:36px;width:auto}
+.ftr-brand .slogan{margin-top:24px;font-size:28px}
+.ftr-brand p{margin-top:16px;font-size:14px;color:var(--on-dark-muted)}
+.ftr-brand a{color:#fff;font-weight:600}
+.ftr-nav{display:grid;grid-template-columns:1fr 1fr;gap:32px 24px}
+.ftr-nav h2{font-size:12px;line-height:16px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--on-dark-muted);margin-bottom:10px}
+.ftr-nav a{display:inline-flex;align-items:center;min-height:32px;font-size:14px;line-height:20px;text-decoration:none;color:#fff}
+.ftr-nav a:hover{text-decoration:underline;text-underline-offset:4px}
+.ftr-bot{border-top:1px solid var(--on-dark-line)}
+.ftr-bot .wrap{display:grid;gap:16px;padding-block:24px;font-size:12px;line-height:18px;color:var(--on-dark-muted)}
+.ftr-util{display:flex;flex-wrap:wrap;gap:6px 20px;align-items:center}
+.ftr-util a{color:#fff;text-decoration:none}.ftr-util a:hover{text-decoration:underline}
+.lang-inv{border-color:var(--on-dark-line);justify-self:start;width:max-content} .lang-inv a{color:#fff} .lang-inv a[aria-current]{background:#fff;color:var(--ink)}
+@media (min-width:768px){.ftr-nav{grid-template-columns:repeat(3,1fr)}}
+@media (min-width:1024px){.ftr-top{gap:48px;padding-block:72px 56px}.ftr-brand{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:40px;padding-bottom:40px;border-bottom:1px solid var(--on-dark-line)}.ftr-brand .slogan,.ftr-brand p{margin-top:0}.ftr-brand p{text-align:right}.ftr-nav{grid-template-columns:repeat(6,1fr);gap:32px}.ftr-bot .wrap{grid-template-columns:1fr auto auto;align-items:center;gap:32px}}
+
+/* motion */
+.reveal{animation:rise .7s var(--ease) both}
+@keyframes rise{from{opacity:0;transform:translateY(12px)}}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+  .lanes path.lead{stroke-dashoffset:0}
+}
+</style></head>
+<body><a class="skip" href="#main">Skip to main content</a>
+<p class="preview"><b>Design mockup</b> — not the official ANTA Sports website. Content snapshot for design review.</p>
+<header class="hdr"><div class="wrap">
+  <a class="logo" href="#"><img src="assets/img/anta-logo.png" alt="ANTA Sports — Investor Relations home" width="99" height="55"></a>
+  <nav class="nav" aria-label="Main"><a href="#">About Us <svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 9l6 6 6-6"/></svg></a><a href="#">Brands <svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 9l6 6 6-6"/></svg></a><a href="#">Corporate Governance <svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 9l6 6 6-6"/></svg></a><a href="#">Investors <svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 9l6 6 6-6"/></svg></a><a href="#">Sustainability <svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg><span class=sr-only>(opens external site)</span></a><a href="#">Contact Us <svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 9l6 6 6-6"/></svg></a></nav>
+  <div class="hdr-tools">
+    <button class="icon-btn search-btn" type="button" aria-label="Search"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg></button>
+    <nav class="lang" aria-label="Language"><a href="#" aria-current="true" lang="en" title="English">EN</a><a href="#" lang="zh-Hant-HK" title="繁體中文">繁</a><a href="#" lang="zh-Hans-CN" title="简体中文">简</a></nav>
+    <button class="icon-btn menu-btn" type="button" aria-label="Menu" aria-expanded="false"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+  </div></div></header>
+<main id="main"><section class="hero" aria-labelledby="hero-h">
+  <svg class="lanes" viewBox="0 0 1440 890" preserveAspectRatio="xMinYMax slice" aria-hidden="true" focusable="false"><path d="M1440,890 H480 A120,120 0 0 0 480,1130"/><path d="M1440,854 H480 A156,156 0 0 0 480,1166"/><path d="M1440,818 H480 A192,192 0 0 0 480,1202"/><path d="M1440,782 H480 A228,228 0 0 0 480,1238"/><path class="lead" d="M1440,746 H480 A264,264 0 0 0 480,1274"/><path d="M1440,710 H480 A300,300 0 0 0 480,1310"/><path d="M1440,674 H480 A336,336 0 0 0 480,1346"/><path d="M1440,638 H480 A372,372 0 0 0 480,1382"/><path d="M1440,602 H480 A408,408 0 0 0 480,1418"/></svg>
+  <div class="wrap hero-grid">
+    <div class="reveal">
+      <p class="eyebrow eyebrow-bar">HKEX: 2020 (HKD) · 82020 (RMB)</p>
+      <h1 id="hero-h">A <span class="nw">multi-brand</span>, global sportswear group</h1>
+      <p class="lead">Six in-house brands — ANTA, FILA, DESCENTE, KOLON SPORT, JACK WOLFSKIN and MAIA ACTIVE — and the largest shareholder of Amer Sports. Results, announcements and share information for ANTA Sports Products Limited.</p>
+      <div class="hero-cta"><a class="btn btn-red" href="#results">Latest results <svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a><a class="btn btn-line-inv" href="#why">Why invest</a></div>
+      <p class="slogan">Keep Moving</p>
+    </div>
+    <section class="quote reveal" aria-labelledby="q-h">
+  <div class="q-flag"><span class="badge badge-flag">Illustrative</span><span>Illustrative data — not a live quote</span></div>
+  <div class="q-body">
+    <div class="q-tabs" role="tablist" aria-label="Counter"><button role="tab" aria-selected="true">2020 · HKD</button><button role="tab" aria-selected="false">82020 · RMB</button></div>
+    <h2 id="q-h" class="q-sym"><b>2020.HK</b> · ANTA Sports · HKD</h2>
+    <div class="q-price"><span class="q-last">74.50</span><span class="chg chg-down"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M1 3h10L6 10z" fill="currentColor"/></svg><span aria-hidden="true">−0.30 (−0.40%)</span><span class="sr-only">down 0.30, or 0.40 percent</span></span></div>
+    <div class="q-chart"><svg class="spark" viewBox="0 0 600 112" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path d="M0.0,6.0 L2.4,11.5 L4.8,20.3 L7.2,28.1 L9.6,38.3 L12.0,37.8 L14.4,36.4 L16.8,47.5 L19.2,44.2 L21.6,49.3 L24.0,50.7 L26.4,54.8 L28.8,47.5 L31.2,40.1 L33.6,51.2 L36.0,56.2 L38.4,51.6 L40.8,59.9 L43.2,70.1 L45.6,80.2 L48.0,72.8 L50.4,83.4 L52.8,72.4 L55.2,63.6 L57.6,62.2 L60.0,54.8 L62.4,66.4 L64.8,74.7 L67.2,74.2 L69.6,82.0 L72.0,92.2 L74.4,84.8 L76.8,83.0 L79.2,78.8 L81.6,85.3 L84.0,76.5 L86.4,65.4 L88.8,65.0 L91.2,65.0 L93.6,58.1 L96.0,49.8 L98.4,58.5 L100.8,62.2 L103.2,68.7 L105.6,65.4 L108.0,54.8 L110.4,49.3 L112.8,37.3 L115.2,43.8 L117.6,40.1 L120.0,46.1 L122.4,49.8 L124.8,39.6 L127.2,41.0 L129.6,37.8 L132.0,42.4 L134.4,50.7 L136.8,47.5 L139.2,47.0 L141.6,47.5 L144.0,52.1 L146.4,42.4 L148.8,34.6 L151.2,27.2 L153.6,21.7 L156.0,34.1 L158.4,45.6 L160.8,47.0 L163.2,40.1 L165.6,36.4 L168.0,44.7 L170.4,39.6 L172.8,38.3 L175.2,39.6 L177.6,32.7 L180.0,34.6 L182.4,30.4 L184.8,29.5 L187.2,41.9 L189.6,34.6 L192.0,31.8 L194.4,19.8 L196.8,18.9 L199.2,20.3 L201.6,19.4 L204.0,22.6 L206.4,31.3 L208.8,35.0 L211.2,33.6 L213.6,39.6 L216.0,28.6 L218.4,30.0 L220.8,18.4 L223.2,21.2 L225.6,8.8 L228.0,14.8 L230.4,19.4 L232.8,26.7 L235.2,19.8 L237.6,12.0 L240.0,19.4 L242.4,29.0 L244.8,38.3 L247.2,45.6 L249.6,47.0 L252.0,45.6 L254.4,49.3 L256.8,39.6 L259.2,43.3 L261.6,37.8 L264.0,31.8 L266.4,32.3 L268.8,42.9 L271.2,42.9 L273.6,42.4 L276.0,36.9 L278.4,29.0 L280.8,24.4 L283.2,36.4 L285.6,41.9 L288.0,46.6 L290.4,38.7 L292.8,51.2 L295.2,54.4 L297.6,47.5 L300.0,36.4 L302.4,28.1 L304.8,28.1 L307.2,38.3 L309.6,36.4 L312.0,37.3 L314.4,38.3 L316.8,31.8 L319.2,22.1 L321.6,25.4 L324.0,26.3 L326.4,17.5 L328.8,18.9 L331.2,25.8 L333.6,20.3 L336.0,15.7 L338.4,22.6 L340.8,18.4 L343.2,27.7 L345.6,36.0 L348.0,46.6 L350.4,43.8 L352.8,50.7 L355.2,44.7 L357.6,50.7 L360.0,56.2 L362.4,59.9 L364.8,63.1 L367.2,73.3 L369.6,83.4 L372.0,89.9 L374.4,101.4 L376.8,96.8 L379.2,96.8 L381.6,88.5 L384.0,84.3 L386.4,89.4 L388.8,91.7 L391.2,95.9 L393.6,106.0 L396.0,102.3 L398.4,101.9 L400.8,93.6 L403.2,98.2 L405.6,100.5 L408.0,89.4 L410.4,94.5 L412.8,90.8 L415.2,98.6 L417.6,104.6 L420.0,106.0 L422.4,105.5 L424.8,106.0 L427.2,95.4 L429.6,88.0 L432.0,95.4 L434.4,86.2 L436.8,83.9 L439.2,82.5 L441.6,73.3 L444.0,75.6 L446.4,69.1 L448.8,66.4 L451.2,75.6 L453.6,66.8 L456.0,66.8 L458.4,73.7 L460.8,76.0 L463.2,65.9 L465.6,55.8 L468.0,45.2 L470.4,41.9 L472.8,32.3 L475.2,38.7 L477.6,46.6 L480.0,46.1 L482.4,37.8 L484.8,41.5 L487.2,46.1 L489.6,57.6 L492.0,55.8 L494.4,49.8 L496.8,40.1 L499.2,29.0 L501.6,37.3 L504.0,43.8 L506.4,49.3 L508.8,37.8 L511.2,44.7 L513.6,37.8 L516.0,48.4 L518.4,49.3 L520.8,55.3 L523.2,47.9 L525.6,44.2 L528.0,40.1 L530.4,48.4 L532.8,59.0 L535.2,52.1 L537.6,41.0 L540.0,48.9 L542.4,42.9 L544.8,34.6 L547.2,25.4 L549.6,36.0 L552.0,27.2 L554.4,25.8 L556.8,18.0 L559.2,26.7 L561.6,21.7 L564.0,13.8 L566.4,18.4 L568.8,13.8 L571.2,7.8 L573.6,11.1 L576.0,12.0 L578.4,19.4 L580.8,16.6 L583.2,23.1 L585.6,32.7 L588.0,22.1 L590.4,28.1 L592.8,40.1 L595.2,47.0 L597.6,53.0 L600.0,55.8 L600,112 L0,112 Z" class="spark-area"/><path d="M0.0,6.0 L2.4,11.5 L4.8,20.3 L7.2,28.1 L9.6,38.3 L12.0,37.8 L14.4,36.4 L16.8,47.5 L19.2,44.2 L21.6,49.3 L24.0,50.7 L26.4,54.8 L28.8,47.5 L31.2,40.1 L33.6,51.2 L36.0,56.2 L38.4,51.6 L40.8,59.9 L43.2,70.1 L45.6,80.2 L48.0,72.8 L50.4,83.4 L52.8,72.4 L55.2,63.6 L57.6,62.2 L60.0,54.8 L62.4,66.4 L64.8,74.7 L67.2,74.2 L69.6,82.0 L72.0,92.2 L74.4,84.8 L76.8,83.0 L79.2,78.8 L81.6,85.3 L84.0,76.5 L86.4,65.4 L88.8,65.0 L91.2,65.0 L93.6,58.1 L96.0,49.8 L98.4,58.5 L100.8,62.2 L103.2,68.7 L105.6,65.4 L108.0,54.8 L110.4,49.3 L112.8,37.3 L115.2,43.8 L117.6,40.1 L120.0,46.1 L122.4,49.8 L124.8,39.6 L127.2,41.0 L129.6,37.8 L132.0,42.4 L134.4,50.7 L136.8,47.5 L139.2,47.0 L141.6,47.5 L144.0,52.1 L146.4,42.4 L148.8,34.6 L151.2,27.2 L153.6,21.7 L156.0,34.1 L158.4,45.6 L160.8,47.0 L163.2,40.1 L165.6,36.4 L168.0,44.7 L170.4,39.6 L172.8,38.3 L175.2,39.6 L177.6,32.7 L180.0,34.6 L182.4,30.4 L184.8,29.5 L187.2,41.9 L189.6,34.6 L192.0,31.8 L194.4,19.8 L196.8,18.9 L199.2,20.3 L201.6,19.4 L204.0,22.6 L206.4,31.3 L208.8,35.0 L211.2,33.6 L213.6,39.6 L216.0,28.6 L218.4,30.0 L220.8,18.4 L223.2,21.2 L225.6,8.8 L228.0,14.8 L230.4,19.4 L232.8,26.7 L235.2,19.8 L237.6,12.0 L240.0,19.4 L242.4,29.0 L244.8,38.3 L247.2,45.6 L249.6,47.0 L252.0,45.6 L254.4,49.3 L256.8,39.6 L259.2,43.3 L261.6,37.8 L264.0,31.8 L266.4,32.3 L268.8,42.9 L271.2,42.9 L273.6,42.4 L276.0,36.9 L278.4,29.0 L280.8,24.4 L283.2,36.4 L285.6,41.9 L288.0,46.6 L290.4,38.7 L292.8,51.2 L295.2,54.4 L297.6,47.5 L300.0,36.4 L302.4,28.1 L304.8,28.1 L307.2,38.3 L309.6,36.4 L312.0,37.3 L314.4,38.3 L316.8,31.8 L319.2,22.1 L321.6,25.4 L324.0,26.3 L326.4,17.5 L328.8,18.9 L331.2,25.8 L333.6,20.3 L336.0,15.7 L338.4,22.6 L340.8,18.4 L343.2,27.7 L345.6,36.0 L348.0,46.6 L350.4,43.8 L352.8,50.7 L355.2,44.7 L357.6,50.7 L360.0,56.2 L362.4,59.9 L364.8,63.1 L367.2,73.3 L369.6,83.4 L372.0,89.9 L374.4,101.4 L376.8,96.8 L379.2,96.8 L381.6,88.5 L384.0,84.3 L386.4,89.4 L388.8,91.7 L391.2,95.9 L393.6,106.0 L396.0,102.3 L398.4,101.9 L400.8,93.6 L403.2,98.2 L405.6,100.5 L408.0,89.4 L410.4,94.5 L412.8,90.8 L415.2,98.6 L417.6,104.6 L420.0,106.0 L422.4,105.5 L424.8,106.0 L427.2,95.4 L429.6,88.0 L432.0,95.4 L434.4,86.2 L436.8,83.9 L439.2,82.5 L441.6,73.3 L444.0,75.6 L446.4,69.1 L448.8,66.4 L451.2,75.6 L453.6,66.8 L456.0,66.8 L458.4,73.7 L460.8,76.0 L463.2,65.9 L465.6,55.8 L468.0,45.2 L470.4,41.9 L472.8,32.3 L475.2,38.7 L477.6,46.6 L480.0,46.1 L482.4,37.8 L484.8,41.5 L487.2,46.1 L489.6,57.6 L492.0,55.8 L494.4,49.8 L496.8,40.1 L499.2,29.0 L501.6,37.3 L504.0,43.8 L506.4,49.3 L508.8,37.8 L511.2,44.7 L513.6,37.8 L516.0,48.4 L518.4,49.3 L520.8,55.3 L523.2,47.9 L525.6,44.2 L528.0,40.1 L530.4,48.4 L532.8,59.0 L535.2,52.1 L537.6,41.0 L540.0,48.9 L542.4,42.9 L544.8,34.6 L547.2,25.4 L549.6,36.0 L552.0,27.2 L554.4,25.8 L556.8,18.0 L559.2,26.7 L561.6,21.7 L564.0,13.8 L566.4,18.4 L568.8,13.8 L571.2,7.8 L573.6,11.1 L576.0,12.0 L578.4,19.4 L580.8,16.6 L583.2,23.1 L585.6,32.7 L588.0,22.1 L590.4,28.1 L592.8,40.1 L595.2,47.0 L597.6,53.0 L600.0,55.8" class="spark-line" vector-effect="non-scaling-stroke"/></svg><span class="spark-dot" style="top:49.8%" aria-hidden="true"></span></div>
+    <div class="q-axis" aria-hidden="true"><span>Oct 2025</span><span>1-year closing price (illustrative)</span><span>Oct 2026</span></div>
+    <dl class="q-stats">
+      <div><dt>Open</dt><dd>74.80</dd></div><div><dt>Prev. close</dt><dd>74.80</dd></div>
+      <div><dt>High</dt><dd>75.20</dd></div><div><dt>Low</dt><dd>74.15</dd></div>
+      <div><dt>Volume</dt><dd>13.37M</dd></div><div><dt>Turnover</dt><dd>745.00M</dd></div>
+      <div class="q-range"><dt>52-week range</dt><dd><div class="rail" aria-hidden="true"><i style="left:calc(50.2% - 1.5px)"></i></div><div class="ends"><span>69.05</span><span>79.90</span></div></dd></div>
+    </dl>
+  </div>
+  <div class="q-foot"><p class="q-delay"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span><b>Delayed at least 15 minutes</b> · As of 7 Oct 2026 16:10 HKT</span></p><a class="link" href="#">Quote &amp; chart <svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+</section>
+  </div>
+</section><section class="results" id="results" aria-labelledby="res-h"><div class="wrap"><div class="res">
+  <div class="res-head"><p class="eyebrow">Latest results</p><h2 id="res-h">2026 Interim Results</h2><p class="small" style="color:var(--graphite)">Announced 26 Aug 2026 · <span class="res-tag">1H26</span></p>
+  <div class="res-more"><a class="link" href="#">Results centre <svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div></div>
+  <div class="res-docs"><a href="#"><span class="ic"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h4"/></svg></span><span><b>Interim report</b><span class="m">PDF · 11.3 MB</span></span></a><a href="#"><span class="ic"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="4" width="18" height="12" rx="1.5"/><path d="M12 16v4M8 20h8M7 12l3-3 2 2 4-4"/></svg></span><span><b>Presentation</b><span class="m">PDF · 7.5 MB</span></span></a><a href="#"><span class="ic"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M10 8.5v7l6-3.5z" fill="currentColor" stroke="none"/></svg></span><span><b>Webcast</b><span class="m">Webcast</span></span></a><a href="#"><span class="ic"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 10v4a1 1 0 0 0 1 1h2l5 4V5L7 9H5a1 1 0 0 0-1 1zM16 9a4 4 0 0 1 0 6M18.5 6.5a8 8 0 0 1 0 11"/></svg></span><span><b>Announcement</b><span class="m">PDF · 11.7 MB</span></span></a><a href="#"><span class="ic"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 4h11a1 1 0 0 1 1 1v14a1 1 0 0 0 1 1H6a2 2 0 0 1-2-2V5a1 1 0 0 1 1-1z"/><path d="M17 8h2a1 1 0 0 1 1 1v9a2 2 0 0 1-2 2M8 8h5M8 12h5M8 16h3"/></svg></span><span><b>Press release</b><span class="m">PDF · 146 KB</span></span></a></div>
+</div></div></section><section class="sec" id="why" aria-labelledby="wi-h"><div class="wrap wi">
+  <div class="wi-intro"><p class="eyebrow eyebrow-bar">Investment case</p><h2 id="wi-h" class="h2" style="margin-top:12px">Why invest in ANTA Sports</h2>
+  <p class="small">Figures are as published by ANTA Sports in its results press releases and company profile on ir.anta.com.</p>
+  <div style="margin-top:20px"><a class="link" href="#">IR overview <svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div></div>
+  <ol class="wi-list"><li class="wi-item"><span class="wi-num" aria-hidden="true">01</span><div><h3>Leader in China</h3><p>An estimated ~21.8% share of China’s sportswear market in 2025, per an internationally recognised institution cited by ANTA, built on a “Brand + Retail” model and over 800 supply-chain partners.</p><a class="wi-src" href="#">Source <svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg><span class="sr-only">(opens external site)</span></a></div><p class="wi-stat"><b>~21.8%</b><span>China sportswear market share, 2025</span></p></li><li class="wi-item"><span class="wi-num" aria-hidden="true">02</span><div><h3>Multi-brand platform</h3><p>Six in-house brands — ANTA, FILA, DESCENTE, KOLON SPORT, JACK WOLFSKIN and MAIA ACTIVE — spanning mass to premium segments, complemented by strategic investments in Amer Sports and MUSINSA.</p><a class="wi-src" href="#">Source <svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg><span class="sr-only">(opens external site)</span></a></div><p class="wi-stat"><b>6 + 2</b><span>In-house brands + strategic investments</span></p></li><li class="wi-item"><span class="wi-num" aria-hidden="true">03</span><div><h3>Efficient management</h3><p>Operating profit margin up 0.7 ppt to 27.0% and gross profit margin up 0.5 ppt to 63.9% in the first half of 2026.</p><a class="wi-src" href="#">Source <svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg><span class="sr-only">(opens external site)</span></a></div><p class="wi-stat"><b>27.0%</b><span>Operating profit margin, 1H26 (+0.7 ppt)</span></p></li><li class="wi-item"><span class="wi-num" aria-hidden="true">04</span><div><h3>Global expansion</h3><p>Largest shareholder of NYSE-listed Amer Sports (Arc’teryx, Salomon, Wilson); completed the JACK WOLFSKIN acquisition in 2025; ranked among the industry’s global top three.</p><a class="wi-src" href="#">Source <svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg><span class="sr-only">(opens external site)</span></a></div><p class="wi-stat"><b>Top 3</b><span>Ranked among the industry’s global top three</span></p></li><li class="wi-item"><span class="wi-num" aria-hidden="true">05</span><div><h3>Shareholder returns</h3><p>Payout ratio of 50.3% declared for the first half of 2026 (excluding share of associates’ results and related one-off items), maintaining a relatively high payout ratio.</p><a class="wi-src" href="#">Source <svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg><span class="sr-only">(opens external site)</span></a></div><p class="wi-stat"><b>50.3%</b><span>Payout ratio, 1H26</span></p></li></ol>
+</div></section><section class="sec" aria-labelledby="ann-h" style="padding-top:0"><div class="wrap">
+  <div class="sec-head"><div><p class="eyebrow eyebrow-bar">HKEXnews filings</p><h2 id="ann-h" class="h2">Latest announcements</h2></div><a class="link" href="#">All announcements <svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+  <ol class="ann"><li><p class="ann-date"><time>2 Oct 2026</time><span>16:45 HKT</span></p>
+  <div class="ann-main"><span class="tag">Monthly return</span><a class="ann-title" href="#">Monthly Return of Equity Issuer on Movements in Securities for the month ended 30 September 2026<span class="sr-only"> (PDF, 67 KB)</span></a></div>
+  <div class="ann-meta"><span class="pdf"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h4"/></svg>PDF · 67 KB</span><span class="langs" aria-label="Available in"><a href="#" title="English">EN</a><a href="#" lang="zh-Hant-HK" title="繁體中文">繁</a><s title="简体中文: not available"><span aria-hidden="true">简</span><span class="sr-only">简体中文: not available</span></s></span></div></li><li><p class="ann-date"><time>7 Sep 2026</time><span>16:45 HKT</span></p>
+  <div class="ann-main"><span class="tag">Report</span><a class="ann-title" href="#">Interim Report 2026<span class="sr-only"> (PDF, 11.3 MB)</span></a></div>
+  <div class="ann-meta"><span class="pdf"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h4"/></svg>PDF · 11.3 MB</span><span class="langs" aria-label="Available in"><a href="#" title="English">EN</a><a href="#" lang="zh-Hant-HK" title="繁體中文">繁</a><s title="简体中文: not available"><span aria-hidden="true">简</span><span class="sr-only">简体中文: not available</span></s></span></div></li><li><p class="ann-date"><time>1 Sep 2026</time><span>17:00 HKT</span></p>
+  <div class="ann-main"><span class="tag">Monthly return</span><a class="ann-title" href="#">Monthly Return of Equity Issuer on Movements in Securities for the month ended 31 August 2026<span class="sr-only"> (PDF, 68 KB)</span></a></div>
+  <div class="ann-meta"><span class="pdf"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h4"/></svg>PDF · 68 KB</span><span class="langs" aria-label="Available in"><a href="#" title="English">EN</a><a href="#" lang="zh-Hant-HK" title="繁體中文">繁</a><s title="简体中文: not available"><span aria-hidden="true">简</span><span class="sr-only">简体中文: not available</span></s></span></div></li><li><p class="ann-date"><time>1 Sep 2026</time><span>16:45 HKT</span></p>
+  <div class="ann-main"><span class="tag">Announcement</span><a class="ann-title" href="#">LIST OF DIRECTORS AND THEIR ROLES AND FUNCTIONS<span class="sr-only"> (PDF, 178 KB)</span></a></div>
+  <div class="ann-meta"><span class="pdf"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h4"/></svg>PDF · 178 KB</span><span class="langs" aria-label="Available in"><a href="#" title="English">EN</a><a href="#" lang="zh-Hant-HK" title="繁體中文">繁</a><s title="简体中文: not available"><span aria-hidden="true">简</span><span class="sr-only">简体中文: not available</span></s></span></div></li><li><p class="ann-date"><time>31 Aug 2026</time><span>16:45 HKT</span></p>
+  <div class="ann-main"><span class="tag">Announcement</span><a class="ann-title" href="#">FORFEITURE OF UNCLAIMED DIVIDENDS<span class="sr-only"> (PDF, 185 KB)</span></a></div>
+  <div class="ann-meta"><span class="pdf"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h4"/></svg>PDF · 185 KB</span><span class="langs" aria-label="Available in"><a href="#" title="English">EN</a><a href="#" lang="zh-Hant-HK" title="繁體中文">繁</a><s title="简体中文: not available"><span aria-hidden="true">简</span><span class="sr-only">简体中文: not available</span></s></span></div></li></ol></div></section><section class="sec bg-surface" aria-labelledby="fin-h"><div class="wrap">
+  <div class="sec-head"><div><p class="eyebrow eyebrow-bar">Annual results · FY 2025</p><h2 id="fin-h" class="h2">Financial highlights</h2><p class="caption">FY 2025 · RMB million · Six-year trend 2020–2025</p></div><a class="link" href="#">All financial highlights <svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+  <div class="kpis"><article class="kpi"><h3>Revenue</h3><p class="kpi-val">80,219</p><p class="kpi-unit">RMB million</p>
+  <p class="kpi-chg"><span class="chg chg-up chip"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M1 9h10L6 2z" fill="currentColor"/></svg><span aria-hidden="true">+13.3%</span><span class="sr-only">up 13.3 percent</span></span><span>vs prior year</span></p>
+  <div class="kpi-chart"><svg class="bars" viewBox="0 0 120 44" preserveAspectRatio="none" aria-hidden="true" focusable="false"><rect class="bar" x="0.0" y="24.5" width="15.0" height="19.5" rx="1"/><rect class="bar" x="21.0" y="16.9" width="15.0" height="27.1" rx="1"/><rect class="bar" x="42.0" y="14.6" width="15.0" height="29.4" rx="1"/><rect class="bar" x="63.0" y="9.8" width="15.0" height="34.2" rx="1"/><rect class="bar" x="84.0" y="5.2" width="15.0" height="38.8" rx="1"/><rect class="bar bar-now" x="105.0" y="0.0" width="15.0" height="44.0" rx="1"/></svg><p class="sr-only">2020: 35,512; 2021: 49,328; 2022: 53,651; 2023: 62,356; 2024: 70,826; 2025: 80,219</p><div class="kpi-axis" aria-hidden="true"><span>2020</span><span>2025</span></div></div></article><article class="kpi"><h3>Profit attributable to shareholders</h3><p class="kpi-val">13,588</p><p class="kpi-unit">RMB million</p>
+  <p class="kpi-chg"><span class="chg chg-down chip"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M1 3h10L6 10z" fill="currentColor"/></svg><span aria-hidden="true">−12.9%</span><span class="sr-only">down 12.9 percent</span></span><span>vs prior year</span></p>
+  <div class="kpi-chart"><svg class="bars" viewBox="0 0 120 44" preserveAspectRatio="none" aria-hidden="true" focusable="false"><rect class="bar" x="0.0" y="29.4" width="15.0" height="14.6" rx="1"/><rect class="bar" x="21.0" y="22.2" width="15.0" height="21.8" rx="1"/><rect class="bar" x="42.0" y="22.6" width="15.0" height="21.4" rx="1"/><rect class="bar" x="63.0" y="15.1" width="15.0" height="28.9" rx="1"/><rect class="bar" x="84.0" y="0.0" width="15.0" height="44.0" rx="1"/><rect class="bar bar-now" x="105.0" y="5.7" width="15.0" height="38.3" rx="1"/></svg><p class="sr-only">2020: 5,162; 2021: 7,720; 2022: 7,590; 2023: 10,236; 2024: 15,596; 2025: 13,588</p><div class="kpi-axis" aria-hidden="true"><span>2020</span><span>2025</span></div></div></article><article class="kpi"><h3>Gross profit margin</h3><p class="kpi-val">62.0%</p><p class="kpi-unit">&nbsp;</p>
+  <p class="kpi-chg"><span class="chg chg-down chip"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M1 3h10L6 10z" fill="currentColor"/></svg><span aria-hidden="true">−0.2 ppt</span><span class="sr-only">down 0.2 percentage points</span></span><span>vs prior year</span></p>
+  <div class="kpi-chart"><svg class="bars" viewBox="0 0 120 44" preserveAspectRatio="none" aria-hidden="true" focusable="false"><rect class="bar" x="0.0" y="3.1" width="15.0" height="40.9" rx="1"/><rect class="bar" x="21.0" y="0.7" width="15.0" height="43.3" rx="1"/><rect class="bar" x="42.0" y="1.7" width="15.0" height="42.3" rx="1"/><rect class="bar" x="63.0" y="0.0" width="15.0" height="44.0" rx="1"/><rect class="bar" x="84.0" y="0.3" width="15.0" height="43.7" rx="1"/><rect class="bar bar-now" x="105.0" y="0.4" width="15.0" height="43.6" rx="1"/></svg><p class="sr-only">2020: 58.2%; 2021: 61.6%; 2022: 60.2%; 2023: 62.6%; 2024: 62.2%; 2025: 62.0%</p><div class="kpi-axis" aria-hidden="true"><span>2020</span><span>2025</span></div></div></article><article class="kpi"><h3>Basic EPS</h3><p class="kpi-val">489</p><p class="kpi-unit">RMB cents</p>
+  <p class="kpi-chg"><span class="chg chg-down chip"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M1 3h10L6 10z" fill="currentColor"/></svg><span aria-hidden="true">−11.9%</span><span class="sr-only">down 11.9 percent</span></span><span>vs prior year</span></p>
+  <div class="kpi-chart"><svg class="bars" viewBox="0 0 120 44" preserveAspectRatio="none" aria-hidden="true" focusable="false"><rect class="bar" x="0.0" y="28.8" width="15.0" height="15.2" rx="1"/><rect class="bar" x="21.0" y="21.2" width="15.0" height="22.8" rx="1"/><rect class="bar" x="42.0" y="21.6" width="15.0" height="22.4" rx="1"/><rect class="bar" x="63.0" y="14.7" width="15.0" height="29.3" rx="1"/><rect class="bar" x="84.0" y="0.0" width="15.0" height="44.0" rx="1"/><rect class="bar bar-now" x="105.0" y="5.2" width="15.0" height="38.8" rx="1"/></svg><p class="sr-only">2020: 191.92; 2021: 287; 2022: 282; 2023: 369; 2024: 555; 2025: 489</p><div class="kpi-axis" aria-hidden="true"><span>2020</span><span>2025</span></div></div></article></div></div></section><section class="sec" aria-label="Events and investor contacts"><div class="wrap ev-grid">
+  <div><div class="sec-head"><div><p class="eyebrow eyebrow-bar">IR calendar</p><h2 class="h2">Recent events</h2></div><a class="link" href="#">IR calendar <svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+  <p class="ev-note">No upcoming events have been announced yet. Recent events are shown below.</p>
+  <ol class="ev-list"><li class="ev"><div class="ev-cal" aria-hidden="true"><span class="mo">AUG</span><span class="d">26</span><span class="y">2026</span></div>
+  <div><div class="tags"><span class="tag">Results</span><span class="tag tag-past">Past</span></div><h3>2026 Interim Results</h3><time>26 Aug 2026</time></div></li><li class="ev"><div class="ev-cal" aria-hidden="true"><span class="mo">MAY</span><span class="d">12</span><span class="y">2026</span></div>
+  <div><div class="tags"><span class="tag">AGM</span><span class="tag tag-past">Past</span></div><h3>Annual General Meeting</h3><time>12 May 2026</time></div></li><li class="ev"><div class="ev-cal" aria-hidden="true"><span class="mo">MAR</span><span class="d">25</span><span class="y">2026</span></div>
+  <div><div class="tags"><span class="tag">Results</span><span class="tag tag-past">Past</span></div><h3>2025 Annual Result</h3><time>25 Mar 2026</time></div></li></ol></div>
+  <aside class="stay" aria-labelledby="stay-h"><h2 id="stay-h">Stay informed</h2><p>Get announcements by email, or contact our Investor Relations team.</p>
+  <div class="btns"><a class="btn btn-red" href="#"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 16V11a6 6 0 1 1 12 0v5l2 2H4zM10 21h4"/></svg>Email alerts<span class="sr-only">(opens external site)</span></a><a class="btn btn-line" href="#">Contact IR</a></div>
+  <div class="contact"><div><h3>Hong Kong SAR Office</h3><address>16/F, Manhattan Place, 23 Wang Tai Road, Kowloon Bay, Kowloon, Hong Kong SAR, PRC</address></div>
+  <dl><dt>Tel</dt><dd class="tnum">(852) 2116 1660</dd><dt>Fax</dt><dd class="tnum">(852) 2116 1590</dd><dt>Investor relations</dt><dd><a href="#">ir@anta.com.hk</a></dd><dt>General enquiries</dt><dd><a href="#">anta_ccpr@anta.com</a></dd></dl></div></aside>
+</div></section><section class="sec bg-surface" aria-labelledby="br-h"><div class="wrap">
+  <div class="sec-head"><div><p class="eyebrow eyebrow-bar">Multi-brand platform</p><h2 id="br-h" class="h2">Our brands</h2></div><a class="link" href="#">Brand portfolio <svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+  <div class="br-label"><h3 class="eyebrow">In-house brands</h3><span class="caption">6 brands · mass to premium</span></div>
+  <ul class="br-grid"><li><a class="br" href="#"><img class="" src="assets/img/brand-anta.png" alt="ANTA"><span class="nm" aria-hidden="true">ANTA</span></a></li><li><a class="br" href="#"><img class="" src="assets/img/brand-fila.png" alt="FILA"><span class="nm" aria-hidden="true">FILA</span></a></li><li><a class="br" href="#"><img class="" src="assets/img/brand-descente.png" alt="DESCENTE"><span class="nm" aria-hidden="true">DESCENTE</span></a></li><li><a class="br" href="#"><img class="tall" src="assets/img/brand-kolon-sport.png" alt="KOLON SPORT"><span class="nm" aria-hidden="true">KOLON SPORT</span></a></li><li><a class="br" href="#"><img class="" src="assets/img/brand-jack-wolfskin.png" alt="JACK WOLFSKIN"><span class="nm" aria-hidden="true">JACK WOLFSKIN</span></a></li><li><a class="br" href="#"><img class="tall" src="assets/img/brand-maia-active.png" alt="MAIA ACTIVE"><span class="nm" aria-hidden="true">MAIA ACTIVE</span></a></li></ul>
+  <div class="br-label" style="margin-top:40px;margin-bottom:0"><h3 class="eyebrow">Strategic investments</h3></div>
+  <ul class="br-strat" style="margin-top:14px">
+    <li><a class="bs" href="#"><img src="assets/img/brand-amer.png" alt=""><span><b>Amer Sports</b><span>ANTA Sports is the largest shareholder of NYSE-listed Amer Sports, Inc. (NYSE: AS).</span></span></a></li>
+    <li><a class="bs" href="#"><img class="wide" src="assets/img/brand-musinsa.png" alt=""><span><b>MUSINSA</b><span>Joint venture with one of South Korea’s largest fashion platform companies; ANTA Sports holds a 40% equity stake.</span></span></a></li>
+  </ul></div></section><section class="sec" aria-labelledby="esg-h"><div class="wrap esg">
+  <div class="ph" role="img" aria-label="Image placeholder"><svg class="" viewBox="0 0 900 700" preserveAspectRatio="xMidYMid meet" aria-hidden="true" focusable="false"><path d="M0,390 H560 A90,90 0 0 0 560,210 H0"/><path d="M0,426 H560 A126,126 0 0 0 560,174 H0"/><path d="M0,462 H560 A162,162 0 0 0 560,138 H0"/><path d="M0,498 H560 A198,198 0 0 0 560,102 H0"/><path d="M0,534 H560 A234,234 0 0 0 560,66 H0"/><path d="M0,570 H560 A270,270 0 0 0 560,30 H0"/><path d="M0,606 H560 A306,306 0 0 0 560,-6 H0"/></svg><span class="ph-label"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="4" width="18" height="16" rx="1.5"/><circle cx="9" cy="10" r="2"/><path d="M21 16l-5-5-9 9"/></svg>Placeholder — ESG photography (client to supply)</span></div>
+  <div><p class="eyebrow eyebrow-bar">ESG</p><h2 id="esg-h" class="h2">Sustainability at ANTA</h2>
+  <p class="lead">Our environmental, social and governance strategy, targets, ratings and reports are published on the ANTA ESG website.</p>
+  <div class="btns"><a class="btn btn-ink" href="#">Visit esg.anta.com <svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg><span class="sr-only">(opens external site)</span></a><a class="btn btn-line" href="#">ESG reports <svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg><span class="sr-only">(opens external site)</span></a></div></div>
+</div></section><section class="sec" style="padding-top:0" aria-label="CJK typography specimen"><div class="wrap"><div class="spec">
+  <div class="spec-top"><p class="eyebrow">Design specimen · CJK rendering (not part of the live page)</p><p class="caption">Language switcher state: 繁 active on TC pages · Noto Sans TC/SC subset → system CJK fallback</p></div>
+  <div class="spec-cols">
+    <div lang="zh-Hant-HK"><p class="eyebrow eyebrow-bar">港交所：2020（港幣）· 82020（人民幣）</p><h3 class="big" style="margin-top:12px"><span class="nw">多品牌、</span><span class="nw">全球化體育用品集團</span></h3><p class="sl">邁步向前</p></div>
+    <div lang="zh-Hant-HK"><div class="wi-item"><span class="wi-num" aria-hidden="true">01</span><div><h3>中國市場領導地位</h3><p>據國際權威機構統計，2025年安踏體育在中國運動鞋服市場的市佔率約為21.8%，保持全行業領先；以「品牌+零售」商業模式及800多家供應鏈合作夥伴為基礎。</p></div></div></div>
+    <div lang="zh-Hans-CN"><p class="eyebrow">简体中文</p><h3 style="font-size:24px;line-height:34px;font-weight:700;margin-top:8px"><span class="nw">多品牌、</span><span class="nw">全球化体育用品集团</span></h3><p class="sl">迈步向前</p>
+      <div class="kv"><div><b>80,219</b><span>收入 · 人民币百万元</span></div></div></div>
+  </div></div></div></section></main>
+<footer class="ftr"><div class="wrap ftr-top">
+  <div class="ftr-brand"><img src="assets/img/anta-logo-white.png" alt="ANTA Sports" width="99" height="55"><p class="slogan">Keep Moving</p>
+  <p>ANTA Sports Products Limited · HKEX 2020 / 82020<br><a href="#">ir@anta.com.hk</a></p></div>
+  <nav class="ftr-nav" aria-label="Footer"><div><h2>About Us</h2><ul><li><a href="#">About ANTA Sports</a></li><li><a href="#">Chairman's Statement</a></li><li><a href="#">Our Strategy</a></li><li><a href="#">Sales Network</a></li><li><a href="#">Corporate News</a></li></ul></div><div><h2>Brands</h2><ul><li><a href="#">ANTA</a></li><li><a href="#">FILA</a></li><li><a href="#">DESCENTE</a></li><li><a href="#">KOLON SPORT</a></li><li><a href="#">JACK WOLFSKIN</a></li><li><a href="#">MAIA ACTIVE</a></li><li><a href="#">Strategic Investments</a></li></ul></div><div><h2>Corporate Governance</h2><ul><li><a href="#">Overview</a></li><li><a href="#">Directors &amp; Management</a></li><li><a href="#">Company Information</a></li><li><a href="#">AGM</a></li><li><a href="#">Monthly Returns</a></li><li><a href="#">Corporate Communications</a></li></ul></div><div><h2>Investors</h2><ul><li><a href="#">IR Overview</a></li><li><a href="#">Financial Reports &amp; Presentations</a></li><li><a href="#">Financial Highlights</a></li><li><a href="#">Announcements &amp; Circulars</a></li><li><a href="#">Investor FAQ</a></li><li><a href="#">Stock Quote &amp; Chart</a></li></ul></div><div><h2>Sustainability</h2><ul><li><a href="#">esg.anta.com&nbsp;↗<span class="sr-only">(opens external site)</span></a></li></ul></div><div><h2>Contact Us</h2><ul><li><a href="#">Contact</a></li><li><a href="#">Email Alerts</a></li></ul></div></nav></div>
+  <div class="ftr-bot"><div class="wrap">
+    <p>Design preview for client review. Content is a snapshot of ir.anta.com and may be out of date; the official website and HKEXnews prevail. Stock data on this preview is illustrative only.</p>
+    <div class="ftr-util"><a href="#">Search</a><a href="#">Disclaimer &amp; privacy</a><a href="#">Sitemap</a><a href="#">HKEXnews filings</a><span>© 2026 ANTA Sports Products Limited</span></div>
+    <nav class="lang lang-inv" aria-label="Language (footer)"><a href="#" aria-current="true">EN</a><a href="#" lang="zh-Hant-HK">繁</a><a href="#" lang="zh-Hans-CN">简</a></nav>
+  </div></div></footer>
+</body></html>

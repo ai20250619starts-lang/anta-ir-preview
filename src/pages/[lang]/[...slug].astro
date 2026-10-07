@@ -19,7 +19,7 @@ const title = link?.label[lang] ?? path;
     {section && section.label[lang] !== title && <p class="eyebrow">{section.label[lang]}</p>}
     <h1 class="mt-2 text-3xl font-bold md:text-4xl">{title}</h1>
     {link?.blurb && <p class="mt-3 max-w-2xl text-lg text-graphite">{link.blurb[lang]}</p>}
-    <p class="mt-6 inline-flex items-center gap-2 rounded-card border border-dashed border-stone px-4 py-3 text-graphite">
+    <p class="mt-6 inline-flex items-center gap-2 rounded-card border border-dashed border-muted px-4 py-3 text-graphite">
       <strong class="text-ink">{t(lang, 'comingSoon')}</strong> — {t(lang, 'comingSoonBody')}
     </p>
     <div class="mt-8"><Button href={withBase(`${lang}/`)} variant="secondary">{t(lang, 'backHome')}</Button></div>

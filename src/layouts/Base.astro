@@ -14,6 +14,7 @@ import PreviewBanner from '../components/PreviewBanner.astro';
 import SiteHeader from '../components/SiteHeader.astro';
 import SiteFooter from '../components/SiteFooter.astro';
 import interLatin from '../assets/fonts/inter-latin-wght-normal.woff2?url';
+import barlow from '../assets/fonts/barlow-condensed-latin-600-normal.woff2?url';
 
 interface Props {
   lang: Lang;
@@ -37,12 +38,66 @@ const desc = description ?? t(lang, 'heroBody');
     <PasswordGate />
     <title>{title} · {t(lang, 'siteTitle')}</title>
     <meta name="description" content={desc} />
-    <meta name="theme-color" content="#111111" />
+    <meta name="theme-color" content="#0e0f11" />
     <meta property="og:title" content={`${title} · ${t(lang, 'siteName')}`} />
     <meta property="og:description" content={desc} />
     <meta property="og:type" content="website" />
     <link rel="icon" href={withBase('assets/anta/favicon.png')} />
     <link rel="preload" href={interLatin} as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href={barlow} as="font" type="font/woff2" crossorigin />
+    <!--
+      Lane Lines motion (one small vanilla script, no libraries). Adds html.js so hide-before-reveal CSS applies only
+      when JS runs; all motion CSS is also inside @media (prefers-reduced-motion: no-preference). An
+      IntersectionObserver adds .is-in once to [data-reveal] sections (CSS reveal + KPI bars grow) and counts up
+      [data-count] figures once (aria-hidden copy only; the final text stays in the DOM for screen readers).
+    -->
+    <script is:inline>
+      (function () {
+        var d = document.documentElement;
+        if (!('IntersectionObserver' in window)) return;
+        d.classList.add('js');
+        var still = matchMedia('(prefers-reduced-motion: reduce)').matches;
+        function fmt(n, dec, sep) {
+          var s = n.toFixed(dec);
+          if (sep) { var p = s.split('.'); p[0] = p[0].replace(/\B(?=(\d{3})+(?!\d))/g, ','); s = p.join('.'); }
+          return s;
+        }
+        function parse(el) {
+          var f = el.textContent, m = f.match(/\d[\d,]*(?:\.\d+)?/);
+          if (!m) return null;
+          var raw = m[0];
+          return { f: f, pre: f.slice(0, m.index), post: f.slice(m.index + raw.length), sep: raw.indexOf(',') > -1, dec: (raw.split('.')[1] || '').length, to: parseFloat(raw.replace(/,/g, '')) };
+        }
+        function run(el) {
+          var c = el._c; if (!c) return;
+          var t0 = 0, dur = 1100;
+          function step(t) {
+            t0 = t0 || t;
+            var k = Math.min(1, (t - t0) / dur), e = 1 - Math.pow(1 - k, 3);
+            el.textContent = k < 1 ? c.pre + fmt(c.to * e, c.dec, c.sep) + c.post : c.f;
+            if (k < 1) requestAnimationFrame(step);
+          }
+          requestAnimationFrame(step);
+        }
+        document.addEventListener('DOMContentLoaded', function () {
+          var io = new IntersectionObserver(function (entries) {
+            entries.forEach(function (e) {
+              if (!e.isIntersecting) return;
+              io.unobserve(e.target);
+              e.target.classList.add('is-in');
+              if (e.target.hasAttribute('data-count')) run(e.target);
+            });
+          }, { rootMargin: '0px 0px -8% 0px', threshold: 0.12 });
+          document.querySelectorAll('[data-reveal]').forEach(function (el) { io.observe(el); });
+          if (still) return;
+          document.querySelectorAll('[data-count]').forEach(function (el) {
+            var c = parse(el); if (!c) return;
+            el._c = c; el.textContent = c.pre + fmt(0, c.dec, c.sep) + c.post;
+            io.observe(el);
+          });
+        });
+      })();
+    </script>
     {LANGS.map((l) => <link rel="alternate" hreflang={HTML_LANG[l]} href={abs(switchLangPath(Astro.url.pathname, base, l))} />)}
     <link rel="alternate" hreflang="x-default" href={abs(switchLangPath(Astro.url.pathname, base, 'en'))} />
   </head>

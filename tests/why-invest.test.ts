@@ -46,3 +46,27 @@ describe('why invest', () => {
     }
   });
 });
+
+describe('why invest lead figures (Lane Lines)', () => {
+  it('every decimal figure in a lead figure or caption appears in the point body', () => {
+    for (const p of WHY_INVEST) for (const l of LANGS) {
+      const nums = `${p.figure[l]} ${p.figureCaption[l]}`.match(/\d+\.\d+/g) ?? [];
+      for (const n of nums) expect(p.body[l], `${p.key}/${l}: ${n}`).toContain(n);
+    }
+  });
+
+  it('"6 + 2" matches the brands shown (in-house + strategic investments)', async () => {
+    const { brands } = await import('../src/data');
+    const inHouse = brands.brands.filter((b) => b.pillar === 'in-house').length;
+    const strategic = brands.brands.filter((b) => b.pillar === 'strategic-investment').length;
+    const mb = WHY_INVEST.find((p) => p.key === 'multi-brand')!;
+    for (const l of LANGS) expect(mb.figure[l]).toBe(`${inHouse} + ${strategic}`);
+  });
+
+  it('"Top 3" / 前三 is stated in the global-expansion copy', () => {
+    const g = WHY_INVEST.find((p) => p.key === 'global')!;
+    expect(g.body.en).toMatch(/top three/);
+    expect(g.body.tc).toContain('前三');
+    expect(g.body.sc).toContain('前三');
+  });
+});
