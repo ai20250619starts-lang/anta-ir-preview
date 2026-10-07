@@ -42,6 +42,7 @@ const store = new DocumentStore();
 const sections: Record<string, { perLang: Record<string, number>; groups: number }> = {};
 
 log(`scrape start (${offline ? 'OFFLINE, cache only' : 'online, cache-first'})`);
+if (offline) N.push('offline rebuild: no network requests were made; link-check results and sizes come from earlier online runs (cache)');
 // Priority order matters: the first list a document is found in decides its type; later lists add tags.
 sections['reports (financial_report.php)'] = await scrapeCards(f, store, N, 'financial_report.php', 'report');
 sections['presentations (financial_info.php)'] = await scrapeCards(f, store, N, 'financial_info.php', 'presentation');

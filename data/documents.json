@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-07T10:26:50.232Z",
+  "generatedAt": "2026-10-07T10:28:28.178Z",
   "source": "https://ir.anta.com",
   "count": 948,
   "documents": [
@@ -13873,7 +13873,7 @@
           "check": {
             "status": 0,
             "ok": false,
-            "checkedAt": "2026-10-07T10:16:21.125Z"
+            "checkedAt": ""
           }
         },
         "tc": {
@@ -13884,7 +13884,7 @@
           "check": {
             "status": 0,
             "ok": false,
-            "checkedAt": "2026-10-07T10:16:42.130Z"
+            "checkedAt": ""
           }
         },
         "sc": {
@@ -13895,7 +13895,7 @@
           "check": {
             "status": 0,
             "ok": false,
-            "checkedAt": "2026-10-07T10:16:42.130Z"
+            "checkedAt": ""
           }
         }
       },

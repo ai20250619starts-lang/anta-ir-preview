@@ -59,7 +59,9 @@ export async function checkLinks(f: PoliteFetcher, docs: DocumentRecord[], opts:
     const $ = cheerio.load(r.body);
     $('a[href], iframe[src]').each((_, el) => {
       const raw = $(el).attr('href') ?? $(el).attr('src') ?? '';
-      const u = absUrl(raw, page);
+      // include/ fragments are injected into /{lang}/financial.php, so their relative links resolve against that page
+      const resolveAgainst = /\/include\//.test(page) ? page.replace(/\/include\/[^?#]*.*$/, '/financial.php') : page;
+      const u = absUrl(raw, resolveAgainst);
       if (!u || /\.pdf($|\?)/i.test(u) || /wisdomir\.com\/files\//.test(u)) return;
       const s = pageLinks.get(u.split('#')[0]) ?? new Set<string>();
       s.add(page);
