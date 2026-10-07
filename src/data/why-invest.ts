@@ -7,7 +7,7 @@
  * string that appears in its source, per language; tests/why-invest.test.ts checks that every one is
  * present in the source text, so a figure cannot drift from its source.
  *
- * STATUS: draft, pending client confirmation (shown as a badge on the page).
+ * STATUS: confirmed by the client (piece 4); the draft badge has been removed.
  */
 import type { Lang } from './schemas';
 

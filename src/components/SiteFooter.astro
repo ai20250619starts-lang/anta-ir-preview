@@ -1,9 +1,9 @@
 ---
 import type { Lang } from '../data/schemas';
-import { t } from '../i18n/ui';
+import { pick, t } from '../i18n/ui';
 import { NAV, UTILITY } from '../lib/nav';
 import { withBase } from '../lib/paths';
-import { contacts } from '../data';
+import { company, contacts } from '../data';
 import LangSwitcher from './LangSwitcher.astro';
 import { Image } from 'astro:assets';
 import logoWhite from '../assets/images/logo.png';
@@ -22,7 +22,7 @@ const year = new Date().getFullYear();
       {irEmail && (
         <p class="mt-3 text-sm"><a class="underline decoration-1 underline-offset-4 hover:decoration-2" href={`mailto:${irEmail}`}>{irEmail}</a></p>
       )}
-      <p class="mt-6 font-display text-xl tracking-wide text-white">{t(lang, 'slogan')}</p>
+      <p class="mt-6 font-display text-xl tracking-wide text-white">{pick(company.slogan, lang)}</p>
     </div>
     <nav aria-label={lang === 'en' ? 'Footer' : lang === 'tc' ? '頁尾' : '页尾'} class="grid grid-cols-2 gap-x-6 gap-y-8 sm:grid-cols-3">
       {NAV.map((s) => (

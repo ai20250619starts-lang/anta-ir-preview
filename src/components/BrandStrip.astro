@@ -2,8 +2,8 @@
 /**
  * Monochrome logo strip of the brand portfolio (logos rendered black for a calm, consistent row).
  * In-house brands follow the client's order (deck slide 4). Strategic investments are only those listed on
- * ir.anta.com/en/brand.php (data/brands.json): Amer Sports and MUSINSA. PUMA (29.06% stake announced
- * 2026-01-27) is not listed on the brand page and no completion is evidenced in the scraped data, so it is omitted.
+ * ir.anta.com/en/brand.php (data/brands.json): Amer Sports and MUSINSA. Brands matching src/lib/hidden-terms.ts
+ * are never shown.
  * All eight have local logo assets; a text wordmark is the fallback if one is missing.
  */
 import type { Lang } from '../data/schemas';
@@ -22,6 +22,14 @@ const brandHref = (b: (typeof list)[number]) =>
   withBase(b.pillar === 'in-house' ? `${lang}/brands/${b.key}/` : `${lang}/brands/strategic-investments/#${b.key}`);
 /** Display names where the logo alone is ambiguous (AMER = Amer Sports, per brand.php). */
 const NAMES: Record<string, string> = { amer: 'Amer Sports' };
+/**
+ * Optical size corrections so logos read at a similar visual weight. AMER's file has wide transparent padding
+ * and small lettering; MUSINSA is a very wide, heavy wordmark (240x47). Default: 48px tall.
+ */
+const LOGO_SIZE: Record<string, { h: number; cls: string }> = {
+  amer: { h: 64, cls: 'max-h-16' },
+  musinsa: { h: 24, cls: 'max-h-6 max-w-[132px]' },
+};
 const groups = [
   { key: 'in-house', label: t(lang, 'inHouse'), items: list.filter((b) => b.pillar === 'in-house') },
   { key: 'strategic-investment', label: t(lang, 'strategic'), items: list.filter((b) => b.pillar === 'strategic-investment') },
@@ -38,7 +46,7 @@ const groups = [
             <li class="bg-white">
               <a href={brandHref(b)} class="flex h-24 items-center justify-center p-4 hover:bg-paper">
                 {img ? (
-                  <Image src={img} alt={NAMES[b.key] ?? b.name} height={48} class="max-h-12 w-auto object-contain brightness-0" />
+                  <Image src={img} alt={NAMES[b.key] ?? b.name} height={LOGO_SIZE[b.key]?.h ?? 48} class={`${LOGO_SIZE[b.key]?.cls ?? 'max-h-12'} w-auto object-contain brightness-0`} />
                 ) : (
                   <span class="font-display text-xl tracking-wide">{b.name}</span>
                 )}

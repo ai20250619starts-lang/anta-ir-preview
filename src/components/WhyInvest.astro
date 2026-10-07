@@ -3,7 +3,6 @@
 import type { Lang } from '../data/schemas';
 import { WHY_INVEST, type WhyInvestPoint } from '../data/why-invest';
 import { t } from '../i18n/ui';
-import Badge from './ui/Badge.astro';
 import Icon from './ui/Icon.astro';
 
 interface Props { lang: Lang }
@@ -16,10 +15,7 @@ const sourceUrl = (p: WhyInvestPoint): string => {
 };
 ---
 <section class="container-page py-section" aria-labelledby="h-why">
-  <div class="mb-6 flex flex-wrap items-center gap-x-4 gap-y-2">
-    <h2 id="h-why" class="text-2xl font-bold tracking-tight md:text-3xl">{t(lang, 'whyInvest')}</h2>
-    <Badge tone="notice">{t(lang, 'draftBadge')}</Badge>
-  </div>
+  <h2 id="h-why" class="mb-6 text-2xl font-bold tracking-tight md:text-3xl">{t(lang, 'whyInvest')}</h2>
   <ol class="grid gap-px overflow-hidden rounded-card border border-mist bg-mist sm:grid-cols-2 lg:grid-cols-5">
     {WHY_INVEST.map((p, i) => (
       <li class="flex flex-col gap-2 bg-white p-5">

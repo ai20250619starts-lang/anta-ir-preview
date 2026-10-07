@@ -26,8 +26,13 @@ import {
   type DocumentRecord,
   type DocumentType,
 } from './schemas';
+import { mentionsHidden } from '../lib/hidden-terms';
 
-export const documents = DocumentsFile.parse(documentsJson);
+const rawDocuments = DocumentsFile.parse(documentsJson);
+/** Documents shown on the site: the scraped set minus any record mentioning a hidden term (see src/lib/hidden-terms.ts). */
+export const documents = { ...rawDocuments, documents: rawDocuments.documents.filter((d) => !mentionsHidden(d)) };
+/** Number of scraped documents withheld from display by HIDDEN_TERMS. */
+export const hiddenDocumentCount = rawDocuments.documents.length - documents.documents.length;
 export const highlights = FinancialHighlightsFile.parse(highlightsJson);
 export const board = BoardFile.parse(boardJson);
 export const calendar = CalendarFile.parse(calendarJson);

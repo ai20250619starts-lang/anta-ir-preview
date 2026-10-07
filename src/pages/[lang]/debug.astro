@@ -1,6 +1,6 @@
 ---
 import Base from '../../layouts/Base.astro';
-import { documents, highlights, board, calendar, faq, contacts, brands, company, quote, assets } from '../../data';
+import { documents, hiddenDocumentCount, highlights, board, calendar, faq, contacts, brands, company, quote, assets } from '../../data';
 import { langPaths, pick } from '../../i18n/ui';
 import type { Lang } from '../../data/schemas';
 
@@ -14,7 +14,7 @@ const byType = Object.entries(
 const withLang = docs.filter((d) => d.title[lang] && d.files[lang]).length;
 const years = docs.map((d) => d.year).filter((y): y is number => !!y);
 const datasets = [
-  ['documents.json', docs.length],
+  ['documents.json', hiddenDocumentCount ? `${docs.length} shown · ${hiddenDocumentCount} withheld (hidden terms)` : docs.length],
   ['financial-highlights.json', highlights.rows.length],
   ['board.json', `${board.people.length} people · ${board.committees.length} committees`],
   ['calendar.json', calendar.events.length],

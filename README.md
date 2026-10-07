@@ -144,7 +144,12 @@ Design system, home page, final IA pages, search, charts, and deployment. No dep
 ## Home page per client deck (piece 3)
 
 - Navigation follows the client's IR proposal deck (slide 4): About Us · Brands · Corporate Governance · Investors · Sustainability (external link to esg.anta.com, no local page) · Contact Us. "Press Releases" is now "Corporate News". Every unbuilt item is a coming-soon stub (banner, gate, noindex) generated from `src/lib/nav.ts`.
-- "Why Invest" (deck slide 9) is on the home page with a *Draft, pending client confirmation* badge. Copy and sources live in `src/data/why-invest.ts`; `tests/why-invest.test.ts` checks that every figure appears verbatim in the scraped source (documents.json / company.json / brands.json).
+- "Why Invest" (deck slide 9) is on the home page (confirmed by the client in piece 4; the draft badge was removed). Copy and sources live in `src/data/why-invest.ts`; `tests/why-invest.test.ts` checks that every figure appears verbatim in the scraped source (documents.json / company.json / brands.json).
 - Brands strip: six in-house brands in the client's order; strategic investments are only those on ir.anta.com's brand page (Amer Sports, MUSINSA).
 - Screenshots: `node scripts/screenshots.mjs <baseUrl> audit/screenshots/piece3 home-en-desktop,home-en-mobile,home-tc-desktop,home-tc-mobile`.
 - Note: if `PREVIEW_PASSWORD` is set in the shell environment, a plain `npm run build` is gated too; use `env -u PREVIEW_PASSWORD npm run build` for an ungated local build.
+
+## Piece 4: hidden terms and the official slogan
+
+- **Hidden terms.** `src/lib/hidden-terms.ts` (`HIDDEN_TERMS`, currently `puma`, `彪馬`, `彪马`, matched case-insensitively) is the single place to configure terms that must never appear on the site. `src/data/index.ts` drops any document whose record mentions one (in any language or field) before pages see it; `data/documents.json` is left as scraped. The debug page shows how many documents were withheld. `tests/hidden-terms.test.ts` checks the filter and scans every built HTML file in `dist/` (run the tests after a build; the scan is skipped when there is no `dist/`).
+- **Slogan.** Rendered from `data/company.json` → `slogan` (scraped from the ir.anta.com home-page banner `.b-info`): EN "Keep Moving", TC "邁步向前", SC "迈步向前".
