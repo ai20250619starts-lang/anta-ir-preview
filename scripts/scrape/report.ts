@@ -46,7 +46,12 @@ export function buildReport(i: ReportInput) {
   const missing = i.docs.filter((d) => d.missingLanguages.length);
   const missingByLang = LANGS.map((L) => [L, missing.filter((d) => d.missingLanguages.includes(L)).length]);
   const fallbackByLang = LANGS.map((L) => [L, i.docs.filter((d) => d.fallbackLanguages.includes(L)).length]);
-  const broken = (i.links ?? []).filter((l) => !l.ok);
+  const failed = (i.links ?? []).filter((l) => !l.ok);
+  // The scraping box only has HTTPS (port 443) egress, so plain-http targets fail with a network error
+  // regardless of whether they exist. Report those separately as "unverified" rather than broken.
+  const httpOnlyUnverified = (l: { url: string; status: number }) => l.status === 0 && l.url.startsWith('http://');
+  const broken = failed.filter((l) => !httpOnlyUnverified(l));
+  const unverified = failed.filter(httpOnlyUnverified);
   const sizes = i.docs.flatMap((d) => LANGS.map((L) => d.files[L])).filter((f) => f?.sizeBytes).length;
   const timeKnown = i.docs.filter((d) => d.time).length;
 
@@ -62,7 +67,7 @@ export function buildReport(i: ReportInput) {
     fallbackLanguages: Object.fromEntries(fallbackByLang),
     filesWithSize: sizes,
     documentsWithTime: timeKnown,
-    links: { checked: i.linksChecked, broken },
+    links: { checked: i.linksChecked, broken, unverifiedHttpOnly: unverified },
     crossChecks: i.crossChecks,
     assetsSkipped: i.assetsSkipped,
     validation: i.validation,
@@ -111,7 +116,13 @@ ${missingNonSc.length > 60 ? `\n…and ${missingNonSc.length - 60} more (see scr
 
 Checked ${i.linksChecked} unique URLs: every file of reports, presentations, press releases, webcasts, governance/AGM/communication documents; a sample of announcement PDFs (newest 10 plus one per year per type; \`--check-all\` checks every file); and internal/external links found on the scraped pages.
 
+Broken (${broken.length}; ${broken.filter((b) => b.kind === 'document').length} document files, ${broken.filter((b) => b.kind === 'internal-page').length} internal pages, ${broken.filter((b) => b.kind === 'external').length} external):
+
 ${broken.length ? table(['Status', 'Kind', 'URL', 'Found on'], broken.map((b) => [b.status || 'network error', b.kind, b.url, b.foundOn.slice(0, 2).join('<br>')])) : '_No broken links found._'}
+
+Unverified (${unverified.length}): plain \`http://\` targets. The scraping environment only allows outbound HTTPS, so these could not be checked from here. Re-check them from a normal network before relying on them.
+
+${unverified.length ? table(['Kind', 'URL', 'Found on'], unverified.map((b) => [b.kind, b.url, b.foundOn.slice(0, 2).join('<br>')])) : '_None._'}
 
 ## Cross-checks
 

@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-10-07T10:15:02.902Z",
-  "startedAt": "2026-10-07T09:08:08.995Z",
+  "generatedAt": "2026-10-07T10:26:50.341Z",
+  "startedAt": "2026-10-07T10:15:57.659Z",
   "totals": {
-    "documents": 949,
+    "documents": 948,
     "financial highlight rows": 6,
     "board people": 11,
     "committees": 5,
@@ -13,8 +13,8 @@
     "assets downloaded": 19
   },
   "fetch": {
-    "network": 1168,
-    "cacheHits": 1119,
+    "network": 121,
+    "cacheHits": 2249,
     "errors": 18
   },
   "sections": {
@@ -167,7 +167,7 @@
       }
     },
     "press-release": {
-      "total": 86,
+      "total": 85,
       "en": 84,
       "tc": 84,
       "sc": 84,
@@ -298,7 +298,7 @@
       "2021": 2,
       "2022": 2,
       "2023": 15,
-      "2024": 21,
+      "2024": 20,
       "2025": 12,
       "2026": 8
     },
@@ -333,33 +333,22 @@
   },
   "missingLanguages": {
     "byLanguage": {
-      "en": 2,
-      "tc": 2,
-      "sc": 2
+      "en": 1,
+      "tc": 1,
+      "sc": 1
     },
     "records": [
-      {
-        "id": "2024-03-11-press-release-37215bf5",
-        "type": "press-release",
-        "date": "2024-03-11",
-        "missing": [
-          "en",
-          "tc"
-        ],
-        "title": "安踏欧文一代全球首发 — 安踏携手凯里 · 欧文开启全球化进程"
-      },
       {
         "id": "2024-03-11-press-release-16a35940",
         "type": "press-release",
         "date": "2024-03-11",
         "missing": [
-          "en",
-          "sc"
+          "en"
         ],
         "title": "安踏歐文一代全球首發 — 安踏攜手凱里 · 歐文開啟全球化進程"
       },
       {
-        "id": "2007-08-27-press-release-950e6a25",
+        "id": "2007-08-27-press-release-d9c50631",
         "type": "press-release",
         "date": "2007-08-27",
         "missing": [
@@ -376,9 +365,9 @@
     "sc": 742
   },
   "filesWithSize": 710,
-  "documentsWithTime": 800,
+  "documentsWithTime": 799,
   "links": {
-    "checked": 835,
+    "checked": 920,
     "broken": [
       {
         "url": "http://webcast.live.wisdomir.com/anta_23ir/arc_landing_en.php",
@@ -396,771 +385,6 @@
         "foundOn": [
           "https://ir.anta.com/tc/include/financial_webcast.php?year=2023",
           "https://ir.anta.com/sc/include/financial_webcast.php?year=2023"
-        ],
-        "kind": "document"
-      },
-      {
-        "url": "https://ir.anta.com/en/include/news_detail.php?id=103240",
-        "status": 404,
-        "ok": false,
-        "foundOn": [
-          "https://ir.anta.com/en/include/financial_press.php?year=2021"
-        ],
-        "kind": "document"
-      },
-      {
-        "url": "https://ir.anta.com/tc/include/news_detail.php?id=103240",
-        "status": 404,
-        "ok": false,
-        "foundOn": [
-          "https://ir.anta.com/tc/include/financial_press.php?year=2021"
-        ],
-        "kind": "document"
-      },
-      {
-        "url": "https://ir.anta.com/sc/include/news_detail.php?id=103240",
-        "status": 404,
-        "ok": false,
-        "foundOn": [
-          "https://ir.anta.com/sc/include/financial_press.php?year=2021"
-        ],
-        "kind": "document"
-      },
-      {
-        "url": "https://ir.anta.com/en/include/news_detail.php?id=91609",
-        "status": 404,
-        "ok": false,
-        "foundOn": [
-          "https://ir.anta.com/en/include/financial_press.php?year=2021"
-        ],
-        "kind": "document"
-      },
-      {
-        "url": "https://ir.anta.com/tc/include/news_detail.php?id=91609",
-        "status": 404,
-        "ok": false,
-        "foundOn": [
-          "https://ir.anta.com/tc/include/financial_press.php?year=2021"
-        ],
-        "kind": "document"
-      },
-      {
-        "url": "https://ir.anta.com/sc/include/news_detail.php?id=91609",
-        "status": 404,
-        "ok": false,
-        "foundOn": [
-          "https://ir.anta.com/sc/include/financial_press.php?year=2021"
-        ],
-        "kind": "document"
-      },
-      {
-        "url": "https://ir.anta.com/en/include/news_detail.php?id=80587",
-        "status": 404,
-        "ok": false,
-        "foundOn": [
-          "https://ir.anta.com/en/include/financial_press.php?year=2020"
-        ],
-        "kind": "document"
-      },
-      {
-        "url": "https://ir.anta.com/tc/include/news_detail.php?id=80587",
-        "status": 404,
-        "ok": false,
-        "foundOn": [
-          "https://ir.anta.com/tc/include/financial_press.php?year=2020"
-        ],
-        "kind": "document"
-      },
-      {
-        "url": "https://ir.anta.com/sc/include/news_detail.php?id=80587",
-        "status": 404,
-        "ok": false,
-        "foundOn": [
-          "https://ir.anta.com/sc/include/financial_press.php?year=2020"
-        ],
-        "kind": "document"
-      },
-      {
-        "url": "https://ir.anta.com/en/include/news_detail.php?id=73646",
-        "status": 404,
-        "ok": false,
-        "foundOn": [
-          "https://ir.anta.com/en/include/financial_press.php?year=2020"
-        ],
-        "kind": "document"
-      },
-      {
-        "url": "https://ir.anta.com/tc/include/news_detail.php?id=73646",
-        "status": 404,
-        "ok": false,
-        "foundOn": [
-          "https://ir.anta.com/tc/include/financial_press.php?year=2020"
-        ],
-        "kind": "document"
-      },
-      {
-        "url": "https://ir.anta.com/sc/include/news_detail.php?id=73646",
-        "status": 404,
-        "ok": false,
-        "foundOn": [
-          "https://ir.anta.com/sc/include/financial_press.php?year=2020"
-        ],
-        "kind": "document"
-      },
-      {
-        "url": "https://ir.anta.com/en/include/news_detail.php?id=65635",
-        "status": 404,
-        "ok": false,
-        "foundOn": [
-          "https://ir.anta.com/en/include/financial_press.php?year=2019"
-        ],
-        "kind": "document"
-      },
-      {
-        "url": "https://ir.anta.com/tc/include/news_detail.php?id=65635",
-        "status": 404,
-        "ok": false,
-        "foundOn": [
-          "https://ir.anta.com/tc/include/financial_press.php?year=2019"
-        ],
-        "kind": "document"
-      },
-      {
-        "url": "https://ir.anta.com/sc/include/news_detail.php?id=65635",
-        "status": 404,
-        "ok": false,
-        "foundOn": [
-          "https://ir.anta.com/sc/include/financial_press.php?year=2019"
-        ],
-        "kind": "document"
-      },
-      {
-        "url": "https://ir.anta.com/en/include/news_detail.php?id=57321",
-        "status": 404,
-        "ok": false,
-        "foundOn": [
-          "https://ir.anta.com/en/include/financial_press.php?year=2019"
-        ],
-        "kind": "document"
-      },
-      {
-        "url": "https://ir.anta.com/tc/include/news_detail.php?id=57321",
-        "status": 404,
-        "ok": false,
-        "foundOn": [
-          "https://ir.anta.com/tc/include/financial_press.php?year=2019"
-        ],
-        "kind": "document"
-      },
-      {
-        "url": "https://ir.anta.com/sc/include/news_detail.php?id=57321",
-        "status": 404,
-        "ok": false,
-        "foundOn": [
-          "https://ir.anta.com/sc/include/financial_press.php?year=2019"
-        ],
-        "kind": "document"
-      },
-      {
-        "url": "https://ir.anta.com/en/include/news_detail.php?id=52186",
-        "status": 404,
-        "ok": false,
-        "foundOn": [
-          "https://ir.anta.com/en/include/financial_press.php?year=2018"
-        ],
-        "kind": "document"
-      },
-      {
-        "url": "https://ir.anta.com/tc/include/news_detail.php?id=52186",
-        "status": 404,
-        "ok": false,
-        "foundOn": [
-          "https://ir.anta.com/tc/include/financial_press.php?year=2018"
-        ],
-        "kind": "document"
-      },
-      {
-        "url": "https://ir.anta.com/sc/include/news_detail.php?id=52186",
-        "status": 404,
-        "ok": false,
-        "foundOn": [
-          "https://ir.anta.com/sc/include/financial_press.php?year=2018"
-        ],
-        "kind": "document"
-      },
-      {
-        "url": "https://ir.anta.com/en/include/news_detail.php?id=42089",
-        "status": 404,
-        "ok": false,
-        "foundOn": [
-          "https://ir.anta.com/en/include/financial_press.php?year=2018"
-        ],
-        "kind": "document"
-      },
-      {
-        "url": "https://ir.anta.com/tc/include/news_detail.php?id=42089",
-        "status": 404,
-        "ok": false,
-        "foundOn": [
-          "https://ir.anta.com/tc/include/financial_press.php?year=2018"
-        ],
-        "kind": "document"
-      },
-      {
-        "url": "https://ir.anta.com/sc/include/news_detail.php?id=42089",
-        "status": 404,
-        "ok": false,
-        "foundOn": [
-          "https://ir.anta.com/sc/include/financial_press.php?year=2018"
-        ],
-        "kind": "document"
-      },
-      {
-        "url": "https://ir.anta.com/en/include/news_detail.php?id=38653",
-        "status": 404,
-        "ok": false,
-        "foundOn": [
-          "https://ir.anta.com/en/include/financial_press.php?year=2017"
-        ],
-        "kind": "document"
-      },
-      {
-        "url": "https://ir.anta.com/tc/include/news_detail.php?id=38653",
-        "status": 404,
-        "ok": false,
-        "foundOn": [
-          "https://ir.anta.com/tc/include/financial_press.php?year=2017"
-        ],
-        "kind": "document"
-      },
-      {
-        "url": "https://ir.anta.com/sc/include/news_detail.php?id=38653",
-        "status": 404,
-        "ok": false,
-        "foundOn": [
-          "https://ir.anta.com/sc/include/financial_press.php?year=2017"
-        ],
-        "kind": "document"
-      },
-      {
-        "url": "https://ir.anta.com/en/include/news_detail.php?id=38652",
-        "status": 404,
-        "ok": false,
-        "foundOn": [
-          "https://ir.anta.com/en/include/financial_press.php?year=2017"
-        ],
-        "kind": "document"
-      },
-      {
-        "url": "https://ir.anta.com/tc/include/news_detail.php?id=38652",
-        "status": 404,
-        "ok": false,
-        "foundOn": [
-          "https://ir.anta.com/tc/include/financial_press.php?year=2017"
-        ],
-        "kind": "document"
-      },
-      {
-        "url": "https://ir.anta.com/sc/include/news_detail.php?id=38652",
-        "status": 404,
-        "ok": false,
-        "foundOn": [
-          "https://ir.anta.com/sc/include/financial_press.php?year=2017"
-        ],
-        "kind": "document"
-      },
-      {
-        "url": "https://ir.anta.com/en/include/news_detail.php?id=38657",
-        "status": 404,
-        "ok": false,
-        "foundOn": [
-          "https://ir.anta.com/en/include/financial_press.php?year=2016"
-        ],
-        "kind": "document"
-      },
-      {
-        "url": "https://ir.anta.com/tc/include/news_detail.php?id=38657",
-        "status": 404,
-        "ok": false,
-        "foundOn": [
-          "https://ir.anta.com/tc/include/financial_press.php?year=2016"
-        ],
-        "kind": "document"
-      },
-      {
-        "url": "https://ir.anta.com/sc/include/news_detail.php?id=38657",
-        "status": 404,
-        "ok": false,
-        "foundOn": [
-          "https://ir.anta.com/sc/include/financial_press.php?year=2016"
-        ],
-        "kind": "document"
-      },
-      {
-        "url": "https://ir.anta.com/en/include/news_detail.php?id=38656",
-        "status": 404,
-        "ok": false,
-        "foundOn": [
-          "https://ir.anta.com/en/include/financial_press.php?year=2016"
-        ],
-        "kind": "document"
-      },
-      {
-        "url": "https://ir.anta.com/tc/include/news_detail.php?id=38656",
-        "status": 404,
-        "ok": false,
-        "foundOn": [
-          "https://ir.anta.com/tc/include/financial_press.php?year=2016"
-        ],
-        "kind": "document"
-      },
-      {
-        "url": "https://ir.anta.com/sc/include/news_detail.php?id=38656",
-        "status": 404,
-        "ok": false,
-        "foundOn": [
-          "https://ir.anta.com/sc/include/financial_press.php?year=2016"
-        ],
-        "kind": "document"
-      },
-      {
-        "url": "https://ir.anta.com/en/include/news_detail.php?id=38673",
-        "status": 404,
-        "ok": false,
-        "foundOn": [
-          "https://ir.anta.com/en/include/financial_press.php?year=2015"
-        ],
-        "kind": "document"
-      },
-      {
-        "url": "https://ir.anta.com/tc/include/news_detail.php?id=38673",
-        "status": 404,
-        "ok": false,
-        "foundOn": [
-          "https://ir.anta.com/tc/include/financial_press.php?year=2015"
-        ],
-        "kind": "document"
-      },
-      {
-        "url": "https://ir.anta.com/sc/include/news_detail.php?id=38673",
-        "status": 404,
-        "ok": false,
-        "foundOn": [
-          "https://ir.anta.com/sc/include/financial_press.php?year=2015"
-        ],
-        "kind": "document"
-      },
-      {
-        "url": "https://ir.anta.com/en/include/news_detail.php?id=38658",
-        "status": 404,
-        "ok": false,
-        "foundOn": [
-          "https://ir.anta.com/en/include/financial_press.php?year=2015"
-        ],
-        "kind": "document"
-      },
-      {
-        "url": "https://ir.anta.com/tc/include/news_detail.php?id=38658",
-        "status": 404,
-        "ok": false,
-        "foundOn": [
-          "https://ir.anta.com/tc/include/financial_press.php?year=2015"
-        ],
-        "kind": "document"
-      },
-      {
-        "url": "https://ir.anta.com/sc/include/news_detail.php?id=38658",
-        "status": 404,
-        "ok": false,
-        "foundOn": [
-          "https://ir.anta.com/sc/include/financial_press.php?year=2015"
-        ],
-        "kind": "document"
-      },
-      {
-        "url": "https://ir.anta.com/en/include/news_detail.php?id=40056",
-        "status": 404,
-        "ok": false,
-        "foundOn": [
-          "https://ir.anta.com/en/include/financial_press.php?year=2014"
-        ],
-        "kind": "document"
-      },
-      {
-        "url": "https://ir.anta.com/tc/include/news_detail.php?id=40056",
-        "status": 404,
-        "ok": false,
-        "foundOn": [
-          "https://ir.anta.com/tc/include/financial_press.php?year=2014"
-        ],
-        "kind": "document"
-      },
-      {
-        "url": "https://ir.anta.com/sc/include/news_detail.php?id=40056",
-        "status": 404,
-        "ok": false,
-        "foundOn": [
-          "https://ir.anta.com/sc/include/financial_press.php?year=2014"
-        ],
-        "kind": "document"
-      },
-      {
-        "url": "https://ir.anta.com/en/include/news_detail.php?id=38681",
-        "status": 404,
-        "ok": false,
-        "foundOn": [
-          "https://ir.anta.com/en/include/financial_press.php?year=2014"
-        ],
-        "kind": "document"
-      },
-      {
-        "url": "https://ir.anta.com/tc/include/news_detail.php?id=38681",
-        "status": 404,
-        "ok": false,
-        "foundOn": [
-          "https://ir.anta.com/tc/include/financial_press.php?year=2014"
-        ],
-        "kind": "document"
-      },
-      {
-        "url": "https://ir.anta.com/sc/include/news_detail.php?id=38681",
-        "status": 404,
-        "ok": false,
-        "foundOn": [
-          "https://ir.anta.com/sc/include/financial_press.php?year=2014"
-        ],
-        "kind": "document"
-      },
-      {
-        "url": "https://ir.anta.com/en/include/news_detail.php?id=40058",
-        "status": 404,
-        "ok": false,
-        "foundOn": [
-          "https://ir.anta.com/en/include/financial_press.php?year=2013"
-        ],
-        "kind": "document"
-      },
-      {
-        "url": "https://ir.anta.com/tc/include/news_detail.php?id=40058",
-        "status": 404,
-        "ok": false,
-        "foundOn": [
-          "https://ir.anta.com/tc/include/financial_press.php?year=2013"
-        ],
-        "kind": "document"
-      },
-      {
-        "url": "https://ir.anta.com/sc/include/news_detail.php?id=40058",
-        "status": 404,
-        "ok": false,
-        "foundOn": [
-          "https://ir.anta.com/sc/include/financial_press.php?year=2013"
-        ],
-        "kind": "document"
-      },
-      {
-        "url": "https://ir.anta.com/en/include/news_detail.php?id=40057",
-        "status": 404,
-        "ok": false,
-        "foundOn": [
-          "https://ir.anta.com/en/include/financial_press.php?year=2013"
-        ],
-        "kind": "document"
-      },
-      {
-        "url": "https://ir.anta.com/tc/include/news_detail.php?id=40057",
-        "status": 404,
-        "ok": false,
-        "foundOn": [
-          "https://ir.anta.com/tc/include/financial_press.php?year=2013"
-        ],
-        "kind": "document"
-      },
-      {
-        "url": "https://ir.anta.com/sc/include/news_detail.php?id=40057",
-        "status": 404,
-        "ok": false,
-        "foundOn": [
-          "https://ir.anta.com/sc/include/financial_press.php?year=2013"
-        ],
-        "kind": "document"
-      },
-      {
-        "url": "https://ir.anta.com/en/include/news_detail.php?id=40065",
-        "status": 404,
-        "ok": false,
-        "foundOn": [
-          "https://ir.anta.com/en/include/financial_press.php?year=2012"
-        ],
-        "kind": "document"
-      },
-      {
-        "url": "https://ir.anta.com/tc/include/news_detail.php?id=40065",
-        "status": 404,
-        "ok": false,
-        "foundOn": [
-          "https://ir.anta.com/tc/include/financial_press.php?year=2012"
-        ],
-        "kind": "document"
-      },
-      {
-        "url": "https://ir.anta.com/sc/include/news_detail.php?id=40065",
-        "status": 404,
-        "ok": false,
-        "foundOn": [
-          "https://ir.anta.com/sc/include/financial_press.php?year=2012"
-        ],
-        "kind": "document"
-      },
-      {
-        "url": "https://ir.anta.com/en/include/news_detail.php?id=40064",
-        "status": 404,
-        "ok": false,
-        "foundOn": [
-          "https://ir.anta.com/en/include/financial_press.php?year=2012"
-        ],
-        "kind": "document"
-      },
-      {
-        "url": "https://ir.anta.com/tc/include/news_detail.php?id=40064",
-        "status": 404,
-        "ok": false,
-        "foundOn": [
-          "https://ir.anta.com/tc/include/financial_press.php?year=2012"
-        ],
-        "kind": "document"
-      },
-      {
-        "url": "https://ir.anta.com/sc/include/news_detail.php?id=40064",
-        "status": 404,
-        "ok": false,
-        "foundOn": [
-          "https://ir.anta.com/sc/include/financial_press.php?year=2012"
-        ],
-        "kind": "document"
-      },
-      {
-        "url": "https://ir.anta.com/en/include/news_detail.php?id=40073",
-        "status": 404,
-        "ok": false,
-        "foundOn": [
-          "https://ir.anta.com/en/include/financial_press.php?year=2011"
-        ],
-        "kind": "document"
-      },
-      {
-        "url": "https://ir.anta.com/tc/include/news_detail.php?id=40073",
-        "status": 404,
-        "ok": false,
-        "foundOn": [
-          "https://ir.anta.com/tc/include/financial_press.php?year=2011"
-        ],
-        "kind": "document"
-      },
-      {
-        "url": "https://ir.anta.com/sc/include/news_detail.php?id=40073",
-        "status": 404,
-        "ok": false,
-        "foundOn": [
-          "https://ir.anta.com/sc/include/financial_press.php?year=2011"
-        ],
-        "kind": "document"
-      },
-      {
-        "url": "https://ir.anta.com/en/include/news_detail.php?id=40072",
-        "status": 404,
-        "ok": false,
-        "foundOn": [
-          "https://ir.anta.com/en/include/financial_press.php?year=2011"
-        ],
-        "kind": "document"
-      },
-      {
-        "url": "https://ir.anta.com/tc/include/news_detail.php?id=40072",
-        "status": 404,
-        "ok": false,
-        "foundOn": [
-          "https://ir.anta.com/tc/include/financial_press.php?year=2011"
-        ],
-        "kind": "document"
-      },
-      {
-        "url": "https://ir.anta.com/sc/include/news_detail.php?id=40072",
-        "status": 404,
-        "ok": false,
-        "foundOn": [
-          "https://ir.anta.com/sc/include/financial_press.php?year=2011"
-        ],
-        "kind": "document"
-      },
-      {
-        "url": "https://ir.anta.com/en/include/news_detail.php?id=40075",
-        "status": 404,
-        "ok": false,
-        "foundOn": [
-          "https://ir.anta.com/en/include/financial_press.php?year=2010"
-        ],
-        "kind": "document"
-      },
-      {
-        "url": "https://ir.anta.com/tc/include/news_detail.php?id=40075",
-        "status": 404,
-        "ok": false,
-        "foundOn": [
-          "https://ir.anta.com/tc/include/financial_press.php?year=2010"
-        ],
-        "kind": "document"
-      },
-      {
-        "url": "https://ir.anta.com/sc/include/news_detail.php?id=40075",
-        "status": 404,
-        "ok": false,
-        "foundOn": [
-          "https://ir.anta.com/sc/include/financial_press.php?year=2010"
-        ],
-        "kind": "document"
-      },
-      {
-        "url": "https://ir.anta.com/en/include/news_detail.php?id=40074",
-        "status": 404,
-        "ok": false,
-        "foundOn": [
-          "https://ir.anta.com/en/include/financial_press.php?year=2010"
-        ],
-        "kind": "document"
-      },
-      {
-        "url": "https://ir.anta.com/tc/include/news_detail.php?id=40074",
-        "status": 404,
-        "ok": false,
-        "foundOn": [
-          "https://ir.anta.com/tc/include/financial_press.php?year=2010"
-        ],
-        "kind": "document"
-      },
-      {
-        "url": "https://ir.anta.com/sc/include/news_detail.php?id=40074",
-        "status": 404,
-        "ok": false,
-        "foundOn": [
-          "https://ir.anta.com/sc/include/financial_press.php?year=2010"
-        ],
-        "kind": "document"
-      },
-      {
-        "url": "https://ir.anta.com/en/include/news_detail.php?id=40077",
-        "status": 404,
-        "ok": false,
-        "foundOn": [
-          "https://ir.anta.com/en/include/financial_press.php?year=2009"
-        ],
-        "kind": "document"
-      },
-      {
-        "url": "https://ir.anta.com/tc/include/news_detail.php?id=40077",
-        "status": 404,
-        "ok": false,
-        "foundOn": [
-          "https://ir.anta.com/tc/include/financial_press.php?year=2009"
-        ],
-        "kind": "document"
-      },
-      {
-        "url": "https://ir.anta.com/sc/include/news_detail.php?id=40077",
-        "status": 404,
-        "ok": false,
-        "foundOn": [
-          "https://ir.anta.com/sc/include/financial_press.php?year=2009"
-        ],
-        "kind": "document"
-      },
-      {
-        "url": "https://ir.anta.com/en/include/news_detail.php?id=40076",
-        "status": 404,
-        "ok": false,
-        "foundOn": [
-          "https://ir.anta.com/en/include/financial_press.php?year=2009"
-        ],
-        "kind": "document"
-      },
-      {
-        "url": "https://ir.anta.com/tc/include/news_detail.php?id=40076",
-        "status": 404,
-        "ok": false,
-        "foundOn": [
-          "https://ir.anta.com/tc/include/financial_press.php?year=2009"
-        ],
-        "kind": "document"
-      },
-      {
-        "url": "https://ir.anta.com/sc/include/news_detail.php?id=40076",
-        "status": 404,
-        "ok": false,
-        "foundOn": [
-          "https://ir.anta.com/sc/include/financial_press.php?year=2009"
-        ],
-        "kind": "document"
-      },
-      {
-        "url": "https://ir.anta.com/en/include/news_detail.php?id=40079",
-        "status": 404,
-        "ok": false,
-        "foundOn": [
-          "https://ir.anta.com/en/include/financial_press.php?year=2008"
-        ],
-        "kind": "document"
-      },
-      {
-        "url": "https://ir.anta.com/tc/include/news_detail.php?id=40079",
-        "status": 404,
-        "ok": false,
-        "foundOn": [
-          "https://ir.anta.com/tc/include/financial_press.php?year=2008"
-        ],
-        "kind": "document"
-      },
-      {
-        "url": "https://ir.anta.com/sc/include/news_detail.php?id=40079",
-        "status": 404,
-        "ok": false,
-        "foundOn": [
-          "https://ir.anta.com/sc/include/financial_press.php?year=2008"
-        ],
-        "kind": "document"
-      },
-      {
-        "url": "https://ir.anta.com/en/include/news_detail.php?id=40081",
-        "status": 404,
-        "ok": false,
-        "foundOn": [
-          "https://ir.anta.com/en/include/financial_press.php?year=2007"
-        ],
-        "kind": "document"
-      },
-      {
-        "url": "https://ir.anta.com/tc/include/news_detail.php?id=40081",
-        "status": 404,
-        "ok": false,
-        "foundOn": [
-          "https://ir.anta.com/tc/include/financial_press.php?year=2007"
-        ],
-        "kind": "document"
-      },
-      {
-        "url": "https://ir.anta.com/sc/include/news_detail.php?id=40081",
-        "status": 404,
-        "ok": false,
-        "foundOn": [
-          "https://ir.anta.com/sc/include/financial_press.php?year=2007"
-        ],
-        "kind": "document"
-      },
-      {
-        "url": "https://ir.anta.com/en/include/news_detail.php?id=40080",
-        "status": 404,
-        "ok": false,
-        "foundOn": [
-          "https://ir.anta.com/en/include/financial_press.php?year=2007"
         ],
         "kind": "document"
       },
@@ -1323,6 +547,771 @@
         "ok": false,
         "foundOn": [
           "https://ir.anta.com/sc/news_detail.php?id=132610"
+        ],
+        "kind": "internal-page"
+      },
+      {
+        "url": "https://ir.anta.com/en/include/news_detail.php?id=103240",
+        "status": 404,
+        "ok": false,
+        "foundOn": [
+          "https://ir.anta.com/en/include/financial_press.php?year=2021"
+        ],
+        "kind": "internal-page"
+      },
+      {
+        "url": "https://ir.anta.com/en/include/news_detail.php?id=91609",
+        "status": 404,
+        "ok": false,
+        "foundOn": [
+          "https://ir.anta.com/en/include/financial_press.php?year=2021"
+        ],
+        "kind": "internal-page"
+      },
+      {
+        "url": "https://ir.anta.com/en/include/news_detail.php?id=80587",
+        "status": 404,
+        "ok": false,
+        "foundOn": [
+          "https://ir.anta.com/en/include/financial_press.php?year=2020"
+        ],
+        "kind": "internal-page"
+      },
+      {
+        "url": "https://ir.anta.com/en/include/news_detail.php?id=73646",
+        "status": 404,
+        "ok": false,
+        "foundOn": [
+          "https://ir.anta.com/en/include/financial_press.php?year=2020"
+        ],
+        "kind": "internal-page"
+      },
+      {
+        "url": "https://ir.anta.com/en/include/news_detail.php?id=65635",
+        "status": 404,
+        "ok": false,
+        "foundOn": [
+          "https://ir.anta.com/en/include/financial_press.php?year=2019"
+        ],
+        "kind": "internal-page"
+      },
+      {
+        "url": "https://ir.anta.com/en/include/news_detail.php?id=57321",
+        "status": 404,
+        "ok": false,
+        "foundOn": [
+          "https://ir.anta.com/en/include/financial_press.php?year=2019"
+        ],
+        "kind": "internal-page"
+      },
+      {
+        "url": "https://ir.anta.com/en/include/news_detail.php?id=52186",
+        "status": 404,
+        "ok": false,
+        "foundOn": [
+          "https://ir.anta.com/en/include/financial_press.php?year=2018"
+        ],
+        "kind": "internal-page"
+      },
+      {
+        "url": "https://ir.anta.com/en/include/news_detail.php?id=42089",
+        "status": 404,
+        "ok": false,
+        "foundOn": [
+          "https://ir.anta.com/en/include/financial_press.php?year=2018"
+        ],
+        "kind": "internal-page"
+      },
+      {
+        "url": "https://ir.anta.com/en/include/news_detail.php?id=38653",
+        "status": 404,
+        "ok": false,
+        "foundOn": [
+          "https://ir.anta.com/en/include/financial_press.php?year=2017"
+        ],
+        "kind": "internal-page"
+      },
+      {
+        "url": "https://ir.anta.com/en/include/news_detail.php?id=38652",
+        "status": 404,
+        "ok": false,
+        "foundOn": [
+          "https://ir.anta.com/en/include/financial_press.php?year=2017"
+        ],
+        "kind": "internal-page"
+      },
+      {
+        "url": "https://ir.anta.com/en/include/news_detail.php?id=38657",
+        "status": 404,
+        "ok": false,
+        "foundOn": [
+          "https://ir.anta.com/en/include/financial_press.php?year=2016"
+        ],
+        "kind": "internal-page"
+      },
+      {
+        "url": "https://ir.anta.com/en/include/news_detail.php?id=38656",
+        "status": 404,
+        "ok": false,
+        "foundOn": [
+          "https://ir.anta.com/en/include/financial_press.php?year=2016"
+        ],
+        "kind": "internal-page"
+      },
+      {
+        "url": "https://ir.anta.com/en/include/news_detail.php?id=38673",
+        "status": 404,
+        "ok": false,
+        "foundOn": [
+          "https://ir.anta.com/en/include/financial_press.php?year=2015"
+        ],
+        "kind": "internal-page"
+      },
+      {
+        "url": "https://ir.anta.com/en/include/news_detail.php?id=38658",
+        "status": 404,
+        "ok": false,
+        "foundOn": [
+          "https://ir.anta.com/en/include/financial_press.php?year=2015"
+        ],
+        "kind": "internal-page"
+      },
+      {
+        "url": "https://ir.anta.com/en/include/news_detail.php?id=40056",
+        "status": 404,
+        "ok": false,
+        "foundOn": [
+          "https://ir.anta.com/en/include/financial_press.php?year=2014"
+        ],
+        "kind": "internal-page"
+      },
+      {
+        "url": "https://ir.anta.com/en/include/news_detail.php?id=38681",
+        "status": 404,
+        "ok": false,
+        "foundOn": [
+          "https://ir.anta.com/en/include/financial_press.php?year=2014"
+        ],
+        "kind": "internal-page"
+      },
+      {
+        "url": "https://ir.anta.com/en/include/news_detail.php?id=40058",
+        "status": 404,
+        "ok": false,
+        "foundOn": [
+          "https://ir.anta.com/en/include/financial_press.php?year=2013"
+        ],
+        "kind": "internal-page"
+      },
+      {
+        "url": "https://ir.anta.com/en/include/news_detail.php?id=40057",
+        "status": 404,
+        "ok": false,
+        "foundOn": [
+          "https://ir.anta.com/en/include/financial_press.php?year=2013"
+        ],
+        "kind": "internal-page"
+      },
+      {
+        "url": "https://ir.anta.com/en/include/news_detail.php?id=40065",
+        "status": 404,
+        "ok": false,
+        "foundOn": [
+          "https://ir.anta.com/en/include/financial_press.php?year=2012"
+        ],
+        "kind": "internal-page"
+      },
+      {
+        "url": "https://ir.anta.com/en/include/news_detail.php?id=40064",
+        "status": 404,
+        "ok": false,
+        "foundOn": [
+          "https://ir.anta.com/en/include/financial_press.php?year=2012"
+        ],
+        "kind": "internal-page"
+      },
+      {
+        "url": "https://ir.anta.com/en/include/news_detail.php?id=40073",
+        "status": 404,
+        "ok": false,
+        "foundOn": [
+          "https://ir.anta.com/en/include/financial_press.php?year=2011"
+        ],
+        "kind": "internal-page"
+      },
+      {
+        "url": "https://ir.anta.com/en/include/news_detail.php?id=40072",
+        "status": 404,
+        "ok": false,
+        "foundOn": [
+          "https://ir.anta.com/en/include/financial_press.php?year=2011"
+        ],
+        "kind": "internal-page"
+      },
+      {
+        "url": "https://ir.anta.com/en/include/news_detail.php?id=40075",
+        "status": 404,
+        "ok": false,
+        "foundOn": [
+          "https://ir.anta.com/en/include/financial_press.php?year=2010"
+        ],
+        "kind": "internal-page"
+      },
+      {
+        "url": "https://ir.anta.com/en/include/news_detail.php?id=40074",
+        "status": 404,
+        "ok": false,
+        "foundOn": [
+          "https://ir.anta.com/en/include/financial_press.php?year=2010"
+        ],
+        "kind": "internal-page"
+      },
+      {
+        "url": "https://ir.anta.com/en/include/news_detail.php?id=40077",
+        "status": 404,
+        "ok": false,
+        "foundOn": [
+          "https://ir.anta.com/en/include/financial_press.php?year=2009"
+        ],
+        "kind": "internal-page"
+      },
+      {
+        "url": "https://ir.anta.com/en/include/news_detail.php?id=40076",
+        "status": 404,
+        "ok": false,
+        "foundOn": [
+          "https://ir.anta.com/en/include/financial_press.php?year=2009"
+        ],
+        "kind": "internal-page"
+      },
+      {
+        "url": "https://ir.anta.com/en/include/news_detail.php?id=40079",
+        "status": 404,
+        "ok": false,
+        "foundOn": [
+          "https://ir.anta.com/en/include/financial_press.php?year=2008"
+        ],
+        "kind": "internal-page"
+      },
+      {
+        "url": "https://ir.anta.com/en/include/news_detail.php?id=40081",
+        "status": 404,
+        "ok": false,
+        "foundOn": [
+          "https://ir.anta.com/en/include/financial_press.php?year=2007"
+        ],
+        "kind": "internal-page"
+      },
+      {
+        "url": "https://ir.anta.com/en/include/news_detail.php?id=40080",
+        "status": 404,
+        "ok": false,
+        "foundOn": [
+          "https://ir.anta.com/en/include/financial_press.php?year=2007"
+        ],
+        "kind": "internal-page"
+      },
+      {
+        "url": "https://ir.anta.com/tc/include/news_detail.php?id=103240",
+        "status": 404,
+        "ok": false,
+        "foundOn": [
+          "https://ir.anta.com/tc/include/financial_press.php?year=2021"
+        ],
+        "kind": "internal-page"
+      },
+      {
+        "url": "https://ir.anta.com/tc/include/news_detail.php?id=91609",
+        "status": 404,
+        "ok": false,
+        "foundOn": [
+          "https://ir.anta.com/tc/include/financial_press.php?year=2021"
+        ],
+        "kind": "internal-page"
+      },
+      {
+        "url": "https://ir.anta.com/tc/include/news_detail.php?id=80587",
+        "status": 404,
+        "ok": false,
+        "foundOn": [
+          "https://ir.anta.com/tc/include/financial_press.php?year=2020"
+        ],
+        "kind": "internal-page"
+      },
+      {
+        "url": "https://ir.anta.com/tc/include/news_detail.php?id=73646",
+        "status": 404,
+        "ok": false,
+        "foundOn": [
+          "https://ir.anta.com/tc/include/financial_press.php?year=2020"
+        ],
+        "kind": "internal-page"
+      },
+      {
+        "url": "https://ir.anta.com/tc/include/news_detail.php?id=65635",
+        "status": 404,
+        "ok": false,
+        "foundOn": [
+          "https://ir.anta.com/tc/include/financial_press.php?year=2019"
+        ],
+        "kind": "internal-page"
+      },
+      {
+        "url": "https://ir.anta.com/tc/include/news_detail.php?id=57321",
+        "status": 404,
+        "ok": false,
+        "foundOn": [
+          "https://ir.anta.com/tc/include/financial_press.php?year=2019"
+        ],
+        "kind": "internal-page"
+      },
+      {
+        "url": "https://ir.anta.com/tc/include/news_detail.php?id=52186",
+        "status": 404,
+        "ok": false,
+        "foundOn": [
+          "https://ir.anta.com/tc/include/financial_press.php?year=2018"
+        ],
+        "kind": "internal-page"
+      },
+      {
+        "url": "https://ir.anta.com/tc/include/news_detail.php?id=42089",
+        "status": 404,
+        "ok": false,
+        "foundOn": [
+          "https://ir.anta.com/tc/include/financial_press.php?year=2018"
+        ],
+        "kind": "internal-page"
+      },
+      {
+        "url": "https://ir.anta.com/tc/include/news_detail.php?id=38653",
+        "status": 404,
+        "ok": false,
+        "foundOn": [
+          "https://ir.anta.com/tc/include/financial_press.php?year=2017"
+        ],
+        "kind": "internal-page"
+      },
+      {
+        "url": "https://ir.anta.com/tc/include/news_detail.php?id=38652",
+        "status": 404,
+        "ok": false,
+        "foundOn": [
+          "https://ir.anta.com/tc/include/financial_press.php?year=2017"
+        ],
+        "kind": "internal-page"
+      },
+      {
+        "url": "https://ir.anta.com/tc/include/news_detail.php?id=38657",
+        "status": 404,
+        "ok": false,
+        "foundOn": [
+          "https://ir.anta.com/tc/include/financial_press.php?year=2016"
+        ],
+        "kind": "internal-page"
+      },
+      {
+        "url": "https://ir.anta.com/tc/include/news_detail.php?id=38656",
+        "status": 404,
+        "ok": false,
+        "foundOn": [
+          "https://ir.anta.com/tc/include/financial_press.php?year=2016"
+        ],
+        "kind": "internal-page"
+      },
+      {
+        "url": "https://ir.anta.com/tc/include/news_detail.php?id=38673",
+        "status": 404,
+        "ok": false,
+        "foundOn": [
+          "https://ir.anta.com/tc/include/financial_press.php?year=2015"
+        ],
+        "kind": "internal-page"
+      },
+      {
+        "url": "https://ir.anta.com/tc/include/news_detail.php?id=38658",
+        "status": 404,
+        "ok": false,
+        "foundOn": [
+          "https://ir.anta.com/tc/include/financial_press.php?year=2015"
+        ],
+        "kind": "internal-page"
+      },
+      {
+        "url": "https://ir.anta.com/tc/include/news_detail.php?id=40056",
+        "status": 404,
+        "ok": false,
+        "foundOn": [
+          "https://ir.anta.com/tc/include/financial_press.php?year=2014"
+        ],
+        "kind": "internal-page"
+      },
+      {
+        "url": "https://ir.anta.com/tc/include/news_detail.php?id=38681",
+        "status": 404,
+        "ok": false,
+        "foundOn": [
+          "https://ir.anta.com/tc/include/financial_press.php?year=2014"
+        ],
+        "kind": "internal-page"
+      },
+      {
+        "url": "https://ir.anta.com/tc/include/news_detail.php?id=40058",
+        "status": 404,
+        "ok": false,
+        "foundOn": [
+          "https://ir.anta.com/tc/include/financial_press.php?year=2013"
+        ],
+        "kind": "internal-page"
+      },
+      {
+        "url": "https://ir.anta.com/tc/include/news_detail.php?id=40057",
+        "status": 404,
+        "ok": false,
+        "foundOn": [
+          "https://ir.anta.com/tc/include/financial_press.php?year=2013"
+        ],
+        "kind": "internal-page"
+      },
+      {
+        "url": "https://ir.anta.com/tc/include/news_detail.php?id=40065",
+        "status": 404,
+        "ok": false,
+        "foundOn": [
+          "https://ir.anta.com/tc/include/financial_press.php?year=2012"
+        ],
+        "kind": "internal-page"
+      },
+      {
+        "url": "https://ir.anta.com/tc/include/news_detail.php?id=40064",
+        "status": 404,
+        "ok": false,
+        "foundOn": [
+          "https://ir.anta.com/tc/include/financial_press.php?year=2012"
+        ],
+        "kind": "internal-page"
+      },
+      {
+        "url": "https://ir.anta.com/tc/include/news_detail.php?id=40073",
+        "status": 404,
+        "ok": false,
+        "foundOn": [
+          "https://ir.anta.com/tc/include/financial_press.php?year=2011"
+        ],
+        "kind": "internal-page"
+      },
+      {
+        "url": "https://ir.anta.com/tc/include/news_detail.php?id=40072",
+        "status": 404,
+        "ok": false,
+        "foundOn": [
+          "https://ir.anta.com/tc/include/financial_press.php?year=2011"
+        ],
+        "kind": "internal-page"
+      },
+      {
+        "url": "https://ir.anta.com/tc/include/news_detail.php?id=40075",
+        "status": 404,
+        "ok": false,
+        "foundOn": [
+          "https://ir.anta.com/tc/include/financial_press.php?year=2010"
+        ],
+        "kind": "internal-page"
+      },
+      {
+        "url": "https://ir.anta.com/tc/include/news_detail.php?id=40074",
+        "status": 404,
+        "ok": false,
+        "foundOn": [
+          "https://ir.anta.com/tc/include/financial_press.php?year=2010"
+        ],
+        "kind": "internal-page"
+      },
+      {
+        "url": "https://ir.anta.com/tc/include/news_detail.php?id=40077",
+        "status": 404,
+        "ok": false,
+        "foundOn": [
+          "https://ir.anta.com/tc/include/financial_press.php?year=2009"
+        ],
+        "kind": "internal-page"
+      },
+      {
+        "url": "https://ir.anta.com/tc/include/news_detail.php?id=40076",
+        "status": 404,
+        "ok": false,
+        "foundOn": [
+          "https://ir.anta.com/tc/include/financial_press.php?year=2009"
+        ],
+        "kind": "internal-page"
+      },
+      {
+        "url": "https://ir.anta.com/tc/include/news_detail.php?id=40079",
+        "status": 404,
+        "ok": false,
+        "foundOn": [
+          "https://ir.anta.com/tc/include/financial_press.php?year=2008"
+        ],
+        "kind": "internal-page"
+      },
+      {
+        "url": "https://ir.anta.com/tc/include/news_detail.php?id=40081",
+        "status": 404,
+        "ok": false,
+        "foundOn": [
+          "https://ir.anta.com/tc/include/financial_press.php?year=2007"
+        ],
+        "kind": "internal-page"
+      },
+      {
+        "url": "https://ir.anta.com/sc/include/news_detail.php?id=103240",
+        "status": 404,
+        "ok": false,
+        "foundOn": [
+          "https://ir.anta.com/sc/include/financial_press.php?year=2021"
+        ],
+        "kind": "internal-page"
+      },
+      {
+        "url": "https://ir.anta.com/sc/include/news_detail.php?id=91609",
+        "status": 404,
+        "ok": false,
+        "foundOn": [
+          "https://ir.anta.com/sc/include/financial_press.php?year=2021"
+        ],
+        "kind": "internal-page"
+      },
+      {
+        "url": "https://ir.anta.com/sc/include/news_detail.php?id=80587",
+        "status": 404,
+        "ok": false,
+        "foundOn": [
+          "https://ir.anta.com/sc/include/financial_press.php?year=2020"
+        ],
+        "kind": "internal-page"
+      },
+      {
+        "url": "https://ir.anta.com/sc/include/news_detail.php?id=73646",
+        "status": 404,
+        "ok": false,
+        "foundOn": [
+          "https://ir.anta.com/sc/include/financial_press.php?year=2020"
+        ],
+        "kind": "internal-page"
+      },
+      {
+        "url": "https://ir.anta.com/sc/include/news_detail.php?id=65635",
+        "status": 404,
+        "ok": false,
+        "foundOn": [
+          "https://ir.anta.com/sc/include/financial_press.php?year=2019"
+        ],
+        "kind": "internal-page"
+      },
+      {
+        "url": "https://ir.anta.com/sc/include/news_detail.php?id=57321",
+        "status": 404,
+        "ok": false,
+        "foundOn": [
+          "https://ir.anta.com/sc/include/financial_press.php?year=2019"
+        ],
+        "kind": "internal-page"
+      },
+      {
+        "url": "https://ir.anta.com/sc/include/news_detail.php?id=52186",
+        "status": 404,
+        "ok": false,
+        "foundOn": [
+          "https://ir.anta.com/sc/include/financial_press.php?year=2018"
+        ],
+        "kind": "internal-page"
+      },
+      {
+        "url": "https://ir.anta.com/sc/include/news_detail.php?id=42089",
+        "status": 404,
+        "ok": false,
+        "foundOn": [
+          "https://ir.anta.com/sc/include/financial_press.php?year=2018"
+        ],
+        "kind": "internal-page"
+      },
+      {
+        "url": "https://ir.anta.com/sc/include/news_detail.php?id=38653",
+        "status": 404,
+        "ok": false,
+        "foundOn": [
+          "https://ir.anta.com/sc/include/financial_press.php?year=2017"
+        ],
+        "kind": "internal-page"
+      },
+      {
+        "url": "https://ir.anta.com/sc/include/news_detail.php?id=38652",
+        "status": 404,
+        "ok": false,
+        "foundOn": [
+          "https://ir.anta.com/sc/include/financial_press.php?year=2017"
+        ],
+        "kind": "internal-page"
+      },
+      {
+        "url": "https://ir.anta.com/sc/include/news_detail.php?id=38657",
+        "status": 404,
+        "ok": false,
+        "foundOn": [
+          "https://ir.anta.com/sc/include/financial_press.php?year=2016"
+        ],
+        "kind": "internal-page"
+      },
+      {
+        "url": "https://ir.anta.com/sc/include/news_detail.php?id=38656",
+        "status": 404,
+        "ok": false,
+        "foundOn": [
+          "https://ir.anta.com/sc/include/financial_press.php?year=2016"
+        ],
+        "kind": "internal-page"
+      },
+      {
+        "url": "https://ir.anta.com/sc/include/news_detail.php?id=38673",
+        "status": 404,
+        "ok": false,
+        "foundOn": [
+          "https://ir.anta.com/sc/include/financial_press.php?year=2015"
+        ],
+        "kind": "internal-page"
+      },
+      {
+        "url": "https://ir.anta.com/sc/include/news_detail.php?id=38658",
+        "status": 404,
+        "ok": false,
+        "foundOn": [
+          "https://ir.anta.com/sc/include/financial_press.php?year=2015"
+        ],
+        "kind": "internal-page"
+      },
+      {
+        "url": "https://ir.anta.com/sc/include/news_detail.php?id=40056",
+        "status": 404,
+        "ok": false,
+        "foundOn": [
+          "https://ir.anta.com/sc/include/financial_press.php?year=2014"
+        ],
+        "kind": "internal-page"
+      },
+      {
+        "url": "https://ir.anta.com/sc/include/news_detail.php?id=38681",
+        "status": 404,
+        "ok": false,
+        "foundOn": [
+          "https://ir.anta.com/sc/include/financial_press.php?year=2014"
+        ],
+        "kind": "internal-page"
+      },
+      {
+        "url": "https://ir.anta.com/sc/include/news_detail.php?id=40058",
+        "status": 404,
+        "ok": false,
+        "foundOn": [
+          "https://ir.anta.com/sc/include/financial_press.php?year=2013"
+        ],
+        "kind": "internal-page"
+      },
+      {
+        "url": "https://ir.anta.com/sc/include/news_detail.php?id=40057",
+        "status": 404,
+        "ok": false,
+        "foundOn": [
+          "https://ir.anta.com/sc/include/financial_press.php?year=2013"
+        ],
+        "kind": "internal-page"
+      },
+      {
+        "url": "https://ir.anta.com/sc/include/news_detail.php?id=40065",
+        "status": 404,
+        "ok": false,
+        "foundOn": [
+          "https://ir.anta.com/sc/include/financial_press.php?year=2012"
+        ],
+        "kind": "internal-page"
+      },
+      {
+        "url": "https://ir.anta.com/sc/include/news_detail.php?id=40064",
+        "status": 404,
+        "ok": false,
+        "foundOn": [
+          "https://ir.anta.com/sc/include/financial_press.php?year=2012"
+        ],
+        "kind": "internal-page"
+      },
+      {
+        "url": "https://ir.anta.com/sc/include/news_detail.php?id=40073",
+        "status": 404,
+        "ok": false,
+        "foundOn": [
+          "https://ir.anta.com/sc/include/financial_press.php?year=2011"
+        ],
+        "kind": "internal-page"
+      },
+      {
+        "url": "https://ir.anta.com/sc/include/news_detail.php?id=40072",
+        "status": 404,
+        "ok": false,
+        "foundOn": [
+          "https://ir.anta.com/sc/include/financial_press.php?year=2011"
+        ],
+        "kind": "internal-page"
+      },
+      {
+        "url": "https://ir.anta.com/sc/include/news_detail.php?id=40075",
+        "status": 404,
+        "ok": false,
+        "foundOn": [
+          "https://ir.anta.com/sc/include/financial_press.php?year=2010"
+        ],
+        "kind": "internal-page"
+      },
+      {
+        "url": "https://ir.anta.com/sc/include/news_detail.php?id=40074",
+        "status": 404,
+        "ok": false,
+        "foundOn": [
+          "https://ir.anta.com/sc/include/financial_press.php?year=2010"
+        ],
+        "kind": "internal-page"
+      },
+      {
+        "url": "https://ir.anta.com/sc/include/news_detail.php?id=40077",
+        "status": 404,
+        "ok": false,
+        "foundOn": [
+          "https://ir.anta.com/sc/include/financial_press.php?year=2009"
+        ],
+        "kind": "internal-page"
+      },
+      {
+        "url": "https://ir.anta.com/sc/include/news_detail.php?id=40076",
+        "status": 404,
+        "ok": false,
+        "foundOn": [
+          "https://ir.anta.com/sc/include/financial_press.php?year=2009"
+        ],
+        "kind": "internal-page"
+      },
+      {
+        "url": "https://ir.anta.com/sc/include/news_detail.php?id=40079",
+        "status": 404,
+        "ok": false,
+        "foundOn": [
+          "https://ir.anta.com/sc/include/financial_press.php?year=2008"
+        ],
+        "kind": "internal-page"
+      },
+      {
+        "url": "https://ir.anta.com/sc/include/news_detail.php?id=40081",
+        "status": 404,
+        "ok": false,
+        "foundOn": [
+          "https://ir.anta.com/sc/include/financial_press.php?year=2007"
         ],
         "kind": "internal-page"
       },

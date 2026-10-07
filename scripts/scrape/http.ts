@@ -21,7 +21,7 @@ const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
 /**
  * Sequential, rate-limited fetcher with a resumable on-disk cache.
  * - every network request waits until DELAY_MS (+ jitter) has passed since the previous one
- * - responses (including 4xx/5xx) are cached by method+URL; network errors are not cached, so re-runs retry them
+ * - responses (including 4xx/5xx) are cached by method+URL; page GET network errors are not cached (re-runs retry them); link-check network errors are cached unless --recheck-errors
  * - offline mode never touches the network
  */
 export class PoliteFetcher {
@@ -29,7 +29,7 @@ export class PoliteFetcher {
   stats = { network: 0, cacheHits: 0, errors: 0 };
   /** Every GET URL requested this run (cache hits included), for internal-link discovery. */
   visited = new Set<string>();
-  constructor(private opts: { offline?: boolean; log?: (s: string) => void } = {}) {
+  constructor(private opts: { offline?: boolean; recheckErrors?: boolean; log?: (s: string) => void } = {}) {
     mkdirSync(CACHE_DIR, { recursive: true });
   }
 
@@ -104,8 +104,12 @@ export class PoliteFetcher {
   async check(url: string): Promise<{ status: number; ok: boolean; sizeBytes: number | null; checkedAt: string; fromCache: boolean; error?: string }> {
     const p = this.paths('CHECK', url);
     if (existsSync(p.meta)) {
-      this.stats.cacheHits++;
-      return { ...JSON.parse(readFileSync(p.meta, 'utf8')), fromCache: true };
+      const cached = JSON.parse(readFileSync(p.meta, 'utf8'));
+      // network-error results are cached too (so re-runs don't spend ~20 s per dead host); --recheck-errors retries them
+      if (!(cached.status === 0 && this.opts.recheckErrors && !this.opts.offline)) {
+        this.stats.cacheHits++;
+        return { ...cached, fromCache: true };
+      }
     }
     if (this.opts.offline) return { status: 0, ok: false, sizeBytes: null, checkedAt: '', fromCache: false, error: 'offline: not in cache' };
     const attempt = async (method: 'HEAD' | 'GET') => {
@@ -136,8 +140,8 @@ export class PoliteFetcher {
     let r = await attempt('HEAD');
     if ([0, 403, 405, 501].includes(r.status)) r = await attempt('GET');
     const out = { url, status: r.status, ok: r.status >= 200 && r.status < 400, sizeBytes: r.size, checkedAt: new Date().toISOString(), error: r.error };
-    if (r.status !== 0) writeFileSync(p.meta, JSON.stringify(out, null, 1));
-    else this.stats.errors++;
+    writeFileSync(p.meta, JSON.stringify(out, null, 1));
+    if (r.status === 0) this.stats.errors++;
     this.opts.log?.(`CHECK ${r.status} ${url}`);
     return { ...out, fromCache: false };
   }

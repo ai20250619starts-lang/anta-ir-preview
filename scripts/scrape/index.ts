@@ -4,6 +4,7 @@
  *   npm run scrape -- --offline    # rebuild /data purely from the on-disk cache (no network)
  *   npm run scrape -- --no-links   # skip the link check
  *   npm run scrape -- --check-all  # link-check every document file (slow: ~1 request / 3 s)
+ *   npm run scrape -- --recheck-errors  # retry link checks that previously failed with a network error
  */
 import { mkdirSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
@@ -36,7 +37,7 @@ const log = (s: string) => console.log(`[${new Date().toISOString().slice(11, 19
 const notes: string[] = [];
 const N = { push: (s: string) => (notes.push(s), log(`note: ${s}`)) };
 
-const f = new PoliteFetcher({ offline, log: (s) => log(s) });
+const f = new PoliteFetcher({ offline, recheckErrors: args.has('--recheck-errors'), log: (s) => log(s) });
 const store = new DocumentStore();
 const sections: Record<string, { perLang: Record<string, number>; groups: number }> = {};
 

@@ -1,14 +1,14 @@
 # Scrape report
 
-Generated 2026-10-07T10:15:02.902Z (UTC). Source: https://ir.anta.com (EN / TC / SC). Run started 2026-10-07T09:08:08.995Z.
+Generated 2026-10-07T10:26:50.341Z (UTC). Source: https://ir.anta.com (EN / TC / SC). Run started 2026-10-07T10:15:57.659Z.
 
-Fetch: **1168** network requests this run, 1119 cache hits, 18 errors. Sequential, ≥3 s apart, descriptive User-Agent, on-disk cache in `.cache/http` (re-runs only fetch what is missing).
+Fetch: **121** network requests this run, 2249 cache hits, 18 errors. Sequential, ≥3 s apart, descriptive User-Agent, on-disk cache in `.cache/http` (re-runs only fetch what is missing).
 
 ## Totals
 
 | Dataset | Records |
 | --- | --- |
-| documents (merged across languages) | 949 |
+| documents (merged across languages) | 948 |
 | financial highlight rows | 6 |
 | board people | 11 |
 | committees | 5 |
@@ -18,7 +18,7 @@ Fetch: **1168** network requests this run, 1119 cache hits, 18 errors. Sequentia
 | brands | 8 |
 | assets downloaded | 19 |
 
-Merged documents with a publication time: 800. Files with a known size: 710.
+Merged documents with a publication time: 799. Files with a known size: 710.
 
 ## Source lists (raw items per language → merged records)
 
@@ -49,7 +49,7 @@ Records found in several lists (e.g. an annual report listed under Reports *and*
 | governance | 31 | 31 | 31 | 31 | 31 | 31 | 0 |
 | monthly-return | 214 | 214 | 214 | 214 | 214 | 214 | 0 |
 | presentation | 41 | 41 | 41 | 41 | 41 | 41 | 41 |
-| press-release | 86 | 84 | 84 | 84 | 84 | 84 | 84 |
+| press-release | 85 | 84 | 84 | 84 | 84 | 84 | 84 |
 | report | 58 | 58 | 58 | 58 | 58 | 58 | 17 |
 | webcast | 7 | 7 | 7 | 7 | 6 | 4 | 6 |
 
@@ -63,115 +63,29 @@ Records found in several lists (e.g. an annual report listed under Reports *and*
 | governance |  | 2 | 1 |  | 5 | 1 |  |  |  |  |  | 2 |  | 1 | 3 |  |  |  |  |  | 16 |
 | monthly-return | 10 | 13 | 12 | 12 | 12 | 12 | 12 | 12 | 12 | 12 | 12 | 12 | 12 | 12 | 12 | 12 | 12 | 11 |  |  |  |
 | presentation | 5 | 2 | 2 | 2 | 2 | 2 | 2 | 2 | 2 | 2 | 2 | 2 | 2 | 2 | 2 | 2 | 2 | 2 | 2 |  |  |
-| press-release | 8 | 12 | 21 | 15 | 2 | 2 | 2 | 2 | 2 | 2 | 2 | 2 | 2 | 2 | 2 | 2 | 2 | 2 | 1 | 1 |  |
+| press-release | 8 | 12 | 20 | 15 | 2 | 2 | 2 | 2 | 2 | 2 | 2 | 2 | 2 | 2 | 2 | 2 | 2 | 2 | 1 | 1 |  |
 | report | 3 | 3 | 3 | 3 | 3 | 3 | 3 | 3 | 3 | 3 | 3 | 2 | 3 | 3 | 3 | 3 | 3 | 3 | 3 | 2 |  |
 | webcast | 2 | 2 | 2 | 1 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
 
 ## Missing languages
 
-Records missing a language (no title or no file on the source site for that language): EN 2, TC 2, SC 2.
+Records missing a language (no title or no file on the source site for that language): EN 1, TC 1, SC 1.
 SC records that link a TC file instead of an SC file: 742; TC records linking an EN file: 3.
 
 | Date | Type | Missing | Title |
 | --- | --- | --- | --- |
-| 2024-03-11 | press-release | en, tc | 安踏欧文一代全球首发 — 安踏携手凯里 · 欧文开启全球化进程 |
-| 2024-03-11 | press-release | en, sc | 安踏歐文一代全球首發 — 安踏攜手凱里 · 歐文開啟全球化進程 |
+| 2024-03-11 | press-release | en | 安踏歐文一代全球首發 — 安踏攜手凱里 · 歐文開啟全球化進程 |
 | 2007-08-27 | press-release | tc, sc | ANTA Sports Products Limited Announces its 2007 Interim Results |
 
 
 ## Broken links
 
-Checked 835 unique URLs: every file of reports, presentations, press releases, webcasts, governance/AGM/communication documents; a sample of announcement PDFs (newest 10 plus one per year per type; `--check-all` checks every file); and internal/external links found on the scraped pages.
+Checked 920 unique URLs: every file of reports, presentations, press releases, webcasts, governance/AGM/communication documents; a sample of announcement PDFs (newest 10 plus one per year per type; `--check-all` checks every file); and internal/external links found on the scraped pages.
 
 | Status | Kind | URL | Found on |
 | --- | --- | --- | --- |
 | network error | document | http://webcast.live.wisdomir.com/anta_23ir/arc_landing_en.php | https://ir.anta.com/en/include/financial_webcast.php?year=2023 |
 | network error | document | http://webcast.live.wisdomir.com/anta_23ir/arc_landing_tc.php | https://ir.anta.com/tc/include/financial_webcast.php?year=2023<br>https://ir.anta.com/sc/include/financial_webcast.php?year=2023 |
-| 404 | document | https://ir.anta.com/en/include/news_detail.php?id=103240 | https://ir.anta.com/en/include/financial_press.php?year=2021 |
-| 404 | document | https://ir.anta.com/tc/include/news_detail.php?id=103240 | https://ir.anta.com/tc/include/financial_press.php?year=2021 |
-| 404 | document | https://ir.anta.com/sc/include/news_detail.php?id=103240 | https://ir.anta.com/sc/include/financial_press.php?year=2021 |
-| 404 | document | https://ir.anta.com/en/include/news_detail.php?id=91609 | https://ir.anta.com/en/include/financial_press.php?year=2021 |
-| 404 | document | https://ir.anta.com/tc/include/news_detail.php?id=91609 | https://ir.anta.com/tc/include/financial_press.php?year=2021 |
-| 404 | document | https://ir.anta.com/sc/include/news_detail.php?id=91609 | https://ir.anta.com/sc/include/financial_press.php?year=2021 |
-| 404 | document | https://ir.anta.com/en/include/news_detail.php?id=80587 | https://ir.anta.com/en/include/financial_press.php?year=2020 |
-| 404 | document | https://ir.anta.com/tc/include/news_detail.php?id=80587 | https://ir.anta.com/tc/include/financial_press.php?year=2020 |
-| 404 | document | https://ir.anta.com/sc/include/news_detail.php?id=80587 | https://ir.anta.com/sc/include/financial_press.php?year=2020 |
-| 404 | document | https://ir.anta.com/en/include/news_detail.php?id=73646 | https://ir.anta.com/en/include/financial_press.php?year=2020 |
-| 404 | document | https://ir.anta.com/tc/include/news_detail.php?id=73646 | https://ir.anta.com/tc/include/financial_press.php?year=2020 |
-| 404 | document | https://ir.anta.com/sc/include/news_detail.php?id=73646 | https://ir.anta.com/sc/include/financial_press.php?year=2020 |
-| 404 | document | https://ir.anta.com/en/include/news_detail.php?id=65635 | https://ir.anta.com/en/include/financial_press.php?year=2019 |
-| 404 | document | https://ir.anta.com/tc/include/news_detail.php?id=65635 | https://ir.anta.com/tc/include/financial_press.php?year=2019 |
-| 404 | document | https://ir.anta.com/sc/include/news_detail.php?id=65635 | https://ir.anta.com/sc/include/financial_press.php?year=2019 |
-| 404 | document | https://ir.anta.com/en/include/news_detail.php?id=57321 | https://ir.anta.com/en/include/financial_press.php?year=2019 |
-| 404 | document | https://ir.anta.com/tc/include/news_detail.php?id=57321 | https://ir.anta.com/tc/include/financial_press.php?year=2019 |
-| 404 | document | https://ir.anta.com/sc/include/news_detail.php?id=57321 | https://ir.anta.com/sc/include/financial_press.php?year=2019 |
-| 404 | document | https://ir.anta.com/en/include/news_detail.php?id=52186 | https://ir.anta.com/en/include/financial_press.php?year=2018 |
-| 404 | document | https://ir.anta.com/tc/include/news_detail.php?id=52186 | https://ir.anta.com/tc/include/financial_press.php?year=2018 |
-| 404 | document | https://ir.anta.com/sc/include/news_detail.php?id=52186 | https://ir.anta.com/sc/include/financial_press.php?year=2018 |
-| 404 | document | https://ir.anta.com/en/include/news_detail.php?id=42089 | https://ir.anta.com/en/include/financial_press.php?year=2018 |
-| 404 | document | https://ir.anta.com/tc/include/news_detail.php?id=42089 | https://ir.anta.com/tc/include/financial_press.php?year=2018 |
-| 404 | document | https://ir.anta.com/sc/include/news_detail.php?id=42089 | https://ir.anta.com/sc/include/financial_press.php?year=2018 |
-| 404 | document | https://ir.anta.com/en/include/news_detail.php?id=38653 | https://ir.anta.com/en/include/financial_press.php?year=2017 |
-| 404 | document | https://ir.anta.com/tc/include/news_detail.php?id=38653 | https://ir.anta.com/tc/include/financial_press.php?year=2017 |
-| 404 | document | https://ir.anta.com/sc/include/news_detail.php?id=38653 | https://ir.anta.com/sc/include/financial_press.php?year=2017 |
-| 404 | document | https://ir.anta.com/en/include/news_detail.php?id=38652 | https://ir.anta.com/en/include/financial_press.php?year=2017 |
-| 404 | document | https://ir.anta.com/tc/include/news_detail.php?id=38652 | https://ir.anta.com/tc/include/financial_press.php?year=2017 |
-| 404 | document | https://ir.anta.com/sc/include/news_detail.php?id=38652 | https://ir.anta.com/sc/include/financial_press.php?year=2017 |
-| 404 | document | https://ir.anta.com/en/include/news_detail.php?id=38657 | https://ir.anta.com/en/include/financial_press.php?year=2016 |
-| 404 | document | https://ir.anta.com/tc/include/news_detail.php?id=38657 | https://ir.anta.com/tc/include/financial_press.php?year=2016 |
-| 404 | document | https://ir.anta.com/sc/include/news_detail.php?id=38657 | https://ir.anta.com/sc/include/financial_press.php?year=2016 |
-| 404 | document | https://ir.anta.com/en/include/news_detail.php?id=38656 | https://ir.anta.com/en/include/financial_press.php?year=2016 |
-| 404 | document | https://ir.anta.com/tc/include/news_detail.php?id=38656 | https://ir.anta.com/tc/include/financial_press.php?year=2016 |
-| 404 | document | https://ir.anta.com/sc/include/news_detail.php?id=38656 | https://ir.anta.com/sc/include/financial_press.php?year=2016 |
-| 404 | document | https://ir.anta.com/en/include/news_detail.php?id=38673 | https://ir.anta.com/en/include/financial_press.php?year=2015 |
-| 404 | document | https://ir.anta.com/tc/include/news_detail.php?id=38673 | https://ir.anta.com/tc/include/financial_press.php?year=2015 |
-| 404 | document | https://ir.anta.com/sc/include/news_detail.php?id=38673 | https://ir.anta.com/sc/include/financial_press.php?year=2015 |
-| 404 | document | https://ir.anta.com/en/include/news_detail.php?id=38658 | https://ir.anta.com/en/include/financial_press.php?year=2015 |
-| 404 | document | https://ir.anta.com/tc/include/news_detail.php?id=38658 | https://ir.anta.com/tc/include/financial_press.php?year=2015 |
-| 404 | document | https://ir.anta.com/sc/include/news_detail.php?id=38658 | https://ir.anta.com/sc/include/financial_press.php?year=2015 |
-| 404 | document | https://ir.anta.com/en/include/news_detail.php?id=40056 | https://ir.anta.com/en/include/financial_press.php?year=2014 |
-| 404 | document | https://ir.anta.com/tc/include/news_detail.php?id=40056 | https://ir.anta.com/tc/include/financial_press.php?year=2014 |
-| 404 | document | https://ir.anta.com/sc/include/news_detail.php?id=40056 | https://ir.anta.com/sc/include/financial_press.php?year=2014 |
-| 404 | document | https://ir.anta.com/en/include/news_detail.php?id=38681 | https://ir.anta.com/en/include/financial_press.php?year=2014 |
-| 404 | document | https://ir.anta.com/tc/include/news_detail.php?id=38681 | https://ir.anta.com/tc/include/financial_press.php?year=2014 |
-| 404 | document | https://ir.anta.com/sc/include/news_detail.php?id=38681 | https://ir.anta.com/sc/include/financial_press.php?year=2014 |
-| 404 | document | https://ir.anta.com/en/include/news_detail.php?id=40058 | https://ir.anta.com/en/include/financial_press.php?year=2013 |
-| 404 | document | https://ir.anta.com/tc/include/news_detail.php?id=40058 | https://ir.anta.com/tc/include/financial_press.php?year=2013 |
-| 404 | document | https://ir.anta.com/sc/include/news_detail.php?id=40058 | https://ir.anta.com/sc/include/financial_press.php?year=2013 |
-| 404 | document | https://ir.anta.com/en/include/news_detail.php?id=40057 | https://ir.anta.com/en/include/financial_press.php?year=2013 |
-| 404 | document | https://ir.anta.com/tc/include/news_detail.php?id=40057 | https://ir.anta.com/tc/include/financial_press.php?year=2013 |
-| 404 | document | https://ir.anta.com/sc/include/news_detail.php?id=40057 | https://ir.anta.com/sc/include/financial_press.php?year=2013 |
-| 404 | document | https://ir.anta.com/en/include/news_detail.php?id=40065 | https://ir.anta.com/en/include/financial_press.php?year=2012 |
-| 404 | document | https://ir.anta.com/tc/include/news_detail.php?id=40065 | https://ir.anta.com/tc/include/financial_press.php?year=2012 |
-| 404 | document | https://ir.anta.com/sc/include/news_detail.php?id=40065 | https://ir.anta.com/sc/include/financial_press.php?year=2012 |
-| 404 | document | https://ir.anta.com/en/include/news_detail.php?id=40064 | https://ir.anta.com/en/include/financial_press.php?year=2012 |
-| 404 | document | https://ir.anta.com/tc/include/news_detail.php?id=40064 | https://ir.anta.com/tc/include/financial_press.php?year=2012 |
-| 404 | document | https://ir.anta.com/sc/include/news_detail.php?id=40064 | https://ir.anta.com/sc/include/financial_press.php?year=2012 |
-| 404 | document | https://ir.anta.com/en/include/news_detail.php?id=40073 | https://ir.anta.com/en/include/financial_press.php?year=2011 |
-| 404 | document | https://ir.anta.com/tc/include/news_detail.php?id=40073 | https://ir.anta.com/tc/include/financial_press.php?year=2011 |
-| 404 | document | https://ir.anta.com/sc/include/news_detail.php?id=40073 | https://ir.anta.com/sc/include/financial_press.php?year=2011 |
-| 404 | document | https://ir.anta.com/en/include/news_detail.php?id=40072 | https://ir.anta.com/en/include/financial_press.php?year=2011 |
-| 404 | document | https://ir.anta.com/tc/include/news_detail.php?id=40072 | https://ir.anta.com/tc/include/financial_press.php?year=2011 |
-| 404 | document | https://ir.anta.com/sc/include/news_detail.php?id=40072 | https://ir.anta.com/sc/include/financial_press.php?year=2011 |
-| 404 | document | https://ir.anta.com/en/include/news_detail.php?id=40075 | https://ir.anta.com/en/include/financial_press.php?year=2010 |
-| 404 | document | https://ir.anta.com/tc/include/news_detail.php?id=40075 | https://ir.anta.com/tc/include/financial_press.php?year=2010 |
-| 404 | document | https://ir.anta.com/sc/include/news_detail.php?id=40075 | https://ir.anta.com/sc/include/financial_press.php?year=2010 |
-| 404 | document | https://ir.anta.com/en/include/news_detail.php?id=40074 | https://ir.anta.com/en/include/financial_press.php?year=2010 |
-| 404 | document | https://ir.anta.com/tc/include/news_detail.php?id=40074 | https://ir.anta.com/tc/include/financial_press.php?year=2010 |
-| 404 | document | https://ir.anta.com/sc/include/news_detail.php?id=40074 | https://ir.anta.com/sc/include/financial_press.php?year=2010 |
-| 404 | document | https://ir.anta.com/en/include/news_detail.php?id=40077 | https://ir.anta.com/en/include/financial_press.php?year=2009 |
-| 404 | document | https://ir.anta.com/tc/include/news_detail.php?id=40077 | https://ir.anta.com/tc/include/financial_press.php?year=2009 |
-| 404 | document | https://ir.anta.com/sc/include/news_detail.php?id=40077 | https://ir.anta.com/sc/include/financial_press.php?year=2009 |
-| 404 | document | https://ir.anta.com/en/include/news_detail.php?id=40076 | https://ir.anta.com/en/include/financial_press.php?year=2009 |
-| 404 | document | https://ir.anta.com/tc/include/news_detail.php?id=40076 | https://ir.anta.com/tc/include/financial_press.php?year=2009 |
-| 404 | document | https://ir.anta.com/sc/include/news_detail.php?id=40076 | https://ir.anta.com/sc/include/financial_press.php?year=2009 |
-| 404 | document | https://ir.anta.com/en/include/news_detail.php?id=40079 | https://ir.anta.com/en/include/financial_press.php?year=2008 |
-| 404 | document | https://ir.anta.com/tc/include/news_detail.php?id=40079 | https://ir.anta.com/tc/include/financial_press.php?year=2008 |
-| 404 | document | https://ir.anta.com/sc/include/news_detail.php?id=40079 | https://ir.anta.com/sc/include/financial_press.php?year=2008 |
-| 404 | document | https://ir.anta.com/en/include/news_detail.php?id=40081 | https://ir.anta.com/en/include/financial_press.php?year=2007 |
-| 404 | document | https://ir.anta.com/tc/include/news_detail.php?id=40081 | https://ir.anta.com/tc/include/financial_press.php?year=2007 |
-| 404 | document | https://ir.anta.com/sc/include/news_detail.php?id=40081 | https://ir.anta.com/sc/include/financial_press.php?year=2007 |
-| 404 | document | https://ir.anta.com/en/include/news_detail.php?id=40080 | https://ir.anta.com/en/include/financial_press.php?year=2007 |
 | network error | external | http://anta.cre8ir.com/ | https://ir.anta.com/en/financial_report.php |
 | network error | external | http://anta.cre8ir.com/index_c.html | https://ir.anta.com/tc/financial_report.php<br>https://ir.anta.com/sc/financial_report.php |
 | 404 | internal-page | https://ir.anta.com/esg/en/index.php | https://ir.anta.com/en/news_press.php<br>https://ir.anta.com/en/news_press.php?year=2025 |
@@ -186,6 +100,91 @@ Checked 835 unique URLs: every file of reports, presentations, press releases, w
 | 404 | internal-page | https://ir.anta.com/esg/sc/index.php | https://ir.anta.com/sc/news_press.php<br>https://ir.anta.com/sc/news_press.php?year=2025 |
 | 404 | internal-page | https://ir.anta.com/sc/mailto%20:esg@anta.com.hk | https://ir.anta.com/sc/news_detail.php?id=139011<br>https://ir.anta.com/sc/news_detail.php?id=135218 |
 | 404 | internal-page | https://ir.anta.com/sc/mailto%20:ir@anta.com.hk | https://ir.anta.com/sc/news_detail.php?id=132610 |
+| 404 | internal-page | https://ir.anta.com/en/include/news_detail.php?id=103240 | https://ir.anta.com/en/include/financial_press.php?year=2021 |
+| 404 | internal-page | https://ir.anta.com/en/include/news_detail.php?id=91609 | https://ir.anta.com/en/include/financial_press.php?year=2021 |
+| 404 | internal-page | https://ir.anta.com/en/include/news_detail.php?id=80587 | https://ir.anta.com/en/include/financial_press.php?year=2020 |
+| 404 | internal-page | https://ir.anta.com/en/include/news_detail.php?id=73646 | https://ir.anta.com/en/include/financial_press.php?year=2020 |
+| 404 | internal-page | https://ir.anta.com/en/include/news_detail.php?id=65635 | https://ir.anta.com/en/include/financial_press.php?year=2019 |
+| 404 | internal-page | https://ir.anta.com/en/include/news_detail.php?id=57321 | https://ir.anta.com/en/include/financial_press.php?year=2019 |
+| 404 | internal-page | https://ir.anta.com/en/include/news_detail.php?id=52186 | https://ir.anta.com/en/include/financial_press.php?year=2018 |
+| 404 | internal-page | https://ir.anta.com/en/include/news_detail.php?id=42089 | https://ir.anta.com/en/include/financial_press.php?year=2018 |
+| 404 | internal-page | https://ir.anta.com/en/include/news_detail.php?id=38653 | https://ir.anta.com/en/include/financial_press.php?year=2017 |
+| 404 | internal-page | https://ir.anta.com/en/include/news_detail.php?id=38652 | https://ir.anta.com/en/include/financial_press.php?year=2017 |
+| 404 | internal-page | https://ir.anta.com/en/include/news_detail.php?id=38657 | https://ir.anta.com/en/include/financial_press.php?year=2016 |
+| 404 | internal-page | https://ir.anta.com/en/include/news_detail.php?id=38656 | https://ir.anta.com/en/include/financial_press.php?year=2016 |
+| 404 | internal-page | https://ir.anta.com/en/include/news_detail.php?id=38673 | https://ir.anta.com/en/include/financial_press.php?year=2015 |
+| 404 | internal-page | https://ir.anta.com/en/include/news_detail.php?id=38658 | https://ir.anta.com/en/include/financial_press.php?year=2015 |
+| 404 | internal-page | https://ir.anta.com/en/include/news_detail.php?id=40056 | https://ir.anta.com/en/include/financial_press.php?year=2014 |
+| 404 | internal-page | https://ir.anta.com/en/include/news_detail.php?id=38681 | https://ir.anta.com/en/include/financial_press.php?year=2014 |
+| 404 | internal-page | https://ir.anta.com/en/include/news_detail.php?id=40058 | https://ir.anta.com/en/include/financial_press.php?year=2013 |
+| 404 | internal-page | https://ir.anta.com/en/include/news_detail.php?id=40057 | https://ir.anta.com/en/include/financial_press.php?year=2013 |
+| 404 | internal-page | https://ir.anta.com/en/include/news_detail.php?id=40065 | https://ir.anta.com/en/include/financial_press.php?year=2012 |
+| 404 | internal-page | https://ir.anta.com/en/include/news_detail.php?id=40064 | https://ir.anta.com/en/include/financial_press.php?year=2012 |
+| 404 | internal-page | https://ir.anta.com/en/include/news_detail.php?id=40073 | https://ir.anta.com/en/include/financial_press.php?year=2011 |
+| 404 | internal-page | https://ir.anta.com/en/include/news_detail.php?id=40072 | https://ir.anta.com/en/include/financial_press.php?year=2011 |
+| 404 | internal-page | https://ir.anta.com/en/include/news_detail.php?id=40075 | https://ir.anta.com/en/include/financial_press.php?year=2010 |
+| 404 | internal-page | https://ir.anta.com/en/include/news_detail.php?id=40074 | https://ir.anta.com/en/include/financial_press.php?year=2010 |
+| 404 | internal-page | https://ir.anta.com/en/include/news_detail.php?id=40077 | https://ir.anta.com/en/include/financial_press.php?year=2009 |
+| 404 | internal-page | https://ir.anta.com/en/include/news_detail.php?id=40076 | https://ir.anta.com/en/include/financial_press.php?year=2009 |
+| 404 | internal-page | https://ir.anta.com/en/include/news_detail.php?id=40079 | https://ir.anta.com/en/include/financial_press.php?year=2008 |
+| 404 | internal-page | https://ir.anta.com/en/include/news_detail.php?id=40081 | https://ir.anta.com/en/include/financial_press.php?year=2007 |
+| 404 | internal-page | https://ir.anta.com/en/include/news_detail.php?id=40080 | https://ir.anta.com/en/include/financial_press.php?year=2007 |
+| 404 | internal-page | https://ir.anta.com/tc/include/news_detail.php?id=103240 | https://ir.anta.com/tc/include/financial_press.php?year=2021 |
+| 404 | internal-page | https://ir.anta.com/tc/include/news_detail.php?id=91609 | https://ir.anta.com/tc/include/financial_press.php?year=2021 |
+| 404 | internal-page | https://ir.anta.com/tc/include/news_detail.php?id=80587 | https://ir.anta.com/tc/include/financial_press.php?year=2020 |
+| 404 | internal-page | https://ir.anta.com/tc/include/news_detail.php?id=73646 | https://ir.anta.com/tc/include/financial_press.php?year=2020 |
+| 404 | internal-page | https://ir.anta.com/tc/include/news_detail.php?id=65635 | https://ir.anta.com/tc/include/financial_press.php?year=2019 |
+| 404 | internal-page | https://ir.anta.com/tc/include/news_detail.php?id=57321 | https://ir.anta.com/tc/include/financial_press.php?year=2019 |
+| 404 | internal-page | https://ir.anta.com/tc/include/news_detail.php?id=52186 | https://ir.anta.com/tc/include/financial_press.php?year=2018 |
+| 404 | internal-page | https://ir.anta.com/tc/include/news_detail.php?id=42089 | https://ir.anta.com/tc/include/financial_press.php?year=2018 |
+| 404 | internal-page | https://ir.anta.com/tc/include/news_detail.php?id=38653 | https://ir.anta.com/tc/include/financial_press.php?year=2017 |
+| 404 | internal-page | https://ir.anta.com/tc/include/news_detail.php?id=38652 | https://ir.anta.com/tc/include/financial_press.php?year=2017 |
+| 404 | internal-page | https://ir.anta.com/tc/include/news_detail.php?id=38657 | https://ir.anta.com/tc/include/financial_press.php?year=2016 |
+| 404 | internal-page | https://ir.anta.com/tc/include/news_detail.php?id=38656 | https://ir.anta.com/tc/include/financial_press.php?year=2016 |
+| 404 | internal-page | https://ir.anta.com/tc/include/news_detail.php?id=38673 | https://ir.anta.com/tc/include/financial_press.php?year=2015 |
+| 404 | internal-page | https://ir.anta.com/tc/include/news_detail.php?id=38658 | https://ir.anta.com/tc/include/financial_press.php?year=2015 |
+| 404 | internal-page | https://ir.anta.com/tc/include/news_detail.php?id=40056 | https://ir.anta.com/tc/include/financial_press.php?year=2014 |
+| 404 | internal-page | https://ir.anta.com/tc/include/news_detail.php?id=38681 | https://ir.anta.com/tc/include/financial_press.php?year=2014 |
+| 404 | internal-page | https://ir.anta.com/tc/include/news_detail.php?id=40058 | https://ir.anta.com/tc/include/financial_press.php?year=2013 |
+| 404 | internal-page | https://ir.anta.com/tc/include/news_detail.php?id=40057 | https://ir.anta.com/tc/include/financial_press.php?year=2013 |
+| 404 | internal-page | https://ir.anta.com/tc/include/news_detail.php?id=40065 | https://ir.anta.com/tc/include/financial_press.php?year=2012 |
+| 404 | internal-page | https://ir.anta.com/tc/include/news_detail.php?id=40064 | https://ir.anta.com/tc/include/financial_press.php?year=2012 |
+| 404 | internal-page | https://ir.anta.com/tc/include/news_detail.php?id=40073 | https://ir.anta.com/tc/include/financial_press.php?year=2011 |
+| 404 | internal-page | https://ir.anta.com/tc/include/news_detail.php?id=40072 | https://ir.anta.com/tc/include/financial_press.php?year=2011 |
+| 404 | internal-page | https://ir.anta.com/tc/include/news_detail.php?id=40075 | https://ir.anta.com/tc/include/financial_press.php?year=2010 |
+| 404 | internal-page | https://ir.anta.com/tc/include/news_detail.php?id=40074 | https://ir.anta.com/tc/include/financial_press.php?year=2010 |
+| 404 | internal-page | https://ir.anta.com/tc/include/news_detail.php?id=40077 | https://ir.anta.com/tc/include/financial_press.php?year=2009 |
+| 404 | internal-page | https://ir.anta.com/tc/include/news_detail.php?id=40076 | https://ir.anta.com/tc/include/financial_press.php?year=2009 |
+| 404 | internal-page | https://ir.anta.com/tc/include/news_detail.php?id=40079 | https://ir.anta.com/tc/include/financial_press.php?year=2008 |
+| 404 | internal-page | https://ir.anta.com/tc/include/news_detail.php?id=40081 | https://ir.anta.com/tc/include/financial_press.php?year=2007 |
+| 404 | internal-page | https://ir.anta.com/sc/include/news_detail.php?id=103240 | https://ir.anta.com/sc/include/financial_press.php?year=2021 |
+| 404 | internal-page | https://ir.anta.com/sc/include/news_detail.php?id=91609 | https://ir.anta.com/sc/include/financial_press.php?year=2021 |
+| 404 | internal-page | https://ir.anta.com/sc/include/news_detail.php?id=80587 | https://ir.anta.com/sc/include/financial_press.php?year=2020 |
+| 404 | internal-page | https://ir.anta.com/sc/include/news_detail.php?id=73646 | https://ir.anta.com/sc/include/financial_press.php?year=2020 |
+| 404 | internal-page | https://ir.anta.com/sc/include/news_detail.php?id=65635 | https://ir.anta.com/sc/include/financial_press.php?year=2019 |
+| 404 | internal-page | https://ir.anta.com/sc/include/news_detail.php?id=57321 | https://ir.anta.com/sc/include/financial_press.php?year=2019 |
+| 404 | internal-page | https://ir.anta.com/sc/include/news_detail.php?id=52186 | https://ir.anta.com/sc/include/financial_press.php?year=2018 |
+| 404 | internal-page | https://ir.anta.com/sc/include/news_detail.php?id=42089 | https://ir.anta.com/sc/include/financial_press.php?year=2018 |
+| 404 | internal-page | https://ir.anta.com/sc/include/news_detail.php?id=38653 | https://ir.anta.com/sc/include/financial_press.php?year=2017 |
+| 404 | internal-page | https://ir.anta.com/sc/include/news_detail.php?id=38652 | https://ir.anta.com/sc/include/financial_press.php?year=2017 |
+| 404 | internal-page | https://ir.anta.com/sc/include/news_detail.php?id=38657 | https://ir.anta.com/sc/include/financial_press.php?year=2016 |
+| 404 | internal-page | https://ir.anta.com/sc/include/news_detail.php?id=38656 | https://ir.anta.com/sc/include/financial_press.php?year=2016 |
+| 404 | internal-page | https://ir.anta.com/sc/include/news_detail.php?id=38673 | https://ir.anta.com/sc/include/financial_press.php?year=2015 |
+| 404 | internal-page | https://ir.anta.com/sc/include/news_detail.php?id=38658 | https://ir.anta.com/sc/include/financial_press.php?year=2015 |
+| 404 | internal-page | https://ir.anta.com/sc/include/news_detail.php?id=40056 | https://ir.anta.com/sc/include/financial_press.php?year=2014 |
+| 404 | internal-page | https://ir.anta.com/sc/include/news_detail.php?id=38681 | https://ir.anta.com/sc/include/financial_press.php?year=2014 |
+| 404 | internal-page | https://ir.anta.com/sc/include/news_detail.php?id=40058 | https://ir.anta.com/sc/include/financial_press.php?year=2013 |
+| 404 | internal-page | https://ir.anta.com/sc/include/news_detail.php?id=40057 | https://ir.anta.com/sc/include/financial_press.php?year=2013 |
+| 404 | internal-page | https://ir.anta.com/sc/include/news_detail.php?id=40065 | https://ir.anta.com/sc/include/financial_press.php?year=2012 |
+| 404 | internal-page | https://ir.anta.com/sc/include/news_detail.php?id=40064 | https://ir.anta.com/sc/include/financial_press.php?year=2012 |
+| 404 | internal-page | https://ir.anta.com/sc/include/news_detail.php?id=40073 | https://ir.anta.com/sc/include/financial_press.php?year=2011 |
+| 404 | internal-page | https://ir.anta.com/sc/include/news_detail.php?id=40072 | https://ir.anta.com/sc/include/financial_press.php?year=2011 |
+| 404 | internal-page | https://ir.anta.com/sc/include/news_detail.php?id=40075 | https://ir.anta.com/sc/include/financial_press.php?year=2010 |
+| 404 | internal-page | https://ir.anta.com/sc/include/news_detail.php?id=40074 | https://ir.anta.com/sc/include/financial_press.php?year=2010 |
+| 404 | internal-page | https://ir.anta.com/sc/include/news_detail.php?id=40077 | https://ir.anta.com/sc/include/financial_press.php?year=2009 |
+| 404 | internal-page | https://ir.anta.com/sc/include/news_detail.php?id=40076 | https://ir.anta.com/sc/include/financial_press.php?year=2009 |
+| 404 | internal-page | https://ir.anta.com/sc/include/news_detail.php?id=40079 | https://ir.anta.com/sc/include/financial_press.php?year=2008 |
+| 404 | internal-page | https://ir.anta.com/sc/include/news_detail.php?id=40081 | https://ir.anta.com/sc/include/financial_press.php?year=2007 |
 | 503 | external | https://www.hkexnews.hk/index.htm | https://ir.anta.com/en/about_communications.php |
 | 503 | external | https://www.hkexnews.hk/index_c.htm | https://ir.anta.com/tc/about_communications.php<br>https://ir.anta.com/sc/about_communications.php |
 | 404 | external | https://meetings.computershare.com/ANTAAGM2026 | https://ir.anta.com/en/news_gm.php<br>https://ir.anta.com/tc/news_gm.php |

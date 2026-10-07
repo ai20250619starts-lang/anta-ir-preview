@@ -30,6 +30,7 @@ npm run dev             # local dev server on http://127.0.0.1:4321/en/ (local o
 | `npm run scrape -- --offline` | Rebuilds `/data` from the on-disk cache only (no network) |
 | `npm run scrape -- --no-links` | Skips the link check |
 | `npm run scrape -- --check-all` | Link-checks *every* document file (~2,000 URLs, about 2 h at 1 request / 3 s; resumable) |
+| `npm run scrape -- --recheck-errors` | Retries link checks that previously ended in a network error (these are cached so re-runs stay fast). Plain `http://` targets can't be reached from the box (HTTPS-only egress); the report lists them as *unverified*, not broken |
 | `npm run assets` | Re-runs only the asset download, using `data/brands.json` |
 | `npm run validate` | Validates every `/data` file against the zod schemas, plus integrity rules |
 | `npm test` | Runs the vitest suite (`tests/`) |
