@@ -1,0 +1,35 @@
+{
+  "name": "anta-ir-preview",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Preview of a revamped ANTA Sports investor relations website (client review only; not the official site).",
+  "engines": {
+    "node": ">=20.3"
+  },
+  "scripts": {
+    "dev": "astro dev --host 127.0.0.1",
+    "build": "npm run validate && astro check && astro build",
+    "preview": "astro preview --host 127.0.0.1",
+    "scrape": "tsx scripts/scrape/index.ts",
+    "scrape:offline": "tsx scripts/scrape/index.ts --offline",
+    "assets": "tsx scripts/scrape/assets.ts",
+    "validate": "tsx scripts/validate-data.ts",
+    "test": "vitest run",
+    "check": "astro check"
+  },
+  "dependencies": {
+    "@tailwindcss/vite": "^4.3.3",
+    "astro": "^5.18.2",
+    "tailwindcss": "^4.3.3",
+    "zod": "^3.25.76"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.10",
+    "@types/node": "^20.19.43",
+    "cheerio": "^1.2.0",
+    "tsx": "^4.23.15",
+    "typescript": "^5.9.3",
+    "vitest": "^3.2.7"
+  }
+}

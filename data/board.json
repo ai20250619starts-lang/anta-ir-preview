@@ -1,0 +1,622 @@
+{
+  "generatedAt": "2026-10-07T09:01:45.750Z",
+  "people": [
+    {
+      "id": "ding-shizhong",
+      "group": "executive-director",
+      "name": {
+        "en": "Mr. Ding Shizhong",
+        "tc": "丁世忠先生",
+        "sc": null
+      },
+      "nameZh": "丁世忠先生",
+      "roles": {
+        "en": "Chairman",
+        "tc": null,
+        "sc": null
+      },
+      "bio": {
+        "en": [
+          "aged 55, is the Board Chairman and an Executive Director of the Company. He plays a core leadership role in the Group’s corporate strategy, talent build-up, corporate culture, corporate governance and business oversight, and directly oversees the Group’s mergers and acquisitions initiatives. He is the co-founder of the Group and has dedicated to leading the Group to expand and promote the domestic and overseas businesses. Mr. Ding is the chair of the board of directors of Amer Sports, Inc. (NYSE: AS), which is listed on the New York Stock Exchange. In recent years, he has been awarded honors by various sectors of society, including China’s Top 50 Most Influential Business Leaders in 2023 by Fortune China, 100 Best-Performing CEOs in China by Harvard Business Review, and the Philanthropist of the Year in 2022 by China Charity Ranking. He is currently a vice chairman of All-China Federation of Industry and Commerce, a board member of Samaranch Foundation and a member of the Chinese Olympic Committee. Mr. Ding is the younger brother of Mr. Ding Shijia and the brother-in-law of Mr. Lai Shixian, both being the Company’s Executive Directors. He is also a director of Anta International Group Holdings Limited, a substantial shareholder of the Company."
+        ],
+        "tc": [
+          "55歲，為本公司的董事會主席兼執行董事。彼在本集團企業戰略、人才建設、企業文化、企業管治、經營監督等事項上發揮核心領導作用，並直接管理本集團收購合併事宜。彼為本集團的創始人之一，並一直致力於領導本集團拓展及推廣海內外業務。丁先生現為紐約證券交易所上市公司Amer Sports, Inc. (NYSE：AS) 的董事會主席。近年來，彼獲授《財富》2023年中國最具影響力的50位商界領袖、《哈佛商業評論》中國百佳CEO、2022中國慈善榜年度慈善家等社會各界頒發的榮譽稱號。彼現為中華全國工商業聯合會副主席、薩馬蘭奇體育發展基金會理事會成員及中國奧委會委員。丁先生為丁世家先生的弟弟及賴世賢先生的內兄，彼等皆為本公司的執行董事。彼亦為安踏國際集團控股有限公司的董事，安踏國際集團控股有限公司為本公司的主要股東。"
+        ],
+        "sc": []
+      },
+      "order": 0
+    },
+    {
+      "id": "ding-shijia",
+      "group": "executive-director",
+      "name": {
+        "en": "Mr. Ding Shijia",
+        "tc": "丁世家先生",
+        "sc": null
+      },
+      "nameZh": "丁世家先生",
+      "roles": {
+        "en": "Deputy Chairman",
+        "tc": null,
+        "sc": null
+      },
+      "bio": {
+        "en": [
+          "aged 61, is the Board Deputy Chairman and an Executive Director of the Company. He oversees the Group’s manufacturing operation. He is the co-founder of the Group and has over 30 years of experience in the sporting goods industry in China. In 2002 and 2004, he was awarded the title of Eminent Young Entrepreneur of Quanzhou. Mr. Ding is the elder brother of Mr. Ding Shizhong and the brother-in-law of Mr. Lai Shixian, both being the Company’s Executive Directors. He is also a director of Anta International Group Holdings Limited, a substantial shareholder of the Company."
+        ],
+        "tc": [
+          "61歲，為本公司的董事會副主席兼執行董事。彼負責管理本集團生產職能。彼為本集團的創始人之一及於中國體育用品業擁有逾三十年經驗。於二零零二年及二零零四年，彼獲授泉州市優秀青年企業家的榮銜。丁世家先生為丁世忠先生的長兄及賴世賢先生的內兄，彼等皆為本公司的執行董事。彼亦為安踏國際集團控股有限公司的董事，安踏國際集團控股有限公司為本公司的主要股東。"
+        ],
+        "sc": []
+      },
+      "order": 1
+    },
+    {
+      "id": "lai-shixian",
+      "group": "executive-director",
+      "name": {
+        "en": "Mr. Lai Shixian",
+        "tc": "賴世賢先生",
+        "sc": null
+      },
+      "nameZh": "賴世賢先生",
+      "roles": {
+        "en": "Co-Chief Executive Officer",
+        "tc": null,
+        "sc": null
+      },
+      "bio": {
+        "en": [
+          "aged 51, is an Executive Director and one of the Co-CEOs of the Company. He is in charge of ANTA brand, all other brands except FILA brand, group procurement and a number of the Group’s functions including human resources, legal, investor relations and administration. He joined the Group in March 2003 and has over 20 years of experience in administrative and financial management. Mr. Lai holds an EMBA degree from China Europe International Business School. Mr. Lai is the brother-in law of Mr. Ding Shizhong and Mr. Ding Shijia, both being the Company’s Executive Directors. He is also a director of Anta International Group Holdings Limited, a substantial shareholder of the Company. Mr. Lai is an independent non-executive director of China Lilang Limited (stock code: 1234), a company listed on the Hong Kong Stock Exchange."
+        ],
+        "tc": [
+          "51歲，為本公司的執行董事及其中一位聯席首席執行官。彼分管安踏品牌、除FILA 品牌以外的所有其他品牌、集團採購以及本集團的若干職能（包括人力資源、法務、投資者關係及行政管理等）。彼於二零零三年三月加入本集團及於行政及財務管理方面擁有逾二十年經驗。賴先生擁有中歐國際工商學院的高層管理人員工商管理碩士學位。賴先生為丁世忠先生及丁世家先生的妹夫，彼等皆為本公司的執行董事。彼亦為安踏國際集團控股有限公司的董事，安踏國際集團控股有限公司為本公司的主要股東。賴先生現為香港聯交所上市公司中國利郎有限公司（股票代號：1234）的獨立非執行董事。"
+        ],
+        "sc": []
+      },
+      "order": 2
+    },
+    {
+      "id": "wu-yonghua",
+      "group": "executive-director",
+      "name": {
+        "en": "Mr. Wu Yonghua",
+        "tc": "吳永華先生",
+        "sc": null
+      },
+      "nameZh": "吳永華先生",
+      "roles": {
+        "en": "Co-Chief Executive Officer",
+        "tc": null,
+        "sc": null
+      },
+      "bio": {
+        "en": [
+          "aged 55, is an Executive Director and one of the Co-CEOs of the Company. He is in charge of FILA brand, the Group’s overseas businesses, including Southeast Asia international business, and a number of the Group’s functions, including strategy, digitalisation, technological innovation, quality management, corporate culture and public relations. He joined the Group in October 2003 and has over 20 years of experience in sales, marketing and brand operations in China market."
+        ],
+        "tc": [
+          "55歲，為本公司的執行董事及其中一位聯席首席執行官。彼主要分管FILA 品牌、本集團海外業務（包括東南亞國際業務）及本集團若干職能（包括戰略、數字化、科創、質量管理、企業文化與公共關係等）。彼於二零零三年十月加入本集團，在中國市場銷售、營銷及品牌運營領域擁有逾二十年經驗。"
+        ],
+        "sc": []
+      },
+      "order": 3
+    },
+    {
+      "id": "zheng-jie",
+      "group": "executive-director",
+      "name": {
+        "en": "Mr. Zheng Jie",
+        "tc": "鄭捷先生",
+        "sc": null
+      },
+      "nameZh": "鄭捷先生",
+      "roles": {
+        "en": null,
+        "tc": null,
+        "sc": null
+      },
+      "bio": {
+        "en": [
+          "aged 57, is an Executive Director of the Company. He is primarily responsible for Amer Sports related business. Mr. Zheng is the chief executive officer and a director of Amer Sports, Inc. (NYSE: AS), which is listed on the New York Stock Exchange. He joined the Group in October 2008 and has over 20 years of experience in the field of marketing management, including over 8 years in the China division of an international sportswear brand as the sales vice president and the general manager. Mr. Zheng holds a bachelor’s degree in management science from Fudan University in Shanghai."
+        ],
+        "tc": [
+          "57歲，為本公司的執行董事。彼主要負責Amer Sports相關業務。鄭先生現為紐約證券交易所上市公司Amer Sports, Inc.（NYSE：AS）的首席執行官兼董事。彼於二零零八年十月加入本集團，於營銷管理方面擁有超過二十年經驗，包括於國際運動服飾品牌中國業務部任職銷售副總裁及總經理超過八年。鄭先生擁有上海復旦大學管理科學學士學位。"
+        ],
+        "sc": []
+      },
+      "order": 4
+    },
+    {
+      "id": "bi-mingwei",
+      "group": "executive-director",
+      "name": {
+        "en": "Mr. Bi Mingwei",
+        "tc": "畢明偉先生",
+        "sc": null
+      },
+      "nameZh": "畢明偉先生",
+      "roles": {
+        "en": "Chief Financial Officer",
+        "tc": null,
+        "sc": null
+      },
+      "bio": {
+        "en": [
+          "aged 53, is an Executive Director and the CFO of the Company. He is primarily responsible for the Group’s financial management functions and a number of middle-and-back-office functions including business process management and logistics management. He joined the Group in May 2007 and has over 20 years of experience in financial management and the sportswear industry. Mr. Bi is a director of Amer Sports, Inc. (NYSE: AS), which is listed on the New York Stock Exchange. Mr. Bi holds a bachelor’s degree of accounting from the University of International Business and Economics in China and is a non-practicing member of the Chinese Institute of Certified Public Accountants."
+        ],
+        "tc": [
+          "53歲，為本公司的執行董事兼首席財務官。彼主要負責本集團的財務管理職能及若干中後台職能（包括業務流程管理及物流管理等）。畢先生現為紐約證券交易所上市公司Amer Sports, Inc.（NYSE：AS）的董事。彼於二零零七年五月加入本集團，於財務管理及運動服飾行業擁有逾二十年經驗。畢先生擁有中國對外經濟貿易大學會計學學士學位，並為中國註冊會計師協會非執業會員。"
+        ],
+        "sc": []
+      },
+      "order": 5
+    },
+    {
+      "id": "yiu-kin-wah-stephen",
+      "group": "independent-non-executive-director",
+      "name": {
+        "en": "Mr. Yiu Kin Wah Stephen JP",
+        "tc": "姚建華先生 太平紳士",
+        "sc": null
+      },
+      "nameZh": "姚建華先生 太平紳士",
+      "roles": {
+        "en": null,
+        "tc": null,
+        "sc": null
+      },
+      "bio": {
+        "en": [
+          "aged 65, is an Independent Non-Executive Director of the Company and joined the Board in June 2018. He holds a professional diploma in accountancy from The Hong Kong Polytechnic University and a master’s degree in business administration from the University of Warwick in the United Kingdom. Mr. Yiu is a fellow member of the Association of Chartered Certified Accountants and the Hong Kong Institute of Certified Public Accountants. He is currently a member of the Public Service Commission of the Hong Kong Special Administrative Region, a board member of the Airport Authority Hong Kong, the chairman of the Insurance Authority, a member of the Exchange Fund Advisory Committee, a director of Hong Kong Academy of Finance and the treasurer and a council member of The Hong Kong University of Science and Technology. Mr. Yiu is an independent non-executive director of China Mobile Limited (stock code: 941) and Meituan (stock code: 3690), both of which are listed on the Hong Kong Stock Exchange, and an independent director of Amer Sports, Inc. (NYSE: AS), which is listed on the New York Stock Exchange. Mr. Yiu served at KPMG, a global accounting firm, with his last position as the chairman and chief executive officer of KPMG China and Hong Kong as well as a member of the executive committee and the board of KPMG International and KPMG Asia Pacific."
+        ],
+        "tc": [
+          "65歲，為本公司獨立非執行董事，並於二零一八年六月加入董事會。彼擁有香港理工大學會計專業文憑及英國華威大學工商管理碩士學位。姚先生為特許公認會計師公會和香港會計師公會資深會員。彼現為香港特別行政區公務員敘用委員會委員、香港機場管理局董事會成員、保險業監管局主席、外匯基金諮詢委員會委員、金融學院的董事及香港科技大學司庫及校董會成員。姚先生現為香港聯交所上市公司中國移動有限公司（股票代號：941）及美團（股票代號：3690）的獨立非執行董事，及紐約證券交易所上市公司Amer Sports, Inc.（NYSE：AS）的獨立董事。姚先生曾任職於環球會計師事務所畢馬威，最後的職位為畢馬威中國及香港的主席和首席執行官、畢馬威國際及亞太地區的執行委員會和董事會成員。"
+        ],
+        "sc": []
+      },
+      "order": 6
+    },
+    {
+      "id": "lai-hin-wing-henry-stephen",
+      "group": "independent-non-executive-director",
+      "name": {
+        "en": "Mr. Lai Hin Wing Henry Stephen",
+        "tc": "賴顯榮先生",
+        "sc": null
+      },
+      "nameZh": "賴顯榮先生",
+      "roles": {
+        "en": null,
+        "tc": null,
+        "sc": null
+      },
+      "bio": {
+        "en": [
+          "aged 69, is an Independent Non-Executive Director of the Company and joined the Board in November 2020. He received a bachelor’s degree in law from The University of Hong Kong and was admitted as a solicitor in Hong Kong SAR, England and Wales and the State of Victoria, Australia. He is currently a partner and co-chairman of Messrs. P. C. Woo & Co., a firm of solicitors and notaries in Hong Kong SAR, and has been practicing in the legal field for more than 40 years. Mr. Lai is a Notary Public and a China Appointed Attesting Officer in Hong Kong SAR. He is currently the past chairman, and an honorary council member, fellow member and the Corporate Governance Policies Committee chairman of The Hong Kong Institute of Directors, a member of the Consents Committee of the Law Society of Hong Kong, a member of the Association of China-Appointed Attesting Officers Limited Disciplinary Tribunal Panel and a member of the Board of Governors of The Hang Seng University of Hong Kong. Mr. Lai is an independent non-executive director of China Resources Beer (Holdings) Company Limited (stock code: 291), which is listed on the Hong Kong Stock Exchange. He was a nonexecutive director of China Medical & HealthCare Group Limited (stock code: 383) from November 2020 to October 2023, a non-executive director of Winfull Group Holdings Limited (stock code: 183) from December 2011 to December 2025, and an independent non-executive director of Cloudbreak Pharma Inc. (stock code: 2592) from March 2025 to December 2025, which all are listed on the Hong Kong Stock Exchange."
+        ],
+        "tc": [
+          "69歲，為本公司獨立非執行董事，並於二零二零年十一月加入董事會。彼畢業於香港大學並擁有法律學士學位，為中國香港、英格蘭及威爾斯與澳洲維多利亞州認可律師。彼現為中國香港律師兼國際公證人事務所胡百全律師事務所的合夥人兼聯席主席，於法律界執業逾四十年。賴先生為中國香港的國際公證人及中國委託公證人。彼現為香港董事學會卸任主席、榮譽理事、資深會員及企業管治政策委員會主席、香港律師會審批委員會委員、中國委託公証人協會有限公司紀律審裁團委員及香港恒生大學校董。賴先生現為香港聯交所上市公司華潤啤酒（控股）有限公司（股票代號：291）的獨立非執行董事。彼曾於二零二零年十一月至二零二三年十月擔任中國醫療網絡有限公司（股票代號：383）的非執行董事、二零一一年十二月至二零二五年十二月擔任宏輝集團控股有限公司（股票代號：183）的非執行董事，以及二零二五年三月至二零二五年十二月擔任撥康視雲製藥有限公司（股票代號：2592）的獨立非執行董事，該等公司均於香港聯交所上市。"
+        ],
+        "sc": []
+      },
+      "order": 7
+    },
+    {
+      "id": "wang-jiaqian",
+      "group": "independent-non-executive-director",
+      "name": {
+        "en": "Ms. Wang Jiaqian",
+        "tc": "王佳茜女士",
+        "sc": null
+      },
+      "nameZh": "王佳茜女士",
+      "roles": {
+        "en": null,
+        "tc": null,
+        "sc": null
+      },
+      "bio": {
+        "en": [
+          "aged 47, is an Independent Non-Executive Director of the Company and joined the Board in July 2021. She holds a bachelor’s degree in English from the Nanjing University and a master’s degree in finance from the Peking University in China. She is currently a director of the North Asia President’s Office, in charge of strategy, planning, insights, and external partnerships of Chanel Limited. Ms. Wang was employed by Boston Consulting Group, a global management consulting firm, from September 2010 to June 2019 with her last position as Managing Director and Global Partner. She has over 15 years of experience in strategy and business consulting in retail and consumer products sector."
+        ],
+        "tc": [
+          "47歲，為本公司獨立非執行董事，並於二零二一年七月加入董事會。彼擁有中國南京大學英語語言文學專業學士學位及中國北京大學金融專業碩士學位。彼現為香奈兒有限公司北亞區總裁辦公室總監，分管戰略、規劃、洞察、和外部合作。王女士於二零一零年九月至二零一九年六月任職於環球管理諮詢公司波士頓諮詢公司，最後的職位為董事總經理暨全球合夥人。彼於零售及消費品戰略及商業諮詢方面擁有逾十五年經驗。"
+        ],
+        "sc": []
+      },
+      "order": 8
+    },
+    {
+      "id": "xia-lian",
+      "group": "independent-non-executive-director",
+      "name": {
+        "en": "Ms. Xia Lian",
+        "tc": "夏蓮女士",
+        "sc": null
+      },
+      "nameZh": "夏蓮女士",
+      "roles": {
+        "en": null,
+        "tc": null,
+        "sc": null
+      },
+      "bio": {
+        "en": [
+          "aged 47, is an Independent Non-Executive Director of the Company and joined the Board in July 2022. She holds a bachelor’s degree in marketing from the Peking University in China and a master’s degree in executive master in change from European Institute of Business Administration (INSEAD). She is currently an executive director and the general manager of Vista Education Technology (Shenzhen) Co., Ltd.* (遠見教育科技（深圳）有限公司), and has over 20 years of experience in business administration and business consultancy. Ms. Xia was employed by Cheung Kong Graduate School of Business from April 2007 to August 2020 with her last position as an assistant dean. Ms. Xia is an independent non-executive director of Luye Pharma Group Ltd. (stock code: 2186), a company listed on the Hong Kong Stock Exchange, and an independent director of Shanying International Holding Co., Ltd.* (山鷹國際控股股份公司) (stock code: 600567), a company listed on the Shanghai Stock Exchange."
+        ],
+        "tc": [
+          "47歲，為本公司獨立非執行董事，並於二零二二年七月加入董事會。彼擁有中國北京大學市場營銷學士學位及歐洲工商管理學院(INSEAD)組織變革高管碩士學位。彼現為遠見教育科技（深圳）有限公司執行董事及總經理，於工商管理及商業諮詢方面擁有逾二十年經驗。夏女士於二零零七年四月至二零二零年八月任職於長江商學院，最後的職位為助理院長。夏女士現為香港聯交所上市公司綠葉製藥集團有限公司（股票代號：2186）的獨立非執行董事及上海證券交易所上市公司山鷹國際控股股份公司（股票代號：600567）的獨立董事。"
+        ],
+        "sc": []
+      },
+      "order": 9
+    },
+    {
+      "id": "tse-kin-chung",
+      "group": "company-secretary",
+      "name": {
+        "en": "Mr. Tse Kin Chung",
+        "tc": "謝建聰先生",
+        "sc": null
+      },
+      "nameZh": "謝建聰先生",
+      "roles": {
+        "en": null,
+        "tc": null,
+        "sc": null
+      },
+      "bio": {
+        "en": [
+          "aged 45, is the company secretary of the Company and a vice president of the Group, primarily responsible for financial management and compliance matters. He joined the Group in October 2007 and has over 20 years of experience in the field of auditing and financial management. He holds a bachelor’s degree in accountancy from The Hong Kong Polytechnic University. He is also a member of the Hong Kong Institute of Certified Public Accountants."
+        ],
+        "tc": [
+          "45歲，為本公司的公司秘書兼本集團副總裁，主要負責財務管理及合規工作。彼於二零零七年十月加入本集團，具有逾二十年審計及財務管理之經驗。彼擁有香港理工大學會計學學士學位，亦為香港會計師公會會員。"
+        ],
+        "sc": []
+      },
+      "order": 10
+    }
+  ],
+  "committees": [
+    {
+      "key": "audit",
+      "name": {
+        "en": "Audit Committee",
+        "tc": null,
+        "sc": null
+      },
+      "members": [
+        {
+          "name": {
+            "en": "Mr. Yiu Kin Wah Stephen",
+            "tc": null,
+            "sc": null
+          },
+          "personId": "yiu-kin-wah-stephen",
+          "isChair": true,
+          "nonBoardMember": false
+        },
+        {
+          "name": {
+            "en": "Mr. Lai Hin Wing Henry Stephen",
+            "tc": null,
+            "sc": null
+          },
+          "personId": "lai-hin-wing-henry-stephen",
+          "isChair": false,
+          "nonBoardMember": false
+        },
+        {
+          "name": {
+            "en": "Ms. Wang Jiaqian",
+            "tc": null,
+            "sc": null
+          },
+          "personId": "wang-jiaqian",
+          "isChair": false,
+          "nonBoardMember": false
+        },
+        {
+          "name": {
+            "en": "Ms. Xia Lian",
+            "tc": null,
+            "sc": null
+          },
+          "personId": "xia-lian",
+          "isChair": false,
+          "nonBoardMember": false
+        }
+      ],
+      "termsOfReference": {
+        "en": "https://ir.anta.com/pdf/gov_ac_en.pdf",
+        "tc": null,
+        "sc": null
+      }
+    },
+    {
+      "key": "remuneration",
+      "name": {
+        "en": "Remuneration Committee",
+        "tc": null,
+        "sc": null
+      },
+      "members": [
+        {
+          "name": {
+            "en": "Ms. Xia Lian",
+            "tc": null,
+            "sc": null
+          },
+          "personId": "xia-lian",
+          "isChair": true,
+          "nonBoardMember": false
+        },
+        {
+          "name": {
+            "en": "Mr. Lai Hin Wing Henry Stephen",
+            "tc": null,
+            "sc": null
+          },
+          "personId": "lai-hin-wing-henry-stephen",
+          "isChair": false,
+          "nonBoardMember": false
+        },
+        {
+          "name": {
+            "en": "Ms. Wang Jiaqian",
+            "tc": null,
+            "sc": null
+          },
+          "personId": "wang-jiaqian",
+          "isChair": false,
+          "nonBoardMember": false
+        }
+      ],
+      "termsOfReference": {
+        "en": "https://ir.anta.com/pdf/gov_rc_en.pdf",
+        "tc": null,
+        "sc": null
+      }
+    },
+    {
+      "key": "nomination",
+      "name": {
+        "en": "Nomination Committee",
+        "tc": null,
+        "sc": null
+      },
+      "members": [
+        {
+          "name": {
+            "en": "Mr. Lai Hin Wing Henry Stephen",
+            "tc": null,
+            "sc": null
+          },
+          "personId": "lai-hin-wing-henry-stephen",
+          "isChair": true,
+          "nonBoardMember": false
+        },
+        {
+          "name": {
+            "en": "Mr. Yiu Kin Wah Stephen",
+            "tc": null,
+            "sc": null
+          },
+          "personId": "yiu-kin-wah-stephen",
+          "isChair": false,
+          "nonBoardMember": false
+        },
+        {
+          "name": {
+            "en": "Ms. Wang Jiaqian",
+            "tc": null,
+            "sc": null
+          },
+          "personId": "wang-jiaqian",
+          "isChair": false,
+          "nonBoardMember": false
+        },
+        {
+          "name": {
+            "en": "Ms. Xia Lian",
+            "tc": null,
+            "sc": null
+          },
+          "personId": "xia-lian",
+          "isChair": false,
+          "nonBoardMember": false
+        }
+      ],
+      "termsOfReference": {
+        "en": "https://ir.anta.com/pdf/gov_nc_en.pdf",
+        "tc": null,
+        "sc": null
+      }
+    },
+    {
+      "key": "risk-management",
+      "name": {
+        "en": "Risk Management Committee",
+        "tc": null,
+        "sc": null
+      },
+      "members": [
+        {
+          "name": {
+            "en": "Ms. Wang Jiaqian",
+            "tc": null,
+            "sc": null
+          },
+          "personId": "wang-jiaqian",
+          "isChair": true,
+          "nonBoardMember": false
+        },
+        {
+          "name": {
+            "en": "Mr. Yiu Kin Wah Stephen",
+            "tc": null,
+            "sc": null
+          },
+          "personId": "yiu-kin-wah-stephen",
+          "isChair": false,
+          "nonBoardMember": false
+        },
+        {
+          "name": {
+            "en": "Mr. Lai Hin Wing Henry Stephen",
+            "tc": null,
+            "sc": null
+          },
+          "personId": "lai-hin-wing-henry-stephen",
+          "isChair": false,
+          "nonBoardMember": false
+        },
+        {
+          "name": {
+            "en": "Ms. Xia Lian",
+            "tc": null,
+            "sc": null
+          },
+          "personId": "xia-lian",
+          "isChair": false,
+          "nonBoardMember": false
+        },
+        {
+          "name": {
+            "en": "Mr. Bi Mingwei",
+            "tc": null,
+            "sc": null
+          },
+          "personId": "bi-mingwei",
+          "isChair": false,
+          "nonBoardMember": false
+        }
+      ],
+      "termsOfReference": {
+        "en": "https://ir.anta.com/pdf/gov_rmc_en.pdf",
+        "tc": null,
+        "sc": null
+      }
+    },
+    {
+      "key": "sustainability",
+      "name": {
+        "en": "Sustainability Committee",
+        "tc": null,
+        "sc": null
+      },
+      "members": [
+        {
+          "name": {
+            "en": "Mr. Lai Shixian",
+            "tc": null,
+            "sc": null
+          },
+          "personId": "lai-shixian",
+          "isChair": true,
+          "nonBoardMember": false
+        },
+        {
+          "name": {
+            "en": "Mr. Yiu Kin Wah Stephen",
+            "tc": null,
+            "sc": null
+          },
+          "personId": "yiu-kin-wah-stephen",
+          "isChair": false,
+          "nonBoardMember": false
+        },
+        {
+          "name": {
+            "en": "Mr. Lai Hin Wing Henry Stephen",
+            "tc": null,
+            "sc": null
+          },
+          "personId": "lai-hin-wing-henry-stephen",
+          "isChair": false,
+          "nonBoardMember": false
+        },
+        {
+          "name": {
+            "en": "Ms. Wang Jiaqian",
+            "tc": null,
+            "sc": null
+          },
+          "personId": "wang-jiaqian",
+          "isChair": false,
+          "nonBoardMember": false
+        },
+        {
+          "name": {
+            "en": "Ms. Xia Lian",
+            "tc": null,
+            "sc": null
+          },
+          "personId": "xia-lian",
+          "isChair": false,
+          "nonBoardMember": false
+        },
+        {
+          "name": {
+            "en": "Mr. Wu Yonghua",
+            "tc": null,
+            "sc": null
+          },
+          "personId": "wu-yonghua",
+          "isChair": false,
+          "nonBoardMember": false
+        },
+        {
+          "name": {
+            "en": "Ms. Jiang Yan",
+            "tc": null,
+            "sc": null
+          },
+          "personId": null,
+          "isChair": false,
+          "nonBoardMember": true
+        },
+        {
+          "name": {
+            "en": "Mr. Wan Bin",
+            "tc": null,
+            "sc": null
+          },
+          "personId": null,
+          "isChair": false,
+          "nonBoardMember": true
+        }
+      ],
+      "termsOfReference": {
+        "en": "https://ir.anta.com/pdf/gov_sc_en.pdf",
+        "tc": null,
+        "sc": null
+      }
+    }
+  ],
+  "governanceIntro": {
+    "en": [
+      "ANTA Sports Products Limited recognises the value and importance of achieving high corporate governance standards to enhance corporate performance, transparency and accountability, earning the confidence of shareholders and the public. The board of director strives to adhere to the principles of corporate governance and adopt sound corporate governance practices to meet the legal and commercial standards by focusing on areas such as internal control, fair disclosure and accountability to all shareholders. The Company regularly reviews its corporate governance practices to ensure its continuous compliance.",
+      "For more detail about ANTA Sports Products Limited's corporate governance, please see the \"Corporate Governance Report\" section in the latest annual report."
+    ],
+    "tc": [],
+    "sc": []
+  },
+  "sourceUrls": {
+    "directors": {
+      "en": "https://ir.anta.com/en/about_bod.php",
+      "tc": "https://ir.anta.com/tc/about_bod.php",
+      "sc": "https://ir.anta.com/sc/about_bod.php"
+    },
+    "governance": {
+      "en": "https://ir.anta.com/en/about_gov.php",
+      "tc": "https://ir.anta.com/tc/about_gov.php",
+      "sc": "https://ir.anta.com/sc/about_gov.php"
+    },
+    "companyInfo": {
+      "en": "https://ir.anta.com/en/about_info.php",
+      "tc": "https://ir.anta.com/tc/about_info.php",
+      "sc": "https://ir.anta.com/sc/about_info.php"
+    }
+  }
+}

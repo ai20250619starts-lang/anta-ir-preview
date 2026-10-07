@@ -1,0 +1,59 @@
+{
+  "generatedAt": "2026-10-07T09:01:45.769Z",
+  "events": [
+    {
+      "id": "2026-08-26-167467",
+      "date": "2026-08-26",
+      "year": 2026,
+      "title": {
+        "en": "2026 Interim Results",
+        "tc": "2026年中期業績發布會",
+        "sc": null
+      },
+      "kind": "results",
+      "icsUrl": "https://ir.anta.com/en/downloadics.php?id=167467",
+      "attachments": [],
+      "sourceUrls": {
+        "en": "https://ir.anta.com/en/news_calendar.php",
+        "tc": "https://ir.anta.com/tc/news_calendar.php",
+        "sc": null
+      }
+    },
+    {
+      "id": "2026-05-12-160885",
+      "date": "2026-05-12",
+      "year": 2026,
+      "title": {
+        "en": "Annual General Meeting",
+        "tc": "股東週年大會",
+        "sc": null
+      },
+      "kind": "agm",
+      "icsUrl": "https://ir.anta.com/en/downloadics.php?id=160885",
+      "attachments": [],
+      "sourceUrls": {
+        "en": "https://ir.anta.com/en/news_calendar.php",
+        "tc": "https://ir.anta.com/tc/news_calendar.php",
+        "sc": null
+      }
+    },
+    {
+      "id": "2026-03-25-159674",
+      "date": "2026-03-25",
+      "year": 2026,
+      "title": {
+        "en": "2025 Annual Result",
+        "tc": "2025年全年業績發布會",
+        "sc": null
+      },
+      "kind": "results",
+      "icsUrl": "https://ir.anta.com/en/downloadics.php?id=159674",
+      "attachments": [],
+      "sourceUrls": {
+        "en": "https://ir.anta.com/en/news_calendar.php",
+        "tc": "https://ir.anta.com/tc/news_calendar.php",
+        "sc": null
+      }
+    }
+  ]
+}

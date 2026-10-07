@@ -1,0 +1,65 @@
+---
+import Base from '../../layouts/Base.astro';
+import { documents, highlights, board, calendar, faq, contacts, brands, company, quote, assets } from '../../data';
+import { langPaths, pick } from '../../i18n/ui';
+import type { Lang } from '../../data/schemas';
+
+export const getStaticPaths = langPaths;
+const lang = Astro.params.lang as Lang;
+
+const docs = documents.documents;
+const byType = Object.entries(
+  docs.reduce<Record<string, number>>((acc, d) => ((acc[d.type] = (acc[d.type] ?? 0) + 1), acc), {}),
+).sort((a, b) => b[1] - a[1]);
+const withLang = docs.filter((d) => d.title[lang] && d.files[lang]).length;
+const years = docs.map((d) => d.year).filter((y): y is number => !!y);
+const datasets = [
+  ['documents.json', docs.length],
+  ['financial-highlights.json', highlights.rows.length],
+  ['board.json', `${board.people.length} people · ${board.committees.length} committees`],
+  ['calendar.json', calendar.events.length],
+  ['faq.json', faq.items.length],
+  ['contacts.json', `${contacts.offices.length} offices · ${contacts.emails.length} emails`],
+  ['brands.json', brands.brands.length],
+  ['company.json', pick(company.legalName, lang)],
+  ['quote.mock.json', `illustrative · ${quote.series.length} days`],
+  ['assets.json', assets.assets.length],
+];
+---
+<Base lang={lang} title="Data layer">
+  <h1 class="text-2xl font-bold">{pick(company.legalName, lang)} <span class="text-brand">2020.HK</span></h1>
+  <p class="mt-2 text-graphite">
+    Piece 1 debug page: shows that the scraped, validated data layer is consumed by the site in EN / TC / SC.
+    Snapshot generated {documents.generatedAt.slice(0, 10)} from {documents.source}.
+  </p>
+
+  <section class="mt-8 grid gap-6 md:grid-cols-2">
+    <div class="rounded border border-mist p-4">
+      <h2 class="font-semibold">Documents</h2>
+      <p class="tabular mt-1 text-3xl font-bold">{docs.length}</p>
+      <p class="text-sm text-graphite">{withLang} available in this language · {Math.min(...years)}–{Math.max(...years)}</p>
+      <ul class="tabular mt-3 grid grid-cols-2 gap-x-4 text-sm">
+        {byType.map(([k, v]) => <li class="flex justify-between border-b border-paper py-1"><span>{k}</span><span>{v}</span></li>)}
+      </ul>
+    </div>
+    <div class="rounded border border-mist p-4">
+      <h2 class="font-semibold">Datasets (validated)</h2>
+      <ul class="mt-3 text-sm">
+        {datasets.map(([k, v]) => <li class="flex justify-between border-b border-paper py-1"><code>{k}</code><span class="tabular">{v}</span></li>)}
+      </ul>
+    </div>
+  </section>
+
+  <section class="mt-8">
+    <h2 class="font-semibold">Latest 10</h2>
+    <ul class="mt-2 divide-y divide-paper text-sm">
+      {docs.slice(0, 10).map((d) => (
+        <li class="flex gap-4 py-2">
+          <span class="tabular w-28 shrink-0 text-graphite">{d.date}{d.time ? ` ${d.time}` : ''}</span>
+          <span class="w-36 shrink-0 text-xs uppercase text-graphite">{d.type}</span>
+          {d.files[lang] ? <a class="hover:text-brand" href={d.files[lang]!.url}>{pick(d.title, lang)}</a> : <span>{pick(d.title, lang)}</span>}
+        </li>
+      ))}
+    </ul>
+  </section>
+</Base>

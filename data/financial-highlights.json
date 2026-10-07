@@ -1,0 +1,203 @@
+{
+  "generatedAt": "2026-10-07T09:01:45.723Z",
+  "currencyNote": {
+    "en": "RMB million",
+    "tc": "人民幣百萬元",
+    "sc": null
+  },
+  "years": [
+    2025,
+    2024,
+    2023,
+    2022,
+    2021,
+    2020
+  ],
+  "rows": [
+    {
+      "key": "revenue",
+      "group": {
+        "en": "Key Financial Highlights",
+        "tc": "重要財務資訊",
+        "sc": null
+      },
+      "label": {
+        "en": "Revenue",
+        "tc": "收益",
+        "sc": null
+      },
+      "unit": "rmb-million",
+      "values": {
+        "2020": 35512,
+        "2021": 49328,
+        "2022": 53651,
+        "2023": 62356,
+        "2024": 70826,
+        "2025": 80219
+      },
+      "display": {
+        "2020": "35,512",
+        "2021": "49,328",
+        "2022": "53,651",
+        "2023": "62,356",
+        "2024": "70,826",
+        "2025": "80,219"
+      }
+    },
+    {
+      "key": "gross-profit",
+      "group": {
+        "en": "Key Financial Highlights",
+        "tc": "重要財務資訊",
+        "sc": null
+      },
+      "label": {
+        "en": "Gross profit",
+        "tc": "毛利",
+        "sc": null
+      },
+      "unit": "rmb-million",
+      "values": {
+        "2020": 20651,
+        "2021": 30404,
+        "2022": 32318,
+        "2023": 39028,
+        "2024": 44032,
+        "2025": 49734
+      },
+      "display": {
+        "2020": "20,651",
+        "2021": "30,404",
+        "2022": "32,318",
+        "2023": "39,028",
+        "2024": "44,032",
+        "2025": "49,734"
+      }
+    },
+    {
+      "key": "profit-from-operations",
+      "group": {
+        "en": "Key Financial Highlights",
+        "tc": "重要財務資訊",
+        "sc": null
+      },
+      "label": {
+        "en": "Profit from operations",
+        "tc": "經營溢利",
+        "sc": null
+      },
+      "unit": "rmb-million",
+      "values": {
+        "2020": 9152,
+        "2021": 10989,
+        "2022": 11230,
+        "2023": 15367,
+        "2024": 16595,
+        "2025": 19091
+      },
+      "display": {
+        "2020": "9,152",
+        "2021": "10,989",
+        "2022": "11,230",
+        "2023": "15,367",
+        "2024": "16,595",
+        "2025": "19,091"
+      }
+    },
+    {
+      "key": "profit-attributable-to-equity-shareholders",
+      "group": {
+        "en": "Key Financial Highlights",
+        "tc": "重要財務資訊",
+        "sc": null
+      },
+      "label": {
+        "en": "Profit attributable to equity shareholders",
+        "tc": "股東應佔溢利",
+        "sc": null
+      },
+      "unit": "rmb-million",
+      "values": {
+        "2020": 5162,
+        "2021": 7720,
+        "2022": 7590,
+        "2023": 10236,
+        "2024": 15596,
+        "2025": 13588
+      },
+      "display": {
+        "2020": "5,162",
+        "2021": "7,720",
+        "2022": "7,590",
+        "2023": "10,236",
+        "2024": "15,596",
+        "2025": "13,588"
+      }
+    },
+    {
+      "key": "basic-earnings-per-share",
+      "group": {
+        "en": "Key Financial Highlights",
+        "tc": "重要財務資訊",
+        "sc": null
+      },
+      "label": {
+        "en": "Basic earnings per share (RMB cents)",
+        "tc": "每股基本盈利（人民幣分）",
+        "sc": null
+      },
+      "unit": "rmb-cents",
+      "values": {
+        "2020": 191.92,
+        "2021": 287,
+        "2022": 282,
+        "2023": 369,
+        "2024": 555,
+        "2025": 489
+      },
+      "display": {
+        "2020": "191.92",
+        "2021": "287",
+        "2022": "282",
+        "2023": "369",
+        "2024": "555",
+        "2025": "489"
+      }
+    },
+    {
+      "key": "gross-profit-margin",
+      "group": {
+        "en": "Margins",
+        "tc": "利潤率",
+        "sc": null
+      },
+      "label": {
+        "en": "Gross profit margin",
+        "tc": "毛利率",
+        "sc": null
+      },
+      "unit": "percent",
+      "values": {
+        "2020": 58.2,
+        "2021": 61.6,
+        "2022": 60.2,
+        "2023": 62.6,
+        "2024": 62.2,
+        "2025": 62
+      },
+      "display": {
+        "2020": "58.2%",
+        "2021": "61.6%",
+        "2022": "60.2%",
+        "2023": "62.6%",
+        "2024": "62.2%",
+        "2025": "62.0%"
+      }
+    }
+  ],
+  "sourceUrls": {
+    "en": "https://ir.anta.com/en/financial_highlight.php",
+    "tc": "https://ir.anta.com/tc/financial_highlight.php",
+    "sc": "https://ir.anta.com/sc/financial_highlight.php"
+  }
+}

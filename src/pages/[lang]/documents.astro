@@ -1,0 +1,41 @@
+---
+import Base from '../../layouts/Base.astro';
+import { documents, formatBytes } from '../../data';
+import { langPaths, pick, t } from '../../i18n/ui';
+import type { Lang } from '../../data/schemas';
+
+export const getStaticPaths = langPaths;
+const lang = Astro.params.lang as Lang;
+const docs = documents.documents;
+const types = [...new Set(docs.map((d) => d.type))];
+---
+<Base lang={lang} title={t(lang, 'documents')} path="documents/">
+  <h1 class="text-2xl font-bold">{t(lang, 'documents')} <span class="tabular text-graphite">({docs.length})</span></h1>
+  <p class="mt-2 text-sm text-graphite">Unstyled listing of every merged document record (all types, newest first). Filters/search come with the design system.</p>
+  {types.map((type) => {
+    const list = docs.filter((d) => d.type === type);
+    return (
+      <section class="mt-8">
+        <h2 class="text-lg font-semibold">{type} <span class="tabular text-graphite">({list.length})</span></h2>
+        <table class="mt-2 w-full text-left text-sm">
+          <thead class="text-xs uppercase text-graphite"><tr><th class="py-1 pr-3">Date</th><th class="pr-3">Category</th><th class="pr-3">Title</th><th class="pr-3">File</th></tr></thead>
+          <tbody>
+            {list.map((d) => {
+              const f = d.files[lang] ?? d.files.en ?? d.files.tc;
+              return (
+                <tr class="border-t border-paper align-top">
+                  <td class="tabular py-1 pr-3 whitespace-nowrap">{d.date ?? '—'}{d.time ? ` ${d.time}` : ''}</td>
+                  <td class="pr-3 text-xs text-graphite">{d.category}</td>
+                  <td class="pr-3">{pick(d.title, lang)}{!d.title[lang] && <span class="text-xs text-graphite"> {t(lang, 'missing')}</span>}</td>
+                  <td class="pr-3 whitespace-nowrap text-xs">
+                    {f && <a class="text-brand hover:underline" href={f.url} rel="noopener">{f.format.toUpperCase()}{f.fileLang !== lang ? ` (${f.fileLang})` : ''}</a>} {f?.sizeBytes ? formatBytes(f.sizeBytes) : ''}
+                  </td>
+                </tr>
+              );
+            })}
+          </tbody>
+        </table>
+      </section>
+    );
+  })}
+</Base>

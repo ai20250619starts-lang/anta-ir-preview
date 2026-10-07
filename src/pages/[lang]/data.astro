@@ -1,0 +1,68 @@
+---
+import Base from '../../layouts/Base.astro';
+import { highlights, board, calendar, faq, contacts, brands, company, quote } from '../../data';
+import { langPaths, pick, t } from '../../i18n/ui';
+import type { Lang } from '../../data/schemas';
+
+export const getStaticPaths = langPaths;
+const lang = Astro.params.lang as Lang;
+const L = (v: string[] | undefined) => v ?? [];
+---
+<Base lang={lang} title={t(lang, 'data')} path="data/">
+  <h1 class="text-2xl font-bold">{t(lang, 'data')}</h1>
+
+  <section class="mt-8">
+    <h2 class="text-lg font-semibold">Mock quote <span class="rounded bg-brand px-2 py-0.5 text-xs text-white">{t(lang, 'illustrative')}</span></h2>
+    <p class="tabular mt-2">{quote.symbol} HKD {quote.last.toFixed(2)} ({quote.change >= 0 ? '▲ +' : '▼ '}{quote.change.toFixed(2)}, {quote.changePct.toFixed(2)}%) · delayed ≥{quote.delayMinutes} min</p>
+    <p class="text-xs text-graphite">{quote.disclaimer[lang]}</p>
+  </section>
+
+  <section class="mt-8">
+    <h2 class="text-lg font-semibold">Financial highlights ({pick(highlights.currencyNote, lang)})</h2>
+    <table class="tabular mt-2 text-sm">
+      <thead><tr><th class="pr-4 text-left"></th>{highlights.years.map((y) => <th class="px-2 text-right">{y}</th>)}</tr></thead>
+      <tbody>{highlights.rows.map((r) => <tr class="border-t border-paper"><td class="pr-4">{pick(r.label, lang)}</td>{highlights.years.map((y) => <td class="px-2 text-right">{r.display[String(y)]}</td>)}</tr>)}</tbody>
+    </table>
+  </section>
+
+  <section class="mt-8">
+    <h2 class="text-lg font-semibold">Board ({board.people.length}) & committees ({board.committees.length})</h2>
+    <ul class="mt-2 text-sm">{board.people.map((p) => <li>{pick(p.name, lang)} <span class="text-graphite">· {p.group}{pick(p.roles, lang) ? ` · ${pick(p.roles, lang)}` : ''}</span></li>)}</ul>
+    <ul class="mt-3 text-sm">{board.committees.map((c) => <li><strong>{pick(c.name, lang)}</strong>: {c.members.map((m) => `${pick(m.name, lang)}${m.isChair ? ' (chair)' : ''}`).join(', ')}</li>)}</ul>
+  </section>
+
+  <section class="mt-8">
+    <h2 class="text-lg font-semibold">IR calendar ({calendar.events.length})</h2>
+    <ul class="tabular mt-2 text-sm">{calendar.events.map((e) => <li>{e.date} · {pick(e.title, lang)} <span class="text-graphite">({e.kind})</span></li>)}</ul>
+  </section>
+
+  <section class="mt-8">
+    <h2 class="text-lg font-semibold">FAQ ({faq.items.length})</h2>
+    <dl class="mt-2 text-sm">{faq.items.map((q) => <><dt class="mt-2 font-semibold">{pick(q.question, lang)}</dt><dd set:html={pick(q.answerHtml, lang)} /></>)}</dl>
+  </section>
+
+  <section class="mt-8">
+    <h2 class="text-lg font-semibold">Contacts</h2>
+    <ul class="mt-2 text-sm">{contacts.offices.map((o) => <li><strong>{pick(o.name, lang)}</strong>: {pick(o.address, lang)} · {o.phones.join(' / ')}</li>)}</ul>
+    <ul class="mt-2 text-sm">{contacts.emails.map((e) => <li>{pick(e.label, lang)}: <a class="text-brand" href={`mailto:${e.email}`}>{e.email}</a></li>)}</ul>
+  </section>
+
+  <section class="mt-8">
+    <h2 class="text-lg font-semibold">Brands ({brands.brands.length})</h2>
+    <ul class="mt-2 grid grid-cols-2 gap-4 text-sm md:grid-cols-4">
+      {brands.brands.map((b) => (
+        <li class="rounded border border-mist p-3">
+          {b.logo && <img src={b.logo.src} alt={b.name} class="h-10 w-auto" loading="lazy" />}
+          <p class="mt-2 font-semibold">{b.name}</p>
+          <p class="text-xs text-graphite">{b.pillar}</p>
+        </li>
+      ))}
+    </ul>
+  </section>
+
+  <section class="mt-8">
+    <h2 class="text-lg font-semibold">Company profile</h2>
+    {L(company.profile[lang]).map((p) => <p class="mt-2 text-sm">{p}</p>)}
+    <p class="mt-2 text-sm">ESG: <a class="text-brand" href={company.esg.siteUrl[lang]}>{company.esg.siteUrl[lang]}</a></p>
+  </section>
+</Base>

@@ -1,0 +1,250 @@
+{
+  "generatedAt": "2026-10-07T09:01:45.810Z",
+  "intro": {
+    "overview": {
+      "en": [
+        "ANTA Sports employs a differentiated multi-brand strategy to capture opportunities across mass-to-premium segments in the rapidly evolving global sportswear market. By building a well-defined brand portfolio that spans performance sports, high-end fashion sports, outdoor and specialized categories, the Group strengthens resilience against market volatility while supporting sustainable long-term value creation. Our brand portfolio is organized into two complementary pillars: In-house Brands (fully managed operations) and Strategic Investments (equity stakes and partnerships)."
+      ],
+      "tc": [],
+      "sc": []
+    },
+    "inHouse": {
+      "en": [
+        "The Group’s core operating brands form a complementary ladder covering mass-market performance to premium niche segments."
+      ],
+      "tc": [],
+      "sc": []
+    },
+    "strategic": {
+      "en": [
+        "Complementing the in-house portfolio, ANTA Sports holds strategic positions that expand its global footprint and access to premium international brands and platforms."
+      ],
+      "tc": [],
+      "sc": []
+    }
+  },
+  "brands": [
+    {
+      "key": "anta",
+      "name": "ANTA",
+      "pillar": "in-house",
+      "description": {
+        "en": [
+          "ANTA was established in China in 1990s. As a leading sports brand in China, ANTA has always been committed to providing consumers with functional, professional and technology-driven sports products across a diverse range of sporting categories, from popular sports such as running, cross-training, basketball, and others, to professional and niche sports."
+        ],
+        "tc": [],
+        "sc": []
+      },
+      "links": [
+        {
+          "label": {
+            "en": "Brand Website",
+            "tc": null,
+            "sc": null
+          },
+          "url": "http://en.anta.com/"
+        },
+        {
+          "label": {
+            "en": "Official Online Shop",
+            "tc": null,
+            "sc": null
+          },
+          "url": "https://www.anta.cn/"
+        }
+      ],
+      "logo": {
+        "src": "https://ir.anta.com/img/brand/logo_1.png",
+        "sourceUrl": "https://ir.anta.com/img/brand/logo_1.png"
+      },
+      "image": {
+        "src": "https://ir.anta.com/img/brand/brand_1_img.jpg",
+        "sourceUrl": "https://ir.anta.com/img/brand/brand_1_img.jpg"
+      },
+      "order": 0
+    },
+    {
+      "key": "fila",
+      "name": "FILA",
+      "pillar": "in-house",
+      "description": {
+        "en": [
+          "FILA was established in Italy in 1910s. After acquired the Fila business in the PRC in late 2009, FILA is positioned as a high-end sports fashion clothing brand in China. As a global brand with over 100 years of history, the unique combination of stylish and sporty image from FILA has gained awareness among the Chinese high-end consumers. FILA also has cross-over cooperation with world-renowned designers to bring differentiated sports fashion experiences to the consumers. Echoing FILA’s high-end positioning, FILA stores are mainly located in first- and second-tier cities."
+        ],
+        "tc": [],
+        "sc": []
+      },
+      "links": [
+        {
+          "label": {
+            "en": "Brand Website",
+            "tc": null,
+            "sc": null
+          },
+          "url": "https://www.fila.cn/"
+        }
+      ],
+      "logo": {
+        "src": "https://ir.anta.com/img/brand/logo_3.png",
+        "sourceUrl": "https://ir.anta.com/img/brand/logo_3.png"
+      },
+      "image": {
+        "src": "https://ir.anta.com/img/brand/brand_3_img.jpg",
+        "sourceUrl": "https://ir.anta.com/img/brand/brand_3_img.jpg"
+      },
+      "order": 1
+    },
+    {
+      "key": "descente",
+      "name": "DESCENTE",
+      "pillar": "in-house",
+      "description": {
+        "en": [
+          "DESCENTE was established in Japan in 1930s. Having upheld the design-driven sports spirit of “DESIGN THAT MOVES” throughout 80 years of brand legacy, DESCENTE incorporates revolutionary technology with ingenious craftsmanship into each of its creations, with a focus on high-end and high-quality professional sportswear product collection for skiing, running, cycling, cross training, golf, women’s fitness and more. Through years of continuous effort and dedication, DESCENTE has established itself in the Chinese Mainland market, capturing the attention of core customers seeking high-tech materials and exquisite craftsmanship."
+        ],
+        "tc": [],
+        "sc": []
+      },
+      "links": [],
+      "logo": {
+        "src": "https://ir.anta.com/img/brand/logo_6.png",
+        "sourceUrl": "https://ir.anta.com/img/brand/logo_6.png"
+      },
+      "image": {
+        "src": "https://ir.anta.com/img/brand/brand_6_img.jpg",
+        "sourceUrl": "https://ir.anta.com/img/brand/brand_6_img.jpg"
+      },
+      "order": 2
+    },
+    {
+      "key": "kolon-sport",
+      "name": "KOLON SPORT",
+      "pillar": "in-house",
+      "description": {
+        "en": [
+          "Since its founding in 1973, KOLON SPORT has strived to be a premium outdoor lifestyle brand integrating fashionable design and functionality. Successfully satisfying consumers’ sophisticated needs for functionality, KOLON SPORT has also broken through the boundaries between urban and outdoor fashion through fashionable and aggressive design. To capitalize on opportunities in the fast-growing outdoor sports and camping market, KOLON SPORT improves consumers’ experiences through product innovation, integrated marketing and continued retail image upgrades."
+        ],
+        "tc": [],
+        "sc": []
+      },
+      "links": [],
+      "logo": {
+        "src": "https://ir.anta.com/img/brand/logo_8.png",
+        "sourceUrl": "https://ir.anta.com/img/brand/logo_8.png"
+      },
+      "image": {
+        "src": "https://ir.anta.com/img/brand/brand_8_img.jpg",
+        "sourceUrl": "https://ir.anta.com/img/brand/brand_8_img.jpg"
+      },
+      "order": 3
+    },
+    {
+      "key": "maia-active",
+      "name": "MAIA ACTIVE",
+      "pillar": "in-house",
+      "description": {
+        "en": [
+          "MAIA ACTIVE, a sportswear brand specifically designed for Asian women, was established in Shanghai in 2016. With the design philosophy of 'Letting Asian women enjoy the beauty of sports,' MAIA develops 'Addictive' technology sports fabrics and a sizing system better suited for Asian women. This approach allows MAIA to create high-quality sportswear that enhances the sports experience for Asian women. MAIA encourages every sporty girl to become her ideal version, helping her to find it, achieve it, and BE AS YOU WISH."
+        ],
+        "tc": [],
+        "sc": []
+      },
+      "links": [],
+      "logo": {
+        "src": "https://ir.anta.com/img/brand/logo_11.png",
+        "sourceUrl": "https://ir.anta.com/img/brand/logo_11.png"
+      },
+      "image": {
+        "src": "https://ir.anta.com/img/brand/brand_11_img.jpg",
+        "sourceUrl": "https://ir.anta.com/img/brand/brand_11_img.jpg"
+      },
+      "order": 4
+    },
+    {
+      "key": "jack-wolfskin",
+      "name": "JACK WOLFSKIN",
+      "pillar": "in-house",
+      "description": {
+        "en": [
+          "Founded in 1981, JACK WOLFSKIN is a premium German brand specializing in outdoor apparel, footwear, and equipment. Catering to both active outdoor enthusiasts and urban explorers, the brand offers professional-grade products across hiking, biking, skiing, and camping categories. Renowned for their optimized functionality, exceptional quality, and innovative craftsmanship, JACK WOLFSKIN's offerings reflect the finest in German engineering, technology, and design.",
+          "The brand boasts a versatile portfolio of thoughtfully and sustainably engineered technologies, including the widely acclaimed \"Texapore\" range of materials. Guided by the philosophy of enabling everyone to partake in outdoor experiences through endless discovery, JACK WOLFSKIN is committed to delivering innovative and sustainable solutions that elevate and enrich outdoor experiences for all."
+        ],
+        "tc": [],
+        "sc": []
+      },
+      "links": [
+        {
+          "label": {
+            "en": "Brand Website",
+            "tc": null,
+            "sc": null
+          },
+          "url": "https://www.jack-wolfskin.com/"
+        }
+      ],
+      "logo": {
+        "src": "https://ir.anta.com/img/brand/logo_12.png",
+        "sourceUrl": "https://ir.anta.com/img/brand/logo_12.png"
+      },
+      "image": {
+        "src": "https://ir.anta.com/img/brand/brand_12_img.jpg",
+        "sourceUrl": "https://ir.anta.com/img/brand/brand_12_img.jpg"
+      },
+      "order": 5
+    },
+    {
+      "key": "amer",
+      "name": "AMER",
+      "pillar": "strategic-investment",
+      "description": {
+        "en": [
+          "Amer Sports is a sporting goods company with internationally recognized brands including Salomon, Arc'teryx, Wilson, Peak Performance, Atomic, etc. Its technically advanced sports equipment, footwear, apparel and accessories aim to improve performance and increase enjoyment of sports and outdoor activities.",
+          "ANTA Sports is also the largest shareholder of Amer Sports, Inc., a global group of iconic sports and outdoor brands, including Arc'teryx, Salomon, Wilson, Peak Performance, and Atomic, whose shares are listed on the New York Stock Exchange (NYSE: AS)."
+        ],
+        "tc": [],
+        "sc": []
+      },
+      "links": [
+        {
+          "label": {
+            "en": "Brand Website",
+            "tc": null,
+            "sc": null
+          },
+          "url": "https://www.amersports.com/"
+        }
+      ],
+      "logo": {
+        "src": "https://ir.anta.com/img/brand/logo_10.png",
+        "sourceUrl": "https://ir.anta.com/img/brand/logo_10.png"
+      },
+      "image": null,
+      "order": 6
+    },
+    {
+      "key": "musinsa",
+      "name": "MUSINSA",
+      "pillar": "strategic-investment",
+      "description": {
+        "en": [
+          "MUSINSA is one of South Korea’s largest fashion platform companies, operating popular platforms such as MUSINSA, 29CM, EMPTY and SOLDOUT. It is committed to exploring synergies between fashion and sports.",
+          "ANTA Sports has established a joint venture (JV) with MUSINSA, taking a 40% equity stake to develop the \"MUSINSA STANDARD\" brand and the \"Musinsa Store\" multi-brand retail concept across the China market. This partnership strategically targets young consumers seeking unique sports and fashion products."
+        ],
+        "tc": [],
+        "sc": []
+      },
+      "links": [],
+      "logo": {
+        "src": "https://ir.anta.com/img/brand/logo_13.png",
+        "sourceUrl": "https://ir.anta.com/img/brand/logo_13.png"
+      },
+      "image": null,
+      "order": 7
+    }
+  ],
+  "sourceUrls": {
+    "en": "https://ir.anta.com/en/brand.php",
+    "tc": "https://ir.anta.com/tc/brand.php",
+    "sc": "https://ir.anta.com/sc/brand.php"
+  }
+}

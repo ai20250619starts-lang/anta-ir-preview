@@ -1,0 +1,403 @@
+{
+  "generatedAt": "2026-10-07T09:01:45.803Z",
+  "offices": [
+    {
+      "key": "jinjiang",
+      "name": {
+        "en": "Jinjiang Office",
+        "tc": null,
+        "sc": null
+      },
+      "address": {
+        "en": "Dongshan Industrial Zone, Chidian Town, Jinjiang City, Fujian Province, China",
+        "tc": null,
+        "sc": null
+      },
+      "postcode": "362212",
+      "phones": [
+        "(86) 595 8592 6666",
+        "(86) 595 8592 9999"
+      ],
+      "fax": [],
+      "mapUrl": "https://www.google.com.hk/maps/place/%E5%AE%89%E8%B8%8F%E9%9B%86%E5%9C%98/@24.8760638,118.5770781,18z/data=!4m8!1m2!2m1!1z5b636b6Z5aSn5Y6m!3m4!1s0x3414d6aa783e3347:0xfc1975bf35c5965c!8m2!3d24.8761487!4d118.5797377?hl=zh-TW"
+    },
+    {
+      "key": "xiamen",
+      "name": {
+        "en": "Xiamen Office",
+        "tc": null,
+        "sc": null
+      },
+      "address": {
+        "en": "No.99, Jiayi Road, Guanyinshan, Xiamen, Fujian Province, China",
+        "tc": null,
+        "sc": null
+      },
+      "postcode": "361008",
+      "phones": [
+        "(86) 592 630 5588",
+        "(86) 592 630 5599"
+      ],
+      "fax": [],
+      "mapUrl": "https://www.google.com.hk/maps/place/24%C2%B029'11.2%22N+118%C2%B011'49.8%22E/@24.4864499,118.1949713,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d24.486445!4d118.19716?hl=zh-TW"
+    },
+    {
+      "key": "hong-kong-sar",
+      "name": {
+        "en": "Hong Kong SAR Office",
+        "tc": null,
+        "sc": null
+      },
+      "address": {
+        "en": "16/F, Manhattan Place, 23 Wang Tai Road, Kowloon Bay, Kowloon, Hong Kong SAR, PRC",
+        "tc": null,
+        "sc": null
+      },
+      "postcode": null,
+      "phones": [
+        "(852) 2116 1660"
+      ],
+      "fax": [
+        "(852) 2116 1590"
+      ],
+      "mapUrl": "https://www.google.com.hk/maps/place/MANHATTAN+PLACE/@22.3199465,114.209647,19z/data=!4m8!1m2!2m1!1z6aaZ5riv5Lmd6b6N5Lmd6b6N54Gj5a6P5rOw6YGTMjPomZ8gTWFuaGF0dGFuIFBsYWNl!3m4!1s0x0:0x24d5201b16d31cc9!8m2!3d22.319791!4d114.2102211?hl=zh-TW"
+    }
+  ],
+  "emails": [
+    {
+      "key": "general",
+      "label": {
+        "en": "General enquiries",
+        "tc": null,
+        "sc": null
+      },
+      "email": "anta_ccpr@anta.com"
+    },
+    {
+      "key": "investor-relations",
+      "label": {
+        "en": "Investor relations enquiries",
+        "tc": null,
+        "sc": null
+      },
+      "email": "ir@anta.com.hk"
+    }
+  ],
+  "companyInfo": [
+    {
+      "key": "board",
+      "heading": {
+        "en": "Board",
+        "tc": null,
+        "sc": null
+      },
+      "blocks": [
+        {
+          "en": [
+            "Executive Directors",
+            "Mr. Ding Shizhong (Chairman)",
+            "Mr. Ding Shijia (Deputy Chairman)",
+            "Mr. Lai Shixian (Co-Chief Executive Officer)",
+            "Mr. Wu Yonghua (Co-Chief Executive Officer)",
+            "Mr. Zheng Jie",
+            "Mr. Bi Mingwei (Chief Financial Officer)"
+          ],
+          "tc": [],
+          "sc": []
+        },
+        {
+          "en": [
+            "Independent Non-Executive Directors",
+            "Mr. Yiu Kin Wah StephenJP",
+            "Mr. Lai Hin Wing Henry Stephen",
+            "Ms. Wang Jiaqian",
+            "Ms. Xia Lian"
+          ],
+          "tc": [],
+          "sc": []
+        },
+        {
+          "en": [
+            "Company Secretary",
+            "Mr. Tse Kin Chung"
+          ],
+          "tc": [],
+          "sc": []
+        }
+      ]
+    },
+    {
+      "key": "board-committee",
+      "heading": {
+        "en": "Board Committee",
+        "tc": null,
+        "sc": null
+      },
+      "blocks": [
+        {
+          "en": [
+            "Audit Committee",
+            "Mr. Yiu Kin Wah Stephen (committee chairman)",
+            "Mr. Lai Hin Wing Henry Stephen",
+            "Ms. Wang Jiaqian",
+            "Ms. Xia Lian"
+          ],
+          "tc": [],
+          "sc": []
+        },
+        {
+          "en": [
+            "Remuneration Committee",
+            "Ms. Xia Lian (committee chairman)",
+            "Mr. Lai Hin Wing Henry Stephen",
+            "Ms. Wang Jiaqian"
+          ],
+          "tc": [],
+          "sc": []
+        },
+        {
+          "en": [
+            "Nomination Committee",
+            "Mr. Lai Hin Wing Henry Stephen (committee chairman)",
+            "Mr. Yiu Kin Wah Stephen",
+            "Ms. Wang Jiaqian",
+            "Ms. Xia Lian"
+          ],
+          "tc": [],
+          "sc": []
+        },
+        {
+          "en": [
+            "Risk Management Committee",
+            "Ms. Wang Jiaqian (committee chairman)",
+            "Mr. Yiu Kin Wah Stephen",
+            "Mr. Lai Hin Wing Henry Stephen",
+            "Ms. Xia Lian",
+            "Mr. Bi Mingwei"
+          ],
+          "tc": [],
+          "sc": []
+        },
+        {
+          "en": [
+            "Sustainability Committee",
+            "Mr. Lai Shixian (committee chairman)",
+            "Mr. Yiu Kin Wah Stephen",
+            "Mr. Lai Hin Wing Henry Stephen",
+            "Ms. Wang Jiaqian",
+            "Ms. Xia Lian",
+            "Mr. Wu Yonghua",
+            "Ms. Jiang Yan*",
+            "Mr. Wan Bin*",
+            "*non-Board member"
+          ],
+          "tc": [],
+          "sc": []
+        }
+      ]
+    },
+    {
+      "key": "authorised-representatives",
+      "heading": {
+        "en": "Authorised Representatives",
+        "tc": null,
+        "sc": null
+      },
+      "blocks": [
+        {
+          "en": [
+            "Mr. Lai Shixian",
+            "Mr. Tse Kin Chung"
+          ],
+          "tc": [],
+          "sc": []
+        }
+      ]
+    },
+    {
+      "key": "registered-office",
+      "heading": {
+        "en": "Registered Office",
+        "tc": null,
+        "sc": null
+      },
+      "blocks": [
+        {
+          "en": [
+            "Cayman Islands Office",
+            "Cricket Square, Hutchins Drive,",
+            "P.O. Box 2681, Grand Cayman",
+            "KY1-1111, Cayman Islands"
+          ],
+          "tc": [],
+          "sc": []
+        }
+      ]
+    },
+    {
+      "key": "principal-place-of-business-in-hong-kong-sar",
+      "heading": {
+        "en": "Principal Place of Business in Hong Kong SAR",
+        "tc": null,
+        "sc": null
+      },
+      "blocks": [
+        {
+          "en": [
+            "Hong Kong SAR Office",
+            "16/F, Manhattan Place, 23 Wang Tai Road,",
+            "Kowloon Bay, Kowloon, Hong Kong SAR"
+          ],
+          "tc": [],
+          "sc": []
+        }
+      ]
+    },
+    {
+      "key": "head-offices-in-chinese-mainland",
+      "heading": {
+        "en": "Head offices in Chinese Mainland",
+        "tc": null,
+        "sc": null
+      },
+      "blocks": [
+        {
+          "en": [
+            "Jinjiang Office",
+            "Dongshan Industrial Zone, Chidian Town,",
+            "Jinjiang City, Fujian Province, China",
+            "Postal code: 362212"
+          ],
+          "tc": [],
+          "sc": []
+        },
+        {
+          "en": [
+            "Xiamen Office",
+            "No. 99 Jiayi Road, Guanyinshan, Xiamen, Fujian Province, China",
+            "Postal code: 361008"
+          ],
+          "tc": [],
+          "sc": []
+        }
+      ]
+    },
+    {
+      "key": "share-registrars-and-transfer-offices",
+      "heading": {
+        "en": "Share Registrars and Transfer Offices",
+        "tc": null,
+        "sc": null
+      },
+      "blocks": [
+        {
+          "en": [
+            "Cayman Islands Principal Registrar",
+            "Suntera (Cayman) Limited",
+            "Suite 3204, Unit 2A, Block 3,",
+            "Building D, P.O. Box 1586, Gardenia Court, Camana Bay,",
+            "Grand Cayman, KY1-1100, Cayman Islands"
+          ],
+          "tc": [],
+          "sc": []
+        },
+        {
+          "en": [
+            "Hong Kong SAR Branch Registrar",
+            "Computershare Hong Kong Investor Services Limited",
+            "Shops 1712-1716,17th Floor, Hopewell Centre,",
+            "183 Queen's Road East, Wan Chai, Hong Kong SAR"
+          ],
+          "tc": [],
+          "sc": []
+        }
+      ]
+    },
+    {
+      "key": "legal-adviser",
+      "heading": {
+        "en": "Legal Adviser",
+        "tc": null,
+        "sc": null
+      },
+      "blocks": [
+        {
+          "en": [
+            "Morgan, Lewis & Bockius"
+          ],
+          "tc": [],
+          "sc": []
+        }
+      ]
+    },
+    {
+      "key": "auditor",
+      "heading": {
+        "en": "Auditor",
+        "tc": null,
+        "sc": null
+      },
+      "blocks": [
+        {
+          "en": [
+            "KPMG",
+            "Certified Public Accountants",
+            "Public Interest Entity Auditor registered in accordance with the Accounting and Financial Reporting Council Ordinance"
+          ],
+          "tc": [],
+          "sc": []
+        }
+      ]
+    },
+    {
+      "key": "principal-bankers",
+      "heading": {
+        "en": "Principal Bankers",
+        "tc": null,
+        "sc": null
+      },
+      "blocks": [
+        {
+          "en": [
+            "Bank of China (Hong Kong) Limited",
+            "Industrial and Commercial Bank of China Ltd.",
+            "Industrial Bank Co., Ltd.",
+            "China Merchants Bank Co., Ltd.",
+            "Standard Chartered Bank PLC"
+          ],
+          "tc": [],
+          "sc": []
+        }
+      ]
+    }
+  ],
+  "vendorForms": {
+    "enquiryFormUrl": {
+      "en": "https://enquiryform.website.wisdomir.com/main/02020_new.php?id=394&lang=en",
+      "tc": "",
+      "sc": ""
+    },
+    "emailAlertUrl": {
+      "en": "https://alertform.website.wisdomir.com/main/02020.php?id=394&lang=en",
+      "tc": "",
+      "sc": ""
+    }
+  },
+  "sourceUrls": {
+    "contact": {
+      "en": "https://ir.anta.com/en/contact.php",
+      "tc": "https://ir.anta.com/tc/contact.php",
+      "sc": "https://ir.anta.com/sc/contact.php"
+    },
+    "companyInfo": {
+      "en": "https://ir.anta.com/en/about_info.php",
+      "tc": "https://ir.anta.com/tc/about_info.php",
+      "sc": "https://ir.anta.com/sc/about_info.php"
+    },
+    "emailAlert": {
+      "en": "https://ir.anta.com/en/contact_alert.php",
+      "tc": "https://ir.anta.com/tc/contact_alert.php",
+      "sc": "https://ir.anta.com/sc/contact_alert.php"
+    }
+  }
+}
