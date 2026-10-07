@@ -1,0 +1,620 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" id="html">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<meta name="description" content="">
+<meta name="keywords" content="">
+<meta name="format-detection" content="telephone=no">
+<meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Stock Chart</title>
+
+<link type="text/css" rel="stylesheet" href="../css/public.php?chartbgcolor=000000&chartlogocolor=808080&chartpricebgcolor=000000&fontcolor2=FF7F7F&chart_button=505050&chart_button_hover=808080"/>
+<link type="text/css" rel="stylesheet" href="../css/screen.css"/>
+<link type="text/css" rel="stylesheet" href="../css/font.php?font_en=16px%2F1.6+%22Calibri%22%2C+Arial%2C+Helvetica%2C+sans-serif%2C+Verdana%3B&font_tc=16px%2F1.6+%22STHeiti%22%2C+%22Microsoft+JhengHei%22%2C+%22Microsoft+YaHei%22%2C+%22%E5%AE%8B%E4%BD%93%22%2C+Arial%2C+Helvetica%2C+Verdana%2C+sans-serif%3B"/>
+<script type="text/javascript" src="../js/jquery-2.2.1.min.js"></script>
+<script type="text/javascript" src="../js/easyXDM-2.4.19.3.min.js"></script>
+<script type="text/javascript" src="../js/postMessageDocumentHeight.min.js"></script>
+
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+		<style type="text/css">
+      ${demo.css}
+		</style>
+		<script type="text/javascript">
+      $(function () {
+		            $.getJSON('stock/02020.php', function (data) {
+		  
+              // Create the chart
+              $('#chart').highcharts('StockChart', {
+                  chart: { backgroundColor: "#000000" },
+/*                  navigator: {
+                    enabled: false
+                  },*/
+/*                  rangeSelector: {enabled: false}, */
+                  rangeSelector: {
+                    selected: 1, 
+                  	height: 45,
+                    buttons: [
+                    {
+                      type: 'month',
+                      count: 1,
+                      text: '1M'
+                    }, {
+                      type: 'month',
+                      count: 3,
+                      text: '3M'
+                    }, {
+                      type: 'year',
+                      count: 1,
+                      text: '1Y'
+                    }, {
+                      type: 'ytd',
+                      text: 'YTD'
+                    }, {
+                      type: 'all',
+                      text: 'All'
+                    }],
+                    buttonSpacing:3,
+                    buttonTheme: {
+                    	width: 40,
+                    	height: 16,
+                    	padding: 8,
+                      fill: 'transparent',
+                      stroke: 'none',
+                      'stroke-width': 0,
+                      r: 0,
+                      style: {
+                        color: 'transparent'
+                      },
+                      states: {
+                        hover: {
+                          fill: 'transparent',
+                          style: {
+                            color: 'transparent'
+                          }
+                        },
+                        select: {
+                          fill: 'transparent',
+                          style: {
+                            color: 'transparent'
+                          }
+                        }
+                      
+                      }
+                    },
+                    inputBoxBorderColor: '#909090',
+                    inputBoxWidth: 120,
+                    inputBoxHeight: 22,
+                    inputStyle: {
+                      color: '#808080',
+                    },
+                    labelStyle: {
+                      color: '#808080'
+                    }
+                  },
+                  exporting: { enabled: false },
+                  credits: { enabled: false },
+                  title: { enabled: false },				  			  
+
+                  series : [{
+					  type: 'line',
+					  id: 'hkexstock',
+                  	  name : 'Price',
+                  	  data : data,
+                      marker : {
+                          enabled : false,
+                          radius : 1
+                      },
+                      shadow : true,
+                      tooltip : {
+                          valueDecimals : 3				      }
+                  },
+				  {
+				      type: 'ema',
+				      linkedTo: 'hkexstock',
+				      marker : {
+                          enabled : false,
+                          radius : 1
+                      },
+				      params: {
+                          period: 10
+                      },
+					  visible: false
+				  },
+				  {
+				      type: 'ema',
+				      linkedTo: 'hkexstock',
+				      marker : {
+                          enabled : false,
+                          radius : 1
+                      },
+				      params: {
+				          period: 20
+				      },
+					  visible: false
+				  },
+				  {
+				      type: 'ema',
+				      linkedTo: 'hkexstock',
+				      marker : {
+                          enabled : false,
+                          radius : 1
+                      },
+				      params: {
+				          period: 50
+				      },
+					  visible: false
+				  }
+		      ]
+              },function(chart){
+        
+                  $('#button1').click(function(){
+                    chart.rangeSelector.clickButton(0, true);
+                  });
+
+                  $('#button2').click(function(){
+                    chart.rangeSelector.clickButton(1, true);
+                  });
+
+                  $('#button3').click(function(){
+                    chart.rangeSelector.clickButton(2, true);
+                  });
+
+                  $('#button4').click(function(){
+                    chart.rangeSelector.clickButton(3, true);
+                  });
+
+                  $('#button5').click(function(){
+                    chart.rangeSelector.clickButton(4, true);
+                  });
+        
+                  $('#button201').click(function(){
+                    if (chart.series[1].options.visible==false) {
+                      chart.series[1].options.visible = true;
+					} else {
+					  chart.series[1].options.visible = false;
+					}
+                    chart.series[1].update(chart.series[1].options);
+                  });
+
+                  $('#button202').click(function(){
+                    if (chart.series[2].options.visible==false) {
+                      chart.series[2].options.visible = true;
+					} else {
+					  chart.series[2].options.visible = false;
+					}
+                    chart.series[2].update(chart.series[2].options);
+                  });
+
+                  $('#button203').click(function(){
+                    if (chart.series[3].options.visible==false) {
+                      chart.series[3].options.visible = true;
+					} else {
+					  chart.series[3].options.visible = false;
+					}
+                    chart.series[3].update(chart.series[3].options);
+                  });
+				  
+               }
+              
+              );
+          });
+      });
+		</script>
+
+<script src="js/highstock822_en.js"></script>
+<script src="js/data822.js"></script>
+<script src="js/exporting822.js"></script>
+<script src="js/indicators822.js"></script>
+<script src="js/ema822.js"></script>
+
+	<!--
+    <script src="js/highstock_en.js"></script>
+    <script src="js/exporting_en.js"></script>
+-->
+    <style>
+    	input.highcharts-range-selector:focus {
+        height: 26px !important;
+        width: 125px !important;
+        background-color:#ffffff !important;
+      }
+    </style>
+
+<script>
+
+    function ImagetoPrint(source)
+    {
+        return "<html><head><script>function step1(){\n" +
+                "setTimeout('step2()', 10);}\n" +
+                "function step2(){window.print();window.close()}\n" +
+                "</scri" + "pt></head><body onload='step1()'>\n" +
+                "<img src='" + source + "' /></body></html>";
+    }
+
+    function PrintImage()
+    {
+        var source=document.getElementById("action2value").value;
+        Pagelink = "about:blank";
+        var pwa = window.open(Pagelink, "_new");
+        pwa.document.open();
+        pwa.document.write(ImagetoPrint(source));
+        pwa.document.close();
+    }
+
+</script>
+
+<style>
+.button201{
+	display:inline-block;
+	width:15px;
+	height:15px;
+	background-color:#ECC685;
+	border:#fff 1px solid;
+	margin-top:4px;
+	margin-right:6px;
+	vertical-align:text-top;
+	border-radius: 3px;
+}
+.button202{
+	display:inline-block;
+	width:15px;
+	height:15px;
+	background-color:#23CCE2;
+	border:#ffff 1px solid;
+	margin-top:4px;
+	margin-right:6px;
+	vertical-align:text-top;
+	border-radius: 3px;
+}
+.button203{
+	display:inline-block;
+	width:15px;
+	height:15px;
+	background-color:#E3A5A0;
+	border:#fff 1px solid;
+	margin-top:4px;
+	margin-right:6px;
+	vertical-align:text-top;
+	border-radius: 3px;
+}
+
+</style>
+
+</head>
+
+<body id="ver-en" style="background-color:#000000">
+  <header id="header">
+      <div class="container">
+         <div class="head_top flex">
+              <div class="head_logo"><strong>ANTA SPORTS</strong> (2020.HK)</div>
+              <div class="head_time">
+                   Date: 07 October 2026<br/> Time: 16:08:52              </div>
+          </div>
+
+          <div class="head_min">
+               <ul class="hkd_ul flex justify_between_stretch">
+                    <li>
+                        <div class="com_height flex justify_between_center">
+                            <span>HKD</span>
+                            <strong class='str_hkd stockcolor'>71.350</strong>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="bor_bot flex justify_between_center">
+                            <span>Change</span>
+                            <strong class="stockcolor"><i class="down"></i>0.050</strong>
+                        </div>
+                        <div class="bor_top flex justify_between_center">
+                            <span>%Change</span>
+                            <strong class="stockcolor"><i class="down"></i>0.070</strong>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="bor_bot flex justify_between_center">
+                            <span>Previous Close</span>
+                            <strong class="stockcolor">71.400</strong>
+                        </div>
+                        <div class="bor_top flex justify_between_center">
+                            <span>Open</span>
+                            <strong class="stockcolor">70.800</strong>
+                        </div>
+                    </li>
+
+                                        <li>
+                        <div class="bor_bot flex justify_between_center">
+                            <span>Day High</span>
+                            <strong class="stockcolor">71.700</strong>
+                        </div>
+                        <div class="bor_top flex justify_between_center">
+                            <span>Day Low</span>
+                            <strong class="stockcolor">70.800</strong>
+                        </div>
+                    </li>
+                                   </ul>
+          </div>
+
+          <div class="head_bot">
+               <ul class="range_ul flex justify_between_stretch">
+                                      <li>
+                       <div class="flex justify_between_center">
+                         <strong>day range</strong>
+                         <span>HKD 70.800 - HKD 71.700</span>
+                       </div>
+                   </li>
+                   <li>
+                       <div class="flex justify_between_center">
+                         <strong>volume</strong>
+                         <span>4.590M</span>
+                       </div>
+                   </li>
+                                      <li>
+                       <div class="flex justify_between_center">
+                         <strong>52wk range</strong>
+                         <span>HKD 65.340 - HKD 88.310</span>
+                       </div>                       
+                   </li>
+                   <li>
+                       <div class="flex justify_between_center">
+                         <strong>Turnover</strong>
+                         <span>HKD 327.140M</span>
+                       </div> 
+                   </li>
+                                      <li>
+                       <div class="flex justify_between_center">
+                         <strong>market cap</strong>
+                         <span>HKD 199.540B</span>
+                       </div>
+                   </li>
+                                      <li>
+                       <div class="flex justify_between_center">
+                          <strong>current p/e ratio (ttm)</strong>
+                          <span>13.117</span>
+                       </div>
+                   </li>
+                   <li>
+                       <div class="flex justify_between_center">
+                          <strong>Board Lot</strong>
+                          <span>200</span>
+                       </div> 
+                   </li>
+                   <li>
+                       <div class="flex justify_between_center">
+                         <strong>yield</strong>
+                         <span>3.434%</span>
+                       </div>
+                   </li>
+               </ul>
+          </div>
+
+      </div>
+  </header>
+
+<script>
+function changeperiod(id) {
+  document.getElementById("button1").classList.remove("active");
+  document.getElementById("button2").classList.remove("active");
+  document.getElementById("button3").classList.remove("active");
+  document.getElementById("button4").classList.remove("active");
+  document.getElementById("button5").classList.remove("active");
+  document.getElementById("button"+id).classList.add("active");
+
+  document.getElementById("action1").href="export/02020_"+id+"_en.png"; 
+  //alert("export/02020_"+id+"_en.png");
+  document.getElementById("action2value").value="export/02020_"+id+"_en.png"; 
+}
+
+function changetype(id) {
+  document.getElementById("button101").classList.remove("active");
+  document.getElementById("button102").classList.remove("active");
+  document.getElementById("button103").classList.remove("active");
+  document.getElementById("button"+id).classList.add("active");
+}
+
+function changema(id) {
+  if (document.getElementById("button"+id).classList.contains("active")) {
+	document.getElementById("button"+id).classList.remove("active");
+  } else {
+    document.getElementById("button"+id).classList.add("active");
+  }
+}
+</script>
+
+  <section id="warp">
+       <div class="container">
+            <div class="chat_main">                                           
+                <div class="stock_chat" id="stock_chat">
+<!--                    <div id="chart_header" class="flex justify_between_center">
+-->
+                        <div id="range_selector">
+                            <ul class="range_selector_ul flex justify_between_center">
+                                <li id="button1"><a href="javascript:void(0);" class="stockcolor-bg" onclick="javascript:changeperiod('1');">1M</a></li>
+                                <li id="button2" class="active"><a href="javascript:void(0);" class="stockcolor-bg" onclick="javascript:changeperiod('2');">3M</a></li>
+                                <li id="button3"><a href="javascript:void(0);" class="stockcolor-bg" onclick="javascript:changeperiod('3');">1Y</a></li>
+                                <li id="button4"><a href="javascript:void(0);" class="stockcolor-bg" onclick="javascript:changeperiod('4');">YTD</a></li>
+                                <li id="button5"><a href="javascript:void(0);" class="stockcolor-bg" onclick="javascript:changeperiod('5');">All</a></li>
+                            </ul>
+                        </div>
+<!--
+                        <div id="range_input">
+                            <div class="range_inputr_box flex justify_between_center">
+                              <ul>
+                                <li>
+                                  <label>From</label>
+                                  <span id="FromCalendarImage" class="DateSelection">
+                                      <input id="FromCalendarInput" value="yyyy/mm/dd" onFocus="if (value =='yyyy/mm/dd'){value =''}" onBlur="if (value ==''){value='yyyy/mm/dd'}">
+                                  </span>
+                                </li>
+                                <li>
+                                  <label>To</label>
+                                  <span id="ToCalendarImage" class="DateSelection">
+                                      <input id="ToCalendarInput" value="yyyy/mm/dd" onFocus="if (value =='yyyy/mm/dd'){value =''}" onBlur="if (value ==''){value='yyyy/mm/dd'}">
+                                  </span>
+                                </li>
+                                <li><a class="submit stockcolor-bg" href="javascript:void(0);">Submit</a></li>
+                              </ul> 
+
+                              <div id="PageFlickContainer">
+                                  <div id="PressReleases"></div>
+                                  <div id="PagesContainer"></div>        
+                              </div>
+
+                            </div>  
+                         
+
+
+                        </div>
+                    </div>-->
+
+                    <div class="chart_warp flex justify_between_star">
+                        <div class="chart_photo">
+                              <div id="chart"></div>
+                        </div>
+
+                        <div id="chartexport">
+                            <a id="action1" class="chart_png stockcolor-bg" href="export/02020_2_en.png" target="_blank">PNG</a>
+                            <a class="chart_pdf stockcolor-bg" href="csv.php?id=394&lang=en" target="_blank">CSV</a>
+                            <input type="hidden" id="action2value" value="export/02020_2_en.png">
+                            <a id="action2" class="chart_print stockcolor-bg" href="#0" onclick="PrintImage(''); return false;">PRINT</a>
+                        </div>
+                    </div>
+
+                        <div id="range_selector"> Type                            <ul class="range_selector_ul flex justify_between_center">
+                                <li id="button101" class="active"><a href="?id=394&lang=en&charttype=line" class="stockcolor-bg" onclick="javascript:changetype('101');">Line</a></li>
+                                <li id="button102" class=""><a href="?id=394&lang=en&charttype=candlestick" class="stockcolor-bg" onclick="javascript:changetype('102');">Candle Stick</a></li>
+                                <li id="button103" class=""><a href="?id=394&lang=en&charttype=ohlc" class="stockcolor-bg" onclick="javascript:changetype('103');">OHLC</a></li>
+                            </ul>
+                        </div>
+                        <br>
+                        <div id="range_selector"> Moving Average                            <ul class="range_selector_ul flex justify_between_center">
+                                <li id="button201"><a href="javascript:void(0);" class="stockcolor-bg" onclick="javascript:changema('201');"><span class="button201"></span>MA(10)</a></li>
+                                <li id="button202"><a href="javascript:void(0);" class="stockcolor-bg" onclick="javascript:changema('202');"><span class="button202"></span>MA(20)</a></li>
+                                <li id="button203"><a href="javascript:void(0);" class="stockcolor-bg" onclick="javascript:changema('203');"><span class="button203"></span>MA(50)</a></li>
+                            </ul>
+                        </div>
+
+<!--                    <div class="stock_main chart_photo">
+                       <ul class="input_ul flex justify_between_stretch">
+                            <li>
+                                <div class="flex justify_between_center">
+                                    <span class="stockcolor">Diagram type</span>
+                                    <div class="dropdown">
+                                      <select class="exchange-select" autocomplete="off">
+                                        <option value="">Line Graph</option>
+                                        <option value="">Bar</option>
+                                        <option value="">Candlestick</option>
+                                        <option value="">Mountain</option>
+                                      </select>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="flex justify_between_center">
+                                    <span class="stockcolor">Peers</span>
+                                    <div class="dropdown">
+                                      <select class="exchange-select" autocomplete="off">
+                                        <option value="">BEIJING ENT</option>
+                                        <option value="">GUOCO GROUP</option>
+                                        <option value="">FOSUN INTL</option>
+                                        <option value="">SHANGHAI IND H</option>
+                                      </select>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="flex justify_between_center">
+                                    <span class="stockcolor">Moving averages</span>
+                                    <div class="dropdown">
+                                      <select class="exchange-select" autocomplete="off">
+                                        <option value="">10 days</option>
+                                        <option value="">20 days</option>
+                                        <option value="">50 days</option>
+                                      </select>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="flex justify_between_center">
+                                    <span class="stockcolor">Indicators</span>
+                                    <div class="dropdown">
+                                      <select class="exchange-select" autocomplete="off">
+                                        <option value="">Earnings</option>
+                                        <option value="">Press Releases</option>
+                                        <option value="">Period High/Low</option>
+                                      </select>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="flex justify_between_center">
+                                    <span class="stockcolor">Volume</span>
+                                    <div class="dropdown">
+                                      <select class="exchange-select" autocomplete="off">
+                                        <option value="">On</option>
+                                        <option value="">Off</option>
+                                      </select>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="flex justify_between_center">
+                                    <span class="stockcolor">Average</span>
+                                    <div class="dropdown">
+                                      <select class="exchange-select" autocomplete="off">
+                                        <option value="">10</option>
+                                        <option value="">20</option>
+                                        <option value="">40</option>
+                                        <option value="">100</option>
+                                        <option value="">200</option>
+                                      </select>
+                                    </div>
+                                </div>
+                            </li>
+
+                       </ul>
+                    </div>-->
+                </div>
+
+                
+            </div>
+       </div>
+  </section>
+
+  <footer id="footer">
+       <div class="container">
+            <div class="Disclaimer">
+                 Quote delayed at least 15 minutes [ <a href="javascript:void(0)" onClick="MM_openBrWindow('disclaimer_en.php','disclaimer','width=450,height=300')">Disclaimer</a> ]
+                                  <br/>Information is provided by <a href="http://www.wisdomir.com/" target="_blank">WisdomIR</a>
+                             </div>
+       </div>
+  </footer>
+
+
+<script type="text/javascript">
+  function MM_openBrWindow(theURL,winName,features) {
+    window.open(theURL,winName,features);
+  }
+</script>
+
+<script type="text/javascript">
+    /// [binh.nguyen@euroland.com] Auto-generated: Multi-culture pack for JsCalendar and jQuery globalization plugin
+    (function(){function isRtl(){var a=document.body.getAttribute('dir')&&document.body.getAttribute('dir').toLowerCase()=='rtl';var b=document.body.getAttribute('latin')&&document.body.getAttribute('latin').toLowerCase()=='true';return(a&&!b)};var d=[['0','٠'],['1','١'],['2','٢'],['3','٣'],['4','٤'],['5','٥'],['6','٦'],['7','٧'],['8','٨'],['9','٩']];function toArabicNumber(a){var b=''+a;var c=d;for(var i=0;i<c.length;i++)b=b.replace(new RegExp(c[i][0],'ig'),c[i][1]);return b};function fromArabicNumber(a){var b=''+a;var c=d;for(var i=0;i<c.length;i++)b=b.replace(new RegExp(c[i][1],'ig'),c[i][0]);return b};if(typeof(Calendar) != 'undefined'){Calendar.LANG("en","English (United Kingdom)",{fdow:0,goToday:"Go Today",today:"today",wk:"wk",weekend:"0,6",AM:"AM",PM:"PM",mn:["January","February","March","April","May","June","July","August","September","October","November","December"],smn:["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],dn:["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],sdn:["Su","Mo","Tu","We","Th","Fr","Sa"],toLocalDigit:function(a){if(isRtl())return toArabicNumber(a);else return a},fromLocalDigit:function(a){if(isRtl())return fromArabicNumber(a);else return a}})}})();(function($){$.reSetupCultures=function(){if($.format&&$.cultures){var a=["January","February","March","April","May","June","July","August","September","October","November","December"],monthShortNames=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];a.push('');monthShortNames.push('');var b=$.cultures,en=b.en,standard=en.calendars.standard,culture=b['en-GB']=$.extend(true,{},en,{name:'en-GB',englishName:"English (United Kingdom)",nativeName:"English (United Kingdom)",language:'en',numberFormat:{',':",",'.':".",pattern:['-n'],decimals:2,groupSizes:[3],'+':"+",'-':"-",percent:{',':",",'.':".",pattern:["-n %","n %"],decimals:2,groupSizes:[3],symbol:"%"},currency:{pattern:['$-n','$n'],',':",",'.':".",symbol:"¥",decimals:2,groupSizes:[3]}},calendars:{standard:$.extend(true,{},standard,{firstDay:0,days:{names:["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],namesAbbr:["Sun","Mon","Tue","Wed","Thu","Fri","Sat"],namesShort:["Su","Mo","Tu","We","Th","Fr","Sa"]},months:{names:a,namesAbbr:monthShortNames},AM:['AM','AM'.toLowerCase(),'AM'],PM:['','PM'.toLowerCase(),'PM'],patterns:{d:"dd/MM/yyyy",D:"dd MMMM yyyy",F:"dd MMMM yyyy HH:mm:ss",M:"dd MMMM",Y:"MMMM yyyy",t:"HH:mm",T:"HH:mm:ss",f:"dd/MM/yyyy"+' '+"HH:mm"},'/':"/",':':":"})}},b['en-GB']);culture.calendar=culture.calendars.standard;b.defaultCultureName='en-GB'}}; $.reSetupCultures();})(jQuery);
+</script> 
+</body>
+</html>
+
+
+     <script language="javascript">
+//控制父页面iframe高度的方法
+setTimeout(function(){
+    var autoMessage = document.body.scrollHeight;
+    window.parent.postMessage(autoMessage,'*');
+}, 2000);
+</script>
