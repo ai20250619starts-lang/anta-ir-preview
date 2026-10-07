@@ -1,0 +1,27 @@
+---
+/**
+ * Up/down indicator: arrow + sign + value, plus screen-reader words. Colour (HK convention green up / red down)
+ * is only a secondary cue — never the only signal.
+ */
+import type { Lang } from '../../data/schemas';
+import { changeWords, direction, signed } from '../../lib/format';
+import Icon from './Icon.astro';
+interface Props {
+  value: number;
+  unit: '%' | 'ppt';
+  lang: Lang;
+  /** optional absolute change shown before the percentage, e.g. price change */
+  abs?: number;
+  digits?: number;
+  class?: string;
+}
+const { value, unit, lang, abs, digits = 1, class: cls = '' } = Astro.props;
+const dir = direction(value);
+const color = dir === 'up' ? 'text-up' : dir === 'down' ? 'text-down' : 'text-graphite';
+const unitText = unit === 'ppt' ? { en: ' ppt', tc: ' 個百分點', sc: ' 个百分点' }[lang] : '%';
+---
+<span class={`tabular inline-flex items-center gap-1 font-semibold ${color} ${cls}`}>
+  <Icon name={dir === 'up' ? 'arrow-up' : dir === 'down' ? 'arrow-down' : 'flat'} size={12} />
+  <span aria-hidden="true">{abs !== undefined && <>{signed(abs, 2)} </>}{abs !== undefined ? `(${signed(value, digits, unitText)})` : signed(value, digits, unitText)}</span>
+  <span class="sr-only">{changeWords(value, unit, lang)}</span>
+</span>

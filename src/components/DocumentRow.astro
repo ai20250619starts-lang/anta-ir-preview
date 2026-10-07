@@ -1,0 +1,79 @@
+---
+/**
+ * One document: date (+HKT time), type badge, title link, format + size, language versions.
+ * - approximate (file-path) dates show year only, marked "approx."; undated items say so
+ * - when the linked file is in another language (e.g. SC record -> TC PDF) a version note ("繁體版") is shown
+ */
+import type { DocumentRecord, Lang } from '../data/schemas';
+import { HTML_LANG, LANG_LABEL, LANG_NAME, TYPE_LABEL, pick, pickLang, t } from '../i18n/ui';
+import { docDate } from '../lib/format';
+import { availableLangs, fileInLang, formatLabel, primaryFile } from '../lib/docs';
+import { formatBytes } from '../data';
+import Badge from './ui/Badge.astro';
+import Icon from './ui/Icon.astro';
+
+interface Props { doc: DocumentRecord; lang: Lang; showType?: boolean; headingLevel?: 'h3' | 'p' }
+const { doc, lang, showType = true, headingLevel = 'p' } = Astro.props;
+const dd = docDate(doc, lang);
+const pf = primaryFile(doc, lang);
+const title = pick(doc.title, lang);
+const titleLang = pickLang(doc.title, lang);
+const langs = availableLangs(doc);
+const versionNote = pf?.isFallback ? t(lang, pf.versionLang === 'tc' ? 'tcVersion' : pf.versionLang === 'en' ? 'enVersion' : 'scVersion') : null;
+const size = pf?.file.sizeBytes ? formatBytes(pf.file.sizeBytes) : null;
+const H = headingLevel;
+---
+<article class="grid gap-x-6 gap-y-2 border-b border-mist py-4 md:grid-cols-[9.5rem_1fr_auto] md:items-start">
+  <div class="text-sm text-graphite">
+    {dd.kind === 'exact' && (
+      <time datetime={dd.iso} class="tabular block">
+        <span class="font-semibold text-ink">{dd.text}</span>
+        {dd.time && <span class="ml-2 md:ml-0 md:block">{dd.time} {t(lang, 'hkt')}</span>}
+      </time>
+    )}
+    {dd.kind === 'approx' && (
+      <span class="tabular inline-flex items-center gap-1.5">
+        <time datetime={dd.iso} class="font-semibold text-ink"><span aria-hidden="true">≈ </span>{dd.text}</time>
+        <abbr title={t(lang, 'approxNote')} class="no-underline"><Badge tone="outline">{t(lang, 'approx')}</Badge></abbr>
+        <span class="sr-only">{t(lang, 'approxNote')}</span>
+      </span>
+    )}
+    {dd.kind === 'undated' && <span class="italic">{dd.text}</span>}
+  </div>
+
+  <div class="min-w-0">
+    {showType && <p class="mb-1"><Badge>{TYPE_LABEL[doc.type][lang]}</Badge></p>}
+    <H class="text-base leading-snug font-medium">
+      {pf ? (
+        <a href={pf.file.url} class="text-ink hover:text-brand-ink hover:underline" lang={titleLang !== lang ? HTML_LANG[titleLang] : undefined} rel="noopener">
+          {title}<span class="sr-only"> ({formatLabel(pf.file, doc.type, lang)}{size ? `, ${size}` : ''}{versionNote ? `, ${versionNote}` : ''})</span>
+        </a>
+      ) : <span>{title}</span>}
+    </H>
+  </div>
+
+  <div class="flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-graphite md:justify-end md:pt-0.5">
+    {pf && (
+      <span class="inline-flex items-center gap-1 font-semibold text-ink" aria-hidden="true">
+        <Icon name={pf.file.format === 'pdf' ? 'file' : doc.type === 'webcast' ? 'play' : 'external'} size={14} />
+        {formatLabel(pf.file, doc.type, lang)}{size && <span class="tabular font-normal text-graphite"> · {size}</span>}
+      </span>
+    )}
+    {versionNote && <span lang={HTML_LANG[pf!.versionLang]}><Badge tone="brand">{versionNote}</Badge></span>}
+    <span class="inline-flex items-center gap-1">
+      <span class="sr-only">{t(lang, 'availableIn')}:</span>
+      {(['en', 'tc', 'sc'] as Lang[]).map((L) => {
+        const f = langs.includes(L) ? fileInLang(doc, L) : null;
+        return f ? (
+          <a href={f.url} hreflang={HTML_LANG[L]} lang={HTML_LANG[L]} class="inline-flex min-h-6 min-w-6 items-center justify-center rounded-sm border border-mist px-1 text-ink hover:border-ink" rel="noopener">
+            <span aria-hidden="true">{LANG_LABEL[L]}</span><span class="sr-only">{LANG_NAME[L]}</span>
+          </a>
+        ) : (
+          <span class="inline-flex min-h-6 min-w-6 items-center justify-center rounded-sm px-1 text-stone line-through" title={`${LANG_NAME[L]}: ${t(lang, 'langUnavailable')}`}>
+            <span aria-hidden="true">{LANG_LABEL[L]}</span><span class="sr-only">{LANG_NAME[L]}: {t(lang, 'langUnavailable')}</span>
+          </span>
+        );
+      })}
+    </span>
+  </div>
+</article>

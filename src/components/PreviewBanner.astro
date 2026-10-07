@@ -1,0 +1,12 @@
+---
+import type { Lang } from '../data/schemas';
+import { t } from '../i18n/ui';
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+---
+<div class="on-dark bg-ink text-white" role="note">
+  <p class="container-page flex items-center justify-center gap-2 py-2 text-center text-xs">
+    <span class="rounded-sm bg-[#ffd84d] px-1.5 py-0.5 text-2xs font-bold tracking-wider text-ink">PREVIEW</span>
+    <span>{t(lang, 'previewBanner')}</span>
+  </p>
+</div>

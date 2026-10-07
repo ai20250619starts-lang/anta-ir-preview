@@ -1,0 +1,42 @@
+---
+/** KPI card from a financial-highlights row: latest FY value, YoY change (arrow + sign), 6-year mini bars. */
+import type { Lang } from '../data/schemas';
+import type { FinancialHighlightsFile } from '../data/schemas';
+import { pick, t } from '../i18n/ui';
+import { yoy } from '../lib/format';
+import Change from './ui/Change.astro';
+
+type Row = FinancialHighlightsFile['rows'][number];
+interface Props { row: Row; years: number[]; lang: Lang; label?: string }
+const { row, years, lang, label } = Astro.props;
+const ys = [...years].sort((a, b) => a - b);
+const fy = ys[ys.length - 1];
+const prev = ys[ys.length - 2];
+const ch = yoy(row.values[String(fy)], row.values[String(prev)], row.unit);
+const vals = ys.map((y) => row.values[String(y)] ?? 0);
+const max = Math.max(...vals);
+const unit = row.unit === 'rmb-million' ? t(lang, 'rmbMillion') : row.unit === 'rmb-cents' ? t(lang, 'rmbCents') : '';
+const display = row.display[String(fy)] ?? '—';
+const name = label ?? pick(row.label, lang).replace(/\s*[（(].*?[)）]\s*$/, '');
+---
+<article class="flex flex-col rounded-card border border-mist bg-white p-5">
+  <h3 class="text-sm font-semibold text-graphite">{name}</h3>
+  <p class="mt-3 flex items-baseline gap-2">
+    <span class="display-num text-4xl text-ink">{display}</span>
+    {unit && <span class="text-xs text-graphite">{unit}</span>}
+  </p>
+  <p class="mt-1 text-xs text-graphite">
+    {t(lang, 'fy')}{lang === 'en' ? ' ' : ''}{fy}
+    {ch && <> · <Change value={ch.value} unit={ch.unit} lang={lang} class="text-xs" /> <span>{t(lang, 'vsPrior')}</span></>}
+  </p>
+  <div class="mt-auto pt-4">
+    <svg viewBox="0 0 120 36" class="h-9 w-full" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+      {vals.map((v, i) => {
+        const h = max ? Math.max(2, (v / max) * 34) : 2;
+        return <rect x={i * 20 + 3} y={36 - h} width="14" height={h} fill={i === vals.length - 1 ? 'var(--color-brand)' : 'var(--color-mist)'} />;
+      })}
+    </svg>
+    <p class="tabular mt-1 flex justify-between text-2xs text-graphite" aria-hidden="true"><span>{ys[0]}</span><span>{fy}</span></p>
+    <p class="sr-only">{ys.map((y) => `${y}: ${row.display[String(y)] ?? '—'}`).join('; ')}</p>
+  </div>
+</article>

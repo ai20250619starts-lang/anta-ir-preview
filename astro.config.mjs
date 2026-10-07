@@ -22,7 +22,7 @@ export default defineConfig({
   i18n: {
     locales: ['en', { path: 'tc', codes: ['zh-Hant', 'zh-HK'] }, { path: 'sc', codes: ['zh-Hans', 'zh-CN'] }],
     defaultLocale: 'en',
-    routing: { prefixDefaultLocale: true, redirectToDefaultLocale: true },
+    routing: { prefixDefaultLocale: true, redirectToDefaultLocale: false },
   },
   vite: { plugins: [tailwindcss()] },
 });

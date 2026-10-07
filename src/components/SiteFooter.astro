@@ -1,0 +1,51 @@
+---
+import type { Lang } from '../data/schemas';
+import { t } from '../i18n/ui';
+import { NAV, UTILITY } from '../lib/nav';
+import { withBase } from '../lib/paths';
+import { contacts } from '../data';
+import LangSwitcher from './LangSwitcher.astro';
+import { Image } from 'astro:assets';
+import logoWhite from '../assets/images/logo.png';
+
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const href = (p: string) => withBase(`${lang}/${p}`);
+const irEmail = contacts.emails.find((e) => e.key === 'investor-relations')?.email;
+const year = new Date().getFullYear();
+---
+<footer class="on-dark mt-auto bg-ink text-white">
+  <div class="container-page grid gap-10 py-12 md:grid-cols-[1.2fr_2fr]">
+    <div>
+      <Image src={logoWhite} alt="ANTA Sports" width={72} height={40} class="h-10 w-auto" />
+      <p class="mt-4 max-w-sm text-sm text-[#d6d3ce]">{t(lang, 'copyright')} · HKEX 2020 / 82020</p>
+      {irEmail && (
+        <p class="mt-3 text-sm"><a class="underline decoration-1 underline-offset-4 hover:decoration-2" href={`mailto:${irEmail}`}>{irEmail}</a></p>
+      )}
+      <p class="mt-6 font-display text-xl tracking-wide text-white">{t(lang, 'slogan')}</p>
+    </div>
+    <nav aria-label={lang === 'en' ? 'Footer' : lang === 'tc' ? '頁尾' : '页尾'} class="grid grid-cols-2 gap-x-6 gap-y-8 sm:grid-cols-4">
+      {NAV.map((s) => (
+        <div>
+          <h2 class="text-xs font-semibold tracking-wider text-[#d6d3ce] uppercase">{s.label[lang]}</h2>
+          <ul class="mt-3 space-y-1">
+            {s.children.map((c) => <li><a href={href(c.path)} class="inline-flex min-h-8 items-center text-sm text-white hover:underline">{c.label[lang]}</a></li>)}
+          </ul>
+        </div>
+      ))}
+    </nav>
+  </div>
+  <div class="border-t border-white/15">
+    <div class="container-page flex flex-col gap-4 py-6 text-xs text-[#d6d3ce] md:flex-row md:items-center md:justify-between">
+      <p class="max-w-3xl">{t(lang, 'footerDisclaimer')}</p>
+      <div class="flex flex-wrap items-center gap-x-4 gap-y-2">
+        {UTILITY.map((u) => <a href={href(u.path)} class="text-white hover:underline">{u.label[lang]}</a>)}
+        <a href={href('design/')} class="text-white hover:underline">{t(lang, 'design')}</a>
+        <a href={href('debug/')} class="text-white hover:underline">{t(lang, 'debug')}</a>
+        <a href={`https://ir.anta.com/${lang}/`} class="text-white hover:underline" rel="noopener">{t(lang, 'officialSite')}</a>
+        <span>© {year}</span>
+      </div>
+    </div>
+    <div class="container-page pb-6"><LangSwitcher lang={lang} variant="full" class="[&_a]:!text-white [&_a]:decoration-white" /></div>
+  </div>
+</footer>

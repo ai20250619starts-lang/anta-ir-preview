@@ -1,5 +1,5 @@
 ---
-// Static redirect to the default language (no server needed); respects PREVIEW_BASE.
+// Root page: PREVIEW banner + language choice, then a static redirect to /en/ (no server needed); respects PREVIEW_BASE.
 import { withBase } from '../lib/paths';
 const target = withBase('en/');
 ---
@@ -7,12 +7,23 @@ const target = withBase('en/');
 <html lang="en">
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="robots" content="noindex, nofollow, noarchive" />
-    <meta http-equiv="refresh" content={`0; url=${target}`} />
+    <meta http-equiv="refresh" content={`1; url=${target}`} />
     <title>ANTA Sports IR — Preview</title>
+    <style>
+      body { margin: 0; font-family: system-ui, sans-serif; color: #111; }
+      .b { background: #111; color: #fff; padding: .6rem 1rem; text-align: center; font-size: .8rem; }
+      .b strong { background: #ffd84d; color: #111; padding: .1rem .4rem; margin-right: .4rem; }
+      main { padding: 3rem 1rem; text-align: center; }
+      a { color: #b70000; margin: 0 .5rem; }
+    </style>
   </head>
   <body>
-    <p>PREVIEW — not the official ANTA Sports website.</p>
-    <a href={target}>English</a> · <a href={withBase('tc/')}>繁體中文</a> · <a href={withBase('sc/')}>简体中文</a>
+    <div class="b" role="note"><strong>PREVIEW</strong>Not the official ANTA Sports website · 並非安踏體育官方網站 · 并非安踏体育官方网站</div>
+    <main>
+      <h1>ANTA Sports Investor Relations — Preview</h1>
+      <p><a href={target}>English</a> · <a href={withBase('tc/')} lang="zh-Hant-HK">繁體中文</a> · <a href={withBase('sc/')} lang="zh-Hans-CN">简体中文</a></p>
+    </main>
   </body>
 </html>

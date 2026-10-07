@@ -1,0 +1,66 @@
+---
+/** Results-period hub: one card per reporting period linking announcement, press release, presentation, webcast, report. */
+import type { Lang } from '../data/schemas';
+import { HTML_LANG, t } from '../i18n/ui';
+import { formatDate } from '../lib/format';
+import { primaryFile, formatLabel } from '../lib/docs';
+import { periodLabel, type ResultsPeriod, type SlotKey } from '../lib/results';
+import { withBase } from '../lib/paths';
+import { formatBytes } from '../data';
+import Icon from './ui/Icon.astro';
+import Badge from './ui/Badge.astro';
+
+interface Props { period: ResultsPeriod; lang: Lang; feature?: boolean; headingLevel?: 'h2' | 'h3' }
+const { period, lang, feature = false, headingLevel = 'h3' } = Astro.props;
+const H = headingLevel;
+const slots: { key: SlotKey; label: string; icon: 'file' | 'play' }[] = [
+  { key: 'report', label: t(lang, 'report'), icon: 'file' },
+  { key: 'presentation', label: t(lang, 'presentation'), icon: 'file' },
+  { key: 'webcast', label: t(lang, 'webcast'), icon: 'play' },
+  { key: 'announcement', label: t(lang, 'announcement'), icon: 'file' },
+  { key: 'pressRelease', label: t(lang, 'pressRelease'), icon: 'file' },
+];
+const reportTitle = period.half === 'annual' ? { en: 'Annual report', tc: '年報', sc: '年报' }[lang] : { en: 'Interim report', tc: '中期報告', sc: '中期报告' }[lang];
+---
+<article class={`rounded-card border ${feature ? 'border-ink' : 'border-mist'} bg-white`}>
+  <div class={`flex flex-wrap items-start justify-between gap-3 border-b border-mist p-5 ${feature ? 'bg-paper' : ''}`}>
+    <div>
+      <p class="eyebrow">{t(lang, 'latestResults')}</p>
+      <H class="mt-1 text-xl font-bold md:text-2xl">{periodLabel(period, lang)}</H>
+      {period.date && <p class="mt-1 text-sm text-graphite">{t(lang, 'announcedOn')}: <time datetime={period.date}>{formatDate(period.date, lang)}</time></p>}
+    </div>
+    <span class="display-num text-3xl text-brand" aria-hidden="true">{period.half === 'annual' ? 'FY' : 'H1'}{String(period.fy).slice(2)}</span>
+  </div>
+  <ul class="divide-y divide-mist">
+    {slots.map((s) => {
+      const d = period.docs[s.key];
+      const pf = d ? primaryFile(d, lang) : null;
+      const label = s.key === 'report' ? reportTitle : s.label;
+      const note = pf?.isFallback ? t(lang, pf.versionLang === 'tc' ? 'tcVersion' : pf.versionLang === 'en' ? 'enVersion' : 'scVersion') : null;
+      return (
+        <li>
+          {pf && d ? (
+            <a href={pf.file.url} rel="noopener" class="group flex min-h-14 items-center justify-between gap-3 px-5 py-3 hover:bg-paper">
+              <span class="flex items-center gap-3">
+                <Icon name={s.icon} size={18} class="text-brand-ink" />
+                <span class="font-semibold text-ink group-hover:underline">{label}</span>
+                {note && <span lang={HTML_LANG[pf.versionLang]}><Badge tone="brand">{note}</Badge></span>}
+              </span>
+              <span class="tabular text-xs text-graphite">
+                {formatLabel(pf.file, d.type, lang)}{pf.file.sizeBytes ? ` · ${formatBytes(pf.file.sizeBytes)}` : ''}
+              </span>
+            </a>
+          ) : (
+            <span class="flex min-h-14 items-center justify-between gap-3 px-5 py-3 text-graphite">
+              <span class="flex items-center gap-3"><Icon name={s.icon} size={18} class="text-stone" />{label}</span>
+              <span class="text-xs">{t(lang, 'notYetAvailable')}</span>
+            </span>
+          )}
+        </li>
+      );
+    })}
+  </ul>
+  <div class="border-t border-mist px-5 py-3">
+    <a href={withBase(`${lang}/results/`)} class="inline-flex min-h-11 items-center gap-1.5 text-sm font-semibold text-brand-ink underline decoration-1 underline-offset-4 hover:decoration-2">{t(lang, 'resultsCentre')}<Icon name="arrow-right" size={14} /></a>
+  </div>
+</article>

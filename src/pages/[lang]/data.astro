@@ -10,6 +10,7 @@ const lang = Astro.params.lang as Lang;
 const L = (v: string[] | undefined) => v ?? [];
 ---
 <Base lang={lang} title={t(lang, 'data')} path="data/">
+<div class="container-page py-8">
   <h1 class="text-2xl font-bold">{t(lang, 'data')}</h1>
 
   <section class="mt-8">
@@ -66,4 +67,5 @@ const L = (v: string[] | undefined) => v ?? [];
     {L(company.profile[lang]).map((p) => <p class="mt-2 text-sm">{p}</p>)}
     <p class="mt-2 text-sm">ESG: <a class="text-brand" href={company.esg.siteUrl[lang]}>{company.esg.siteUrl[lang]}</a></p>
   </section>
+</div>
 </Base>

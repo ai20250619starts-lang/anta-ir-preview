@@ -1,0 +1,81 @@
+---
+/** Minimal design-system showcase: tokens + every core component with real data. */
+import Base from '../../layouts/Base.astro';
+import type { Lang } from '../../data/schemas';
+import { calendar, contacts, documents, highlights } from '../../data';
+import { langPaths, pick, t } from '../../i18n/ui';
+import { buildResultsPeriods, latestResults } from '../../lib/results';
+import QuoteStrip from '../../components/QuoteStrip.astro';
+import ResultsHubCard from '../../components/ResultsHubCard.astro';
+import DocumentRow from '../../components/DocumentRow.astro';
+import KpiCard from '../../components/KpiCard.astro';
+import CalendarItem from '../../components/CalendarItem.astro';
+import ContactCard from '../../components/ContactCard.astro';
+import SectionHeading from '../../components/ui/SectionHeading.astro';
+import Button from '../../components/ui/Button.astro';
+import Badge from '../../components/ui/Badge.astro';
+
+export const getStaticPaths = langPaths;
+const lang = Astro.params.lang as Lang;
+const docs = documents.documents;
+// samples: exact date+time, SC->TC fallback, approximate (file-path) date, undated
+const samples = [
+  docs.find((d) => d.dateSource === 'listing' && d.time && d.files.sc?.fileLang === 'tc'),
+  docs.find((d) => d.dateSource === 'file-path'),
+  docs.find((d) => !d.date),
+].filter((d): d is NonNullable<typeof d> => !!d);
+const swatches = [
+  ['brand', 'bg-brand', '--brand-red (accent only)'],
+  ['brand-ink', 'bg-brand-ink', 'text-safe red (links, buttons)'],
+  ['ink', 'bg-ink', '#111111'],
+  ['graphite', 'bg-graphite', '#4c4a46'],
+  ['stone', 'bg-stone', '#6b6862'],
+  ['mist', 'bg-mist', '#d9d6d0'],
+  ['sand', 'bg-sand', '#ebe8e3'],
+  ['paper', 'bg-paper', '#f6f5f3'],
+  ['up', 'bg-up', '#0b6e3a'],
+];
+const sizes = ['text-5xl', 'text-4xl', 'text-3xl', 'text-2xl', 'text-xl', 'text-lg', 'text-base', 'text-sm', 'text-xs'];
+const ev = [...calendar.events].sort((a, b) => b.date.localeCompare(a.date))[0];
+const hk = contacts.offices[0];
+---
+<Base lang={lang} title={t(lang, 'design')}>
+  <div class="container-page space-y-14 py-section">
+    <h1 class="text-3xl font-bold md:text-4xl">{t(lang, 'design')}</h1>
+
+    <section aria-labelledby="ds-c"><SectionHeading id="ds-c" title="Colour" description="One brand setting (--brand-red, placeholder #FF0000); brand-ink is derived from it for AA text contrast." />
+      <ul class="grid grid-cols-3 gap-3 sm:grid-cols-5 lg:grid-cols-9">
+        {swatches.map(([n, c, note]) => <li class="text-xs"><span class={`block h-14 rounded-card border border-mist ${c}`}></span><span class="mt-1 block font-semibold">{n}</span><span class="text-graphite">{note}</span></li>)}
+      </ul>
+    </section>
+
+    <section aria-labelledby="ds-t"><SectionHeading id="ds-t" title="Type" description="Inter (self-hosted) + system CJK stacks; Barlow Condensed for display numerals; tabular figures for data." />
+      <ul class="space-y-1">{sizes.map((s) => <li class={s}>{s} · 安踏體育 2026 <span class="tabular">1,234.56</span></li>)}</ul>
+      <p class="display-num mt-3 text-5xl">80,219 <span class="text-brand">74.50</span></p>
+    </section>
+
+    <section aria-labelledby="ds-b"><SectionHeading id="ds-b" title="Buttons, badges, links" action={{ href: '#ds-b', label: 'Section action' }} />
+      <div class="flex flex-wrap items-center gap-3">
+        <Button href="#ds-b">Primary</Button><Button href="#ds-b" variant="secondary">Secondary</Button><Button href="#ds-b" variant="text">Text link</Button>
+        <Badge>Neutral</Badge><Badge tone="brand">繁體版</Badge><Badge tone="outline">{t(lang, 'approx')}</Badge><Badge tone="notice">{t(lang, 'illustrative')}</Badge><Badge tone="dark">Dark</Badge>
+        <a href="#ds-b" class="link">Inline link</a>
+      </div>
+      <div class="on-dark mt-4 flex gap-3 rounded-card bg-ink p-4"><Button href="#ds-b" variant="inverse">Inverse</Button></div>
+    </section>
+
+    <section aria-labelledby="ds-q"><SectionHeading id="ds-q" title="Quote strip" /><QuoteStrip lang={lang} /></section>
+
+    <section aria-labelledby="ds-d"><SectionHeading id="ds-d" title="Document rows" description="Exact date + HKT time with 繁體版 note on SC · approximate year · undated." />
+      <div class="border-t border-ink">{samples.map((d) => <DocumentRow doc={d} lang={lang} headingLevel="h3" />)}</div>
+    </section>
+
+    <section aria-labelledby="ds-r" class="grid gap-8 lg:grid-cols-2">
+      <div><SectionHeading id="ds-r" title="Results hub card" /><ResultsHubCard period={latestResults(buildResultsPeriods(docs))} lang={lang} /></div>
+      <div><SectionHeading title="Calendar item & contact card" level={2} />{ev && <CalendarItem event={ev} lang={lang} past />}<div class="mt-4"><ContactCard lang={lang} title={pick(hk.name, lang)} address={pick(hk.address, lang)} phones={hk.phones} emails={contacts.emails.map((e) => ({ label: pick(e.label, lang), email: e.email }))} /></div></div>
+    </section>
+
+    <section aria-labelledby="ds-k"><SectionHeading id="ds-k" title="KPI cards" />
+      <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">{highlights.rows.slice(0, 4).map((r) => <KpiCard row={r} years={highlights.years} lang={lang} />)}</div>
+    </section>
+  </div>
+</Base>

@@ -1,0 +1,70 @@
+---
+/**
+ * Share price strip using the MOCK quote (data/quote.mock.json). Always labelled "Illustrative" (high-visibility
+ * badge) and carries an explicit ≥15-minute delay note + as-of time in HKT, as a licensed feed would require.
+ * Direction = arrow + sign + %, colour only as a secondary cue.
+ */
+import type { Lang } from '../data/schemas';
+import { quote } from '../data';
+import { t } from '../i18n/ui';
+import { formatDate, formatNumber } from '../lib/format';
+import { withBase } from '../lib/paths';
+import Change from './ui/Change.astro';
+import Icon from './ui/Icon.astro';
+
+interface Props { lang: Lang; variant?: 'full' | 'compact'; class?: string }
+const { lang, variant = 'full', class: cls = '' } = Astro.props;
+const q = quote;
+const asOfDate = q.asOf.slice(0, 10);
+const asOfTime = q.asOf.slice(11, 16);
+// sparkline
+const closes = q.series.map((p) => p.close);
+const min = Math.min(...closes), max = Math.max(...closes);
+const W = 160, H = 40;
+const pts = closes.map((c, i) => `${((i / (closes.length - 1)) * W).toFixed(1)},${(H - 2 - ((c - min) / (max - min || 1)) * (H - 4)).toFixed(1)}`).join(' ');
+const stats: [string, string][] = [
+  [t(lang, 'open'), q.open.toFixed(2)],
+  [t(lang, 'high'), q.high.toFixed(2)],
+  [t(lang, 'low'), q.low.toFixed(2)],
+  [t(lang, 'prevClose'), q.prevClose.toFixed(2)],
+  [t(lang, 'volume'), formatNumber(q.volume)],
+  [t(lang, 'week52'), `${q.week52Low.toFixed(2)} – ${q.week52High.toFixed(2)}`],
+];
+const label = { en: 'Share price (illustrative)', tc: '股價（示意）', sc: '股价（示意）' }[lang];
+---
+<section aria-label={label} class={`rounded-card border border-mist bg-white ${cls}`}>
+  <div class="flex items-center justify-between gap-3 border-b border-dashed border-[#c9a400] bg-[#fff6cc] px-4 py-2">
+    <p class="flex items-center gap-2 text-xs font-bold tracking-wider text-ink uppercase">
+      <span class="rounded-sm bg-[#ffd84d] px-1.5 py-0.5 ring-1 ring-ink/20">{t(lang, 'illustrative')}</span>
+      <span class="normal-case tracking-normal font-semibold">{t(lang, 'illustrativeLong')}</span>
+    </p>
+  </div>
+  <div class={`grid gap-4 p-4 ${variant === 'full' ? 'md:grid-cols-[auto_1fr_auto] md:items-center md:gap-8' : ''}`}>
+    <div>
+      <p class="text-sm text-graphite"><span class="font-semibold text-ink">{q.symbol}</span> · HKD</p>
+      <p class="mt-1 flex flex-wrap items-baseline gap-x-3 gap-y-1">
+        <span class="display-num text-5xl leading-none text-ink">{q.last.toFixed(2)}</span>
+        <Change value={q.changePct} abs={q.change} unit="%" lang={lang} digits={2} class="text-base" />
+      </p>
+      <p class="mt-2 flex items-center gap-1.5 text-xs font-semibold text-ink">
+        <Icon name="calendar" size={14} />
+        <span>{t(lang, 'delayed15')}</span>
+        <span class="font-normal text-graphite">· {t(lang, 'asOf')} <time datetime={q.asOf} class="tabular">{formatDate(asOfDate, lang)} {asOfTime} {t(lang, 'hkt')}</time></span>
+      </p>
+    </div>
+    {variant === 'full' && (
+      <dl class="tabular grid grid-cols-2 gap-x-6 gap-y-1 text-sm sm:grid-cols-3">
+        {stats.map(([k, v]) => (
+          <div class="flex justify-between gap-3 border-b border-sand py-1"><dt class="text-graphite">{k}</dt><dd class="font-medium text-ink">{v}</dd></div>
+        ))}
+      </dl>
+    )}
+    <div class="flex items-center gap-4 md:flex-col md:items-end">
+      <svg viewBox={`0 0 ${W} ${H}`} width={W} height={H} class="h-10 w-40 text-ink" aria-hidden="true" focusable="false">
+        <polyline points={pts} fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" />
+      </svg>
+      <a href={withBase(`${lang}/share/`)} class="inline-flex min-h-11 items-center gap-1.5 text-sm font-semibold text-brand-ink underline decoration-1 underline-offset-4 hover:decoration-2">{t(lang, 'quoteDetails')}<Icon name="arrow-right" size={14} /></a>
+    </div>
+  </div>
+  {variant === 'full' && <p class="border-t border-mist px-4 py-2 text-xs text-graphite">{q.disclaimer[lang]}</p>}
+</section>

@@ -1,0 +1,38 @@
+---
+import type { CalendarFile, Lang } from '../data/schemas';
+import { pick, t } from '../i18n/ui';
+import { dayMonth, formatDate } from '../lib/format';
+import Badge from './ui/Badge.astro';
+import Icon from './ui/Icon.astro';
+
+type Ev = CalendarFile['events'][number];
+interface Props { event: Ev; lang: Lang; past?: boolean }
+const { event, lang, past = false } = Astro.props;
+const dm = dayMonth(event.date, lang);
+const kind = {
+  results: { en: 'Results', tc: '業績', sc: '业绩' },
+  agm: { en: 'AGM', tc: '股東週年大會', sc: '股东周年大会' },
+  egm: { en: 'EGM', tc: '股東特別大會', sc: '股东特别大会' },
+  'investor-day': { en: 'Investor day', tc: '投資者日', sc: '投资者日' },
+  dividend: { en: 'Dividend', tc: '股息', sc: '股息' },
+  other: { en: 'Event', tc: '活動', sc: '活动' },
+}[event.kind][lang];
+const ics = event.icsUrl;
+---
+<article class="flex gap-4 border-b border-mist py-4">
+  <div class={`flex w-16 shrink-0 flex-col items-center justify-center rounded-card py-2 text-center ${past ? 'bg-sand text-ink' : 'bg-ink text-white on-dark'}`} aria-hidden="true">
+    <span class="text-2xs font-semibold tracking-wider">{dm.month}</span>
+    <span class="display-num text-3xl leading-none">{dm.day}</span>
+    <span class="tabular text-2xs">{dm.year}</span>
+  </div>
+  <div class="min-w-0">
+    <p class="mb-1 flex flex-wrap gap-1.5"><Badge tone={past ? 'outline' : 'brand'}>{kind}</Badge>{past && <Badge tone="outline">{lang === 'en' ? 'Past' : lang === 'tc' ? '已舉行' : '已举行'}</Badge>}</p>
+    <h3 class="font-semibold leading-snug">{pick(event.title, lang)}</h3>
+    <p class="mt-0.5 text-sm text-graphite"><time datetime={event.date}>{formatDate(event.date, lang)}</time></p>
+    {ics && !past && (
+      <a href={ics} class="mt-1 inline-flex min-h-11 items-center gap-1.5 text-sm font-semibold text-brand-ink underline decoration-1 underline-offset-4 hover:decoration-2" rel="noopener">
+        <Icon name="calendar" size={14} />{t(lang, 'addToCalendar')}<span class="sr-only"> (.ics)</span>
+      </a>
+    )}
+  </div>
+</article>

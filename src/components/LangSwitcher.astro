@@ -1,0 +1,31 @@
+---
+/**
+ * Language switcher that keeps the current page (path from the build; query + #hash added client-side by the
+ * inline script in Base.astro, via [data-lang-switch]).
+ */
+import type { Lang } from '../data/schemas';
+import { HTML_LANG, LANGS, LANG_LABEL, LANG_NAME, t } from '../i18n/ui';
+import { switchLangPath } from '../lib/i18n-path';
+interface Props { lang: Lang; class?: string; variant?: 'compact' | 'full' }
+const { lang, class: cls = '', variant = 'compact' } = Astro.props;
+const base = import.meta.env.BASE_URL;
+const pathname = Astro.url.pathname;
+---
+<nav aria-label={t(lang, 'language')} class={cls}>
+  <ul class="flex items-center gap-1">
+    {LANGS.map((l) => (
+      <li>
+        <a
+          href={switchLangPath(pathname, base, l)}
+          hreflang={HTML_LANG[l]}
+          lang={HTML_LANG[l]}
+          data-lang-switch
+          aria-current={l === lang ? 'true' : undefined}
+          class={`inline-flex min-h-11 min-w-11 items-center justify-center rounded-sm px-2 text-sm ${l === lang ? 'font-bold text-ink underline decoration-brand decoration-2 underline-offset-[6px]' : 'text-graphite hover:text-ink'}`}
+        >
+          {variant === 'full' ? LANG_NAME[l] : <><span aria-hidden="true">{LANG_LABEL[l]}</span><span class="sr-only">{LANG_NAME[l]}</span></>}
+        </a>
+      </li>
+    ))}
+  </ul>
+</nav>

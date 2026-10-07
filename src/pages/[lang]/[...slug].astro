@@ -1,0 +1,27 @@
+---
+/** "Coming soon" placeholder for every IA page not built yet (carries the banner, gate and noindex via Base). */
+import Base from '../../layouts/Base.astro';
+import type { Lang } from '../../data/schemas';
+import { LANGS, t } from '../../i18n/ui';
+import { findNav, stubPaths } from '../../lib/nav';
+import { withBase } from '../../lib/paths';
+import Button from '../../components/ui/Button.astro';
+
+export const getStaticPaths = () =>
+  LANGS.flatMap((lang) => stubPaths().map((p) => ({ params: { lang, slug: p.replace(/\/$/, '') } })));
+const lang = Astro.params.lang as Lang;
+const path = `${Astro.params.slug}/`;
+const { section, link } = findNav(path);
+const title = link?.label[lang] ?? path;
+---
+<Base lang={lang} title={title}>
+  <div class="container-page py-section">
+    {section && section.label[lang] !== title && <p class="eyebrow">{section.label[lang]}</p>}
+    <h1 class="mt-2 text-3xl font-bold md:text-4xl">{title}</h1>
+    {link?.blurb && <p class="mt-3 max-w-2xl text-lg text-graphite">{link.blurb[lang]}</p>}
+    <p class="mt-6 inline-flex items-center gap-2 rounded-card border border-dashed border-stone px-4 py-3 text-graphite">
+      <strong class="text-ink">{t(lang, 'comingSoon')}</strong> — {t(lang, 'comingSoonBody')}
+    </p>
+    <div class="mt-8"><Button href={withBase(`${lang}/`)} variant="secondary">{t(lang, 'backHome')}</Button></div>
+  </div>
+</Base>

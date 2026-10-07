@@ -1,0 +1,40 @@
+---
+/** Monochrome logo strip of the brand portfolio (logos rendered black for a calm, consistent row). */
+import type { Lang } from '../data/schemas';
+import { brands } from '../data';
+import { t } from '../i18n/ui';
+import { localImage } from '../lib/images';
+import { withBase } from '../lib/paths';
+import { Image } from 'astro:assets';
+
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const list = [...brands.brands].sort((a, b) => a.order - b.order);
+const groups = [
+  { key: 'in-house', label: t(lang, 'inHouse'), items: list.filter((b) => b.pillar === 'in-house') },
+  { key: 'strategic-investment', label: t(lang, 'strategic'), items: list.filter((b) => b.pillar === 'strategic-investment') },
+];
+---
+<div class="grid gap-8 lg:grid-cols-[3fr_1fr]">
+  {groups.map((g) => (
+    <div>
+      <h3 class="eyebrow mb-3">{g.label}</h3>
+      <ul class={`grid gap-px overflow-hidden rounded-card border border-mist bg-mist ${g.key === 'in-house' ? 'grid-cols-2 sm:grid-cols-3 md:grid-cols-6 lg:grid-cols-3 xl:grid-cols-6' : 'grid-cols-2 lg:grid-cols-1'}`}>
+        {g.items.map((b) => {
+          const img = localImage(b.logo?.src);
+          return (
+            <li class="bg-white">
+              <a href={withBase(`${lang}/why-anta/brands/#${b.key}`)} class="flex h-24 items-center justify-center p-4 hover:bg-paper">
+                {img ? (
+                  <Image src={img} alt={b.name} height={48} class="max-h-12 w-auto object-contain brightness-0" />
+                ) : (
+                  <span class="font-display text-xl tracking-wide">{b.name}</span>
+                )}
+              </a>
+            </li>
+          );
+        })}
+      </ul>
+    </div>
+  ))}
+</div>

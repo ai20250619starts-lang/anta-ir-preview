@@ -1,0 +1,42 @@
+---
+/**
+ * Button / button-styled link.
+ *  primary   — white on text-safe brand red (brand-ink, ≥4.5:1)
+ *  secondary — ink outline
+ *  inverse   — for dark backgrounds
+ *  text      — underlined text link with arrow
+ */
+import Icon from './Icon.astro';
+interface Props {
+  href?: string;
+  variant?: 'primary' | 'secondary' | 'inverse' | 'text';
+  size?: 'sm' | 'md';
+  external?: boolean;
+  icon?: 'arrow-right' | 'external' | 'file' | 'mail' | 'bell' | 'play' | 'calendar' | null;
+  srSuffix?: string;
+  class?: string;
+  type?: 'button' | 'submit';
+  [k: string]: unknown;
+}
+const { href, variant = 'primary', size = 'md', external = false, icon = external ? 'external' : 'arrow-right', srSuffix, class: cls = '', type = 'button', ...rest } = Astro.props;
+const base = 'inline-flex items-center justify-center gap-2 font-semibold transition-colors no-underline';
+const sizes = { sm: 'min-h-10 px-3.5 text-sm', md: 'min-h-12 px-5 text-base' } as const;
+const variants = {
+  primary: 'bg-brand-ink text-white hover:bg-ink rounded-card',
+  secondary: 'border border-ink text-ink hover:bg-ink hover:text-white rounded-card',
+  inverse: 'border border-white text-white hover:bg-white hover:text-ink rounded-card on-dark',
+  text: 'text-brand-ink underline decoration-1 underline-offset-4 hover:decoration-2 !px-0 !min-h-11',
+} as const;
+const classes = `${base} ${sizes[size]} ${variants[variant]} ${cls}`;
+---
+{href ? (
+  <a href={href} class={classes} {...(external ? { rel: 'noopener' } : {})} {...rest}>
+    <span><slot /></span>{srSuffix && <span class="sr-only"> ({srSuffix})</span>}
+    {icon && <Icon name={icon} size={variant === 'text' ? 14 : 16} />}
+  </a>
+) : (
+  <button type={type} class={classes} {...rest}>
+    <span><slot /></span>
+    {icon && <Icon name={icon} />}
+  </button>
+)}

@@ -1,0 +1,28 @@
+---
+/** Inline SVG icons (decorative: aria-hidden). Pair with visible or sr-only text. */
+interface Props {
+  name: 'arrow-up' | 'arrow-down' | 'arrow-right' | 'flat' | 'external' | 'file' | 'calendar' | 'mail' | 'phone' | 'menu' | 'close' | 'chevron-down' | 'play' | 'globe' | 'pin' | 'bell';
+  class?: string;
+  size?: number;
+}
+const { name, class: cls = '', size = 16 } = Astro.props;
+const paths: Record<Props['name'], string> = {
+  'arrow-up': '<path d="M8 3 13 10H3z" fill="currentColor" stroke="none"/>',
+  'arrow-down': '<path d="M8 13 3 6h10z" fill="currentColor" stroke="none"/>',
+  flat: '<path d="M3 8h10"/>',
+  'arrow-right': '<path d="M3 8h10M9 4l4 4-4 4"/>',
+  external: '<path d="M9 3h4v4M13 3 7.5 8.5M12 9.5V13H3V4h3.5"/>',
+  file: '<path d="M4 1.5h5L12.5 5v9.5h-8.5z"/><path d="M9 1.5V5h3.5"/>',
+  calendar: '<rect x="2" y="3" width="12" height="11" rx="1"/><path d="M2 6.5h12M5 1.5v3M11 1.5v3"/>',
+  mail: '<rect x="1.5" y="3" width="13" height="10" rx="1"/><path d="m2 4 6 5 6-5"/>',
+  phone: '<path d="M5.5 2 3 2.5C2.5 8 8 13.5 13.5 13l.5-2.5-3-1.5-1.5 1.5C8 10 6 8 5.5 6.5L7 5z"/>',
+  menu: '<path d="M2 4h12M2 8h12M2 12h12"/>',
+  close: '<path d="m3 3 10 10M13 3 3 13"/>',
+  'chevron-down': '<path d="m4 6 4 4 4-4"/>',
+  play: '<circle cx="8" cy="8" r="6.5"/><path d="M6.5 5.5v5l4-2.5z" fill="currentColor"/>',
+  globe: '<circle cx="8" cy="8" r="6.5"/><path d="M1.5 8h13M8 1.5c2 2 2 11 0 13M8 1.5c-2 2-2 11 0 13"/>',
+  pin: '<path d="M8 14.5s-4.5-4.2-4.5-7.5a4.5 4.5 0 0 1 9 0c0 3.3-4.5 7.5-4.5 7.5z"/><circle cx="8" cy="7" r="1.6"/>',
+  bell: '<path d="M4 11V7a4 4 0 0 1 8 0v4l1.5 1.5h-11zM6.5 14h3"/>',
+};
+---
+<svg class={`inline-block shrink-0 ${cls}`} width={size} height={size} viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false" set:html={paths[name]} />

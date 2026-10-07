@@ -10,6 +10,7 @@ const docs = documents.documents;
 const types = [...new Set(docs.map((d) => d.type))];
 ---
 <Base lang={lang} title={t(lang, 'documents')} path="documents/">
+<div class="container-page py-8">
   <h1 class="text-2xl font-bold">{t(lang, 'documents')} <span class="tabular text-graphite">({docs.length})</span></h1>
   <p class="mt-2 text-sm text-graphite">Unstyled listing of every merged document record (all types, newest first). Filters/search come with the design system.</p>
   {types.map((type) => {
@@ -38,4 +39,5 @@ const types = [...new Set(docs.map((d) => d.type))];
       </section>
     );
   })}
+</div>
 </Base>
