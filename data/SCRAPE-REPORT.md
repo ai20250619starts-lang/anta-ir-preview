@@ -1,14 +1,14 @@
 # Scrape report
 
-Generated 2026-10-07T10:28:28.249Z (UTC). Source: https://ir.anta.com (EN / TC / SC). Run started 2026-10-07T10:28:26.005Z.
+Generated 2026-10-07T10:33:55.860Z (UTC). Source: https://ir.anta.com (EN / TC / SC). Run started 2026-10-07T10:33:53.506Z.
 
-Fetch: **0** network requests this run, 2249 cache hits, 0 errors. Sequential, ≥3 s apart, descriptive User-Agent, on-disk cache in `.cache/http` (re-runs only fetch what is missing).
+Fetch: **0** network requests this run, 2219 cache hits, 0 errors. Sequential, ≥3 s apart, descriptive User-Agent, on-disk cache in `.cache/http` (re-runs only fetch what is missing).
 
 ## Totals
 
 | Dataset | Records |
 | --- | --- |
-| documents (merged across languages) | 948 |
+| documents (merged across languages) | 903 |
 | financial highlight rows | 6 |
 | board people | 11 |
 | committees | 5 |
@@ -18,7 +18,7 @@ Fetch: **0** network requests this run, 2249 cache hits, 0 errors. Sequential, �
 | brands | 8 |
 | assets downloaded | 19 |
 
-Merged documents with a publication time: 799. Files with a known size: 710.
+Merged documents with a publication time: 783. Files with a known size: 677.
 
 ## Source lists (raw items per language → merged records)
 
@@ -43,13 +43,13 @@ Records found in several lists (e.g. an annual report listed under Reports *and*
 
 | Type | Total | Has EN | Has TC | Has SC | Native EN file | Native TC file | Native SC file |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| announcement | 506 | 506 | 506 | 506 | 506 | 506 | 51 |
+| announcement | 469 | 469 | 469 | 469 | 469 | 469 | 49 |
 | corporate-communication | 2 | 2 | 2 | 2 | 2 | 2 | 2 |
 | general-meeting | 4 | 4 | 4 | 4 | 4 | 4 | 4 |
 | governance | 31 | 31 | 31 | 31 | 31 | 31 | 0 |
 | monthly-return | 214 | 214 | 214 | 214 | 214 | 214 | 0 |
 | presentation | 41 | 41 | 41 | 41 | 41 | 41 | 41 |
-| press-release | 85 | 84 | 84 | 84 | 84 | 84 | 84 |
+| press-release | 77 | 76 | 76 | 76 | 76 | 76 | 76 |
 | report | 58 | 58 | 58 | 58 | 58 | 58 | 17 |
 | webcast | 7 | 7 | 7 | 7 | 6 | 4 | 6 |
 
@@ -57,20 +57,20 @@ Records found in several lists (e.g. an annual report listed under Reports *and*
 
 | Type | 2026 | 2025 | 2024 | 2023 | 2022 | 2021 | 2020 | 2019 | 2018 | 2017 | 2016 | 2015 | 2014 | 2013 | 2012 | 2011 | 2010 | 2009 | 2008 | 2007 | undated |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| announcement | 25 | 45 | 51 | 35 | 25 | 33 | 29 | 49 | 25 | 27 | 18 | 19 | 22 | 16 | 17 | 14 | 15 | 20 | 13 | 8 |  |
+| announcement | 23 | 43 | 49 | 33 | 25 | 31 | 27 | 47 | 23 | 25 | 16 | 17 | 20 | 14 | 15 | 12 | 13 | 18 | 11 | 7 |  |
 | corporate-communication |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 2 |
 | general-meeting |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 4 |
 | governance |  | 2 | 1 |  | 5 | 1 |  |  |  |  |  | 2 |  | 1 | 3 |  |  |  |  |  | 16 |
 | monthly-return | 10 | 13 | 12 | 12 | 12 | 12 | 12 | 12 | 12 | 12 | 12 | 12 | 12 | 12 | 12 | 12 | 12 | 11 |  |  |  |
 | presentation | 5 | 2 | 2 | 2 | 2 | 2 | 2 | 2 | 2 | 2 | 2 | 2 | 2 | 2 | 2 | 2 | 2 | 2 | 2 |  |  |
-| press-release | 8 | 12 | 20 | 15 | 2 | 2 | 2 | 2 | 2 | 2 | 2 | 2 | 2 | 2 | 2 | 2 | 2 | 2 | 1 | 1 |  |
+| press-release | 6 | 10 | 18 | 13 | 2 | 2 | 2 | 2 | 2 | 2 | 2 | 2 | 2 | 2 | 2 | 2 | 2 | 2 | 1 | 1 |  |
 | report | 3 | 3 | 3 | 3 | 3 | 3 | 3 | 3 | 3 | 3 | 3 | 2 | 3 | 3 | 3 | 3 | 3 | 3 | 3 | 2 |  |
 | webcast | 2 | 2 | 2 | 1 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
 
 ## Missing languages
 
 Records missing a language (no title or no file on the source site for that language): EN 1, TC 1, SC 1.
-SC records that link a TC file instead of an SC file: 742; TC records linking an EN file: 3.
+SC records that link a TC file instead of an SC file: 707; TC records linking an EN file: 3.
 
 | Date | Type | Missing | Title |
 | --- | --- | --- | --- |
@@ -80,12 +80,21 @@ SC records that link a TC file instead of an SC file: 742; TC records linking an
 
 ## Broken links
 
-Checked 835 unique URLs: every file of reports, presentations, press releases, webcasts, governance/AGM/communication documents; a sample of announcement PDFs (newest 10 plus one per year per type; `--check-all` checks every file); and internal/external links found on the scraped pages.
+Checked 814 unique URLs: every file of reports, presentations, press releases, webcasts, governance/AGM/communication documents; a sample of announcement PDFs (newest 10 plus one per year per type; `--check-all` checks every file); and internal/external links found on the scraped pages.
 
-Broken (10; 0 document files, 7 internal pages, 3 external):
+Broken (19; 9 document files, 7 internal pages, 3 external):
 
 | Status | Kind | URL | Found on |
 | --- | --- | --- | --- |
+| network error | document | https://manager.wisdomir.com/files/394/2026/0717/20260717190200_13882075_en.pdf | https://ir.anta.com/en/news.php |
+| network error | document | https://manager.wisdomir.com/files/394/2026/0717/20260717190114_75555232_tc.pdf | https://ir.anta.com/tc/news.php |
+| network error | document | https://manager.wisdomir.com/files/394/2026/0717/20260717190115_24195728_sc.pdf | https://ir.anta.com/sc/news.php |
+| network error | document | https://manager.wisdomir.com/files/394/2008/0817/20180720200342_52016339_en.pdf | https://ir.anta.com/en/include/financial_ann.php?year=2008 |
+| network error | document | https://manager.wisdomir.com/files/394/2008/0817/20180720200342_35866494_tc.pdf | https://ir.anta.com/tc/include/financial_ann.php?year=2008 |
+| network error | document | https://manager.wisdomir.com/files/394/2008/0817/20180720200342_75264169_sc.pdf | https://ir.anta.com/sc/include/financial_ann.php?year=2008 |
+| network error | document | https://manager.wisdomir.com/files/394/2007/0827/20180720201856_91940978_en.pdf | https://ir.anta.com/en/include/financial_ann.php?year=2007 |
+| network error | document | https://manager.wisdomir.com/files/394/2007/0827/20180720201856_85757356_tc.pdf | https://ir.anta.com/tc/include/financial_ann.php?year=2007 |
+| network error | document | https://manager.wisdomir.com/files/394/2007/0827/20180720201856_51850749_sc.pdf | https://ir.anta.com/sc/include/financial_ann.php?year=2007 |
 | 404 | internal-page | https://ir.anta.com/esg/en/index.php | https://ir.anta.com/en/news_press.php<br>https://ir.anta.com/en/news_press.php?year=2025 |
 | 404 | internal-page | https://ir.anta.com/esg/ | https://ir.anta.com/en/news_detail.php?id=153198<br>https://ir.anta.com/tc/news_detail.php?id=153198 |
 | 404 | internal-page | https://ir.anta.com/en/news_day.php | https://ir.anta.com/en/news_detail.php?id=126812 |

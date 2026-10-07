@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-10-07T10:28:28.178Z",
+  "generatedAt": "2026-10-07T10:33:55.803Z",
   "source": "https://ir.anta.com",
-  "count": 948,
+  "count": 903,
   "documents": [
     {
       "id": "2026-10-02-monthly-return-f681aa28",
@@ -523,7 +523,8 @@
       "category": "results-press-release",
       "tags": [
         "list:press-releases",
-        "has-html-body"
+        "has-html-body",
+        "list:results-press-releases"
       ],
       "date": "2026-08-26",
       "year": 2026,
@@ -585,73 +586,12 @@
       "fallbackLanguages": []
     },
     {
-      "id": "2026-08-26-press-release-45bc7b5f",
-      "type": "press-release",
-      "category": "results-press-release",
-      "tags": [
-        "list:results-press-releases"
-      ],
-      "date": "2026-08-26",
-      "year": 2026,
-      "dateSource": "listing",
-      "time": "13:01",
-      "timeSource": "file-timestamp",
-      "title": {
-        "en": "ANTA Sports' Revenue Grows 12.9% to RMB43.51 Billion in the First Half of 2026, Ranking First in China and Leading the Industry",
-        "tc": "安踏體育2026上半年收入增長12.9%至435.1億元，居中國首位 整體業績領先行業",
-        "sc": "安踏体育2026上半年收入增长12.9%至435.1亿元，居中国首位 整体业绩领先行业"
-      },
-      "files": {
-        "en": {
-          "url": "https://manager.wisdomir.com/files/394/2026/0826/20260826130143_85499224_en.pdf",
-          "fileLang": "en",
-          "format": "pdf",
-          "sizeBytes": 149021,
-          "check": {
-            "status": 200,
-            "ok": true,
-            "checkedAt": "2026-10-07T09:25:01.501Z"
-          }
-        },
-        "tc": {
-          "url": "https://manager.wisdomir.com/files/394/2026/0826/20260826130143_85083524_tc.pdf",
-          "fileLang": "tc",
-          "format": "pdf",
-          "sizeBytes": 287155,
-          "check": {
-            "status": 200,
-            "ok": true,
-            "checkedAt": "2026-10-07T09:25:04.823Z"
-          }
-        },
-        "sc": {
-          "url": "https://manager.wisdomir.com/files/394/2026/0826/20260826130143_38784039_sc.pdf",
-          "fileLang": "sc",
-          "format": "pdf",
-          "sizeBytes": 287155,
-          "check": {
-            "status": 200,
-            "ok": true,
-            "checkedAt": "2026-10-07T09:25:08.126Z"
-          }
-        }
-      },
-      "thumbnail": null,
-      "body": null,
-      "sourceUrls": {
-        "en": "https://ir.anta.com/en/financial_press.php",
-        "tc": "https://ir.anta.com/tc/financial_press.php",
-        "sc": "https://ir.anta.com/sc/financial_press.php"
-      },
-      "missingLanguages": [],
-      "fallbackLanguages": []
-    },
-    {
       "id": "2026-08-26-announcement-3a3d591a",
       "type": "announcement",
       "category": "results-announcement",
       "tags": [
-        "list:results-announcements"
+        "list:results-announcements",
+        "list:announcements"
       ],
       "date": "2026-08-26",
       "year": 2026,
@@ -707,70 +647,6 @@
       },
       "missingLanguages": [],
       "fallbackLanguages": []
-    },
-    {
-      "id": "2026-08-26-announcement-54c04b53",
-      "type": "announcement",
-      "category": "results-announcement",
-      "tags": [
-        "list:announcements"
-      ],
-      "date": "2026-08-26",
-      "year": 2026,
-      "dateSource": "listing",
-      "time": "12:15",
-      "timeSource": "file-timestamp",
-      "title": {
-        "en": "2026 INTERIM RESULTS ANNOUNCEMENT",
-        "tc": "二零二六年中期業績公告",
-        "sc": "二零二六年中期业绩公告"
-      },
-      "files": {
-        "en": {
-          "url": "https://manager.wisdomir.com/files/394/2026/0826/20260826121502_21980085_en.pdf",
-          "fileLang": "en",
-          "format": "pdf",
-          "sizeBytes": 12302555,
-          "check": {
-            "status": 200,
-            "ok": true,
-            "checkedAt": "2026-10-07T09:25:21.208Z"
-          }
-        },
-        "tc": {
-          "url": "https://manager.wisdomir.com/files/394/2026/0826/20260826121502_75839294_tc.pdf",
-          "fileLang": "tc",
-          "format": "pdf",
-          "sizeBytes": 12868794,
-          "check": {
-            "status": 200,
-            "ok": true,
-            "checkedAt": "2026-10-07T09:25:24.397Z"
-          }
-        },
-        "sc": {
-          "url": "https://manager.wisdomir.com/files/394/2026/0826/20260826121502_75839294_tc.pdf",
-          "fileLang": "tc",
-          "format": "pdf",
-          "sizeBytes": 12868794,
-          "check": {
-            "status": 200,
-            "ok": true,
-            "checkedAt": "2026-10-07T09:25:24.397Z"
-          }
-        }
-      },
-      "thumbnail": null,
-      "body": null,
-      "sourceUrls": {
-        "en": "https://ir.anta.com/en/news.php",
-        "tc": "https://ir.anta.com/tc/news.php",
-        "sc": "https://ir.anta.com/sc/news.php"
-      },
-      "missingLanguages": [],
-      "fallbackLanguages": [
-        "sc"
-      ]
     },
     {
       "id": "2026-08-26-announcement-f7849241",
@@ -1051,21 +927,33 @@
           "fileLang": "en",
           "format": "pdf",
           "sizeBytes": null,
-          "check": null
+          "check": {
+            "status": 0,
+            "ok": false,
+            "checkedAt": ""
+          }
         },
         "tc": {
           "url": "https://manager.wisdomir.com/files/394/2026/0717/20260717190114_75555232_tc.pdf",
           "fileLang": "tc",
           "format": "pdf",
           "sizeBytes": null,
-          "check": null
+          "check": {
+            "status": 0,
+            "ok": false,
+            "checkedAt": ""
+          }
         },
         "sc": {
           "url": "https://manager.wisdomir.com/files/394/2026/0717/20260717190115_24195728_sc.pdf",
           "fileLang": "sc",
           "format": "pdf",
           "sizeBytes": null,
-          "check": null
+          "check": {
+            "status": 0,
+            "ok": false,
+            "checkedAt": ""
+          }
         }
       },
       "thumbnail": null,
@@ -1314,7 +1202,7 @@
     {
       "id": "2026-05-15-announcement-49f4656e",
       "type": "announcement",
-      "category": "share-scheme",
+      "category": "voluntary-announcement",
       "tags": [
         "list:announcements"
       ],
@@ -2137,7 +2025,8 @@
       "type": "announcement",
       "category": "results-announcement",
       "tags": [
-        "list:results-announcements"
+        "list:results-announcements",
+        "list:announcements"
       ],
       "date": "2026-03-25",
       "year": 2026,
@@ -2183,74 +2072,13 @@
       "fallbackLanguages": []
     },
     {
-      "id": "2026-03-25-press-release-53c3b327",
-      "type": "press-release",
-      "category": "results-press-release",
-      "tags": [
-        "list:results-press-releases"
-      ],
-      "date": "2026-03-25",
-      "year": 2026,
-      "dateSource": "listing",
-      "time": "13:06",
-      "timeSource": "file-timestamp",
-      "title": {
-        "en": "ANTA Sports’ 2025 Revenue Grows 13.3% to Over RMB80.2 Billion, Reinforcing Industry Leadership in China with Record Market Share",
-        "tc": "安踏體育2025年收入增長13.3%突破人民幣802億元 穩居中國行業首位 市場份額再創新高",
-        "sc": "安踏体育2025年收入增长13.3%突破人民币802亿元 稳居中国行业首位 市场份额再创新高"
-      },
-      "files": {
-        "en": {
-          "url": "https://manager.wisdomir.com/files/394/2026/0325/20260325130606_83501600_en.pdf",
-          "fileLang": "en",
-          "format": "pdf",
-          "sizeBytes": 209035,
-          "check": {
-            "status": 200,
-            "ok": true,
-            "checkedAt": "2026-10-07T09:26:47.531Z"
-          }
-        },
-        "tc": {
-          "url": "https://manager.wisdomir.com/files/394/2026/0325/20260325130606_67944145_tc.pdf",
-          "fileLang": "tc",
-          "format": "pdf",
-          "sizeBytes": 321386,
-          "check": {
-            "status": 200,
-            "ok": true,
-            "checkedAt": "2026-10-07T09:26:50.915Z"
-          }
-        },
-        "sc": {
-          "url": "https://manager.wisdomir.com/files/394/2026/0325/20260325130606_13770601_sc.pdf",
-          "fileLang": "sc",
-          "format": "pdf",
-          "sizeBytes": 309061,
-          "check": {
-            "status": 200,
-            "ok": true,
-            "checkedAt": "2026-10-07T09:26:54.261Z"
-          }
-        }
-      },
-      "thumbnail": null,
-      "body": null,
-      "sourceUrls": {
-        "en": "https://ir.anta.com/en/include/financial_press.php?year=2025",
-        "tc": "https://ir.anta.com/tc/include/financial_press.php?year=2025",
-        "sc": "https://ir.anta.com/sc/include/financial_press.php?year=2025"
-      },
-      "missingLanguages": [],
-      "fallbackLanguages": []
-    },
-    {
       "id": "2026-03-25-press-release-3353fe05",
       "type": "press-release",
       "category": "results-press-release",
       "tags": [
         "list:press-releases",
-        "has-html-body"
+        "has-html-body",
+        "list:results-press-releases"
       ],
       "date": "2026-03-25",
       "year": 2026,
@@ -2345,58 +2173,6 @@
         },
         "sc": {
           "url": "https://manager.wisdomir.com/files/394/2026/0325/20260325121501_48229918_tc.pdf",
-          "fileLang": "tc",
-          "format": "pdf",
-          "sizeBytes": null,
-          "check": null
-        }
-      },
-      "thumbnail": null,
-      "body": null,
-      "sourceUrls": {
-        "en": "https://ir.anta.com/en/news.php",
-        "tc": "https://ir.anta.com/tc/news.php",
-        "sc": "https://ir.anta.com/sc/news.php"
-      },
-      "missingLanguages": [],
-      "fallbackLanguages": [
-        "sc"
-      ]
-    },
-    {
-      "id": "2026-03-25-announcement-86acbf9c",
-      "type": "announcement",
-      "category": "results-announcement",
-      "tags": [
-        "list:announcements"
-      ],
-      "date": "2026-03-25",
-      "year": 2026,
-      "dateSource": "listing",
-      "time": "12:15",
-      "timeSource": "file-timestamp",
-      "title": {
-        "en": "2025 ANNUAL RESULTS ANNOUNCEMENT",
-        "tc": "二零二五年年度業績公告",
-        "sc": "二零二五年年度业绩公告"
-      },
-      "files": {
-        "en": {
-          "url": "https://manager.wisdomir.com/files/394/2026/0325/20260325121501_54061636_en.pdf",
-          "fileLang": "en",
-          "format": "pdf",
-          "sizeBytes": null,
-          "check": null
-        },
-        "tc": {
-          "url": "https://manager.wisdomir.com/files/394/2026/0325/20260325121501_71411410_tc.pdf",
-          "fileLang": "tc",
-          "format": "pdf",
-          "sizeBytes": null,
-          "check": null
-        },
-        "sc": {
-          "url": "https://manager.wisdomir.com/files/394/2026/0325/20260325121501_71411410_tc.pdf",
           "fileLang": "tc",
           "format": "pdf",
           "sizeBytes": null,
@@ -4417,7 +4193,8 @@
       "category": "results-press-release",
       "tags": [
         "list:press-releases",
-        "has-html-body"
+        "has-html-body",
+        "list:results-press-releases"
       ],
       "date": "2025-08-27",
       "year": 2025,
@@ -4479,10 +4256,11 @@
       "fallbackLanguages": []
     },
     {
-      "id": "2025-08-27-announcement-28e991b1",
+      "id": "2025-07-29-announcement-1e2dc3c2",
       "type": "announcement",
       "category": "results-announcement",
       "tags": [
+        "list:results-announcements",
         "list:announcements"
       ],
       "date": "2025-08-27",
@@ -4497,22 +4275,22 @@
       },
       "files": {
         "en": {
-          "url": "https://manager.wisdomir.com/files/394/2025/0827/20250827123002_80903955_en.pdf",
+          "url": "https://manager.wisdomir.com/files/394/2025/0729/20250827123641_42458779_en.pdf",
           "fileLang": "en",
           "format": "pdf",
           "sizeBytes": null,
           "check": null
         },
         "tc": {
-          "url": "https://manager.wisdomir.com/files/394/2025/0827/20250827123002_29579820_tc.pdf",
+          "url": "https://manager.wisdomir.com/files/394/2025/0729/20250827123621_68418768_tc.pdf",
           "fileLang": "tc",
           "format": "pdf",
           "sizeBytes": null,
           "check": null
         },
         "sc": {
-          "url": "https://manager.wisdomir.com/files/394/2025/0827/20250827123002_29579820_tc.pdf",
-          "fileLang": "tc",
+          "url": "https://manager.wisdomir.com/files/394/2025/0729/20250827123622_75146625_sc.pdf",
+          "fileLang": "sc",
           "format": "pdf",
           "sizeBytes": null,
           "check": null
@@ -4521,14 +4299,12 @@
       "thumbnail": null,
       "body": null,
       "sourceUrls": {
-        "en": "https://ir.anta.com/en/news.php?year=2025",
-        "tc": "https://ir.anta.com/tc/news.php?year=2025",
-        "sc": "https://ir.anta.com/sc/news.php?year=2025"
+        "en": "https://ir.anta.com/en/include/financial_ann.php?year=2025",
+        "tc": "https://ir.anta.com/tc/include/financial_ann.php?year=2025",
+        "sc": "https://ir.anta.com/sc/include/financial_ann.php?year=2025"
       },
       "missingLanguages": [],
-      "fallbackLanguages": [
-        "sc"
-      ]
+      "fallbackLanguages": []
     },
     {
       "id": "2025-08-27-announcement-4c23afbb",
@@ -4739,56 +4515,6 @@
       ]
     },
     {
-      "id": "2025-07-29-announcement-1e2dc3c2",
-      "type": "announcement",
-      "category": "results-announcement",
-      "tags": [
-        "list:results-announcements"
-      ],
-      "date": "2025-07-29",
-      "year": 2025,
-      "dateSource": "listing",
-      "time": null,
-      "timeSource": "none",
-      "title": {
-        "en": "2025 INTERIM RESULTS ANNOUNCEMENT",
-        "tc": "二零二五年中期業績公告",
-        "sc": "二零二五年中期业绩公告"
-      },
-      "files": {
-        "en": {
-          "url": "https://manager.wisdomir.com/files/394/2025/0729/20250827123641_42458779_en.pdf",
-          "fileLang": "en",
-          "format": "pdf",
-          "sizeBytes": null,
-          "check": null
-        },
-        "tc": {
-          "url": "https://manager.wisdomir.com/files/394/2025/0729/20250827123621_68418768_tc.pdf",
-          "fileLang": "tc",
-          "format": "pdf",
-          "sizeBytes": null,
-          "check": null
-        },
-        "sc": {
-          "url": "https://manager.wisdomir.com/files/394/2025/0729/20250827123622_75146625_sc.pdf",
-          "fileLang": "sc",
-          "format": "pdf",
-          "sizeBytes": null,
-          "check": null
-        }
-      },
-      "thumbnail": null,
-      "body": null,
-      "sourceUrls": {
-        "en": "https://ir.anta.com/en/include/financial_ann.php?year=2025",
-        "tc": "https://ir.anta.com/tc/include/financial_ann.php?year=2025",
-        "sc": "https://ir.anta.com/sc/include/financial_ann.php?year=2025"
-      },
-      "missingLanguages": [],
-      "fallbackLanguages": []
-    },
-    {
       "id": "2025-07-29-presentation-219487c3",
       "type": "presentation",
       "category": "results-presentation",
@@ -4846,68 +4572,6 @@
         "en": "https://ir.anta.com/en/financial_info.php",
         "tc": "https://ir.anta.com/tc/financial_info.php",
         "sc": "https://ir.anta.com/sc/financial_info.php"
-      },
-      "missingLanguages": [],
-      "fallbackLanguages": []
-    },
-    {
-      "id": "2025-07-29-press-release-0d48f3aa",
-      "type": "press-release",
-      "category": "results-press-release",
-      "tags": [
-        "list:results-press-releases"
-      ],
-      "date": "2025-07-29",
-      "year": 2025,
-      "dateSource": "listing",
-      "time": null,
-      "timeSource": "none",
-      "title": {
-        "en": "ANTA Sports' Revenue Increases by 14.3%, Exceeding RMB 38.5 Billion in the First Half Four Consecutive Years of Domestic Leadership with Globalization Advancing Strongly",
-        "tc": "安踏體育上半年收入超人民幣385 億元 增長14.3% 連續4 年國內領先 全球化深入推進",
-        "sc": "安踏体育上半年收入超人民币385 亿元 增长14.3% 连续4 年国内领先 全球化深入推进"
-      },
-      "files": {
-        "en": {
-          "url": "https://manager.wisdomir.com/files/394/2025/0729/20250827132814_10207182_en.pdf",
-          "fileLang": "en",
-          "format": "pdf",
-          "sizeBytes": 197224,
-          "check": {
-            "status": 200,
-            "ok": true,
-            "checkedAt": "2026-10-07T09:29:24.743Z"
-          }
-        },
-        "tc": {
-          "url": "https://manager.wisdomir.com/files/394/2025/0729/20250827132814_90050160_tc.pdf",
-          "fileLang": "tc",
-          "format": "pdf",
-          "sizeBytes": 311832,
-          "check": {
-            "status": 200,
-            "ok": true,
-            "checkedAt": "2026-10-07T09:29:28.372Z"
-          }
-        },
-        "sc": {
-          "url": "https://manager.wisdomir.com/files/394/2025/0729/20250827132814_74930439_sc.pdf",
-          "fileLang": "sc",
-          "format": "pdf",
-          "sizeBytes": 311832,
-          "check": {
-            "status": 200,
-            "ok": true,
-            "checkedAt": "2026-10-07T09:29:31.564Z"
-          }
-        }
-      },
-      "thumbnail": null,
-      "body": null,
-      "sourceUrls": {
-        "en": "https://ir.anta.com/en/include/financial_press.php?year=2025",
-        "tc": "https://ir.anta.com/tc/include/financial_press.php?year=2025",
-        "sc": "https://ir.anta.com/sc/include/financial_press.php?year=2025"
       },
       "missingLanguages": [],
       "fallbackLanguages": []
@@ -5316,7 +4980,7 @@
     {
       "id": "2025-06-04-announcement-a761a1d6",
       "type": "announcement",
-      "category": "share-scheme",
+      "category": "voluntary-announcement",
       "tags": [
         "list:announcements"
       ],
@@ -5420,7 +5084,7 @@
     {
       "id": "2025-06-02-announcement-4f7d6ddd",
       "type": "announcement",
-      "category": "transaction",
+      "category": "voluntary-announcement",
       "tags": [
         "list:announcements"
       ],
@@ -5732,7 +5396,7 @@
     {
       "id": "2025-04-10-announcement-d74a1f2e",
       "type": "announcement",
-      "category": "transaction",
+      "category": "voluntary-announcement",
       "tags": [
         "list:announcements"
       ],
@@ -6121,7 +5785,8 @@
       "type": "announcement",
       "category": "results-announcement",
       "tags": [
-        "list:results-announcements"
+        "list:results-announcements",
+        "list:announcements"
       ],
       "date": "2025-03-19",
       "year": 2025,
@@ -6172,7 +5837,8 @@
       "category": "results-press-release",
       "tags": [
         "list:press-releases",
-        "has-html-body"
+        "has-html-body",
+        "list:results-press-releases"
       ],
       "date": "2025-03-19",
       "year": 2025,
@@ -6232,120 +5898,6 @@
       },
       "missingLanguages": [],
       "fallbackLanguages": []
-    },
-    {
-      "id": "2025-03-19-press-release-bf0ce37f",
-      "type": "press-release",
-      "category": "results-press-release",
-      "tags": [
-        "list:results-press-releases"
-      ],
-      "date": "2025-03-19",
-      "year": 2025,
-      "dateSource": "listing",
-      "time": "13:09",
-      "timeSource": "file-timestamp",
-      "title": {
-        "en": "ANTA Sports Achieves Another Record High with Revenue Exceeding RMB70.8 Billion in 2024, a 13.6% Year-on-Year Increase",
-        "tc": "安踏體育業績再創歷史新高 - 二零二四年收入超人民幣708億元　同比增13.6%",
-        "sc": "安踏体育业绩再创历史新高 - 二零二四年收入超人民币708亿元　同比增13.6%"
-      },
-      "files": {
-        "en": {
-          "url": "https://manager.wisdomir.com/files/394/2025/0319/20250319130904_54505976_en.pdf",
-          "fileLang": "en",
-          "format": "pdf",
-          "sizeBytes": 156947,
-          "check": {
-            "status": 200,
-            "ok": true,
-            "checkedAt": "2026-10-07T09:30:18.995Z"
-          }
-        },
-        "tc": {
-          "url": "https://manager.wisdomir.com/files/394/2025/0319/20250319130904_94738895_tc.pdf",
-          "fileLang": "tc",
-          "format": "pdf",
-          "sizeBytes": 377199,
-          "check": {
-            "status": 200,
-            "ok": true,
-            "checkedAt": "2026-10-07T09:30:22.311Z"
-          }
-        },
-        "sc": {
-          "url": "https://manager.wisdomir.com/files/394/2025/0319/20250319133719_86164335_sc.pdf",
-          "fileLang": "sc",
-          "format": "pdf",
-          "sizeBytes": 390759,
-          "check": {
-            "status": 200,
-            "ok": true,
-            "checkedAt": "2026-10-07T09:30:25.739Z"
-          }
-        }
-      },
-      "thumbnail": null,
-      "body": null,
-      "sourceUrls": {
-        "en": "https://ir.anta.com/en/include/financial_press.php?year=2024",
-        "tc": "https://ir.anta.com/tc/include/financial_press.php?year=2024",
-        "sc": "https://ir.anta.com/sc/include/financial_press.php?year=2024"
-      },
-      "missingLanguages": [],
-      "fallbackLanguages": []
-    },
-    {
-      "id": "2025-03-19-announcement-26cfe529",
-      "type": "announcement",
-      "category": "results-announcement",
-      "tags": [
-        "list:announcements"
-      ],
-      "date": "2025-03-19",
-      "year": 2025,
-      "dateSource": "listing",
-      "time": "12:15",
-      "timeSource": "file-timestamp",
-      "title": {
-        "en": "2024 ANNUAL RESULTS ANNOUNCEMENT",
-        "tc": "二零二四年年度業績公告",
-        "sc": "二零二四年年度业绩公告"
-      },
-      "files": {
-        "en": {
-          "url": "https://manager.wisdomir.com/files/394/2025/0319/20250319121501_30834719_en.pdf",
-          "fileLang": "en",
-          "format": "pdf",
-          "sizeBytes": null,
-          "check": null
-        },
-        "tc": {
-          "url": "https://manager.wisdomir.com/files/394/2025/0319/20250319121501_60853454_tc.pdf",
-          "fileLang": "tc",
-          "format": "pdf",
-          "sizeBytes": null,
-          "check": null
-        },
-        "sc": {
-          "url": "https://manager.wisdomir.com/files/394/2025/0319/20250319121501_60853454_tc.pdf",
-          "fileLang": "tc",
-          "format": "pdf",
-          "sizeBytes": null,
-          "check": null
-        }
-      },
-      "thumbnail": null,
-      "body": null,
-      "sourceUrls": {
-        "en": "https://ir.anta.com/en/news.php?year=2025",
-        "tc": "https://ir.anta.com/tc/news.php?year=2025",
-        "sc": "https://ir.anta.com/sc/news.php?year=2025"
-      },
-      "missingLanguages": [],
-      "fallbackLanguages": [
-        "sc"
-      ]
     },
     {
       "id": "2025-03-19-announcement-a1c2fa11",
@@ -9273,7 +8825,8 @@
       "type": "announcement",
       "category": "results-announcement",
       "tags": [
-        "list:results-announcements"
+        "list:results-announcements",
+        "list:announcements"
       ],
       "date": "2024-08-27",
       "year": 2024,
@@ -9371,61 +8924,9 @@
       ]
     },
     {
-      "id": "2024-08-27-announcement-af9b51d8",
-      "type": "announcement",
-      "category": "results-announcement",
-      "tags": [
-        "list:announcements"
-      ],
-      "date": "2024-08-27",
-      "year": 2024,
-      "dateSource": "listing",
-      "time": "16:45",
-      "timeSource": "file-timestamp",
-      "title": {
-        "en": "2024 INTERIM RESULTS ANNOUNCEMENT",
-        "tc": "二零二四年中期業績公告",
-        "sc": "二零二四年中期业绩公告"
-      },
-      "files": {
-        "en": {
-          "url": "https://manager.wisdomir.com/files/394/2024/0827/20240827164501_32477333_en.pdf",
-          "fileLang": "en",
-          "format": "pdf",
-          "sizeBytes": null,
-          "check": null
-        },
-        "tc": {
-          "url": "https://manager.wisdomir.com/files/394/2024/0827/20240827164501_91422455_tc.pdf",
-          "fileLang": "tc",
-          "format": "pdf",
-          "sizeBytes": null,
-          "check": null
-        },
-        "sc": {
-          "url": "https://manager.wisdomir.com/files/394/2024/0827/20240827164501_91422455_tc.pdf",
-          "fileLang": "tc",
-          "format": "pdf",
-          "sizeBytes": null,
-          "check": null
-        }
-      },
-      "thumbnail": null,
-      "body": null,
-      "sourceUrls": {
-        "en": "https://ir.anta.com/en/news.php?year=2024",
-        "tc": "https://ir.anta.com/tc/news.php?year=2024",
-        "sc": "https://ir.anta.com/sc/news.php?year=2024"
-      },
-      "missingLanguages": [],
-      "fallbackLanguages": [
-        "sc"
-      ]
-    },
-    {
       "id": "2024-08-27-announcement-efda4a96",
       "type": "announcement",
-      "category": "share-capital",
+      "category": "voluntary-announcement",
       "tags": [
         "list:announcements"
       ],
@@ -9542,7 +9043,8 @@
       "category": "results-press-release",
       "tags": [
         "list:press-releases",
-        "has-html-body"
+        "has-html-body",
+        "list:results-press-releases"
       ],
       "date": "2024-08-27",
       "year": 2024,
@@ -9599,68 +9101,6 @@
         "en": "https://ir.anta.com/en/news_detail.php?id=138010",
         "tc": "https://ir.anta.com/tc/news_detail.php?id=138010",
         "sc": "https://ir.anta.com/sc/news_detail.php?id=138010"
-      },
-      "missingLanguages": [],
-      "fallbackLanguages": []
-    },
-    {
-      "id": "2024-08-27-press-release-aa8595e9",
-      "type": "press-release",
-      "category": "results-press-release",
-      "tags": [
-        "list:results-press-releases"
-      ],
-      "date": "2024-08-27",
-      "year": 2024,
-      "dateSource": "listing",
-      "time": null,
-      "timeSource": "none",
-      "title": {
-        "en": "ANTA Sports' Revenue Exceeds RMB 33.7 Billion in the First Half of 2024, with a 13.8% Year-on-Year Increase with Leading Growth Rate in the Industry",
-        "tc": "安踏體育二零二四年上半年 收入超人民幣337億同比增13.8% 增長領跑行業",
-        "sc": "安踏体育二零二四年上半年 收入超人民币337亿同比增13.8% 增长领跑行业"
-      },
-      "files": {
-        "en": {
-          "url": "https://manager.wisdomir.com/files/394/2024/0827/20240828173220_62093501_en.pdf",
-          "fileLang": "en",
-          "format": "pdf",
-          "sizeBytes": 180624,
-          "check": {
-            "status": 200,
-            "ok": true,
-            "checkedAt": "2026-10-07T09:32:26.972Z"
-          }
-        },
-        "tc": {
-          "url": "https://manager.wisdomir.com/files/394/2024/0827/20240828173220_66457496_tc.pdf",
-          "fileLang": "tc",
-          "format": "pdf",
-          "sizeBytes": 347081,
-          "check": {
-            "status": 200,
-            "ok": true,
-            "checkedAt": "2026-10-07T09:32:30.184Z"
-          }
-        },
-        "sc": {
-          "url": "https://manager.wisdomir.com/files/394/2024/0827/20240828173220_05996951_sc.pdf",
-          "fileLang": "sc",
-          "format": "pdf",
-          "sizeBytes": 347081,
-          "check": {
-            "status": 200,
-            "ok": true,
-            "checkedAt": "2026-10-07T09:32:33.476Z"
-          }
-        }
-      },
-      "thumbnail": null,
-      "body": null,
-      "sourceUrls": {
-        "en": "https://ir.anta.com/en/include/financial_press.php?year=2024",
-        "tc": "https://ir.anta.com/tc/include/financial_press.php?year=2024",
-        "sc": "https://ir.anta.com/sc/include/financial_press.php?year=2024"
       },
       "missingLanguages": [],
       "fallbackLanguages": []
@@ -10731,7 +10171,7 @@
     {
       "id": "2024-05-27-announcement-897a675f",
       "type": "announcement",
-      "category": "share-scheme",
+      "category": "voluntary-announcement",
       "tags": [
         "list:announcements"
       ],
@@ -11500,7 +10940,8 @@
       "category": "results-press-release",
       "tags": [
         "list:press-releases",
-        "has-html-body"
+        "has-html-body",
+        "list:results-press-releases"
       ],
       "date": "2024-03-26",
       "year": 2024,
@@ -11666,10 +11107,11 @@
       ]
     },
     {
-      "id": "2024-03-26-announcement-86d785a4",
+      "id": "2024-02-05-announcement-5064294a",
       "type": "announcement",
       "category": "results-announcement",
       "tags": [
+        "list:results-announcements",
         "list:announcements"
       ],
       "date": "2024-03-26",
@@ -11684,22 +11126,22 @@
       },
       "files": {
         "en": {
-          "url": "https://manager.wisdomir.com/files/394/2024/0326/20240326121501_86700303_en.pdf",
+          "url": "https://manager.wisdomir.com/files/394/2024/0205/20240405115346_27824564_en.pdf",
           "fileLang": "en",
           "format": "pdf",
           "sizeBytes": null,
           "check": null
         },
         "tc": {
-          "url": "https://manager.wisdomir.com/files/394/2024/0326/20240326121501_34936815_tc.pdf",
+          "url": "https://manager.wisdomir.com/files/394/2024/0205/20240405115347_98403384_tc.pdf",
           "fileLang": "tc",
           "format": "pdf",
           "sizeBytes": null,
           "check": null
         },
         "sc": {
-          "url": "https://manager.wisdomir.com/files/394/2024/0326/20240326121501_34936815_tc.pdf",
-          "fileLang": "tc",
+          "url": "https://manager.wisdomir.com/files/394/2024/0205/20240405115349_31067382_sc.pdf",
+          "fileLang": "sc",
           "format": "pdf",
           "sizeBytes": null,
           "check": null
@@ -11708,14 +11150,12 @@
       "thumbnail": null,
       "body": null,
       "sourceUrls": {
-        "en": "https://ir.anta.com/en/news.php?year=2024",
-        "tc": "https://ir.anta.com/tc/news.php?year=2024",
-        "sc": "https://ir.anta.com/sc/news.php?year=2024"
+        "en": "https://ir.anta.com/en/include/financial_ann.php?year=2023",
+        "tc": "https://ir.anta.com/tc/include/financial_ann.php?year=2023",
+        "sc": "https://ir.anta.com/sc/include/financial_ann.php?year=2023"
       },
       "missingLanguages": [],
-      "fallbackLanguages": [
-        "sc"
-      ]
+      "fallbackLanguages": []
     },
     {
       "id": "2024-03-11-press-release-16a35940",
@@ -11779,7 +11219,7 @@
     {
       "id": "2024-03-05-announcement-1a974500",
       "type": "announcement",
-      "category": "results-announcement",
+      "category": "voluntary-announcement",
       "tags": [
         "list:announcements"
       ],
@@ -12015,56 +11455,6 @@
       "fallbackLanguages": []
     },
     {
-      "id": "2024-02-05-announcement-5064294a",
-      "type": "announcement",
-      "category": "results-announcement",
-      "tags": [
-        "list:results-announcements"
-      ],
-      "date": "2024-02-05",
-      "year": 2024,
-      "dateSource": "listing",
-      "time": null,
-      "timeSource": "none",
-      "title": {
-        "en": "2023 ANNUAL RESULTS ANNOUNCEMENT",
-        "tc": "二零二三年年度業績公告",
-        "sc": "二零二三年年度业绩公告"
-      },
-      "files": {
-        "en": {
-          "url": "https://manager.wisdomir.com/files/394/2024/0205/20240405115346_27824564_en.pdf",
-          "fileLang": "en",
-          "format": "pdf",
-          "sizeBytes": null,
-          "check": null
-        },
-        "tc": {
-          "url": "https://manager.wisdomir.com/files/394/2024/0205/20240405115347_98403384_tc.pdf",
-          "fileLang": "tc",
-          "format": "pdf",
-          "sizeBytes": null,
-          "check": null
-        },
-        "sc": {
-          "url": "https://manager.wisdomir.com/files/394/2024/0205/20240405115349_31067382_sc.pdf",
-          "fileLang": "sc",
-          "format": "pdf",
-          "sizeBytes": null,
-          "check": null
-        }
-      },
-      "thumbnail": null,
-      "body": null,
-      "sourceUrls": {
-        "en": "https://ir.anta.com/en/include/financial_ann.php?year=2023",
-        "tc": "https://ir.anta.com/tc/include/financial_ann.php?year=2023",
-        "sc": "https://ir.anta.com/sc/include/financial_ann.php?year=2023"
-      },
-      "missingLanguages": [],
-      "fallbackLanguages": []
-    },
-    {
       "id": "2024-02-05-presentation-180a03f8",
       "type": "presentation",
       "category": "results-presentation",
@@ -12122,68 +11512,6 @@
         "en": "https://ir.anta.com/en/financial_info.php",
         "tc": "https://ir.anta.com/tc/financial_info.php",
         "sc": "https://ir.anta.com/sc/financial_info.php"
-      },
-      "missingLanguages": [],
-      "fallbackLanguages": []
-    },
-    {
-      "id": "2024-02-05-press-release-5047b59f",
-      "type": "press-release",
-      "category": "results-press-release",
-      "tags": [
-        "list:results-press-releases"
-      ],
-      "date": "2024-02-05",
-      "year": 2024,
-      "dateSource": "listing",
-      "time": null,
-      "timeSource": "none",
-      "title": {
-        "en": "ANTA Sports Achieves Record-high Results, With Revenue Surpassing RMB62.3 Billion in 2023",
-        "tc": "業績創歷史新高 安踏體育二零二三年 收益超 人民幣 623億",
-        "sc": "业绩创历史新高 安踏体育二零二三年 收益超 人民币 623亿"
-      },
-      "files": {
-        "en": {
-          "url": "https://manager.wisdomir.com/files/394/2024/0205/20240326163517_23009137_en.pdf",
-          "fileLang": "en",
-          "format": "pdf",
-          "sizeBytes": 185183,
-          "check": {
-            "status": 200,
-            "ok": true,
-            "checkedAt": "2026-10-07T09:35:03.055Z"
-          }
-        },
-        "tc": {
-          "url": "https://manager.wisdomir.com/files/394/2024/0205/20240326163517_84780495_tc.pdf",
-          "fileLang": "tc",
-          "format": "pdf",
-          "sizeBytes": 361602,
-          "check": {
-            "status": 200,
-            "ok": true,
-            "checkedAt": "2026-10-07T09:35:06.410Z"
-          }
-        },
-        "sc": {
-          "url": "https://manager.wisdomir.com/files/394/2024/0205/20240326163517_35255131_sc.pdf",
-          "fileLang": "sc",
-          "format": "pdf",
-          "sizeBytes": 361602,
-          "check": {
-            "status": 200,
-            "ok": true,
-            "checkedAt": "2026-10-07T09:35:09.538Z"
-          }
-        }
-      },
-      "thumbnail": null,
-      "body": null,
-      "sourceUrls": {
-        "en": "https://ir.anta.com/en/include/financial_press.php?year=2023",
-        "tc": "https://ir.anta.com/tc/include/financial_press.php?year=2023",
-        "sc": "https://ir.anta.com/sc/include/financial_press.php?year=2023"
       },
       "missingLanguages": [],
       "fallbackLanguages": []
@@ -12983,7 +12311,7 @@
     {
       "id": "2023-10-16-announcement-4b811547",
       "type": "announcement",
-      "category": "transaction",
+      "category": "voluntary-announcement",
       "tags": [
         "list:announcements"
       ],
@@ -13571,7 +12899,8 @@
       "type": "announcement",
       "category": "results-announcement",
       "tags": [
-        "list:results-announcements"
+        "list:results-announcements",
+        "list:announcements"
       ],
       "date": "2023-08-22",
       "year": 2023,
@@ -13617,74 +12946,13 @@
       "fallbackLanguages": []
     },
     {
-      "id": "2023-08-22-press-release-12010e87",
-      "type": "press-release",
-      "category": "results-press-release",
-      "tags": [
-        "list:results-press-releases"
-      ],
-      "date": "2023-08-22",
-      "year": 2023,
-      "dateSource": "listing",
-      "time": "19:01",
-      "timeSource": "file-timestamp",
-      "title": {
-        "en": "ANTA Sports Achieves Record-high Revenue of RMB29.65 Billion in the First Half of 2023, Exceeding Market Expectations",
-        "tc": "安踏體育二零二三年上半年業績創新高 - 收益達人民幣296.5億元 超市場預期",
-        "sc": "安踏体育二零二三年上半年业绩创新高 - 收益达人民币296.5亿元 超市场预期"
-      },
-      "files": {
-        "en": {
-          "url": "https://manager.wisdomir.com/files/394/2023/0822/20230822190107_78609180_en.pdf",
-          "fileLang": "en",
-          "format": "pdf",
-          "sizeBytes": 126317,
-          "check": {
-            "status": 200,
-            "ok": true,
-            "checkedAt": "2026-10-07T09:36:36.428Z"
-          }
-        },
-        "tc": {
-          "url": "https://manager.wisdomir.com/files/394/2023/0822/20230822190107_55105292_tc.pdf",
-          "fileLang": "tc",
-          "format": "pdf",
-          "sizeBytes": 283471,
-          "check": {
-            "status": 200,
-            "ok": true,
-            "checkedAt": "2026-10-07T09:36:39.622Z"
-          }
-        },
-        "sc": {
-          "url": "https://manager.wisdomir.com/files/394/2023/0822/20230822190107_30456095_sc.pdf",
-          "fileLang": "sc",
-          "format": "pdf",
-          "sizeBytes": 249754,
-          "check": {
-            "status": 200,
-            "ok": true,
-            "checkedAt": "2026-10-07T09:36:42.682Z"
-          }
-        }
-      },
-      "thumbnail": null,
-      "body": null,
-      "sourceUrls": {
-        "en": "https://ir.anta.com/en/include/financial_press.php?year=2023",
-        "tc": "https://ir.anta.com/tc/include/financial_press.php?year=2023",
-        "sc": "https://ir.anta.com/sc/include/financial_press.php?year=2023"
-      },
-      "missingLanguages": [],
-      "fallbackLanguages": []
-    },
-    {
       "id": "2023-08-22-press-release-dbfcb788",
       "type": "press-release",
       "category": "results-press-release",
       "tags": [
         "list:press-releases",
-        "has-html-body"
+        "has-html-body",
+        "list:results-press-releases"
       ],
       "date": "2023-08-22",
       "year": 2023,
@@ -13796,56 +13064,6 @@
       "fallbackLanguages": [
         "sc"
       ]
-    },
-    {
-      "id": "2023-08-22-announcement-3f6bc21b",
-      "type": "announcement",
-      "category": "results-announcement",
-      "tags": [
-        "list:announcements"
-      ],
-      "date": "2023-08-22",
-      "year": 2023,
-      "dateSource": "listing",
-      "time": "16:45",
-      "timeSource": "file-timestamp",
-      "title": {
-        "en": "2023 INTERIM RESULTS ANNOUNCEMENT",
-        "tc": "二零二三年中期業績公告",
-        "sc": "二零二三年中期业绩公告"
-      },
-      "files": {
-        "en": {
-          "url": "https://manager.wisdomir.com/files/394/2023/0822/20230822164502_14128505_en.pdf",
-          "fileLang": "en",
-          "format": "pdf",
-          "sizeBytes": null,
-          "check": null
-        },
-        "tc": {
-          "url": "https://manager.wisdomir.com/files/394/2023/0822/20240307181506_31071799_tc.pdf",
-          "fileLang": "tc",
-          "format": "pdf",
-          "sizeBytes": null,
-          "check": null
-        },
-        "sc": {
-          "url": "https://manager.wisdomir.com/files/394/2023/0822/20240307181506_55172210_sc.pdf",
-          "fileLang": "sc",
-          "format": "pdf",
-          "sizeBytes": null,
-          "check": null
-        }
-      },
-      "thumbnail": null,
-      "body": null,
-      "sourceUrls": {
-        "en": "https://ir.anta.com/en/news.php?year=2023",
-        "tc": "https://ir.anta.com/tc/news.php?year=2023",
-        "sc": "https://ir.anta.com/sc/news.php?year=2023"
-      },
-      "missingLanguages": [],
-      "fallbackLanguages": []
     },
     {
       "id": "2023-08-22-webcast-0fe5fedb",
@@ -15585,7 +14803,8 @@
       "category": "results-press-release",
       "tags": [
         "list:press-releases",
-        "has-html-body"
+        "has-html-body",
+        "list:results-press-releases"
       ],
       "date": "2023-03-21",
       "year": 2023,
@@ -15699,10 +14918,11 @@
       ]
     },
     {
-      "id": "2023-03-21-announcement-bd063588",
+      "id": "2023-03-21-announcement-8cbd3ec7",
       "type": "announcement",
       "category": "results-announcement",
       "tags": [
+        "list:results-announcements",
         "list:announcements"
       ],
       "date": "2023-03-21",
@@ -15717,22 +14937,22 @@
       },
       "files": {
         "en": {
-          "url": "https://manager.wisdomir.com/files/394/2023/0321/20230321121501_00857096_en.pdf",
+          "url": "https://manager.wisdomir.com/files/394/2023/0321/20230322100124_79355264_en.pdf",
           "fileLang": "en",
           "format": "pdf",
           "sizeBytes": null,
           "check": null
         },
         "tc": {
-          "url": "https://manager.wisdomir.com/files/394/2023/0321/20230321121501_59422692_tc.pdf",
+          "url": "https://manager.wisdomir.com/files/394/2023/0321/20230322100125_68524704_tc.pdf",
           "fileLang": "tc",
           "format": "pdf",
           "sizeBytes": null,
           "check": null
         },
         "sc": {
-          "url": "https://manager.wisdomir.com/files/394/2023/0321/20230321121501_59422692_tc.pdf",
-          "fileLang": "tc",
+          "url": "https://manager.wisdomir.com/files/394/2023/0321/20230322100127_04668381_sc.pdf",
+          "fileLang": "sc",
           "format": "pdf",
           "sizeBytes": null,
           "check": null
@@ -15741,14 +14961,12 @@
       "thumbnail": null,
       "body": null,
       "sourceUrls": {
-        "en": "https://ir.anta.com/en/news.php?year=2023",
-        "tc": "https://ir.anta.com/tc/news.php?year=2023",
-        "sc": "https://ir.anta.com/sc/news.php?year=2023"
+        "en": "https://ir.anta.com/en/include/financial_ann.php?year=2022",
+        "tc": "https://ir.anta.com/tc/include/financial_ann.php?year=2022",
+        "sc": "https://ir.anta.com/sc/include/financial_ann.php?year=2022"
       },
       "missingLanguages": [],
-      "fallbackLanguages": [
-        "sc"
-      ]
+      "fallbackLanguages": []
     },
     {
       "id": "2023-03-21-announcement-f7a32930",
@@ -15803,121 +15021,9 @@
       ]
     },
     {
-      "id": "2023-03-21-announcement-8cbd3ec7",
-      "type": "announcement",
-      "category": "results-announcement",
-      "tags": [
-        "list:results-announcements"
-      ],
-      "date": "2023-03-21",
-      "year": 2023,
-      "dateSource": "listing",
-      "time": null,
-      "timeSource": "none",
-      "title": {
-        "en": "2022 ANNUAL RESULTS ANNOUNCEMENT",
-        "tc": "二零二二年年度業績公告",
-        "sc": "二零二二年年度业绩公告"
-      },
-      "files": {
-        "en": {
-          "url": "https://manager.wisdomir.com/files/394/2023/0321/20230322100124_79355264_en.pdf",
-          "fileLang": "en",
-          "format": "pdf",
-          "sizeBytes": null,
-          "check": null
-        },
-        "tc": {
-          "url": "https://manager.wisdomir.com/files/394/2023/0321/20230322100125_68524704_tc.pdf",
-          "fileLang": "tc",
-          "format": "pdf",
-          "sizeBytes": null,
-          "check": null
-        },
-        "sc": {
-          "url": "https://manager.wisdomir.com/files/394/2023/0321/20230322100127_04668381_sc.pdf",
-          "fileLang": "sc",
-          "format": "pdf",
-          "sizeBytes": null,
-          "check": null
-        }
-      },
-      "thumbnail": null,
-      "body": null,
-      "sourceUrls": {
-        "en": "https://ir.anta.com/en/include/financial_ann.php?year=2022",
-        "tc": "https://ir.anta.com/tc/include/financial_ann.php?year=2022",
-        "sc": "https://ir.anta.com/sc/include/financial_ann.php?year=2022"
-      },
-      "missingLanguages": [],
-      "fallbackLanguages": []
-    },
-    {
-      "id": "2023-03-21-press-release-5994ea12",
-      "type": "press-release",
-      "category": "results-press-release",
-      "tags": [
-        "list:results-press-releases"
-      ],
-      "date": "2023-03-21",
-      "year": 2023,
-      "dateSource": "listing",
-      "time": null,
-      "timeSource": "none",
-      "title": {
-        "en": "ANTA Sports Tides Over Economic Cycle with Confidence - Group Revenue Reaches Record High in 2022, Surpassing RMB50 Billion for the First Time",
-        "tc": "强信心穿越周期 - 安踏體育二零二二年全年收益首超人民幣500億元",
-        "sc": "强信心穿越周期 - 安踏体育二零二二年全年收益首超人民币500亿元"
-      },
-      "files": {
-        "en": {
-          "url": "https://manager.wisdomir.com/files/394/2023/0321/20230322100425_47609524_en.pdf",
-          "fileLang": "en",
-          "format": "pdf",
-          "sizeBytes": 154176,
-          "check": {
-            "status": 200,
-            "ok": true,
-            "checkedAt": "2026-10-07T09:38:57.103Z"
-          }
-        },
-        "tc": {
-          "url": "https://manager.wisdomir.com/files/394/2023/0321/20230322100425_93201137_tc.pdf",
-          "fileLang": "tc",
-          "format": "pdf",
-          "sizeBytes": 280868,
-          "check": {
-            "status": 200,
-            "ok": true,
-            "checkedAt": "2026-10-07T09:39:00.190Z"
-          }
-        },
-        "sc": {
-          "url": "https://manager.wisdomir.com/files/394/2023/0321/20230322100425_16786900_sc.pdf",
-          "fileLang": "sc",
-          "format": "pdf",
-          "sizeBytes": 280868,
-          "check": {
-            "status": 200,
-            "ok": true,
-            "checkedAt": "2026-10-07T09:39:03.486Z"
-          }
-        }
-      },
-      "thumbnail": null,
-      "body": null,
-      "sourceUrls": {
-        "en": "https://ir.anta.com/en/include/financial_press.php?year=2022",
-        "tc": "https://ir.anta.com/tc/include/financial_press.php?year=2022",
-        "sc": "https://ir.anta.com/sc/include/financial_press.php?year=2022"
-      },
-      "missingLanguages": [],
-      "fallbackLanguages": []
-    },
-    {
       "id": "2023-03-16-announcement-1479347b",
       "type": "announcement",
-      "category": "share-capital",
+      "category": "voluntary-announcement",
       "tags": [
         "list:announcements"
       ],
@@ -16296,7 +15402,7 @@
     {
       "id": "2023-01-11-announcement-06a1986e",
       "type": "announcement",
-      "category": "convertible-bonds",
+      "category": "voluntary-announcement",
       "tags": [
         "list:announcements"
       ],
@@ -19376,7 +18482,7 @@
     {
       "id": "2021-12-19-announcement-4f722023",
       "type": "announcement",
-      "category": "share-scheme",
+      "category": "voluntary-announcement",
       "tags": [
         "list:announcements"
       ],
@@ -20143,7 +19249,8 @@
       "type": "announcement",
       "category": "results-announcement",
       "tags": [
-        "list:results-announcements"
+        "list:results-announcements",
+        "list:announcements"
       ],
       "date": "2021-08-24",
       "year": 2021,
@@ -20222,58 +19329,6 @@
         },
         "sc": {
           "url": "https://manager.wisdomir.com/files/394/2021/0824/20210824121502_14801060_tc.pdf",
-          "fileLang": "tc",
-          "format": "pdf",
-          "sizeBytes": null,
-          "check": null
-        }
-      },
-      "thumbnail": null,
-      "body": null,
-      "sourceUrls": {
-        "en": "https://ir.anta.com/en/news.php?year=2021",
-        "tc": "https://ir.anta.com/tc/news.php?year=2021",
-        "sc": "https://ir.anta.com/sc/news.php?year=2021"
-      },
-      "missingLanguages": [],
-      "fallbackLanguages": [
-        "sc"
-      ]
-    },
-    {
-      "id": "2021-08-24-announcement-ee39f018",
-      "type": "announcement",
-      "category": "results-announcement",
-      "tags": [
-        "list:announcements"
-      ],
-      "date": "2021-08-24",
-      "year": 2021,
-      "dateSource": "listing",
-      "time": "12:15",
-      "timeSource": "file-timestamp",
-      "title": {
-        "en": "2021 INTERIM RESULTS ANNOUNCEMENT",
-        "tc": "二零二一年中期業績公告",
-        "sc": "二零二一年中期业绩公告"
-      },
-      "files": {
-        "en": {
-          "url": "https://manager.wisdomir.com/files/394/2021/0824/20210824121502_68707970_en.pdf",
-          "fileLang": "en",
-          "format": "pdf",
-          "sizeBytes": null,
-          "check": null
-        },
-        "tc": {
-          "url": "https://manager.wisdomir.com/files/394/2021/0824/20210824121502_59268920_tc.pdf",
-          "fileLang": "tc",
-          "format": "pdf",
-          "sizeBytes": null,
-          "check": null
-        },
-        "sc": {
-          "url": "https://manager.wisdomir.com/files/394/2021/0824/20210824121502_59268920_tc.pdf",
           "fileLang": "tc",
           "format": "pdf",
           "sizeBytes": null,
@@ -21482,63 +20537,12 @@
       ]
     },
     {
-      "id": "2021-03-24-announcement-489154f1",
-      "type": "announcement",
-      "category": "results-announcement",
-      "tags": [
-        "list:announcements"
-      ],
-      "date": "2021-03-24",
-      "year": 2021,
-      "dateSource": "listing",
-      "time": "16:45",
-      "timeSource": "file-timestamp",
-      "title": {
-        "en": "2020 ANNUAL RESULTS ANNOUNCEMENT",
-        "tc": "二零二零年度業績公告",
-        "sc": "二零二零年度业绩公告"
-      },
-      "files": {
-        "en": {
-          "url": "https://manager.wisdomir.com/files/394/2021/0324/20210324164501_28516215_en.pdf",
-          "fileLang": "en",
-          "format": "pdf",
-          "sizeBytes": null,
-          "check": null
-        },
-        "tc": {
-          "url": "https://manager.wisdomir.com/files/394/2021/0324/20210324164501_59712359_tc.pdf",
-          "fileLang": "tc",
-          "format": "pdf",
-          "sizeBytes": null,
-          "check": null
-        },
-        "sc": {
-          "url": "https://manager.wisdomir.com/files/394/2021/0324/20210324164501_59712359_tc.pdf",
-          "fileLang": "tc",
-          "format": "pdf",
-          "sizeBytes": null,
-          "check": null
-        }
-      },
-      "thumbnail": null,
-      "body": null,
-      "sourceUrls": {
-        "en": "https://ir.anta.com/en/news.php?year=2021",
-        "tc": "https://ir.anta.com/tc/news.php?year=2021",
-        "sc": "https://ir.anta.com/sc/news.php?year=2021"
-      },
-      "missingLanguages": [],
-      "fallbackLanguages": [
-        "sc"
-      ]
-    },
-    {
       "id": "2021-03-24-announcement-50461e07",
       "type": "announcement",
       "category": "results-announcement",
       "tags": [
-        "list:results-announcements"
+        "list:results-announcements",
+        "list:announcements"
       ],
       "date": "2021-03-24",
       "year": 2021,
@@ -22681,63 +21685,12 @@
       ]
     },
     {
-      "id": "2020-08-25-announcement-65eb028a",
-      "type": "announcement",
-      "category": "results-announcement",
-      "tags": [
-        "list:announcements"
-      ],
-      "date": "2020-08-25",
-      "year": 2020,
-      "dateSource": "listing",
-      "time": "16:45",
-      "timeSource": "file-timestamp",
-      "title": {
-        "en": "2020 INTERIM RESULTS ANNOUNCEMENT",
-        "tc": "二零二零年中期業績公告",
-        "sc": "二零二零年中期业绩公告"
-      },
-      "files": {
-        "en": {
-          "url": "https://manager.wisdomir.com/files/394/2020/0825/20200825164501_63891087_en.pdf",
-          "fileLang": "en",
-          "format": "pdf",
-          "sizeBytes": null,
-          "check": null
-        },
-        "tc": {
-          "url": "https://manager.wisdomir.com/files/394/2020/0825/20200825164501_32191060_tc.pdf",
-          "fileLang": "tc",
-          "format": "pdf",
-          "sizeBytes": null,
-          "check": null
-        },
-        "sc": {
-          "url": "https://manager.wisdomir.com/files/394/2020/0825/20200825164501_32191060_tc.pdf",
-          "fileLang": "tc",
-          "format": "pdf",
-          "sizeBytes": null,
-          "check": null
-        }
-      },
-      "thumbnail": null,
-      "body": null,
-      "sourceUrls": {
-        "en": "https://ir.anta.com/en/news.php?year=2020",
-        "tc": "https://ir.anta.com/tc/news.php?year=2020",
-        "sc": "https://ir.anta.com/sc/news.php?year=2020"
-      },
-      "missingLanguages": [],
-      "fallbackLanguages": [
-        "sc"
-      ]
-    },
-    {
       "id": "2020-08-25-announcement-9c842d9a",
       "type": "announcement",
       "category": "results-announcement",
       "tags": [
-        "list:results-announcements"
+        "list:results-announcements",
+        "list:announcements"
       ],
       "date": "2020-08-25",
       "year": 2020,
@@ -23920,63 +22873,12 @@
       ]
     },
     {
-      "id": "2020-03-24-announcement-ed626a50",
-      "type": "announcement",
-      "category": "results-announcement",
-      "tags": [
-        "list:announcements"
-      ],
-      "date": "2020-03-24",
-      "year": 2020,
-      "dateSource": "listing",
-      "time": "12:15",
-      "timeSource": "file-timestamp",
-      "title": {
-        "en": "2019 ANNUAL RESULTS ANNOUNCEMENT",
-        "tc": "二零一九年度業績公告",
-        "sc": "二零一九年度业绩公告"
-      },
-      "files": {
-        "en": {
-          "url": "https://manager.wisdomir.com/files/394/2020/0324/20200324121501_20594395_en.pdf",
-          "fileLang": "en",
-          "format": "pdf",
-          "sizeBytes": null,
-          "check": null
-        },
-        "tc": {
-          "url": "https://manager.wisdomir.com/files/394/2020/0324/20200324121501_14276825_tc.pdf",
-          "fileLang": "tc",
-          "format": "pdf",
-          "sizeBytes": null,
-          "check": null
-        },
-        "sc": {
-          "url": "https://manager.wisdomir.com/files/394/2020/0324/20200324121501_14276825_tc.pdf",
-          "fileLang": "tc",
-          "format": "pdf",
-          "sizeBytes": null,
-          "check": null
-        }
-      },
-      "thumbnail": null,
-      "body": null,
-      "sourceUrls": {
-        "en": "https://ir.anta.com/en/news.php?year=2020",
-        "tc": "https://ir.anta.com/tc/news.php?year=2020",
-        "sc": "https://ir.anta.com/sc/news.php?year=2020"
-      },
-      "missingLanguages": [],
-      "fallbackLanguages": [
-        "sc"
-      ]
-    },
-    {
       "id": "2020-03-24-announcement-75cb34bc",
       "type": "announcement",
       "category": "results-announcement",
       "tags": [
-        "list:results-announcements"
+        "list:results-announcements",
+        "list:announcements"
       ],
       "date": "2020-03-24",
       "year": 2020,
@@ -25279,7 +24181,8 @@
       "type": "announcement",
       "category": "results-announcement",
       "tags": [
-        "list:results-announcements"
+        "list:results-announcements",
+        "list:announcements"
       ],
       "date": "2019-08-26",
       "year": 2019,
@@ -25323,58 +24226,6 @@
       },
       "missingLanguages": [],
       "fallbackLanguages": []
-    },
-    {
-      "id": "2019-08-26-announcement-9cdda759",
-      "type": "announcement",
-      "category": "results-announcement",
-      "tags": [
-        "list:announcements"
-      ],
-      "date": "2019-08-26",
-      "year": 2019,
-      "dateSource": "listing",
-      "time": "12:15",
-      "timeSource": "file-timestamp",
-      "title": {
-        "en": "2019 INTERIM RESULTS ANNOUNCEMENT",
-        "tc": "二零一九年中期業績公告",
-        "sc": "二零一九年中期业绩公告"
-      },
-      "files": {
-        "en": {
-          "url": "https://manager.wisdomir.com/files/394/2019/0826/20190826121501_27290917_en.pdf",
-          "fileLang": "en",
-          "format": "pdf",
-          "sizeBytes": null,
-          "check": null
-        },
-        "tc": {
-          "url": "https://manager.wisdomir.com/files/394/2019/0826/20190826121501_13637618_tc.pdf",
-          "fileLang": "tc",
-          "format": "pdf",
-          "sizeBytes": null,
-          "check": null
-        },
-        "sc": {
-          "url": "https://manager.wisdomir.com/files/394/2019/0826/20190826121501_13637618_tc.pdf",
-          "fileLang": "tc",
-          "format": "pdf",
-          "sizeBytes": null,
-          "check": null
-        }
-      },
-      "thumbnail": null,
-      "body": null,
-      "sourceUrls": {
-        "en": "https://ir.anta.com/en/news.php?year=2019",
-        "tc": "https://ir.anta.com/tc/news.php?year=2019",
-        "sc": "https://ir.anta.com/sc/news.php?year=2019"
-      },
-      "missingLanguages": [],
-      "fallbackLanguages": [
-        "sc"
-      ]
     },
     {
       "id": "2019-08-26-presentation-1a6381fa",
@@ -26867,7 +25718,7 @@
     {
       "id": "2019-04-01-announcement-d6fc9290",
       "type": "announcement",
-      "category": "transaction",
+      "category": "voluntary-announcement",
       "tags": [
         "list:announcements"
       ],
@@ -26919,7 +25770,7 @@
     {
       "id": "2019-03-28-announcement-4c1e63f9",
       "type": "announcement",
-      "category": "transaction",
+      "category": "voluntary-announcement",
       "tags": [
         "list:announcements"
       ],
@@ -26971,7 +25822,7 @@
     {
       "id": "2019-03-12-announcement-d42420fb",
       "type": "announcement",
-      "category": "transaction",
+      "category": "voluntary-announcement",
       "tags": [
         "list:announcements"
       ],
@@ -27023,7 +25874,7 @@
     {
       "id": "2019-03-08-announcement-4f276084",
       "type": "announcement",
-      "category": "transaction",
+      "category": "voluntary-announcement",
       "tags": [
         "list:announcements"
       ],
@@ -27346,7 +26197,7 @@
     {
       "id": "2019-03-04-announcement-27570b40",
       "type": "announcement",
-      "category": "transaction",
+      "category": "voluntary-announcement",
       "tags": [
         "list:announcements"
       ],
@@ -27452,7 +26303,8 @@
       "type": "announcement",
       "category": "results-announcement",
       "tags": [
-        "list:results-announcements"
+        "list:results-announcements",
+        "list:announcements"
       ],
       "date": "2019-02-26",
       "year": 2019,
@@ -27548,56 +26400,6 @@
       "fallbackLanguages": [
         "sc"
       ]
-    },
-    {
-      "id": "2019-02-26-announcement-89534522",
-      "type": "announcement",
-      "category": "results-announcement",
-      "tags": [
-        "list:announcements"
-      ],
-      "date": "2019-02-26",
-      "year": 2019,
-      "dateSource": "listing",
-      "time": "12:30",
-      "timeSource": "file-timestamp",
-      "title": {
-        "en": "2018 ANNUAL RESULTS ANNOUNCEMENT",
-        "tc": "二零一八年度業績公告",
-        "sc": "二零一八年度业绩公告"
-      },
-      "files": {
-        "en": {
-          "url": "https://manager.wisdomir.com/files/394/2019/0226/20190226123001_58086528_en.pdf",
-          "fileLang": "en",
-          "format": "pdf",
-          "sizeBytes": null,
-          "check": null
-        },
-        "tc": {
-          "url": "https://manager.wisdomir.com/files/394/2019/0226/20190226132210_40504692_tc.pdf",
-          "fileLang": "tc",
-          "format": "pdf",
-          "sizeBytes": null,
-          "check": null
-        },
-        "sc": {
-          "url": "https://manager.wisdomir.com/files/394/2019/0226/20190226132211_83704940_sc.pdf",
-          "fileLang": "sc",
-          "format": "pdf",
-          "sizeBytes": null,
-          "check": null
-        }
-      },
-      "thumbnail": null,
-      "body": null,
-      "sourceUrls": {
-        "en": "https://ir.anta.com/en/news.php?year=2019",
-        "tc": "https://ir.anta.com/tc/news.php?year=2019",
-        "sc": "https://ir.anta.com/sc/news.php?year=2019"
-      },
-      "missingLanguages": [],
-      "fallbackLanguages": []
     },
     {
       "id": "2019-02-26-announcement-ec134276",
@@ -27778,7 +26580,7 @@
     {
       "id": "2019-02-25-announcement-8e9887a8",
       "type": "announcement",
-      "category": "transaction",
+      "category": "voluntary-announcement",
       "tags": [
         "list:announcements"
       ],
@@ -27882,7 +26684,7 @@
     {
       "id": "2019-02-21-announcement-4890558e",
       "type": "announcement",
-      "category": "transaction",
+      "category": "voluntary-announcement",
       "tags": [
         "list:announcements"
       ],
@@ -28955,7 +27757,8 @@
       "type": "announcement",
       "category": "results-announcement",
       "tags": [
-        "list:results-announcements"
+        "list:results-announcements",
+        "list:announcements"
       ],
       "date": "2018-08-14",
       "year": 2018,
@@ -29034,58 +27837,6 @@
         },
         "sc": {
           "url": "https://manager.wisdomir.com/files/394/2018/0814/20180814121510_66275497_tc.pdf",
-          "fileLang": "tc",
-          "format": "pdf",
-          "sizeBytes": null,
-          "check": null
-        }
-      },
-      "thumbnail": null,
-      "body": null,
-      "sourceUrls": {
-        "en": "https://ir.anta.com/en/news.php?year=2018",
-        "tc": "https://ir.anta.com/tc/news.php?year=2018",
-        "sc": "https://ir.anta.com/sc/news.php?year=2018"
-      },
-      "missingLanguages": [],
-      "fallbackLanguages": [
-        "sc"
-      ]
-    },
-    {
-      "id": "2018-08-14-announcement-92c33112",
-      "type": "announcement",
-      "category": "results-announcement",
-      "tags": [
-        "list:announcements"
-      ],
-      "date": "2018-08-14",
-      "year": 2018,
-      "dateSource": "listing",
-      "time": "12:15",
-      "timeSource": "file-timestamp",
-      "title": {
-        "en": "2018 INTERIM RESULTS ANNOUNCEMENT",
-        "tc": "二零一八年中期業績公告",
-        "sc": "二零一八年中期业绩公告"
-      },
-      "files": {
-        "en": {
-          "url": "https://manager.wisdomir.com/files/394/2018/0814/20180814121501_91231038_en.pdf",
-          "fileLang": "en",
-          "format": "pdf",
-          "sizeBytes": null,
-          "check": null
-        },
-        "tc": {
-          "url": "https://manager.wisdomir.com/files/394/2018/0814/20180814121510_83772504_tc.pdf",
-          "fileLang": "tc",
-          "format": "pdf",
-          "sizeBytes": null,
-          "check": null
-        },
-        "sc": {
-          "url": "https://manager.wisdomir.com/files/394/2018/0814/20180814121510_83772504_tc.pdf",
           "fileLang": "tc",
           "format": "pdf",
           "sizeBytes": null,
@@ -30240,10 +28991,11 @@
       ]
     },
     {
-      "id": "2018-02-27-announcement-abb76e43",
+      "id": "2018-02-27-announcement-c3fa4cca",
       "type": "announcement",
       "category": "results-announcement",
       "tags": [
+        "list:results-announcements",
         "list:announcements"
       ],
       "date": "2018-02-27",
@@ -30251,58 +29003,6 @@
       "dateSource": "listing",
       "time": "12:04",
       "timeSource": "file-timestamp",
-      "title": {
-        "en": "2017 ANNUAL RESULTS ANNOUNCEMENT",
-        "tc": "二零一七年度業績公告",
-        "sc": "二零一七年度业绩公告"
-      },
-      "files": {
-        "en": {
-          "url": "https://manager.wisdomir.com/files/394/2018/0227/20180227120400_49973891_en.pdf",
-          "fileLang": "en",
-          "format": "pdf",
-          "sizeBytes": null,
-          "check": null
-        },
-        "tc": {
-          "url": "https://manager.wisdomir.com/files/394/2018/0227/20180227120400_25477914_tc.pdf",
-          "fileLang": "tc",
-          "format": "pdf",
-          "sizeBytes": null,
-          "check": null
-        },
-        "sc": {
-          "url": "https://manager.wisdomir.com/files/394/2018/0227/20180227120400_25477914_tc.pdf",
-          "fileLang": "tc",
-          "format": "pdf",
-          "sizeBytes": null,
-          "check": null
-        }
-      },
-      "thumbnail": null,
-      "body": null,
-      "sourceUrls": {
-        "en": "https://ir.anta.com/en/news.php?year=2018",
-        "tc": "https://ir.anta.com/tc/news.php?year=2018",
-        "sc": "https://ir.anta.com/sc/news.php?year=2018"
-      },
-      "missingLanguages": [],
-      "fallbackLanguages": [
-        "sc"
-      ]
-    },
-    {
-      "id": "2018-02-27-announcement-c3fa4cca",
-      "type": "announcement",
-      "category": "results-announcement",
-      "tags": [
-        "list:results-announcements"
-      ],
-      "date": "2018-02-27",
-      "year": 2018,
-      "dateSource": "listing",
-      "time": null,
-      "timeSource": "none",
       "title": {
         "en": "2017 Annual Results Announcement",
         "tc": "二零一七年度業績公告",
@@ -31075,10 +29775,11 @@
       ]
     },
     {
-      "id": "2017-08-15-announcement-144c7e08",
+      "id": "2017-08-15-announcement-444cb225",
       "type": "announcement",
       "category": "results-announcement",
       "tags": [
+        "list:results-announcements",
         "list:announcements"
       ],
       "date": "2017-08-15",
@@ -31086,58 +29787,6 @@
       "dateSource": "listing",
       "time": "12:04",
       "timeSource": "file-timestamp",
-      "title": {
-        "en": "2017 INTERIM RESULTS ANNOUNCEMENT",
-        "tc": "二零一七年中期業績公告",
-        "sc": "二零一七年中期业绩公告"
-      },
-      "files": {
-        "en": {
-          "url": "https://manager.wisdomir.com/files/394/2017/0815/20170815120400_52654829_en.pdf",
-          "fileLang": "en",
-          "format": "pdf",
-          "sizeBytes": null,
-          "check": null
-        },
-        "tc": {
-          "url": "https://manager.wisdomir.com/files/394/2017/0815/20170815120400_23684889_tc.pdf",
-          "fileLang": "tc",
-          "format": "pdf",
-          "sizeBytes": null,
-          "check": null
-        },
-        "sc": {
-          "url": "https://manager.wisdomir.com/files/394/2017/0815/20170815120400_23684889_tc.pdf",
-          "fileLang": "tc",
-          "format": "pdf",
-          "sizeBytes": null,
-          "check": null
-        }
-      },
-      "thumbnail": null,
-      "body": null,
-      "sourceUrls": {
-        "en": "https://ir.anta.com/en/news.php?year=2017",
-        "tc": "https://ir.anta.com/tc/news.php?year=2017",
-        "sc": "https://ir.anta.com/sc/news.php?year=2017"
-      },
-      "missingLanguages": [],
-      "fallbackLanguages": [
-        "sc"
-      ]
-    },
-    {
-      "id": "2017-08-15-announcement-444cb225",
-      "type": "announcement",
-      "category": "results-announcement",
-      "tags": [
-        "list:results-announcements"
-      ],
-      "date": "2017-08-15",
-      "year": 2017,
-      "dateSource": "listing",
-      "time": null,
-      "timeSource": "none",
       "title": {
         "en": "2017 Interim Results Announcement",
         "tc": "二零一七年中期業績公告",
@@ -32728,10 +31377,11 @@
       ]
     },
     {
-      "id": "2017-02-22-announcement-962cda72",
+      "id": "2017-02-22-announcement-8823aa06",
       "type": "announcement",
       "category": "results-announcement",
       "tags": [
+        "list:results-announcements",
         "list:announcements"
       ],
       "date": "2017-02-22",
@@ -32739,58 +31389,6 @@
       "dateSource": "listing",
       "time": "16:36",
       "timeSource": "file-timestamp",
-      "title": {
-        "en": "2016 ANNUAL RESULTS ANNOUNCEMENT",
-        "tc": "二零一六年度業績公告",
-        "sc": "二零一六年度业绩公告"
-      },
-      "files": {
-        "en": {
-          "url": "https://manager.wisdomir.com/files/394/2017/0222/20170222163600_71833063_en.pdf",
-          "fileLang": "en",
-          "format": "pdf",
-          "sizeBytes": null,
-          "check": null
-        },
-        "tc": {
-          "url": "https://manager.wisdomir.com/files/394/2017/0222/20170222163600_93040730_tc.pdf",
-          "fileLang": "tc",
-          "format": "pdf",
-          "sizeBytes": null,
-          "check": null
-        },
-        "sc": {
-          "url": "https://manager.wisdomir.com/files/394/2017/0222/20170222163600_93040730_tc.pdf",
-          "fileLang": "tc",
-          "format": "pdf",
-          "sizeBytes": null,
-          "check": null
-        }
-      },
-      "thumbnail": null,
-      "body": null,
-      "sourceUrls": {
-        "en": "https://ir.anta.com/en/news.php?year=2017",
-        "tc": "https://ir.anta.com/tc/news.php?year=2017",
-        "sc": "https://ir.anta.com/sc/news.php?year=2017"
-      },
-      "missingLanguages": [],
-      "fallbackLanguages": [
-        "sc"
-      ]
-    },
-    {
-      "id": "2017-02-22-announcement-8823aa06",
-      "type": "announcement",
-      "category": "results-announcement",
-      "tags": [
-        "list:results-announcements"
-      ],
-      "date": "2017-02-22",
-      "year": 2017,
-      "dateSource": "listing",
-      "time": null,
-      "timeSource": "none",
       "title": {
         "en": "2016 Annual Results Announcement",
         "tc": "二零一六年度業績公告",
@@ -33511,10 +32109,11 @@
       ]
     },
     {
-      "id": "2016-08-29-announcement-b63a276c",
+      "id": "2016-08-29-announcement-256d5d92",
       "type": "announcement",
       "category": "results-announcement",
       "tags": [
+        "list:results-announcements",
         "list:announcements"
       ],
       "date": "2016-08-29",
@@ -33522,58 +32121,6 @@
       "dateSource": "listing",
       "time": "12:10",
       "timeSource": "file-timestamp",
-      "title": {
-        "en": "2016 INTERIM RESULTS ANNOUNCEMENT",
-        "tc": "二零一六年中期業績公告",
-        "sc": "二零一六年中期业绩公告"
-      },
-      "files": {
-        "en": {
-          "url": "https://manager.wisdomir.com/files/394/2016/0829/20160829121000_01180488_en.pdf",
-          "fileLang": "en",
-          "format": "pdf",
-          "sizeBytes": null,
-          "check": null
-        },
-        "tc": {
-          "url": "https://manager.wisdomir.com/files/394/2016/0829/20160829121000_92996315_tc.pdf",
-          "fileLang": "tc",
-          "format": "pdf",
-          "sizeBytes": null,
-          "check": null
-        },
-        "sc": {
-          "url": "https://manager.wisdomir.com/files/394/2016/0829/20160829121000_92996315_tc.pdf",
-          "fileLang": "tc",
-          "format": "pdf",
-          "sizeBytes": null,
-          "check": null
-        }
-      },
-      "thumbnail": null,
-      "body": null,
-      "sourceUrls": {
-        "en": "https://ir.anta.com/en/news.php?year=2016",
-        "tc": "https://ir.anta.com/tc/news.php?year=2016",
-        "sc": "https://ir.anta.com/sc/news.php?year=2016"
-      },
-      "missingLanguages": [],
-      "fallbackLanguages": [
-        "sc"
-      ]
-    },
-    {
-      "id": "2016-08-29-announcement-256d5d92",
-      "type": "announcement",
-      "category": "results-announcement",
-      "tags": [
-        "list:results-announcements"
-      ],
-      "date": "2016-08-29",
-      "year": 2016,
-      "dateSource": "listing",
-      "time": null,
-      "timeSource": "none",
       "title": {
         "en": "2016 Interim Results Announcement",
         "tc": "二零一六年中期業績公告",
@@ -34750,10 +33297,11 @@
       ]
     },
     {
-      "id": "2016-02-23-announcement-82024f37",
+      "id": "2016-02-23-announcement-3099b141",
       "type": "announcement",
       "category": "results-announcement",
       "tags": [
+        "list:results-announcements",
         "list:announcements"
       ],
       "date": "2016-02-23",
@@ -34761,58 +33309,6 @@
       "dateSource": "listing",
       "time": "12:09",
       "timeSource": "file-timestamp",
-      "title": {
-        "en": "2015 ANNUAL RESULTS ANNOUNCEMENT",
-        "tc": "二零一五年度業績公告",
-        "sc": "二零一五年度业绩公告"
-      },
-      "files": {
-        "en": {
-          "url": "https://manager.wisdomir.com/files/394/2016/0223/20160223120900_47895360_en.pdf",
-          "fileLang": "en",
-          "format": "pdf",
-          "sizeBytes": null,
-          "check": null
-        },
-        "tc": {
-          "url": "https://manager.wisdomir.com/files/394/2016/0223/20160223120900_42807724_tc.pdf",
-          "fileLang": "tc",
-          "format": "pdf",
-          "sizeBytes": null,
-          "check": null
-        },
-        "sc": {
-          "url": "https://manager.wisdomir.com/files/394/2016/0223/20160223120900_42807724_tc.pdf",
-          "fileLang": "tc",
-          "format": "pdf",
-          "sizeBytes": null,
-          "check": null
-        }
-      },
-      "thumbnail": null,
-      "body": null,
-      "sourceUrls": {
-        "en": "https://ir.anta.com/en/news.php?year=2016",
-        "tc": "https://ir.anta.com/tc/news.php?year=2016",
-        "sc": "https://ir.anta.com/sc/news.php?year=2016"
-      },
-      "missingLanguages": [],
-      "fallbackLanguages": [
-        "sc"
-      ]
-    },
-    {
-      "id": "2016-02-23-announcement-3099b141",
-      "type": "announcement",
-      "category": "results-announcement",
-      "tags": [
-        "list:results-announcements"
-      ],
-      "date": "2016-02-23",
-      "year": 2016,
-      "dateSource": "listing",
-      "time": null,
-      "timeSource": "none",
       "title": {
         "en": "2015 Annual Results Announcement",
         "tc": "二零一五年度業績公告",
@@ -35869,10 +34365,11 @@
       ]
     },
     {
-      "id": "2015-08-05-announcement-7bffd543",
+      "id": "2015-08-05-announcement-c9fb51bc",
       "type": "announcement",
       "category": "results-announcement",
       "tags": [
+        "list:results-announcements",
         "list:announcements"
       ],
       "date": "2015-08-05",
@@ -35880,58 +34377,6 @@
       "dateSource": "listing",
       "time": "12:02",
       "timeSource": "file-timestamp",
-      "title": {
-        "en": "2015 INTERIM RESULTS ANNOUNCEMENT",
-        "tc": "二零一五年中期業績公告",
-        "sc": "二零一五年中期业绩公告"
-      },
-      "files": {
-        "en": {
-          "url": "https://manager.wisdomir.com/files/394/2015/0805/20150805120200_42234760_en.pdf",
-          "fileLang": "en",
-          "format": "pdf",
-          "sizeBytes": null,
-          "check": null
-        },
-        "tc": {
-          "url": "https://manager.wisdomir.com/files/394/2015/0805/20150805120200_98596287_tc.pdf",
-          "fileLang": "tc",
-          "format": "pdf",
-          "sizeBytes": null,
-          "check": null
-        },
-        "sc": {
-          "url": "https://manager.wisdomir.com/files/394/2015/0805/20150805120200_98596287_tc.pdf",
-          "fileLang": "tc",
-          "format": "pdf",
-          "sizeBytes": null,
-          "check": null
-        }
-      },
-      "thumbnail": null,
-      "body": null,
-      "sourceUrls": {
-        "en": "https://ir.anta.com/en/news.php?year=2015",
-        "tc": "https://ir.anta.com/tc/news.php?year=2015",
-        "sc": "https://ir.anta.com/sc/news.php?year=2015"
-      },
-      "missingLanguages": [],
-      "fallbackLanguages": [
-        "sc"
-      ]
-    },
-    {
-      "id": "2015-08-05-announcement-c9fb51bc",
-      "type": "announcement",
-      "category": "results-announcement",
-      "tags": [
-        "list:results-announcements"
-      ],
-      "date": "2015-08-05",
-      "year": 2015,
-      "dateSource": "listing",
-      "time": null,
-      "timeSource": "none",
       "title": {
         "en": "2015 Interim Results Announcement",
         "tc": "二零一五年中期業績公告",
@@ -36888,10 +35333,11 @@
       ]
     },
     {
-      "id": "2015-02-11-announcement-84748873",
+      "id": "2015-02-11-announcement-a97b30d9",
       "type": "announcement",
       "category": "results-announcement",
       "tags": [
+        "list:results-announcements",
         "list:announcements"
       ],
       "date": "2015-02-11",
@@ -36899,58 +35345,6 @@
       "dateSource": "listing",
       "time": "12:01",
       "timeSource": "file-timestamp",
-      "title": {
-        "en": "2014 ANNUAL RESULTS ANNOUNCEMENT",
-        "tc": "二零一四年度業績公告",
-        "sc": "二零一四年度业绩公告"
-      },
-      "files": {
-        "en": {
-          "url": "https://manager.wisdomir.com/files/394/2015/0211/20150211120100_18616845_en.pdf",
-          "fileLang": "en",
-          "format": "pdf",
-          "sizeBytes": null,
-          "check": null
-        },
-        "tc": {
-          "url": "https://manager.wisdomir.com/files/394/2015/0211/20150211120100_81554578_tc.pdf",
-          "fileLang": "tc",
-          "format": "pdf",
-          "sizeBytes": null,
-          "check": null
-        },
-        "sc": {
-          "url": "https://manager.wisdomir.com/files/394/2015/0211/20150211120100_81554578_tc.pdf",
-          "fileLang": "tc",
-          "format": "pdf",
-          "sizeBytes": null,
-          "check": null
-        }
-      },
-      "thumbnail": null,
-      "body": null,
-      "sourceUrls": {
-        "en": "https://ir.anta.com/en/news.php?year=2015",
-        "tc": "https://ir.anta.com/tc/news.php?year=2015",
-        "sc": "https://ir.anta.com/sc/news.php?year=2015"
-      },
-      "missingLanguages": [],
-      "fallbackLanguages": [
-        "sc"
-      ]
-    },
-    {
-      "id": "2015-02-11-announcement-a97b30d9",
-      "type": "announcement",
-      "category": "results-announcement",
-      "tags": [
-        "list:results-announcements"
-      ],
-      "date": "2015-02-11",
-      "year": 2015,
-      "dateSource": "listing",
-      "time": null,
-      "timeSource": "none",
       "title": {
         "en": "2014 Annual Results Announcement",
         "tc": "二零一四年度業績公告",
@@ -38081,10 +36475,11 @@
       ]
     },
     {
-      "id": "2014-08-06-announcement-a589dde6",
+      "id": "2014-08-06-announcement-7425e63c",
       "type": "announcement",
       "category": "results-announcement",
       "tags": [
+        "list:results-announcements",
         "list:announcements"
       ],
       "date": "2014-08-06",
@@ -38092,58 +36487,6 @@
       "dateSource": "listing",
       "time": "12:01",
       "timeSource": "file-timestamp",
-      "title": {
-        "en": "2014 INTERIM RESULTS ANNOUNCEMENT",
-        "tc": "二零一四年中期業績公告",
-        "sc": "二零一四年中期业绩公告"
-      },
-      "files": {
-        "en": {
-          "url": "https://manager.wisdomir.com/files/394/2014/0806/20140806120100_40417687_en.pdf",
-          "fileLang": "en",
-          "format": "pdf",
-          "sizeBytes": null,
-          "check": null
-        },
-        "tc": {
-          "url": "https://manager.wisdomir.com/files/394/2014/0806/20140806120100_33606235_tc.pdf",
-          "fileLang": "tc",
-          "format": "pdf",
-          "sizeBytes": null,
-          "check": null
-        },
-        "sc": {
-          "url": "https://manager.wisdomir.com/files/394/2014/0806/20140806120100_33606235_tc.pdf",
-          "fileLang": "tc",
-          "format": "pdf",
-          "sizeBytes": null,
-          "check": null
-        }
-      },
-      "thumbnail": null,
-      "body": null,
-      "sourceUrls": {
-        "en": "https://ir.anta.com/en/news.php?year=2014",
-        "tc": "https://ir.anta.com/tc/news.php?year=2014",
-        "sc": "https://ir.anta.com/sc/news.php?year=2014"
-      },
-      "missingLanguages": [],
-      "fallbackLanguages": [
-        "sc"
-      ]
-    },
-    {
-      "id": "2014-08-06-announcement-7425e63c",
-      "type": "announcement",
-      "category": "results-announcement",
-      "tags": [
-        "list:results-announcements"
-      ],
-      "date": "2014-08-06",
-      "year": 2014,
-      "dateSource": "listing",
-      "time": null,
-      "timeSource": "none",
       "title": {
         "en": "2014 Interim Results Announcement",
         "tc": "二零一四年中期業績公告",
@@ -39110,10 +37453,11 @@
       ]
     },
     {
-      "id": "2014-02-26-announcement-ab49ac20",
+      "id": "2014-02-26-announcement-be4634b0",
       "type": "announcement",
       "category": "results-announcement",
       "tags": [
+        "list:results-announcements",
         "list:announcements"
       ],
       "date": "2014-02-26",
@@ -39121,58 +37465,6 @@
       "dateSource": "listing",
       "time": "12:01",
       "timeSource": "file-timestamp",
-      "title": {
-        "en": "2013 ANNUAL RESULTS ANNOUNCEMENT",
-        "tc": "二零一三年度業績公告",
-        "sc": "二零一三年度业绩公告"
-      },
-      "files": {
-        "en": {
-          "url": "https://manager.wisdomir.com/files/394/2014/0226/20140226120100_86521562_en.pdf",
-          "fileLang": "en",
-          "format": "pdf",
-          "sizeBytes": null,
-          "check": null
-        },
-        "tc": {
-          "url": "https://manager.wisdomir.com/files/394/2014/0226/20140226120100_20156567_tc.pdf",
-          "fileLang": "tc",
-          "format": "pdf",
-          "sizeBytes": null,
-          "check": null
-        },
-        "sc": {
-          "url": "https://manager.wisdomir.com/files/394/2014/0226/20140226120100_20156567_tc.pdf",
-          "fileLang": "tc",
-          "format": "pdf",
-          "sizeBytes": null,
-          "check": null
-        }
-      },
-      "thumbnail": null,
-      "body": null,
-      "sourceUrls": {
-        "en": "https://ir.anta.com/en/news.php?year=2014",
-        "tc": "https://ir.anta.com/tc/news.php?year=2014",
-        "sc": "https://ir.anta.com/sc/news.php?year=2014"
-      },
-      "missingLanguages": [],
-      "fallbackLanguages": [
-        "sc"
-      ]
-    },
-    {
-      "id": "2014-02-26-announcement-be4634b0",
-      "type": "announcement",
-      "category": "results-announcement",
-      "tags": [
-        "list:results-announcements"
-      ],
-      "date": "2014-02-26",
-      "year": 2014,
-      "dateSource": "listing",
-      "time": null,
-      "timeSource": "none",
       "title": {
         "en": "2013 Annual Results Announcement",
         "tc": "二零一三年度業績公告",
@@ -39957,10 +38249,11 @@
       ]
     },
     {
-      "id": "2013-08-06-announcement-a75836d3",
+      "id": "2013-08-06-announcement-55b525ec",
       "type": "announcement",
       "category": "results-announcement",
       "tags": [
+        "list:results-announcements",
         "list:announcements"
       ],
       "date": "2013-08-06",
@@ -39968,58 +38261,6 @@
       "dateSource": "listing",
       "time": "12:11",
       "timeSource": "file-timestamp",
-      "title": {
-        "en": "ANNOUNCEMENT OF INTERIM RESULTS FOR THE SIX MONTHS ENDED 30 JUNE 2013",
-        "tc": "截至二零一三年六月三十日止六個月中期業績公告",
-        "sc": "截至二零一三年六月三十日止六个月中期业绩公告"
-      },
-      "files": {
-        "en": {
-          "url": "https://manager.wisdomir.com/files/394/2013/0806/20130806121100_87659807_en.pdf",
-          "fileLang": "en",
-          "format": "pdf",
-          "sizeBytes": null,
-          "check": null
-        },
-        "tc": {
-          "url": "https://manager.wisdomir.com/files/394/2013/0806/20130806121100_33030771_tc.pdf",
-          "fileLang": "tc",
-          "format": "pdf",
-          "sizeBytes": null,
-          "check": null
-        },
-        "sc": {
-          "url": "https://manager.wisdomir.com/files/394/2013/0806/20130806121100_33030771_tc.pdf",
-          "fileLang": "tc",
-          "format": "pdf",
-          "sizeBytes": null,
-          "check": null
-        }
-      },
-      "thumbnail": null,
-      "body": null,
-      "sourceUrls": {
-        "en": "https://ir.anta.com/en/news.php?year=2013",
-        "tc": "https://ir.anta.com/tc/news.php?year=2013",
-        "sc": "https://ir.anta.com/sc/news.php?year=2013"
-      },
-      "missingLanguages": [],
-      "fallbackLanguages": [
-        "sc"
-      ]
-    },
-    {
-      "id": "2013-08-06-announcement-55b525ec",
-      "type": "announcement",
-      "category": "results-announcement",
-      "tags": [
-        "list:results-announcements"
-      ],
-      "date": "2013-08-06",
-      "year": 2013,
-      "dateSource": "listing",
-      "time": null,
-      "timeSource": "none",
       "title": {
         "en": "Announcement of Interim Results for the Six Months Ended 30 June 2013",
         "tc": "截至二零一三年六月三十日止六個月中期業績公告",
@@ -41038,10 +39279,11 @@
       ]
     },
     {
-      "id": "2013-02-25-announcement-9eaf54d0",
+      "id": "2013-02-25-announcement-c4bbfc2a",
       "type": "announcement",
       "category": "results-announcement",
       "tags": [
+        "list:results-announcements",
         "list:announcements"
       ],
       "date": "2013-02-25",
@@ -41049,58 +39291,6 @@
       "dateSource": "listing",
       "time": "12:13",
       "timeSource": "file-timestamp",
-      "title": {
-        "en": "2012 ANNUAL RESULTS ANNOUNCEMENT",
-        "tc": "二零一二年度業績公告",
-        "sc": "二零一二年度业绩公告"
-      },
-      "files": {
-        "en": {
-          "url": "https://manager.wisdomir.com/files/394/2013/0225/20130225121300_71810370_en.pdf",
-          "fileLang": "en",
-          "format": "pdf",
-          "sizeBytes": null,
-          "check": null
-        },
-        "tc": {
-          "url": "https://manager.wisdomir.com/files/394/2013/0225/20130225121300_30397384_tc.pdf",
-          "fileLang": "tc",
-          "format": "pdf",
-          "sizeBytes": null,
-          "check": null
-        },
-        "sc": {
-          "url": "https://manager.wisdomir.com/files/394/2013/0225/20130225121300_30397384_tc.pdf",
-          "fileLang": "tc",
-          "format": "pdf",
-          "sizeBytes": null,
-          "check": null
-        }
-      },
-      "thumbnail": null,
-      "body": null,
-      "sourceUrls": {
-        "en": "https://ir.anta.com/en/news.php?year=2013",
-        "tc": "https://ir.anta.com/tc/news.php?year=2013",
-        "sc": "https://ir.anta.com/sc/news.php?year=2013"
-      },
-      "missingLanguages": [],
-      "fallbackLanguages": [
-        "sc"
-      ]
-    },
-    {
-      "id": "2013-02-25-announcement-c4bbfc2a",
-      "type": "announcement",
-      "category": "results-announcement",
-      "tags": [
-        "list:results-announcements"
-      ],
-      "date": "2013-02-25",
-      "year": 2013,
-      "dateSource": "listing",
-      "time": null,
-      "timeSource": "none",
       "title": {
         "en": "2012 Annual Results Announcement",
         "tc": "二零一二年度業績公告",
@@ -41925,10 +40115,11 @@
       ]
     },
     {
-      "id": "2012-08-06-announcement-a57cf840",
+      "id": "2012-08-06-announcement-a8b99e60",
       "type": "announcement",
       "category": "results-announcement",
       "tags": [
+        "list:results-announcements",
         "list:announcements"
       ],
       "date": "2012-08-06",
@@ -41936,58 +40127,6 @@
       "dateSource": "listing",
       "time": "12:06",
       "timeSource": "file-timestamp",
-      "title": {
-        "en": "ANNOUNCEMENT OF INTERIM RESULTS FOR THE SIX MONTHS ENDED 30 JUNE 2012",
-        "tc": "截至二零一二年六月三十日止六個月中期業績公告",
-        "sc": "截至二零一二年六月三十日止六个月中期业绩公告"
-      },
-      "files": {
-        "en": {
-          "url": "https://manager.wisdomir.com/files/394/2012/0806/20120806120600_57394977_en.pdf",
-          "fileLang": "en",
-          "format": "pdf",
-          "sizeBytes": null,
-          "check": null
-        },
-        "tc": {
-          "url": "https://manager.wisdomir.com/files/394/2012/0806/20120806120600_47002256_tc.pdf",
-          "fileLang": "tc",
-          "format": "pdf",
-          "sizeBytes": null,
-          "check": null
-        },
-        "sc": {
-          "url": "https://manager.wisdomir.com/files/394/2012/0806/20120806120600_47002256_tc.pdf",
-          "fileLang": "tc",
-          "format": "pdf",
-          "sizeBytes": null,
-          "check": null
-        }
-      },
-      "thumbnail": null,
-      "body": null,
-      "sourceUrls": {
-        "en": "https://ir.anta.com/en/news.php?year=2012",
-        "tc": "https://ir.anta.com/tc/news.php?year=2012",
-        "sc": "https://ir.anta.com/sc/news.php?year=2012"
-      },
-      "missingLanguages": [],
-      "fallbackLanguages": [
-        "sc"
-      ]
-    },
-    {
-      "id": "2012-08-06-announcement-a8b99e60",
-      "type": "announcement",
-      "category": "results-announcement",
-      "tags": [
-        "list:results-announcements"
-      ],
-      "date": "2012-08-06",
-      "year": 2012,
-      "dateSource": "listing",
-      "time": null,
-      "timeSource": "none",
       "title": {
         "en": "Announcement of Interim Results for the Six Months Ended 30 June 2012",
         "tc": "截至二零一二年六月三十日止六個月中期業績公告",
@@ -43250,10 +41389,11 @@
       ]
     },
     {
-      "id": "2012-02-20-announcement-56b4e9cd",
+      "id": "2012-02-20-announcement-48fd4401",
       "type": "announcement",
       "category": "results-announcement",
       "tags": [
+        "list:results-announcements",
         "list:announcements"
       ],
       "date": "2012-02-20",
@@ -43261,58 +41401,6 @@
       "dateSource": "listing",
       "time": "12:14",
       "timeSource": "file-timestamp",
-      "title": {
-        "en": "2011 ANNUAL RESULTS ANNOUNCEMENT",
-        "tc": "二零一一年度業績公告",
-        "sc": "二零一一年度业绩公告"
-      },
-      "files": {
-        "en": {
-          "url": "https://manager.wisdomir.com/files/394/2012/0220/20120220121400_71171644_en.pdf",
-          "fileLang": "en",
-          "format": "pdf",
-          "sizeBytes": null,
-          "check": null
-        },
-        "tc": {
-          "url": "https://manager.wisdomir.com/files/394/2012/0220/20120220121400_07384634_tc.pdf",
-          "fileLang": "tc",
-          "format": "pdf",
-          "sizeBytes": null,
-          "check": null
-        },
-        "sc": {
-          "url": "https://manager.wisdomir.com/files/394/2012/0220/20120220121400_07384634_tc.pdf",
-          "fileLang": "tc",
-          "format": "pdf",
-          "sizeBytes": null,
-          "check": null
-        }
-      },
-      "thumbnail": null,
-      "body": null,
-      "sourceUrls": {
-        "en": "https://ir.anta.com/en/news.php?year=2012",
-        "tc": "https://ir.anta.com/tc/news.php?year=2012",
-        "sc": "https://ir.anta.com/sc/news.php?year=2012"
-      },
-      "missingLanguages": [],
-      "fallbackLanguages": [
-        "sc"
-      ]
-    },
-    {
-      "id": "2012-02-20-announcement-48fd4401",
-      "type": "announcement",
-      "category": "results-announcement",
-      "tags": [
-        "list:results-announcements"
-      ],
-      "date": "2012-02-20",
-      "year": 2012,
-      "dateSource": "listing",
-      "time": null,
-      "timeSource": "none",
       "title": {
         "en": "2011 Annual Results Announcement",
         "tc": "二零一一年度業績公告",
@@ -44033,10 +42121,11 @@
       ]
     },
     {
-      "id": "2011-08-08-announcement-7377b049",
+      "id": "2011-08-08-announcement-419ca902",
       "type": "announcement",
       "category": "results-announcement",
       "tags": [
+        "list:results-announcements",
         "list:announcements"
       ],
       "date": "2011-08-08",
@@ -44044,58 +42133,6 @@
       "dateSource": "listing",
       "time": "12:56",
       "timeSource": "file-timestamp",
-      "title": {
-        "en": "ANNOUNCEMENT OF INTERIM RESULTS FOR THE SIX MONTHS ENDED 30 JUNE 2011",
-        "tc": "截至二零一一年六月三十日止六個月中期業績公告",
-        "sc": "截至二零一一年六月三十日止六个月中期业绩公告"
-      },
-      "files": {
-        "en": {
-          "url": "https://manager.wisdomir.com/files/394/2011/0808/20110808125600_70116654_en.pdf",
-          "fileLang": "en",
-          "format": "pdf",
-          "sizeBytes": null,
-          "check": null
-        },
-        "tc": {
-          "url": "https://manager.wisdomir.com/files/394/2011/0808/20110808125600_39676802_tc.pdf",
-          "fileLang": "tc",
-          "format": "pdf",
-          "sizeBytes": null,
-          "check": null
-        },
-        "sc": {
-          "url": "https://manager.wisdomir.com/files/394/2011/0808/20110808125600_39676802_tc.pdf",
-          "fileLang": "tc",
-          "format": "pdf",
-          "sizeBytes": null,
-          "check": null
-        }
-      },
-      "thumbnail": null,
-      "body": null,
-      "sourceUrls": {
-        "en": "https://ir.anta.com/en/news.php?year=2011",
-        "tc": "https://ir.anta.com/tc/news.php?year=2011",
-        "sc": "https://ir.anta.com/sc/news.php?year=2011"
-      },
-      "missingLanguages": [],
-      "fallbackLanguages": [
-        "sc"
-      ]
-    },
-    {
-      "id": "2011-08-08-announcement-419ca902",
-      "type": "announcement",
-      "category": "results-announcement",
-      "tags": [
-        "list:results-announcements"
-      ],
-      "date": "2011-08-08",
-      "year": 2011,
-      "dateSource": "listing",
-      "time": null,
-      "timeSource": "none",
       "title": {
         "en": "Announcement of Interim Results for the Six Months Ended 30 June 2011",
         "tc": "截至二零一一年六月三十日止六個月中期業績公告",
@@ -45062,10 +43099,11 @@
       ]
     },
     {
-      "id": "2011-02-21-announcement-e1b7799b",
+      "id": "2011-02-21-announcement-af463c9b",
       "type": "announcement",
       "category": "results-announcement",
       "tags": [
+        "list:results-announcements",
         "list:announcements"
       ],
       "date": "2011-02-21",
@@ -45073,58 +43111,6 @@
       "dateSource": "listing",
       "time": "12:37",
       "timeSource": "file-timestamp",
-      "title": {
-        "en": "2010 ANNUAL RESULTS ANNOUNCEMENT",
-        "tc": "二零一零年度業績公告",
-        "sc": "二零一零年度业绩公告"
-      },
-      "files": {
-        "en": {
-          "url": "https://manager.wisdomir.com/files/394/2011/0221/20110221123700_80157898_en.pdf",
-          "fileLang": "en",
-          "format": "pdf",
-          "sizeBytes": null,
-          "check": null
-        },
-        "tc": {
-          "url": "https://manager.wisdomir.com/files/394/2011/0221/20110221123700_61908841_tc.pdf",
-          "fileLang": "tc",
-          "format": "pdf",
-          "sizeBytes": null,
-          "check": null
-        },
-        "sc": {
-          "url": "https://manager.wisdomir.com/files/394/2011/0221/20110221123700_61908841_tc.pdf",
-          "fileLang": "tc",
-          "format": "pdf",
-          "sizeBytes": null,
-          "check": null
-        }
-      },
-      "thumbnail": null,
-      "body": null,
-      "sourceUrls": {
-        "en": "https://ir.anta.com/en/news.php?year=2011",
-        "tc": "https://ir.anta.com/tc/news.php?year=2011",
-        "sc": "https://ir.anta.com/sc/news.php?year=2011"
-      },
-      "missingLanguages": [],
-      "fallbackLanguages": [
-        "sc"
-      ]
-    },
-    {
-      "id": "2011-02-21-announcement-af463c9b",
-      "type": "announcement",
-      "category": "results-announcement",
-      "tags": [
-        "list:results-announcements"
-      ],
-      "date": "2011-02-21",
-      "year": 2011,
-      "dateSource": "listing",
-      "time": null,
-      "timeSource": "none",
       "title": {
         "en": "2010 Annual Results Announcement",
         "tc": "二零一零年度業績公告",
@@ -45897,10 +43883,11 @@
       ]
     },
     {
-      "id": "2010-08-16-announcement-aef6e90c",
+      "id": "2010-08-16-announcement-f6a1b3f4",
       "type": "announcement",
       "category": "results-announcement",
       "tags": [
+        "list:results-announcements",
         "list:announcements"
       ],
       "date": "2010-08-16",
@@ -45908,58 +43895,6 @@
       "dateSource": "listing",
       "time": "12:33",
       "timeSource": "file-timestamp",
-      "title": {
-        "en": "ANNOUNCEMENT OF INTERIM RESULTS FOR THE SIX MONTHS ENDED 30 JUNE 2010",
-        "tc": "截至二零一零年六月三十日止六個月中期業績公告",
-        "sc": "截至二零一零年六月三十日止六个月中期业绩公告"
-      },
-      "files": {
-        "en": {
-          "url": "https://manager.wisdomir.com/files/394/2010/0816/20100816123300_25433216_en.pdf",
-          "fileLang": "en",
-          "format": "pdf",
-          "sizeBytes": null,
-          "check": null
-        },
-        "tc": {
-          "url": "https://manager.wisdomir.com/files/394/2010/0816/20100816123300_43544423_tc.pdf",
-          "fileLang": "tc",
-          "format": "pdf",
-          "sizeBytes": null,
-          "check": null
-        },
-        "sc": {
-          "url": "https://manager.wisdomir.com/files/394/2010/0816/20100816123300_43544423_tc.pdf",
-          "fileLang": "tc",
-          "format": "pdf",
-          "sizeBytes": null,
-          "check": null
-        }
-      },
-      "thumbnail": null,
-      "body": null,
-      "sourceUrls": {
-        "en": "https://ir.anta.com/en/news.php?year=2010",
-        "tc": "https://ir.anta.com/tc/news.php?year=2010",
-        "sc": "https://ir.anta.com/sc/news.php?year=2010"
-      },
-      "missingLanguages": [],
-      "fallbackLanguages": [
-        "sc"
-      ]
-    },
-    {
-      "id": "2010-08-16-announcement-f6a1b3f4",
-      "type": "announcement",
-      "category": "results-announcement",
-      "tags": [
-        "list:results-announcements"
-      ],
-      "date": "2010-08-16",
-      "year": 2010,
-      "dateSource": "listing",
-      "time": null,
-      "timeSource": "none",
       "title": {
         "en": "Announcement of Interim Results for the Six Months Ended 30 June 2010",
         "tc": "截至二零一零年六月三十日止六個月中期業績公告",
@@ -46926,10 +44861,11 @@
       ]
     },
     {
-      "id": "2010-02-24-announcement-64f349e2",
+      "id": "2010-02-24-announcement-fa2aed90",
       "type": "announcement",
       "category": "results-announcement",
       "tags": [
+        "list:results-announcements",
         "list:announcements"
       ],
       "date": "2010-02-24",
@@ -46937,58 +44873,6 @@
       "dateSource": "listing",
       "time": "12:47",
       "timeSource": "file-timestamp",
-      "title": {
-        "en": "2009 ANNUAL RESULTS ANNOUNCEMENT",
-        "tc": "二零零九年度業績公告",
-        "sc": "二零零九年度业绩公告"
-      },
-      "files": {
-        "en": {
-          "url": "https://manager.wisdomir.com/files/394/2010/0224/20100224124700_09885331_en.pdf",
-          "fileLang": "en",
-          "format": "pdf",
-          "sizeBytes": null,
-          "check": null
-        },
-        "tc": {
-          "url": "https://manager.wisdomir.com/files/394/2010/0224/20100224124700_13908307_tc.pdf",
-          "fileLang": "tc",
-          "format": "pdf",
-          "sizeBytes": null,
-          "check": null
-        },
-        "sc": {
-          "url": "https://manager.wisdomir.com/files/394/2010/0224/20100224124700_13908307_tc.pdf",
-          "fileLang": "tc",
-          "format": "pdf",
-          "sizeBytes": null,
-          "check": null
-        }
-      },
-      "thumbnail": null,
-      "body": null,
-      "sourceUrls": {
-        "en": "https://ir.anta.com/en/news.php?year=2010",
-        "tc": "https://ir.anta.com/tc/news.php?year=2010",
-        "sc": "https://ir.anta.com/sc/news.php?year=2010"
-      },
-      "missingLanguages": [],
-      "fallbackLanguages": [
-        "sc"
-      ]
-    },
-    {
-      "id": "2010-02-24-announcement-fa2aed90",
-      "type": "announcement",
-      "category": "results-announcement",
-      "tags": [
-        "list:results-announcements"
-      ],
-      "date": "2010-02-24",
-      "year": 2010,
-      "dateSource": "listing",
-      "time": null,
-      "timeSource": "none",
       "title": {
         "en": "2009 Annual Results Announcement",
         "tc": "二零零九年度業績公告",
@@ -47813,10 +45697,11 @@
       ]
     },
     {
-      "id": "2009-08-17-announcement-a746b541",
+      "id": "2009-08-17-announcement-14ce64b6",
       "type": "announcement",
       "category": "results-announcement",
       "tags": [
+        "list:results-announcements",
         "list:announcements"
       ],
       "date": "2009-08-17",
@@ -47824,58 +45709,6 @@
       "dateSource": "listing",
       "time": "12:49",
       "timeSource": "file-timestamp",
-      "title": {
-        "en": "ANNOUNCEMENT OF INTERIM RESULTS FOR THE SIX MONTHS ENDED 30 JUNE 2009",
-        "tc": "截至二零零九年六月三十日止六個月中期業績公告",
-        "sc": "截至二零零九年六月三十日止六个月中期业绩公告"
-      },
-      "files": {
-        "en": {
-          "url": "https://manager.wisdomir.com/files/394/2009/0817/20090817124900_52615351_en.pdf",
-          "fileLang": "en",
-          "format": "pdf",
-          "sizeBytes": null,
-          "check": null
-        },
-        "tc": {
-          "url": "https://manager.wisdomir.com/files/394/2009/0817/20090817124900_67330854_tc.pdf",
-          "fileLang": "tc",
-          "format": "pdf",
-          "sizeBytes": null,
-          "check": null
-        },
-        "sc": {
-          "url": "https://manager.wisdomir.com/files/394/2009/0817/20090817124900_67330854_tc.pdf",
-          "fileLang": "tc",
-          "format": "pdf",
-          "sizeBytes": null,
-          "check": null
-        }
-      },
-      "thumbnail": null,
-      "body": null,
-      "sourceUrls": {
-        "en": "https://ir.anta.com/en/news.php?year=2009",
-        "tc": "https://ir.anta.com/tc/news.php?year=2009",
-        "sc": "https://ir.anta.com/sc/news.php?year=2009"
-      },
-      "missingLanguages": [],
-      "fallbackLanguages": [
-        "sc"
-      ]
-    },
-    {
-      "id": "2009-08-17-announcement-14ce64b6",
-      "type": "announcement",
-      "category": "results-announcement",
-      "tags": [
-        "list:results-announcements"
-      ],
-      "date": "2009-08-17",
-      "year": 2009,
-      "dateSource": "listing",
-      "time": null,
-      "timeSource": "none",
       "title": {
         "en": "Announcement of Interim Results for the Six Months Ended 30 June 2009",
         "tc": "截至二零零九年六月三十日止六個月中期業績公告",
@@ -48894,10 +46727,11 @@
       ]
     },
     {
-      "id": "2009-03-02-announcement-c6857917",
+      "id": "2009-03-02-announcement-f4ca8b81",
       "type": "announcement",
       "category": "results-announcement",
       "tags": [
+        "list:results-announcements",
         "list:announcements"
       ],
       "date": "2009-03-02",
@@ -48905,58 +46739,6 @@
       "dateSource": "listing",
       "time": "12:47",
       "timeSource": "file-timestamp",
-      "title": {
-        "en": "2008 ANNUAL RESULTS ANNOUNCEMENT",
-        "tc": "二零零八年度業績公告",
-        "sc": "二零零八年度业绩公告"
-      },
-      "files": {
-        "en": {
-          "url": "https://manager.wisdomir.com/files/394/2009/0302/20090302124700_26028451_en.pdf",
-          "fileLang": "en",
-          "format": "pdf",
-          "sizeBytes": null,
-          "check": null
-        },
-        "tc": {
-          "url": "https://manager.wisdomir.com/files/394/2009/0302/20090302124700_51311111_tc.pdf",
-          "fileLang": "tc",
-          "format": "pdf",
-          "sizeBytes": null,
-          "check": null
-        },
-        "sc": {
-          "url": "https://manager.wisdomir.com/files/394/2009/0302/20090302124700_51311111_tc.pdf",
-          "fileLang": "tc",
-          "format": "pdf",
-          "sizeBytes": null,
-          "check": null
-        }
-      },
-      "thumbnail": null,
-      "body": null,
-      "sourceUrls": {
-        "en": "https://ir.anta.com/en/news.php?year=2009",
-        "tc": "https://ir.anta.com/tc/news.php?year=2009",
-        "sc": "https://ir.anta.com/sc/news.php?year=2009"
-      },
-      "missingLanguages": [],
-      "fallbackLanguages": [
-        "sc"
-      ]
-    },
-    {
-      "id": "2009-03-02-announcement-f4ca8b81",
-      "type": "announcement",
-      "category": "results-announcement",
-      "tags": [
-        "list:results-announcements"
-      ],
-      "date": "2009-03-02",
-      "year": 2009,
-      "dateSource": "listing",
-      "time": null,
-      "timeSource": "none",
       "title": {
         "en": "2008 Annual Results Announcement",
         "tc": "二零零八年度業績公告",
@@ -49445,10 +47227,11 @@
       ]
     },
     {
-      "id": "2008-08-25-announcement-b3190e9f",
+      "id": "2008-08-17-announcement-60ebb5aa",
       "type": "announcement",
       "category": "results-announcement",
       "tags": [
+        "list:results-announcements",
         "list:announcements"
       ],
       "date": "2008-08-25",
@@ -49456,70 +47239,6 @@
       "dateSource": "listing",
       "time": "13:34",
       "timeSource": "file-timestamp",
-      "title": {
-        "en": "ANNOUNCEMENT OF INTERIM RESULTSFOR THE SIX MONTHS ENDED 30 JUNE 2008",
-        "tc": "截至二零零八年六月三十日止六個月中期業績公告",
-        "sc": "截至二零零八年六月三十日止六个月中期业绩公告"
-      },
-      "files": {
-        "en": {
-          "url": "https://manager.wisdomir.com/files/394/2008/0825/20080825133400_01559724_en.pdf",
-          "fileLang": "en",
-          "format": "pdf",
-          "sizeBytes": 475667,
-          "check": {
-            "status": 200,
-            "ok": true,
-            "checkedAt": "2026-10-07T09:57:45.114Z"
-          }
-        },
-        "tc": {
-          "url": "https://manager.wisdomir.com/files/394/2008/0825/20080825133400_58921442_tc.pdf",
-          "fileLang": "tc",
-          "format": "pdf",
-          "sizeBytes": 822458,
-          "check": {
-            "status": 200,
-            "ok": true,
-            "checkedAt": "2026-10-07T09:57:48.477Z"
-          }
-        },
-        "sc": {
-          "url": "https://manager.wisdomir.com/files/394/2008/0825/20080825133400_58921442_tc.pdf",
-          "fileLang": "tc",
-          "format": "pdf",
-          "sizeBytes": 822458,
-          "check": {
-            "status": 200,
-            "ok": true,
-            "checkedAt": "2026-10-07T09:57:48.477Z"
-          }
-        }
-      },
-      "thumbnail": null,
-      "body": null,
-      "sourceUrls": {
-        "en": "https://ir.anta.com/en/news.php?year=2008",
-        "tc": "https://ir.anta.com/tc/news.php?year=2008",
-        "sc": "https://ir.anta.com/sc/news.php?year=2008"
-      },
-      "missingLanguages": [],
-      "fallbackLanguages": [
-        "sc"
-      ]
-    },
-    {
-      "id": "2008-08-17-announcement-60ebb5aa",
-      "type": "announcement",
-      "category": "results-announcement",
-      "tags": [
-        "list:results-announcements"
-      ],
-      "date": "2008-08-17",
-      "year": 2008,
-      "dateSource": "listing",
-      "time": null,
-      "timeSource": "none",
       "title": {
         "en": "Announcement of Interim Results for the Six Months Ended 30 June 2008",
         "tc": "截至二零零八年六月三十日止六個月中期業績公告",
@@ -49531,21 +47250,33 @@
           "fileLang": "en",
           "format": "pdf",
           "sizeBytes": null,
-          "check": null
+          "check": {
+            "status": 0,
+            "ok": false,
+            "checkedAt": ""
+          }
         },
         "tc": {
           "url": "https://manager.wisdomir.com/files/394/2008/0817/20180720200342_35866494_tc.pdf",
           "fileLang": "tc",
           "format": "pdf",
           "sizeBytes": null,
-          "check": null
+          "check": {
+            "status": 0,
+            "ok": false,
+            "checkedAt": ""
+          }
         },
         "sc": {
           "url": "https://manager.wisdomir.com/files/394/2008/0817/20180720200342_75264169_sc.pdf",
           "fileLang": "sc",
           "format": "pdf",
           "sizeBytes": null,
-          "check": null
+          "check": {
+            "status": 0,
+            "ok": false,
+            "checkedAt": ""
+          }
         }
       },
       "thumbnail": null,
@@ -50110,10 +47841,11 @@
       "fallbackLanguages": []
     },
     {
-      "id": "2008-03-12-announcement-e5219f71",
+      "id": "2008-03-12-announcement-9b796295",
       "type": "announcement",
       "category": "results-announcement",
       "tags": [
+        "list:results-announcements",
         "list:announcements"
       ],
       "date": "2008-03-12",
@@ -50121,58 +47853,6 @@
       "dateSource": "listing",
       "time": "13:49",
       "timeSource": "file-timestamp",
-      "title": {
-        "en": "ANNOUNCEMENT OF ANNUAL RESULTS FOR THE YEAR ENDED 31 DECEMBER 2007",
-        "tc": "截至二零零七年十二月三十一日止年度 全年業績",
-        "sc": "截至二零零七年十二月三十一日止年度 全年业绩"
-      },
-      "files": {
-        "en": {
-          "url": "https://manager.wisdomir.com/files/394/2008/0312/20080312134900_66361213_en.pdf",
-          "fileLang": "en",
-          "format": "pdf",
-          "sizeBytes": null,
-          "check": null
-        },
-        "tc": {
-          "url": "https://manager.wisdomir.com/files/394/2008/0312/20080312134900_31336536_tc.pdf",
-          "fileLang": "tc",
-          "format": "pdf",
-          "sizeBytes": null,
-          "check": null
-        },
-        "sc": {
-          "url": "https://manager.wisdomir.com/files/394/2008/0312/20080312134900_31336536_tc.pdf",
-          "fileLang": "tc",
-          "format": "pdf",
-          "sizeBytes": null,
-          "check": null
-        }
-      },
-      "thumbnail": null,
-      "body": null,
-      "sourceUrls": {
-        "en": "https://ir.anta.com/en/news.php?year=2008",
-        "tc": "https://ir.anta.com/tc/news.php?year=2008",
-        "sc": "https://ir.anta.com/sc/news.php?year=2008"
-      },
-      "missingLanguages": [],
-      "fallbackLanguages": [
-        "sc"
-      ]
-    },
-    {
-      "id": "2008-03-12-announcement-9b796295",
-      "type": "announcement",
-      "category": "results-announcement",
-      "tags": [
-        "list:results-announcements"
-      ],
-      "date": "2008-03-12",
-      "year": 2008,
-      "dateSource": "listing",
-      "time": null,
-      "timeSource": "none",
       "title": {
         "en": "Announcement of Annual Results for the Year Ended 31 December 2007",
         "tc": "截至二零零七年十二月三十一日止年度全年業績",
@@ -50505,10 +48185,11 @@
       ]
     },
     {
-      "id": "2007-09-12-announcement-897b48aa",
+      "id": "2007-08-27-announcement-d3bb1973",
       "type": "announcement",
       "category": "results-announcement",
       "tags": [
+        "list:results-announcements",
         "list:announcements"
       ],
       "date": "2007-09-12",
@@ -50517,56 +48198,54 @@
       "time": "16:16",
       "timeSource": "file-timestamp",
       "title": {
-        "en": "ANNOUNCEMENT OF INTERIM RESULTS FOR THE SIX MONTHS ENDED 30 JUNE 2007",
-        "tc": "截至二零零七年六月三十日止六個月 中期業績",
-        "sc": "截至二零零七年六月三十日止六个月 中期业绩"
+        "en": "Announcement of Interim Results for the Six Months Ended 30 June 2007",
+        "tc": "截至二零零七年六月三十日止六個月中期業績",
+        "sc": "截至二零零七年六月三十日止六个月中期业绩"
       },
       "files": {
         "en": {
-          "url": "https://manager.wisdomir.com/files/394/2007/0912/20070912161600_20909268_en.pdf",
+          "url": "https://manager.wisdomir.com/files/394/2007/0827/20180720201856_91940978_en.pdf",
           "fileLang": "en",
           "format": "pdf",
-          "sizeBytes": 165645,
+          "sizeBytes": null,
           "check": {
-            "status": 200,
-            "ok": true,
-            "checkedAt": "2026-10-07T09:58:46.727Z"
+            "status": 0,
+            "ok": false,
+            "checkedAt": ""
           }
         },
         "tc": {
-          "url": "https://manager.wisdomir.com/files/394/2007/0912/20070912161600_80315393_tc.pdf",
+          "url": "https://manager.wisdomir.com/files/394/2007/0827/20180720201856_85757356_tc.pdf",
           "fileLang": "tc",
           "format": "pdf",
-          "sizeBytes": 615220,
+          "sizeBytes": null,
           "check": {
-            "status": 200,
-            "ok": true,
-            "checkedAt": "2026-10-07T09:58:49.574Z"
+            "status": 0,
+            "ok": false,
+            "checkedAt": ""
           }
         },
         "sc": {
-          "url": "https://manager.wisdomir.com/files/394/2007/0912/20070912161600_80315393_tc.pdf",
-          "fileLang": "tc",
+          "url": "https://manager.wisdomir.com/files/394/2007/0827/20180720201856_51850749_sc.pdf",
+          "fileLang": "sc",
           "format": "pdf",
-          "sizeBytes": 615220,
+          "sizeBytes": null,
           "check": {
-            "status": 200,
-            "ok": true,
-            "checkedAt": "2026-10-07T09:58:49.574Z"
+            "status": 0,
+            "ok": false,
+            "checkedAt": ""
           }
         }
       },
       "thumbnail": null,
       "body": null,
       "sourceUrls": {
-        "en": "https://ir.anta.com/en/news.php?year=2007",
-        "tc": "https://ir.anta.com/tc/news.php?year=2007",
-        "sc": "https://ir.anta.com/sc/news.php?year=2007"
+        "en": "https://ir.anta.com/en/include/financial_ann.php?year=2007",
+        "tc": "https://ir.anta.com/tc/include/financial_ann.php?year=2007",
+        "sc": "https://ir.anta.com/sc/include/financial_ann.php?year=2007"
       },
       "missingLanguages": [],
-      "fallbackLanguages": [
-        "sc"
-      ]
+      "fallbackLanguages": []
     },
     {
       "id": "2007-08-31-announcement-338da2a8",
@@ -50619,56 +48298,6 @@
       "fallbackLanguages": [
         "sc"
       ]
-    },
-    {
-      "id": "2007-08-27-announcement-d3bb1973",
-      "type": "announcement",
-      "category": "results-announcement",
-      "tags": [
-        "list:results-announcements"
-      ],
-      "date": "2007-08-27",
-      "year": 2007,
-      "dateSource": "listing",
-      "time": null,
-      "timeSource": "none",
-      "title": {
-        "en": "Announcement of Interim Results for the Six Months Ended 30 June 2007",
-        "tc": "截至二零零七年六月三十日止六個月中期業績",
-        "sc": "截至二零零七年六月三十日止六个月中期业绩"
-      },
-      "files": {
-        "en": {
-          "url": "https://manager.wisdomir.com/files/394/2007/0827/20180720201856_91940978_en.pdf",
-          "fileLang": "en",
-          "format": "pdf",
-          "sizeBytes": null,
-          "check": null
-        },
-        "tc": {
-          "url": "https://manager.wisdomir.com/files/394/2007/0827/20180720201856_85757356_tc.pdf",
-          "fileLang": "tc",
-          "format": "pdf",
-          "sizeBytes": null,
-          "check": null
-        },
-        "sc": {
-          "url": "https://manager.wisdomir.com/files/394/2007/0827/20180720201856_51850749_sc.pdf",
-          "fileLang": "sc",
-          "format": "pdf",
-          "sizeBytes": null,
-          "check": null
-        }
-      },
-      "thumbnail": null,
-      "body": null,
-      "sourceUrls": {
-        "en": "https://ir.anta.com/en/include/financial_ann.php?year=2007",
-        "tc": "https://ir.anta.com/tc/include/financial_ann.php?year=2007",
-        "sc": "https://ir.anta.com/sc/include/financial_ann.php?year=2007"
-      },
-      "missingLanguages": [],
-      "fallbackLanguages": []
     },
     {
       "id": "2007-08-27-press-release-d9c50631",

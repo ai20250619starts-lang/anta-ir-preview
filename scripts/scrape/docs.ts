@@ -231,6 +231,9 @@ export const toRecord = (
   };
 };
 
+const RESULTS_CATEGORIES = new Set<DocumentCategory>(['results-announcement', 'results-press-release', 'results-webcast', 'results-presentation']);
+const withinDays = (a: string | null, b: string | null, days: number) =>
+  !!a && !!b && Math.abs(Date.parse(a) - Date.parse(b)) <= days * 86400000;
 const normTitle = (s: string | null) => (s ?? '').toLowerCase().replace(/[^a-z0-9\u4e00-\u9fff]+/g, '');
 
 /** Global de-duplication across lists: same file URL (any language) or same report title => one record with merged tags. */
@@ -238,6 +241,7 @@ export class DocumentStore {
   records: DocumentRecord[] = [];
   private byUrl = new Map<string, DocumentRecord>();
   private byReportTitle = new Map<string, DocumentRecord>();
+  private byResultsTitle = new Map<string, { norm: string; rec: DocumentRecord }[]>();
   merges = 0;
 
   add(r: DocumentRecord) {
@@ -252,6 +256,14 @@ export class DocumentStore {
     let hit = urls.map((u) => this.byUrl.get(u)).find(Boolean);
     const tkey = r.type === 'report' ? `${r.category}|${normTitle(r.title.en)}` : null;
     if (!hit && tkey && r.title.en) hit = this.byReportTitle.get(tkey);
+    // Results documents are often listed twice (financial_* fragment + news.php) with DIFFERENT PDF uploads of the
+    // same filing, and the fragment's date can be a pre-created folder date. Same category + same EN title within
+    // 90 days = same document.
+    // (one list sometimes carries a longer headline, so a title that is a prefix of the other also matches)
+    const rnorm = RESULTS_CATEGORIES.has(r.category) && r.title.en ? normTitle(r.title.en) : null;
+    const sameTitle = (a: string, b: string) => a === b || (Math.min(a.length, b.length) >= 30 && (a.startsWith(b) || b.startsWith(a)));
+    if (!hit && rnorm)
+      hit = (this.byResultsTitle.get(r.category) ?? []).find((x) => sameTitle(x.norm, rnorm) && withinDays(x.rec.date, r.date, 90))?.rec;
     if (hit) {
       this.merges++;
       hit.tags = [...new Set([...hit.tags, ...r.tags])];
@@ -261,6 +273,14 @@ export class DocumentStore {
         if (!hit.files[L] && r.files[L]) hit.files[L] = r.files[L];
         if (!hit.sourceUrls[L] && r.sourceUrls[L]) hit.sourceUrls[L] = r.sourceUrls[L];
         if (r.body?.[L] && (!hit.body || !hit.body[L])) hit.body = { ...(hit.body ?? { en: null, tc: null, sc: null }), [L]: r.body[L] };
+      }
+      if (hit.date && r.date && hit.date !== r.date) {
+        // prefer the date confirmed by a vendor upload timestamp; otherwise a listing date over a file-path date
+        const stamps = new Set(
+          [...LANGS.map((L) => hit!.files[L]?.url), ...LANGS.map((L) => r.files[L]?.url)].map((u) => fileInfo(u)?.stampDate).filter(Boolean),
+        );
+        const better = !stamps.has(hit.date) && (stamps.has(r.date) || (hit.dateSource === 'file-path' && r.dateSource === 'listing'));
+        if (better) Object.assign(hit, { date: r.date, year: r.year, dateSource: r.dateSource, time: r.time, timeSource: r.timeSource });
       }
       if (!hit.date && r.date) Object.assign(hit, { date: r.date, year: r.year, dateSource: r.dateSource });
       if (hit.dateSource === 'file-path' && r.dateSource === 'listing' && r.date) Object.assign(hit, { date: r.date, year: r.year, dateSource: 'listing' });
@@ -273,6 +293,7 @@ export class DocumentStore {
     this.records.push(r);
     urls.forEach((u) => this.byUrl.set(u, r));
     if (tkey && r.title.en) this.byReportTitle.set(tkey, r);
+    if (rnorm) this.byResultsTitle.set(r.category, [...(this.byResultsTitle.get(r.category) ?? []), { norm: rnorm, rec: r }]);
     return r;
   }
 }

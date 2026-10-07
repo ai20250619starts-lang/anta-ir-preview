@@ -9,6 +9,8 @@ const RULES: Rule[] = [
   [/environmental,? social and governance report|corporate social responsibility report|社會責任報告|社会责任报告|\besg report|sustainability report|環境、社會及管治報告|环境、社会及管治报告/i, 'report', 'esg-report'],
   [/^\s*annual report|^\s*\d{4}\s*annual report|年報|年报/i, 'report', 'annual-report'],
   [/^\s*interim report|^\s*\d{4}\s*interim report|中期報告|中期报告/i, 'report', 'interim-report'],
+  // e.g. "VOLUNTARY ANNOUNCEMENT - AMER SPORTS PUBLISHES ANNUAL RESULTS…" is about an associate, not ANTA's own results
+  [/^\s*voluntary announcement|^\s*自願公告|^\s*自愿公告/i, 'announcement', 'voluntary-announcement'],
   [/results announcement|(annual|interim|final) results|業績公告|业绩公告/i, 'announcement', 'results-announcement'],
   [/operational update|retail sales performance|trade fair|營運最新情況|营运最新情况|訂貨會|订货会/i, 'announcement', 'operational-update'],
   [/dividend|股息/i, 'announcement', 'dividend'],

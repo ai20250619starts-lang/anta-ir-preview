@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-10-07T10:28:28.249Z",
-  "startedAt": "2026-10-07T10:28:26.005Z",
+  "generatedAt": "2026-10-07T10:33:55.860Z",
+  "startedAt": "2026-10-07T10:33:53.506Z",
   "totals": {
-    "documents": 948,
+    "documents": 903,
     "financial highlight rows": 6,
     "board people": 11,
     "committees": 5,
@@ -14,7 +14,7 @@
   },
   "fetch": {
     "network": 0,
-    "cacheHits": 2249,
+    "cacheHits": 2219,
     "errors": 0
   },
   "sections": {
@@ -101,14 +101,14 @@
   },
   "documentsByTypeAndLanguage": {
     "announcement": {
-      "total": 506,
-      "en": 506,
-      "tc": 506,
-      "sc": 506,
+      "total": 469,
+      "en": 469,
+      "tc": 469,
+      "sc": 469,
       "nativeFile": {
-        "en": 506,
-        "tc": 506,
-        "sc": 51
+        "en": 469,
+        "tc": 469,
+        "sc": 49
       }
     },
     "corporate-communication": {
@@ -167,14 +167,14 @@
       }
     },
     "press-release": {
-      "total": 85,
-      "en": 84,
-      "tc": 84,
-      "sc": 84,
+      "total": 77,
+      "en": 76,
+      "tc": 76,
+      "sc": 76,
       "nativeFile": {
-        "en": 84,
-        "tc": 84,
-        "sc": 84
+        "en": 76,
+        "tc": 76,
+        "sc": 76
       }
     },
     "report": {
@@ -202,26 +202,26 @@
   },
   "documentsByTypeAndYear": {
     "announcement": {
-      "2007": 8,
-      "2008": 13,
-      "2009": 20,
-      "2010": 15,
-      "2011": 14,
-      "2012": 17,
-      "2013": 16,
-      "2014": 22,
-      "2015": 19,
-      "2016": 18,
-      "2017": 27,
-      "2018": 25,
-      "2019": 49,
-      "2020": 29,
-      "2021": 33,
+      "2007": 7,
+      "2008": 11,
+      "2009": 18,
+      "2010": 13,
+      "2011": 12,
+      "2012": 15,
+      "2013": 14,
+      "2014": 20,
+      "2015": 17,
+      "2016": 16,
+      "2017": 25,
+      "2018": 23,
+      "2019": 47,
+      "2020": 27,
+      "2021": 31,
       "2022": 25,
-      "2023": 35,
-      "2024": 51,
-      "2025": 45,
-      "2026": 25
+      "2023": 33,
+      "2024": 49,
+      "2025": 43,
+      "2026": 23
     },
     "corporate-communication": {
       "undated": 2
@@ -297,10 +297,10 @@
       "2020": 2,
       "2021": 2,
       "2022": 2,
-      "2023": 15,
-      "2024": 20,
-      "2025": 12,
-      "2026": 8
+      "2023": 13,
+      "2024": 18,
+      "2025": 10,
+      "2026": 6
     },
     "report": {
       "2007": 2,
@@ -362,13 +362,94 @@
   "fallbackLanguages": {
     "en": 1,
     "tc": 3,
-    "sc": 742
+    "sc": 707
   },
-  "filesWithSize": 710,
-  "documentsWithTime": 799,
+  "filesWithSize": 677,
+  "documentsWithTime": 783,
   "links": {
-    "checked": 835,
+    "checked": 814,
     "broken": [
+      {
+        "url": "https://manager.wisdomir.com/files/394/2026/0717/20260717190200_13882075_en.pdf",
+        "status": 0,
+        "ok": false,
+        "foundOn": [
+          "https://ir.anta.com/en/news.php"
+        ],
+        "kind": "document"
+      },
+      {
+        "url": "https://manager.wisdomir.com/files/394/2026/0717/20260717190114_75555232_tc.pdf",
+        "status": 0,
+        "ok": false,
+        "foundOn": [
+          "https://ir.anta.com/tc/news.php"
+        ],
+        "kind": "document"
+      },
+      {
+        "url": "https://manager.wisdomir.com/files/394/2026/0717/20260717190115_24195728_sc.pdf",
+        "status": 0,
+        "ok": false,
+        "foundOn": [
+          "https://ir.anta.com/sc/news.php"
+        ],
+        "kind": "document"
+      },
+      {
+        "url": "https://manager.wisdomir.com/files/394/2008/0817/20180720200342_52016339_en.pdf",
+        "status": 0,
+        "ok": false,
+        "foundOn": [
+          "https://ir.anta.com/en/include/financial_ann.php?year=2008"
+        ],
+        "kind": "document"
+      },
+      {
+        "url": "https://manager.wisdomir.com/files/394/2008/0817/20180720200342_35866494_tc.pdf",
+        "status": 0,
+        "ok": false,
+        "foundOn": [
+          "https://ir.anta.com/tc/include/financial_ann.php?year=2008"
+        ],
+        "kind": "document"
+      },
+      {
+        "url": "https://manager.wisdomir.com/files/394/2008/0817/20180720200342_75264169_sc.pdf",
+        "status": 0,
+        "ok": false,
+        "foundOn": [
+          "https://ir.anta.com/sc/include/financial_ann.php?year=2008"
+        ],
+        "kind": "document"
+      },
+      {
+        "url": "https://manager.wisdomir.com/files/394/2007/0827/20180720201856_91940978_en.pdf",
+        "status": 0,
+        "ok": false,
+        "foundOn": [
+          "https://ir.anta.com/en/include/financial_ann.php?year=2007"
+        ],
+        "kind": "document"
+      },
+      {
+        "url": "https://manager.wisdomir.com/files/394/2007/0827/20180720201856_85757356_tc.pdf",
+        "status": 0,
+        "ok": false,
+        "foundOn": [
+          "https://ir.anta.com/tc/include/financial_ann.php?year=2007"
+        ],
+        "kind": "document"
+      },
+      {
+        "url": "https://manager.wisdomir.com/files/394/2007/0827/20180720201856_51850749_sc.pdf",
+        "status": 0,
+        "ok": false,
+        "foundOn": [
+          "https://ir.anta.com/sc/include/financial_ann.php?year=2007"
+        ],
+        "kind": "document"
+      },
       {
         "url": "https://ir.anta.com/esg/en/index.php",
         "status": 404,
